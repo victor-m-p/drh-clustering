@@ -1,0 +1,19 @@
+name: drhenv
+channels:
+    - conda-forge
+    - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - matplotlib
+  - pandas
+  - scikit-learn
+  - pymc
+  - ipykernel
+#  - theano #--> the problem
+  - seaborn
+  - plotly
+  - nbformat
+#  - pip
+#  - pip:
+#    - missingpy 
