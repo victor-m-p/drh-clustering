@@ -29,7 +29,6 @@ answers = data[
         "question_id",
         "question_name",
         "parent_question_id",
-        "parent_question",  # do not really need this
         "answer_value",
     ]
 ].drop_duplicates()
@@ -227,7 +226,6 @@ for df_poll in answers_subset["poll"].unique():
         "question_id",
         "parent_question_id",
         "question_name",
-        "parent_question",
     ]
     poll_combinations = unique_combinations(
         df=poll_subset,
