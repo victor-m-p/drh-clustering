@@ -3,7 +3,7 @@ vmp 2023-04-04
 """
 
 import pandas as pd
-from functions_answers import check_data
+from helper_functions import check_data
 
 """ 
 Take out relevant columns.
@@ -17,9 +17,11 @@ n answers = 276.239 (many values before subsetting questions)
 n entries = 1.288
 """
 
-data = pd.read_csv("../data/dump/raw_data.csv")
+# load data
+data = pd.read_csv("../data/raw/raw_data.csv")
 data = data.rename(columns={"value": "answer_value"})
 
+# take out the relevant columns
 answers = data[
     [
         "poll",
@@ -27,16 +29,14 @@ answers = data[
         "question_id",
         "question_name",
         "parent_question_id",
-        "parent_question",
+        "parent_question",  # do not really need this
         "answer_value",
     ]
 ].drop_duplicates()
 
-base_question_id = 0
-answers["parent_question_id"] = (
-    answers["parent_question_id"].fillna(base_question_id).astype(int)
-)
-# check_data(answers)
+# fillna with placeholder value to convert to int
+answers["parent_question_id"] = answers["parent_question_id"].fillna(0).astype(int)
+check_data(answers)
 
 """ 
 Related questions. 
@@ -48,10 +48,10 @@ n answers = 211.925
 n entries = 1.288
 """
 
-question_relation = pd.read_csv("../data/dump/question_relation.csv")
+question_relation = pd.read_csv("../data/raw/question_relation.csv")
 question_id_poll = answers[["question_id", "poll"]].drop_duplicates()
 
-from functions_answers import map_question_relation
+from helper_functions import map_question_relation
 
 related_questions = map_question_relation(
     question_id_poll, question_relation, "Religious Group (v6)"
@@ -67,13 +67,16 @@ assert len(related_questions) == related_questions["question_id"].nunique()
 
 # merge to get related questions
 answers = answers.merge(related_questions, on=["question_id", "poll"], how="inner")
-# check_data(answers)
+
+check_data(answers)
 
 """ 
-Select:
+Select all of the questions in "question_coding".
+
+These are: 
 - "A supreme high god is present:"
 - "Is supernatural monitoring present:"
-and all their child questions. 
+and most of their child questions. 
 
 n answers = 21.687 (1: 12.987, 0: 6.661, -1: 2.039)
 n entries = 1.247
@@ -90,25 +93,26 @@ answers_question_name = answers.merge(
 )
 
 # the names match group (v6) so we extract the question IDs from here
-# and then we merge on the original "questions" dataframe.
+# and then we merge on the original "answers" dataframe.
+# this gives us the relevant questions from all polls
 question_id_group_6 = answers_question_name[
     answers_question_name["poll"] == "Religious Group (v6)"
 ]
 question_id_group_6 = question_id_group_6["question_id"].unique().tolist()
 answers_subset = answers[answers["related_question_id"].isin(question_id_group_6)]
+check_data(answers_subset)
 
-# take the parent-child mappings from group (v6)
-parent_mapping_v6 = answers_subset[answers_subset["poll"] == "Religious Group (v6)"]
-parent_mapping_v6 = parent_mapping_v6[
-    ["related_question_id", "parent_question_id"]
+""" 
+Add back the short question names 
+"""
+
+# now add back the short question names
+short_question_names = answers_question_name[
+    ["related_question_id", "question_short"]
 ].drop_duplicates()
-parent_mapping_v6 = parent_mapping_v6.rename(
-    columns={"parent_question_id": "related_parent_question_id"}
-)
 answers_subset = answers_subset.merge(
-    parent_mapping_v6, on="related_question_id", how="inner"
+    short_question_names, on="related_question_id", how="inner"
 )
-# check_data(answers_subset)
 
 """ 
 Select only relevant polls: 
@@ -123,7 +127,7 @@ n entries = 974
 from constants import polls
 
 answers_subset = answers_subset[answers_subset["poll"].isin(polls)]
-# check_data(answers_subset)
+check_data(answers_subset)
 
 """ 
 Select only sub-questions for the two main questions: 
@@ -136,6 +140,20 @@ n answers = 16.560 (1: 9.910, 0: 5.043, -1: 1.607)
 n entries = 685
 """
 
+# to subset based on parent_question_id we need related_parent_question_id
+parent_mapping_v6 = answers_subset[answers_subset["poll"] == "Religious Group (v6)"]
+parent_mapping_v6 = parent_mapping_v6[
+    ["related_question_id", "parent_question_id"]
+].drop_duplicates()
+parent_mapping_v6 = parent_mapping_v6.rename(
+    columns={"parent_question_id": "related_parent_question_id"}
+)
+answers_subset = answers_subset.merge(
+    parent_mapping_v6, on="related_question_id", how="inner"
+)
+
+# now take only subquestions of the two main questions
+# and only when parents are answered "Yes" (1)
 parent_questions = [4828, 4954]
 parent_answers = answers_subset[
     answers_subset["related_question_id"].isin(parent_questions)
@@ -151,7 +169,7 @@ parent_answers_yes = parent_answers_yes.rename(
 answers_subset = answers_subset.merge(
     parent_answers_yes, on=["entry_id", "related_parent_question_id"], how="inner"
 )
-# check_data(answers_subset)
+check_data(answers_subset)
 
 """ 
 Clean inconsistent answers (manually coded).
@@ -181,7 +199,7 @@ df_filtered = merged_answers[
 ]
 assert len(df_filtered) <= len(answers_subset)
 answers_subset = df_filtered.drop(columns=["answer_value_small"])
-# check_data(answers_subset)
+check_data(answers_subset)
 
 """ 
 Fill in missing values with np.nan 
@@ -199,7 +217,7 @@ answers_subset = answers_subset.rename(
     }
 )
 
-from functions_answers import unique_combinations
+from helper_functions import unique_combinations
 
 combination_list = []
 for df_poll in answers_subset["poll"].unique():
@@ -222,7 +240,7 @@ answers_subset = pd.concat(combination_list)
 
 # recode -1 to np.nan
 answers_subset["answer_value"] = answers_subset["answer_value"].replace(-1, pd.NA)
-# check_data(answers_subset)
+check_data(answers_subset)
 
 """ 
 Now we assign weight to the data:
@@ -232,11 +250,11 @@ n answers = 24.666 (1: 9.905, 0: 5.034, NaN: 9.727)
 n entries = 685
 """
 
-from functions_answers import assign_weight
+from helper_functions import assign_weight
 
 answers_subset = assign_weight(answers_subset, "entry_id", "question_id")
 answers_subset.to_csv("../data/preprocessed/answers_subset.csv", index=False)
-# check_data(answers_subset)
+check_data(answers_subset)
 
 """ 
 Now we split data into two subsets: 
@@ -252,8 +270,8 @@ monitoring entries = 685
 
 shg = answers_subset[answers_subset["parent_question_id"] == 4828]
 monitoring = answers_subset[answers_subset["parent_question_id"] == 4954]
-# check_data(shg)
-# check_data(monitoring)
+check_data(shg)
+check_data(monitoring)
 
 """ 
 Then we expand the data to have one row per entry_id with all the answers.
@@ -263,14 +281,14 @@ shg entries = 559
 monitoring entries = 526
 """
 
-from functions_answers import expand_data
+from helper_functions import expand_data
 
 shg_expanded = expand_data(shg, "question_id", "entry_id")
 monitoring_expanded = expand_data(monitoring, "question_id", "entry_id")
 
 # check amount of data
-# shg_expanded["entry_id"].nunique()
-# monitoring_expanded["entry_id"].nunique()
+shg_expanded["entry_id"].nunique()
+monitoring_expanded["entry_id"].nunique()
 
 # save
 shg_expanded.to_csv("../data/preprocessed/shg_expanded.csv", index=False)
