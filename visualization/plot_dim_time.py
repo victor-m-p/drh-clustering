@@ -1,13 +1,21 @@
+""" 
+NB: only considers "start time" not "end time". 
+"""
+
+# consider automatic selection of y axis
+# consider automatic handling of filese and c value
+# handle legend in a better way
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.ticker as ticker
 
 # setup
-c = 3
-y_max = 0.7
+c = 10
 x_min = -1000
-superquestion = "monitoring"
+superquestion = "shg"
 
 df_q = pd.read_csv(f"../data/EM/{superquestion}_q_{c}_all.csv")
 dimension_columns = [f"dim{x}" for x in range(c)]
@@ -17,11 +25,11 @@ df_temporal["year_from"] = df_temporal["year_from"].astype(int)
 
 # 3. smoothed over time
 bin_width = 500
-step_size = 30
+step_size = 100
 max_year = df_temporal["year_from"].max()
 x_max = max_year - (bin_width / 2)
 
-from fun import smooth_time
+from helper_functions import smooth_time
 
 df_smoothed = smooth_time(df_temporal, bin_width, step_size)
 
@@ -38,15 +46,38 @@ df_smoothed_long = df_smoothed_agg.melt(
     value_name="value",
 )
 
+# Take only from the time range
+df_smoothed_long = df_smoothed_long[df_smoothed_long["time_bin"] >= x_min - step_size]
+y_max = df_smoothed_long["value"].max()
+y_max = y_max + 0.02
+
 # Plot
-plt.figure(figsize=(9, 4), dpi=300)
+plt.figure(figsize=(8, 4), dpi=300)
 sns.lineplot(data=df_smoothed_long, x="time_bin", y="value", hue="dimension")
 plt.xticks(rotation=45)
+plt.yticks()
 delta = int(np.round(bin_width / 2, 0))
-plt.xlabel(f"Year (smoothed over {bin_width} years)", size=12)
-plt.ylabel("Mean Dimension Value", size=12)
+plt.xlabel(f"Year", size=12)
+plt.ylabel("Dimension weight", size=12)
 plt.xlim(x_min, x_max)
 plt.ylim(0, y_max)
-plt.legend(title="Dimension", fontsize=12, title_fontsize=12, loc="upper right")
+
+# Adjust y axis ticks
+plt.gca().yaxis.set_major_locator(ticker.MultipleLocator(0.1))
+
+# Specify the number of columns in the legend
+ncol = 1
+
+# Place the legend below the plot without a title and without a box
+plt.legend(
+    fontsize=12,
+    loc="upper center",
+    bbox_to_anchor=(1.12, 1.05),
+    ncol=ncol,
+    frameon=False,
+)
+
 plt.tight_layout()
-plt.savefig(f"fig/{superquestion}_{c}_smoothed.jpg")
+plt.savefig(
+    f"../figures/{superquestion}_{c}_temporal.jpg", dpi=300, bbox_inches="tight"
+)

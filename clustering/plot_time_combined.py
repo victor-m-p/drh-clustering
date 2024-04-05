@@ -15,7 +15,6 @@ df_q_shg = pd.read_csv(f"../data/EM/shg_q_{c}_all.csv")
 dimension_columns = [f"dim{x}" for x in range(c)]
 temporal_columns = ["entry_id", "entry_name", "year_from"] + dimension_columns
 
-
 df_temporal_monitoring = df_q_monitoring[temporal_columns]
 df_temporal_q = df_q_shg[temporal_columns]
 

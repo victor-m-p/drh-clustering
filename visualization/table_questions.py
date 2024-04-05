@@ -1,20 +1,21 @@
+# write the tables of questions
 import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 #### setup ####
-c = 8  # minimize BIC
+c = 7  # minimize BIC
 superquestion = "monitoring"
 df_q = pd.read_csv(f"../data/EM/{superquestion}_q_{c}_all.csv")
 df_theta = pd.read_csv(f"../data/EM/{superquestion}_theta_{c}_all.csv")
 
 # First plot data preparation
-df_plot1 = df_theta.drop(columns=["related_question_id", "question_mean"])
+df_plot1 = df_theta.drop(columns=["question_id", "question_mean"])
 df_plot1.set_index("question_short", inplace=True)
 
 # Second plot data preparation
-df_plot2 = df_theta.drop(columns=["related_question_id"])
+df_plot2 = df_theta.drop(columns=["question_id"])
 df_plot2.set_index("question_short", inplace=True)
 value_columns = df_plot2.columns.difference(["question_mean"])
 df_plot_relative = df_plot2[value_columns].sub(df_plot2["question_mean"], axis=0)
@@ -41,56 +42,21 @@ plt.suptitle("Question Weightings", size=15, y=1.02)
 plt.tight_layout()
 plt.show()
 
-""" overview: 
-dim0: minimal concept (0.22): highest in rituals, norms, oaths, ...
-dim1: maximal concept (0.96): lowest in taboo, hygiene, sex, ...
-dim2: maximal_concept (0.89): lowest in hygiene, risk, taboo, ...
-dim3: maximal concept (0.86): lower in: risk, hygiene, conversion non-rel, ...
-dim4: medium concept (0.74): lowest in murder, conversion, fighting, ...
-dim5: medium concept (0.57): lowest in risk, conversion, gossiping, ... (highest in murder, oaths, ritual)
-dim6: maximal concept (0.99): lowest in risk, conversion, fairness, ...
-dim7: maximal concept (0.86): lowest in conversion, risk, sorcery, ...
-"""
-
-df_theta.sort_values("question_mean")
-
-"""
-generally most common features: 
-* performance of rituals
-* ritual observance
-* honouring oaths
-* prosocial norm adherence
-* lying
-
-generally least common features: 
-* shirking risk
-* conversion non-religionists
-* personal hygiene
-* non-lethal fighting
-* gossiping
-
-exciting thing potentially: 
-* from minimal concept --> medium concept --> full concept
-* would be interesting to know which cases have parent == Yes but all answers No
-* do we learn anything additional about cultural packages?
-"""
-
-#### which religions high in what? ####
-# things we need a lot
-
 #### which religions high in what? ####
 # 1. things we need a lot
 dimensions = [f"dim{x}" for x in range(c)]
-unique_questions = df_theta["related_question_id"].unique().tolist()
+unique_questions = df_theta["question_id"].unique().tolist()
 entry_dimensions = ["entry_id", "entry_name"] + dimensions
 
 # 2. get answers
-shg_answers = pd.read_csv("../data/preprocessed/shg_answers.csv")
+shg_answers = pd.read_csv("../data/preprocessed/answers_subset.csv")
 shg_answers = shg_answers[
-    ["entry_id", "related_question_id", "question_short", "answer_numeric"]
+    ["entry_id", "question_id", "question_short", "answer_value"]
 ].drop_duplicates()
-shg_answers = shg_answers[shg_answers["related_question_id"].isin(unique_questions)]
+shg_answers = shg_answers[shg_answers["question_id"].isin(unique_questions)]
 entry_dim = df_q[entry_dimensions]
+
+# frite
 
 # 3. find each in turn and check distribution
 entry_dim.sort_values("dim7", ascending=False).head(5)

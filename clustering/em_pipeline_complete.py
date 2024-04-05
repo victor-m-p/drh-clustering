@@ -4,44 +4,45 @@ still needs a couple of things to be fully automated
 * number of dimensions (AIC/BIC)
 * number of clusters
 
-NB: I cannot guarantee that the weighting works but
-I have checked that for all weights = 1 it gives
-the same result as the unweighted version. 
+todo: 
+- set up automatic pipeline
+- check weighting and BIC (consider removing AIC)
+- consider thresholding at
 """
 
 import numpy as np
 import pandas as pd
-from fun import fit, custom_matmul
+from helper_functions import fit, custom_matmul
 
 np.random.seed(0)
 
 ## setup ##
-c_grid = [c + 1 for c in range(3)]
-filename = "monitoring"
-subset = "all"  # will give only religious groups
+c_grid = [c + 1 for c in range(20)]
+filename = "shg"
+subset = "all"
 
 # load data
 entry_metadata = pd.read_csv("../data/preprocessed/entry_metadata.csv")
-answers = pd.read_csv("../data/preprocessed/shg_answers.csv")
-answers = answers[["question_short", "related_question_id"]].drop_duplicates()
-df = pd.read_csv(f"../data/ML/{filename}.csv")
+questions = pd.read_csv("../data/preprocessed/answers_subset.csv")
+questions = questions[["question_id", "question_short"]].drop_duplicates()
+answers = pd.read_csv(f"../data/preprocessed/{filename}_expanded.csv")
 
 # (optionally) subset
 if subset == "group":
     entry_metadata = entry_metadata[entry_metadata["poll"].str.contains("Group")]
     entry_id = entry_metadata["entry_id"].unique().tolist()
-    df = df[df["entry_id"].isin(entry_id)]
+    answers = answers[answers["entry_id"].isin(entry_id)]
 
 # preprocess data for EM
-df = df.fillna(100)  # everything not 1/0 treated as nan
-weight = df["weight"].values
-df_matrix = df.drop(columns=["entry_id", "weight"])
-df_matrix = df_matrix.convert_dtypes()  # to integer
-X = df_matrix.to_numpy()
+answers = answers.fillna(100)  # everything not 1/0 treated as nan
+weight = answers["weight"].values
+answer_values = answers.drop(columns=["entry_id", "weight"])
+answer_values = answer_values.convert_dtypes()  # to integer
+X = answer_values.to_numpy()
 Y = np.where(X == 100, np.nan, X)
 
 # find the right number of dimensions
-logL_dict = {}  # Assuming you have this dictionary to store log-likelihood values
+logL_dict = {}
 AIC_dict = {}
 BIC_dict = {}
 n = X.shape[0]  # Number of observations
@@ -69,29 +70,26 @@ c = min(BIC_dict, key=BIC_dict.get)
 theta, q = fit(X, c)
 
 # gather question dimensions (theta)
-questions = df_matrix.columns.tolist()
-questions = [int(q[1:]) for q in questions]
-questions = pd.DataFrame(questions, columns=["related_question_id"])
-questions = questions.merge(answers, on="related_question_id", how="inner")
+question_names = answer_values.columns.tolist()
+question_names = [int(q[1:]) for q in question_names]
+question_names = pd.DataFrame(question_names, columns=["question_id"])
+question_selection = question_names.merge(questions, on="question_id", how="inner")
 
 # gather question dimension (theta)
 theta_df = pd.DataFrame(theta.T, columns=[f"dim{i}" for i in range(c)])
-theta_df = pd.concat([questions, theta_df], axis=1)
+theta_df = pd.concat([question_selection, theta_df], axis=1)
 
 # calculate log change and save theta
 question_means = np.nanmean(Y, axis=0)
 theta_df["question_mean"] = question_means
-# for i in range(3):
-#    theta_df[f"dim{i}_log_change"] = theta_df[f"dim{i}"] / theta_df["question_mean"]
-#    theta_df[f"dim{i}_log_change"] = [np.log(x) for x in theta_df[f"dim{i}_log_change"]]
-# theta_df = theta_df.sort_values("dim0_log_change")
 theta_df.to_csv(f"../data/EM/{filename}_theta_{c}_{subset}.csv", index=False)
 
 # gather entry dimension (q)
-entry_ids = df[["entry_id"]]
+entry_ids = answers[["entry_id"]]
 df_entries = entry_ids.merge(entry_metadata, on="entry_id", how="inner")
 q_df = pd.DataFrame(q, columns=[f"dim{i}" for i in range(c)])
 df_entries = pd.concat([df_entries, q_df], axis=1)
+df_entries = df_entries.sort_values("entry_id")
 
 # save
 df_entries.to_csv(f"../data/EM/{filename}_q_{c}_{subset}.csv", index=False)

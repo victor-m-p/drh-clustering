@@ -102,18 +102,6 @@ answers_subset = answers[answers["related_question_id"].isin(question_id_group_6
 check_data(answers_subset)
 
 """ 
-Add back the short question names 
-"""
-
-# now add back the short question names
-short_question_names = answers_question_name[
-    ["related_question_id", "question_short"]
-].drop_duplicates()
-answers_subset = answers_subset.merge(
-    short_question_names, on="related_question_id", how="inner"
-)
-
-""" 
 Select only relevant polls: 
 - Religious Group (v5)
 - Religious Group (v6)
@@ -239,6 +227,22 @@ answers_subset = pd.concat(combination_list)
 # recode -1 to np.nan
 answers_subset["answer_value"] = answers_subset["answer_value"].replace(-1, pd.NA)
 check_data(answers_subset)
+
+""" 
+Add back the short question names.
+Should be after the preceeding step to avoid nan. 
+"""
+
+# now add back the short question names
+short_question_name = answers_question_name[
+    ["related_question_id", "question_short"]
+].drop_duplicates()
+short_question_name = short_question_name.rename(
+    columns={"related_question_id": "question_id"}
+)
+answers_subset = answers_subset.merge(
+    short_question_name, on="question_id", how="inner"
+)
 
 """ 
 Now we assign weight to the data:
