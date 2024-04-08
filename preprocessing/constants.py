@@ -25,7 +25,7 @@ question_coding = {
     "Supernatural beings care about personal hygiene:": "personal hygiene",
     # SHG
     # NB: "Other feature(s) of supreme high god" left out intentionally
-    # NB: "The supreme high god possesses/exhibis some other feature" left out intentionally
+    # NB: "The supreme high god possesses/exhibits some other feature" left out intentionally
     "Are supernatural beings present:": "supernatural beings present",  # level: 0
     "A supreme high god is present:": "supreme high god present",  # level: 1
     "The supreme high god is anthropomorphic:": "is anthropomorphic",  # level: 2 ...

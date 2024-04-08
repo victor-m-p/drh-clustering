@@ -14,11 +14,11 @@ import numpy as np
 import pandas as pd
 from helper_functions import fit, custom_matmul
 
-np.random.seed(0)
+np.random.seed(1)
 
 ## setup ##
 c_grid = [c + 1 for c in range(20)]
-filename = "shg"
+filename = "monitoring"
 subset = "all"
 
 # load data
@@ -48,7 +48,10 @@ BIC_dict = {}
 n = X.shape[0]  # Number of observations
 
 for c in c_grid:  # For each number of clusters
-    theta, q = fit(X, c)
+    theta, q = fit(X, c, weights=weight, num_its=1000, eps=1e-10)
+
+    # does this make sense
+    # here we are calculateing log likelihood on theta
     logL = np.sum(
         q
         * (
@@ -56,7 +59,7 @@ for c in c_grid:  # For each number of clusters
             + custom_matmul((1 - Y), np.log(1 - theta).T)
         )
     )
-    k = c * X.shape[1] + c - 1  # Number of parameters
+    k = c * X.shape[1] + (c - 1)  # Number of parameters
     AIC = (2 * k) - (2 * logL)
     BIC = (np.log(n) * k) - (2 * logL)
 

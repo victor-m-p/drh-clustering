@@ -292,6 +292,25 @@ monitoring_expanded = expand_data(monitoring, "question_id", "entry_id")
 shg_expanded["entry_id"].nunique()
 monitoring_expanded["entry_id"].nunique()
 
+
+# how many have complete answer sets?
+def check_complete(df):
+    num_na = (
+        df.drop(columns=["entry_id", "weight"])
+        .isna()
+        .sum(axis=1)
+        .reset_index(name="n_nan")
+    )
+    num_no_na = num_na[num_na["n_nan"] == 0]
+    return len(num_no_na)
+
+
+check_complete(shg_expanded)
+check_complete(monitoring_expanded)
+
+shg_expanded = shg_expanded.sort_values("entry_id").reset_index(drop=True)
+monitoring_expanded = monitoring_expanded.sort_values("entry_id").reset_index(drop=True)
+
 # save
 shg_expanded.to_csv("../data/preprocessed/shg_expanded.csv", index=False)
 monitoring_expanded.to_csv("../data/preprocessed/monitoring_expanded.csv", index=False)
