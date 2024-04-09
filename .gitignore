@@ -1,5 +1,4 @@
 data/raw/data_dump.csv
-data/dump/postgres.dump.2024.04.07.tar
 data/dump/postgres.dump_2024_04_07.tar
 preprocessing/answers_1_legacy.py
 preprocessing/select_columns.py
