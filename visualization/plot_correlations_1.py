@@ -9,7 +9,7 @@ import seaborn as sns
 from helper_functions import weighted_corr
 
 # setup
-superquestion = "monitoring"
+superquestion = "shg"  # monitoring
 
 # load data
 df_matrix = pd.read_csv(f"../data/preprocessed/{superquestion}_expanded.csv")

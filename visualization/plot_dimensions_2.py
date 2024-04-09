@@ -3,12 +3,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # setup
-c = 7
-superquestion = "monitoring"
+superquestion = "shg"  # monitoring
 
 # load data
-df_q = pd.read_csv(f"../data/EM/{superquestion}_q_{c}_all.csv")
-df_theta = pd.read_csv(f"../data/EM/{superquestion}_theta_{c}_all.csv")
+df_q = pd.read_csv(f"../data/EM/{superquestion}_q_all.csv")
+df_theta = pd.read_csv(f"../data/EM/{superquestion}_theta_all.csv")
 
 # First plot data preparation
 df_plot1 = df_theta.drop(columns=["question_id", "question_mean"])
@@ -24,6 +23,4 @@ ax.set_ylabel("Question", size=14)
 plt.xticks(size=12)
 plt.yticks(size=12)
 plt.tight_layout()
-plt.savefig(
-    f"../figures/{superquestion}_{c}_dimensions.jpg", dpi=300, bbox_inches="tight"
-)
+plt.savefig(f"../figures/{superquestion}_dimensions.jpg", dpi=300, bbox_inches="tight")

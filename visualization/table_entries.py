@@ -1,17 +1,16 @@
-import numpy as np
 import pandas as pd
 
 # setup
-superquestion = "shg"
-c = 10
+superquestion = "monitoring"
 
 # load data
-df_q = pd.read_csv(f"../data/EM/{superquestion}_q_{c}_all.csv")
+df_q = pd.read_csv(f"../data/EM/{superquestion}_q_all.csv")
 df_answers = pd.read_csv(f"../data/preprocessed/{superquestion}_expanded.csv")
 
 # get maximum dimension for each entry and maximum dimension value
-df_q["max_dim"] = df_q[[f"dim{x}" for x in range(c)]].idxmax(axis=1)
-df_q["max_dim_value"] = df_q[[f"dim{x}" for x in range(c)]].max(axis=1)
+dimension_names = [col for col in df_q.columns if col.startswith("dim")]
+df_q["max_dim"] = df_q[dimension_names].idxmax(axis=1)
+df_q["max_dim_value"] = df_q[dimension_names].max(axis=1)
 
 # now select columns
 df_q = df_q[["entry_id", "entry_name", "max_dim", "max_dim_value"]]
@@ -29,4 +28,4 @@ df_q = df_q.sort_values(
 )
 
 # save 1 overview table
-df_q.to_csv(f"../tables/{superquestion}_entries_{c}.csv", index=False)
+df_q.to_csv(f"../tables/{superquestion}_entries.csv", index=False)

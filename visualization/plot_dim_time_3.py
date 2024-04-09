@@ -13,12 +13,11 @@ import seaborn as sns
 import matplotlib.ticker as ticker
 
 # setup
-c = 10
 x_min = -1000
-superquestion = "shg"
+superquestion = "monitoring"
 
-df_q = pd.read_csv(f"../data/EM/{superquestion}_q_{c}_all.csv")
-dimension_columns = [f"dim{x}" for x in range(c)]
+df_q = pd.read_csv(f"../data/EM/{superquestion}_q_all.csv")
+dimension_columns = [col for col in df_q.columns if col.startswith("dim")]
 temporal_columns = ["entry_id", "entry_name", "year_from"] + dimension_columns
 df_temporal = df_q[temporal_columns]
 df_temporal["year_from"] = df_temporal["year_from"].astype(int)
@@ -78,6 +77,4 @@ plt.legend(
 )
 
 plt.tight_layout()
-plt.savefig(
-    f"../figures/{superquestion}_{c}_temporal.jpg", dpi=300, bbox_inches="tight"
-)
+plt.savefig(f"../figures/{superquestion}_temporal.jpg", dpi=300, bbox_inches="tight")

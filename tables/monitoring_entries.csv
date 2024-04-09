@@ -1,0 +1,604 @@
+entry_id,entry_name,max_dim,max_dim_value,num_not_answered
+400,Singaporean Mega-Churches,dim0,1.0,0
+424,Achaemenid Religion,dim0,1.0,0
+563,"Gaddi, a Hindu community of the Western Himalayas",dim0,1.0,0
+896,Sannō Shintō,dim0,1.0,0
+928,The Ghost Dance Movement and the Lakota Sioux,dim0,1.0,0
+946,Nyingma (rnying ma),dim0,1.0,0
+971,Gāṇapatya,dim0,1.0,0
+995,Tamil Neo-Saivism,dim0,1.0,0
+1129,Ancient Thessalians,dim0,1.0,0
+1322,Pagans under the Emperor Julian,dim0,1.0,0
+1560,‘Ara’is al-Majalis fi Qasas al-Anbiya' عَرَائِسُ الْمَجَالِسِ فِي قَصَصِ الْأَنْبِيَاءِ,dim0,1.0,0
+1695,"Xiaojing ""Classic of Filial Piety""",dim0,1.0,0
+1778,Le Conflit d'Adam et Eve contre Satan ou The first and the Second hidden book of Adam and Eve صراع آدم وحوّاء ضدّ الشيطان,dim0,1.0,0
+2009,Ancient Arcadians,dim0,1.0,0
+441,Worshipers of Śītalā,dim0,1.0,1
+441,Worshipers of Śītalā,dim0,1.0,1
+1013,Estado da Índia Renegades in Deccan,dim0,1.0,1
+1071,Digital Shinto Communities,dim0,1.0,1
+1898,Shurpu Incantation Series,dim0,1.0,1
+1993,Ancient Boeotians,dim0,1.0,1
+632,Local Religion at Selinous,dim0,1.0,2
+1290,4QInstruction,dim0,1.0,4
+749,Korean shamanism,dim0,1.0,5
+422,Demeter Cult,dim0,1.0,8
+1522,Tijaniyya Tariqa الطريقة التجانية,dim0,1.0,8
+228,Late Chosŏn Korea,dim0,1.0,9
+383,Varkaris,dim0,0.99,0
+439,Śaiva Magic,dim0,0.99,0
+492,Roman Divination,dim0,0.99,0
+714,Tamil Śaiva Bhakti,dim0,0.99,0
+860,Kimpa Vita,dim0,0.99,0
+960,Bön (Bon),dim0,0.99,0
+921,Bhils,dim0,0.99,1
+775,Jainism,dim0,0.98,0
+1293,The Zapotec or Ben 'Zaa (The Cloud People),dim0,0.98,0
+2084,MAITATSINE: NIGERIA'S BLOODY RELIGIOUS TERRORIST MOVEMENT,dim0,0.98,2
+1582,Cult of Bona Dea,dim0,0.98,3
+1083,Drukpa Kagyü School (Bhutan),dim0,0.97,2
+2071,"Songs of the Sage (4Q510, 4Q511)",dim0,0.97,2
+1352,Śākadvīpīya Brāhmaṇas,dim0,0.96,0
+439,Śaiva Magic,dim0,0.94,0
+1349,The Dingxiang Wang Cult,dim0,0.92,8
+1191,Religion in Greco-Roman Alexandria,dim0,0.92,10
+1265,Mozi 墨子,dim0,0.9,0
+470,Archaic Spartan Cults,dim0,0.89,9
+988,Churches of Christ- United States,dim0,0.88,1
+1546,4QPseudo Ezekiel,dim0,0.88,4
+623,Diasporic American Hinduism,dim0,0.85,0
+230,Religion in Mesopotamia,dim0,0.85,4
+390,Dasara,dim0,0.84,0
+738,Ancient Egyptian,dim0,0.84,0
+204,Han Confucianism,dim0,0.81,12
+1661,Ludlul Bel Nemeqi,dim0,0.77,12
+933,Marcionites,dim0,0.76,0
+918,Fangshi,dim0,0.71,12
+763,Moriori,dim0,0.7,13
+1624,Neo-Assyrian Healers (āšipu/mašmaššu-exorcists),dim0,0.69,5
+581,Mentawai (Rereiket),dim0,0.68,9
+1471,Book of Ezekiel,dim0,0.67,7
+423,Mediterranean,dim0,0.59,18
+2263,"lettre au disciple Ayyuha-l-walad par Al Ghazâlî رسالة ""ايّها الولد لأبي حامد الغزالي",dim0,0.57,2
+1283,Butonese Muslims,dim0,0.56,12
+211,Amarna Religion,dim0,0.53,7
+23,Late Shang Religion,dim0,0.4,14
+957,Spartan Religion,dim0,0.37,14
+997,Ancient Egypt - Early Dynastic Period,dim0,0.32,16
+1928,(The gathering of the Messenger of God does not falter)وجمع رسول الله لا يتشعث,dim1,0.88,0
+486,Church of Jesus Christ of Latter-day Saints (early),dim1,0.82,0
+525,Church of Jesus Christ of Latter-day Saints (modern),dim1,0.82,0
+654,12th-13th c Cistercians,dim1,0.82,0
+688,Darul Uloom Deoband,dim1,0.82,0
+843,Bnay Qyāmā and Bnāt Qyāmā,dim1,0.82,0
+873,The Branch Davidians,dim1,0.82,0
+884,Sub Saharan Africa Pentecostalism,dim1,0.82,0
+886,Pushtimarg (The Path of Grace) in the UK and Gujarat,dim1,0.82,0
+891,Peruvian Mormons,dim1,0.82,0
+906,The Church of England,dim1,0.82,0
+943,Moravian Missionaries in Nunatsiavut,dim1,0.82,0
+965,Pachomian Monasticism,dim1,0.82,0
+1038,Sino-Muslims in Qing China,dim1,0.82,0
+1127,Anglican Church of Korea,dim1,0.82,0
+1178,Modern Mystery School (MMS),dim1,0.82,0
+1247,Exovedate,dim1,0.82,0
+1371,Twelver Shi'ism in post-revolutionary Iran,dim1,0.82,0
+1544,Ukrainian Greek Catholic Church,dim1,0.82,0
+1570,Tamil Muslims,dim1,0.82,0
+1573,Al-Risala (The Message) الرسالة,dim1,0.82,0
+1628,Bad' al-Khalq wa Qasas al-Anbiya' of Kisa'i كتاب بدء الخلق وقصص الأنبياء للكسائي,dim1,0.82,0
+1652,Le Livre de al-'Ibana 'an 'Usul al-Diyana de al-Ash'ari كتاب الإبانة عن أصول الديانة للأشعري,dim1,0.82,0
+1654,Le Parti du Mouvement de La Nahda حزب حركة النهضة,dim1,0.82,0
+1708,الإباضية  Al-Ibadia,dim1,0.82,0
+1709,Almohads (al-Muwaḥḥidūn),dim1,0.82,0
+1741,Methodism in Zimbabwe or Methodist Church in Zimbabwe,dim1,0.82,0
+1779,المذهب المالكي بالبلاد التونسية,dim1,0.82,0
+1780,الطريقة الشاذلية في تونس,dim1,0.82,0
+1781,المذهب الشيعي في تونس,dim1,0.82,0
+1795,‘Adhwā‘ Al-Bayān fi ‘Idhāḥ Al-Qur‘ān bi Al-Qur‘ān: أضواء البيان في إيضاح القرآن بالقرآن,dim1,0.82,0
+1805,Wahhabisme الوهّابيّة,dim1,0.82,0
+1820,"Cherubim and Seraphim Church Unification, Campus Fellowship",dim1,0.82,0
+1835,"The Cherubim and Seraphim Church of Zion, Ugbonla",dim1,0.82,0
+1872,"The Holy Apostles Community, Ayetoro",dim1,0.82,0
+1897,"The Episcopal Church of Cherubim and Seraphim, Zion Pepe",dim1,0.82,0
+1908,"Buddhist Traders in the Chinese Quarter in Hakata, Japan",dim1,0.82,0
+1940,"The Holy Apostles Community, Ori-Oke Iwamimo",dim1,0.82,0
+1961,"Grace Covenant Centre, Ado-Ekiti",dim1,0.82,0
+1966,Cherubim & Seraphim Movement Church (Worldwide) Ayo Ni O,dim1,0.82,0
+1974,"Chapel of Grace, Ile-Ife",dim1,0.82,0
+1976,Who is not assisted by the religious scholar(The Jurist) (Man La Yahdhuruhu al-Faqih) من لا يحضره الفقيه,dim1,0.82,0
+1991,(Laws of Sharia rulings and issues of the branches of jurisprudence.) قوانين الأحكام الشرعية ومسائل الفروع الفقهية,dim1,0.82,0
+1994,Nigeria Fellowship of Evangelical Students (NIFES),dim1,0.82,0
+2000,"The Community Church of Apostles Nigeria and Oversea (COCANO), Ajegunle",dim1,0.82,0
+2006,New Life for All Nations Ministries,dim1,0.82,0
+2016,الدولة الفاطمية 909 - 1171م,dim1,0.82,0
+2021,The United Missionary Church of Africa,dim1,0.82,0
+2023,الدولة الزيرية 971 - 1152,dim1,0.82,0
+2031,الدولة الأغلبية  184-296 هجري,dim1,0.82,0
+2052,Christ Way Ministries International,dim1,0.82,0
+2053,(Alert the unwary)تنبيه الغافلين,dim1,0.82,0
+2054,Christ Apostolic Church,dim1,0.82,0
+2064,Sha'rawi interpretation of the Coran تفسير محمّد متولّي الشعراوي,dim1,0.82,0
+2069,L'ordre Soufi Qasimite Hadfite الطريقة الصوفية القاسميّة الهادفية,dim1,0.82,0
+2070,Overcomers Evangelical Mission International (Ori-Oke Asegun),dim1,0.82,0
+2079,(Jewels of meanings and fulfillment of wishes)جواهر المعاني و بلوغ الأماني,dim1,0.82,0
+2083,(The spirit of Morality)روح الأدب,dim1,0.82,0
+2089,L'ordre Soufit karkariya en Tunisie الطريقة الكركرية في تونس,dim1,0.82,0
+2114,Tijaniyyah Sufi Movement in North-Western Nigeria,dim1,0.82,0
+2116,Qadiriyyah Movement in the Sokoto Caliphate.,dim1,0.82,0
+2122,Jama'at Izalat al-Bid'ah wa Iqamat al-Sunnah (JIBWIS),dim1,0.82,0
+2126,Nasrul-lahi-li Fathi Society of Nigeria (NASFAT),dim1,0.82,0
+2133,ANSAR-UD-DEEN SOCIETY OF NIGERIA,dim1,0.82,0
+2138,الجماعة الأحمدية الإسلامية في نيجيريا,dim1,0.82,0
+2139,Shi'a Group in Nigeria,dim1,0.82,0
+2210,Living Faith Church Worldwide,dim1,0.82,0
+2228,Church of God Mission,dim1,0.82,0
+2243,Hui People,dim1,0.82,0
+2245,صقلية الإسلامية,dim1,0.82,0
+2255,Dongxiang,dim1,0.82,0
+2262,Le Commencement et la Fin البداية والنهاية de Ibn Kathir لابن كثير,dim1,0.82,0
+2265,القرآن الكريم Le Noble Coran,dim1,0.82,0
+2272,Abou Hamid Al-Ghazali:   Le livre d'Al-Jam Al-Awam sur la science de la théologie الجام العوام عن علم الكلام,dim1,0.82,1
+1043,Islam in Aceh,dim1,0.81,1
+1903,The 'Abbāsids,dim1,0.8,2
+970,Cult of Isis (Mysteries of Isis),dim1,0.8,3
+1218,Yiguan Dao/I-Kuan Tao 一貫道,dim1,0.78,2
+358,16th-17th c. Gauḍīya Vaiṣṇava Tradition,dim1,0.77,4
+1650,"كتاب"" المقدّمة ""لابن  خلدون livre  Mou qaddîma d'Abd Al Rahman Ibn Khaldoun",dim1,0.76,0
+676,"The Order of the Holy Trinity for the Redemption of Captives, 1198-1500",dim1,0.76,1
+1300,"Enlace de Agentes de Pastoral Indígena (EAPI, Network of Indigenous Ministry Agents)",dim1,0.76,1
+1311,Jehovah's Witnesses,dim1,0.75,0
+415,Shaiva World Renouncers,dim1,0.74,1
+419,The Worship of Jagannath in Puri (Odisha),dim1,0.74,1
+562,Medieval Śrīvaiṣṇavism,dim1,0.74,1
+624,The Roshaniyya,dim1,0.74,1
+966,"Naqshbandī Order, Naqshbandī Tarīqa, Naqshbandīyyah, Khwājagān,",dim1,0.74,1
+1229,Three Self Patriotic Movement (TSPM),dim1,0.74,1
+1466,Islamic modernists,dim1,0.74,1
+1607,Zaydism and the state in Yemen,dim1,0.74,1
+1689,The Isma'ilis in the Ottoman Empire,dim1,0.74,1
+1697,Stylite Monks,dim1,0.74,1
+2027,Hizb-ut-Tahrir,dim1,0.74,1
+1426,Early Missionary Christianity in China,dim1,0.74,2
+1024,Universal Salvation Ritual,dim1,0.72,3
+1523,Tafsīr al-taḥrīr wa al-tanwīr,dim1,0.7,2
+1529,Byzantine Iconoclasts (726-787 CE),dim1,0.7,2
+2025,"The Satisfaction of Souls and Words of the Wise concerning the scholars and righteous ones buried in Fez, by Muhammad ibn Ja'far al-Kattani",dim1,0.7,3
+944,Mohyla's Ukrainian Church,dim1,0.7,5
+869,Sichuan Esoteric Buddhist Cult,dim1,0.69,2
+1386,Liumen (Liu School),dim1,0.69,2
+639,Chinese Esoteric Buddhism (Tang Tantrism),dim1,0.69,4
+645,"Meo Muslim, Mev, Mewati Muslim",dim1,0.67,3
+355,Paul the Apostle,dim1,0.66,2
+420,Swaminarayan Sampraday,dim1,0.66,2
+1508,Zaytuna Magazine/ المجلة الزيتونية,dim1,0.66,4
+1906,"(Acceptable means of praising the Prophet, may God bless him and grant him peace)الوسائل المتقبلة في مدح النبي صلى الله عليه و سلم",dim1,0.65,0
+2141,(Ahl al-Sunnah Group for Preaching and Jihad)جماعة أهل السنة للدعوة والجهاد,dim1,0.65,0
+193,Fijian Religion (contemporary),dim1,0.65,3
+880,Egyptian Salafism (inluding North Africa and West Asia),dim1,0.64,1
+1803,مفتاح التفسير,dim1,0.63,0
+185,Shinnyo-en,dim1,0.63,5
+1108,Early Christianity and Monasticism in Egypt,dim1,0.63,5
+200,Nechung Cult,dim1,0.62,4
+1295,Donatism,dim1,0.61,3
+948,Christianity in Ephesus,dim1,0.6,6
+1058,Syŏnggyŏng chikhae kwang-ik,dim1,0.6,6
+2038,"Cathars, Catharism, Albigenses, Albigensians, Cathari, Catharistae, ""Pure Christians""",dim1,0.6,6
+1149,Christianity in Tang China,dim1,0.59,2
+1983,Early Byzantine Asceticism,dim1,0.59,5
+456,The Essenes,dim1,0.55,5
+1584,Tafattuq al-aḥkām,dim1,0.55,6
+187,Chinese State Religion (Shang and Western Zhou),dim1,0.55,12
+1958,The Apostolic Faith Mission in Zimbabwe,dim1,0.54,2
+690,Ahl-e-Sunnat wa Jamaat,dim1,0.53,0
+989,Opus Dei,dim1,0.53,0
+994,"Monastic Communities of Lower Egypt: Nitria, Kellia, Scetis",dim1,0.53,0
+1041,Korean Catholicism,dim1,0.53,0
+1907,A treatise on the rulings of the people of Dhimma (رسالة في أحكام اهل الذمة),dim1,0.53,0
+2008,(The beginning of the diligent and the end of the frugal) بداية المجتهد ونهاية المقتصد,dim1,0.53,0
+2032,(The light of the rulers regarding what is best for them and on them) ضياء الحكام فيما لهم وعليهم من الأحكم,dim1,0.53,0
+2040,(Condolences to the Al-Azhar community) المقدمة العزية للجماعة الأزهرية,dim1,0.53,0
+2082,(The spears of the Merciful Party on the Throat of the Servants of the Merciful.) رماح حزب الرحيم على نحور حزب الرحيم,dim1,0.53,0
+2157,Blue Light Evangelicals in the Late Eighteenth-Century Royal Navy,dim1,0.53,0
+406,Daoism,dim1,0.53,9
+934,Mongolian Buddhism during the Revolutionary Period,dim1,0.53,9
+2128,Paulicians,dim1,0.53,10
+1419,Ancient Egyptian Religion in the Early 18th Dynasty,dim1,0.52,6
+1028,German Pietists (Hasidei Ashkenaz),dim1,0.51,6
+178,Ancestral Cult of the Han,dim1,0.51,9
+440,"Jain Digambara Tantra, Karnataka",dim1,0.5,2
+982,The Samaritans (Persian to early Roman periods),dim1,0.5,6
+1037,Third Intermediate Period in Ancient Egypt,dim1,0.5,7
+195,Shakta Religion,dim1,0.5,9
+1517,Tunisian Women's Associations,dim1,0.48,5
+189,Israelite Religion,dim1,0.48,8
+1162,Lingbao dafa,dim1,0.46,13
+1253,Damascus Document,dim1,0.45,9
+1418,Book of Jonah,dim1,0.45,12
+978,Indonesian Catholicism,dim1,0.41,1
+1234,Ashanti,dim1,0.41,13
+255,Talismanic Religion,dim1,0.4,11
+186,Buddhism (Late Ming),dim1,0.39,12
+199,Mithraism,dim1,0.38,13
+600,Riffians,dim1,0.38,13
+1268,Monotheistic Pre-Islamic South Arabia,dim1,0.38,15
+717,Igbo,dim1,0.37,13
+240,Late Medieval Chinese State Religion,dim1,0.36,14
+374,Non-dual Śaiva Tantra,dim1,0.36,14
+1674,New Hampshire Declaration of Faith,dim1,0.34,19
+588,Nyakyusa,dim1,0.33,14
+682,Lakher,dim1,0.33,15
+1196,K’iche’ (Quiché),dim1,0.32,15
+1399,Religion in the Mittani Empire,dim1,0.31,14
+453,Guangzhou (Buddhism),dim1,0.31,15
+578,Gond,dim1,0.31,15
+794,Omaha,dim1,0.3,13
+744,Rwala Bedouin,dim1,0.3,14
+574,Konso,dim1,0.3,15
+650,Manus,dim1,0.3,15
+674,Aymara,dim1,0.3,15
+635,Ifugao,dim1,0.3,17
+565,Fellahin,dim1,0.29,15
+685,Badjau,dim1,0.29,17
+1251,Tsonga,dim1,0.28,16
+729,Kikuyu,dim1,0.28,17
+443,Tyva (Buddhism),dim1,0.27,16
+457,Kananga - Pentacostal,dim1,0.27,16
+458,Tanna - Christian,dim1,0.27,16
+459,Tanna - Kastom,dim1,0.27,16
+722,Gros Ventre,dim1,0.27,16
+609,Tallensi,dim1,0.26,16
+1615,Teuchitlan Tradition,dim1,0.26,16
+471,Urban Northern Ireland,dim1,0.26,17
+256,Etruscan Religion,dim1,0.25,15
+1404,Religion in Nabataea,dim1,0.25,15
+1452,Soushen ji 搜神記,dim1,0.24,16
+325,Religion at Mawangdui,dim1,0.24,19
+1231,"Shenxiao 神霄 (""Divine Empyrean"") Daoism",dim1,0.23,16
+1125,Ancient Egypt - the Ramesside Period,dim1,0.23,17
+250,"Tiantai Buddhism (Song Dynasty, Liangzhe Circuit)",dim1,0.23,18
+465,Mysore,dim1,0.23,18
+468,Turkana,dim1,0.23,18
+493,Krishna Worship in North India - Modern Period,dim1,0.23,18
+657,Trukese,dim1,0.23,18
+679,Santal,dim1,0.23,18
+757,Kiribati,dim1,0.23,18
+613,Maori,dim1,0.22,18
+671,Mbau Fijians,dim1,0.22,18
+203,Pre-imperial Chu Religion,dim1,0.21,19
+625,Copper Inuit,dim1,0.21,19
+571,Abkhaz,dim1,0.2,18
+1263,Judean/Yehudite Colony at Elephantine (Persian period),dim1,0.2,18
+299,Shang State Religion,dim1,0.19,18
+597,Confucianism - Eastern Zhou,dim1,0.19,18
+675,Chukchee,dim1,0.19,18
+712,Huichol,dim1,0.19,18
+1223,Toda,dim1,0.19,18
+1409,Formative Olmec,dim1,0.19,18
+1525,Changsha Zidanku Chu bo shu 長沙子彈庫楚帛書 1 (Chu Silk Manuscript),dim1,0.19,18
+621,Haitians,dim1,0.19,19
+202,Early Zhou Religion,dim1,0.18,19
+1390,Eastern Apache,dim1,0.18,19
+387,Ahmadi; Ahmadiyya Muslim Jama'at; Ahmadiya,dim2,1.0,0
+592,Veerashaivas,dim2,1.0,0
+963,The Knights Templar,dim2,1.0,0
+1321,Mourides (Muridiyya),dim2,1.0,0
+1341,Muslim Students Association of the United States and Canada,dim2,1.0,0
+1367,Targums,dim2,1.0,0
+1554,"Mustafa Sabri, Mawqif al-ʿAql",dim2,1.0,0
+1575,L’esprit libéral du Coran,dim2,1.0,0
+1588,In the Shade of the Qur'an في ظلال القرآن,dim2,1.0,0
+1618,Diya'u al-Ta'aweel fee Ma'ani al-Tanzeel (The Bright interpretation of the meanings of the Qur'an),dim2,1.0,0
+1776,الطريقة القادرية في البلاد التونسية,dim2,1.0,0
+1777,الطريقة التّيجانية بالبلاد التونسية,dim2,1.0,0
+1869,IFA RELIGIOUS GROUP IN ILE- IFE,dim2,1.0,0
+2059,(The Garden of Knowers)بستان العارفين,dim2,1.0,0
+2085,الحصن الرصين في علم التصريف,dim2,1.0,0
+2274,Ìjọ Àdìmúlà (An Institutionalised Indigenous Religious Movement in Yorubaland,dim2,1.0,0
+227,Hindu Goddess Worship in Northwest India—Modern Period,dim2,1.0,1
+1324,Taiping jing,dim2,1.0,1
+2086,Mathnawi ma'nawi,dim2,1.0,2
+1981,(Guiding the traveler to the most honorable path in the jurisprudence of Imam Malik.)إرشاد السالك إلى أشرف المسالك في فقه الإمام مالك,dim2,0.99,0
+1811,كتاب قصيدة المرثية (Kitab Qasidat al-Marsiyyah).,dim2,0.99,2
+1540,The Sanskrit Yasna,dim2,0.98,0
+1542,Umbanda,dim2,0.97,0
+2061,OYA RELIGIOUS GROUP IN OYO,dim2,0.97,0
+1076,Inquisitors of Goa's Santo Ofício,dim2,0.96,3
+1806,Sango Religious group in Oyo,dim2,0.95,0
+952,Ethiopian Jews,dim2,0.94,0
+1006,Ancient Egypt - Old Kingdom,dim2,0.94,0
+1701,The Premonstratensian Order in the Middle Ages,dim2,0.94,1
+1818,(Urjuzat al-Wildan) أرجوزة الولدان,dim2,0.91,2
+1008,Ancient Egypt - First Intermediate Period,dim2,0.9,2
+2149,Judaism in Byzantium,dim2,0.89,2
+841,Sa skya,dim2,0.89,3
+567,Gay and Lesbian Vaishnava Association (GALVA-108),dim2,0.88,0
+2233,The Way of Former Heaven (Xiantiandao 先天道),dim2,0.88,3
+941,Chan Buddhists in early Qing period,dim2,0.88,4
+926,Ladakhi Buddhism,dim2,0.87,0
+2104,الطريقة التجانية في تونس ق18-ق19 ATARIKA TJENIA FI TOUNES  XVIII-XIXème siècle,dim2,0.87,0
+629,Newar Buddhists,dim2,0.87,3
+308,Neo-Assyrian Scholars,dim2,0.87,5
+1664,The Didache,dim2,0.86,0
+1677,Royal Hittite Religion,dim2,0.86,5
+680,Gujarati Mata Worshipers,dim2,0.85,1
+2001,The Book of Deuteronomy,dim2,0.85,1
+570,Supreme Master Ching Hai World Society,dim2,0.85,3
+1539,Maqāṣid al-šarī῾a al-islāmiyya,dim2,0.84,1
+1924,The Deuteronomistic History,dim2,0.83,3
+910,Christian Base Community movement,dim2,0.82,0
+977,Chishti Sufis,dim2,0.82,0
+987,"Parsis, Zoroastrians of India",dim2,0.82,2
+1808,'yan Taru (Women Cadre of the Nana Asma'u),dim2,0.8,0
+927,Zealots,dim2,0.8,4
+1589,Peshitta,dim2,0.79,0
+1774,إباضية جزيرة جربة,dim2,0.77,0
+2080,Daily Communal Petitions (Tefillah/Amidah),dim2,0.77,0
+908,Sino-Christian Theology,dim2,0.77,1
+1248,Religion in the Old Assyrian Period,dim2,0.75,3
+1243,Shengjing zhijie,dim2,0.71,5
+1576,Book of Amos,dim2,0.71,5
+681,Sargonic Empire,dim2,0.71,9
+576,Kuy traditional religions,dim2,0.7,8
+1736,Ihya'u Sunnah wa Ikhmadul Bid'ah,dim2,0.67,0
+1771,إنفاق الميسور في تاريخ بلاد التكرار,dim2,0.67,1
+287,Mithraism,dim2,0.65,9
+1484,Mesopotamian Exorcistic Texts,dim2,0.63,5
+1513,Imrā’atu-nā fī l-šarīʻa wa-l-muŷtamaʻ / امرأتنا في الشريعة والمجتمع,dim2,0.61,4
+887,Postsocialist Mongolian Shamanism,dim2,0.61,9
+1258,Religion in Judah,dim2,0.57,4
+931,The Society of Jesus (Jesuits) in Britain,dim2,0.56,0
+852,Pre-Christian Religion / Paganism in Ireland,dim2,0.54,7
+1259,"The LuWang School, the School of Lu Xiangshan and Wang Yangming",dim2,0.54,7
+1581,Book of Jeremiah,dim2,0.54,9
+870,Postsocialist Mongolian Buddhism,dim2,0.54,10
+1989,Iron Age Celtic Spain and Portugal (Celtiberia),dim2,0.53,5
+1189,Yādiya/Sam'al,dim2,0.52,11
+937,Vestal Virgins,dim2,0.5,1
+980,Pure Land Buddhist Schools in Early Medieval Japan,dim2,0.47,0
+1227,Polytheistic Pre-Islamic South Arabia,dim2,0.47,11
+684,Huron,dim2,0.2,18
+1323,Luguru,dim2,0.18,19
+217,Roman private religion,dim3,1.0,0
+224,Old Norse Fornsed,dim3,1.0,0
+231,Roman private religion,dim3,1.0,0
+284,Yolngu religion,dim3,1.0,0
+361,Classical Greek Religion,dim3,1.0,0
+439,Śaiva Magic,dim3,1.0,0
+439,Śaiva Magic,dim3,1.0,0
+788,The Late Bronze Age City-State of Ugarit,dim3,1.0,0
+859,Valentinians,dim3,1.0,0
+1075,Dazhidu lun 大智度論,dim3,1.0,0
+1077,The Cherished Instruction (Baoxun 保訓),dim3,1.0,0
+1140,Early Medieval Confucianism,dim3,1.0,0
+1158,Early Daoist text—Commands and Admonitions for the Families of the Great Dao (Dadaojia lingjie大道家令戒),dim3,1.0,0
+1308,Jews and Jewish-Sympathizers in South Arabia,dim3,1.0,0
+1387,Spring and Autumn annals of Master Lü,dim3,1.0,0
+1401,"The ""On the Divine Names"" of Pseudo Denys the Areopagite",dim3,1.0,0
+1429,Enheduana's Exaltation of Inana,dim3,1.0,0
+1534,Shorter Sukhāvatīvyūha Sūtra,dim3,1.0,0
+1626,The Cult of Maritime Hera,dim3,1.0,0
+1657,The Institutes of John Cassian,dim3,1.0,0
+1686,L'islam et les origines de la gouvernance Ali Abdel Razek الإسلام وأصول الحكم علي عبد الرازق,dim3,1.0,0
+1763,Uḍḍīśatantra,dim3,1.0,0
+1998,The Chinese Christian Scroll Pelliot chinois 3847,dim3,1.0,0
+2057,Paskuwatti’s Ritual to Cure Sexual Dysfunction,dim3,1.0,0
+2118,Samaritan Hymn by Amram Dare,dim3,1.0,0
+2140,"St. John Chrysostom, Homilies On the Incomprehensible Nature of God",dim3,1.0,0
+2177,The Covenant Ceremony in the Community Rule (1QS),dim3,1.0,0
+2187,1 Samuel 2:1-10,dim3,1.0,0
+2191,Two Aramaic Mortuary Stelae from Nerab,dim3,1.0,0
+2273,Yuan divination schools,dim3,1.0,0
+646,Lakota Religious Traditions,dim3,1.0,1
+745,Buka,dim3,1.0,1
+929,Drikung Kagyu,dim3,1.0,1
+1044,Han Imperial Cult under Emperor Wu,dim3,1.0,1
+1124,The ancient Egyptian Book of Two Ways,dim3,1.0,1
+1294,The Autobiography of Adad-guppi,dim3,1.0,1
+1574,Household religion at Ur,dim3,1.0,1
+1700,The Book of Hosea,dim3,1.0,1
+1847,Arthaśāstra,dim3,1.0,1
+1852,The Communion Letters by Whitley and Anne Strieber,dim3,1.0,1
+2055,An Akkadian Tamitu-Query,dim3,1.0,1
+2081,Ben Sira 36:1–22,dim3,1.0,1
+2181,Communal Petitions for Days of the Week: Prayer for Friday (4Q504),dim3,1.0,1
+212,Warring States (China) Religion,dim3,1.0,2
+586,Kelantanese Thai Religion,dim3,1.0,2
+854,pre-Christian Irish,dim3,1.0,2
+1004,Religion in Roman Ostia,dim3,1.0,2
+1051,Religion at Tell el-Dab'a (ancient Avaris) in Ancient Egypt,dim3,1.0,2
+2190,Ezra 9,dim3,1.0,2
+1269,Ji shenzhou sanbao gantong lu 集神州三寶感通錄,dim3,1.0,3
+1810,Shang Oracle Bone Inscriptions,dim3,1.0,3
+2208,The Book of Judith,dim3,1.0,3
+1595,The Five Yi Yin Texts,dim3,1.0,4
+739,Lakalai,dim3,1.0,10
+626,Barama River Carib,dim3,1.0,13
+444,Sursurunga,dim3,1.0,16
+1375,Epic of Gilgamesh,dim3,0.99,2
+607,Mohism,dim3,0.99,4
+1855,Atra-Hasīs,dim3,0.98,3
+802,Chinese Nunnery in Myanmar,dim3,0.95,10
+1337,Tell Afis (Syria),dim3,0.93,6
+1943,Cult of Gauchito Gil,dim3,0.9,4
+180,Chinese Folk Religion,dim3,0.6,19
+781,Syria,dim3,0.6,19
+1207,Female alchemy Tradition,dim3,0.6,19
+1421,Tian wen 天問,dim3,0.6,19
+2294,Baopuzi neipian 抱朴子內篇,dim3,0.6,19
+485,Sámi pre-Christian religion,dim3,0.57,14
+686,Popoluca,dim3,0.55,18
+721,Semang,dim3,0.52,15
+201,Mediterranean,dim3,0.52,19
+389,Iban traditional religion,dim3,0.5,14
+614,!Kung,dim3,0.38,18
+572,Trobrianders,dim3,0.32,17
+851,Sikhism in the United States,dim4,1.0,0
+879,Free Methodist Church,dim4,1.0,0
+883,Catholics in the People's Republic of China (PRC),dim4,1.0,0
+915,Protestantism welcoming People with Disabilities,dim4,1.0,0
+950,The Religious Society of Friends,dim4,1.0,0
+953,Sachchai,dim4,1.0,0
+968,"Anabaptist Mennonites in North America, 1683-2021",dim4,1.0,0
+1348,Disability-focused Christianity for Palestinians,dim4,1.0,0
+2148,الدولة الحسينية 1705م -1957م,dim4,1.0,0
+2194,The Redeemed Christian Church of God,dim4,1.0,0
+2246,المذهب الحنفي بالبلاد التونسية,dim4,1.0,0
+2247,الفتح العربي الإسلامي لشمال إفريقيا,dim4,1.0,0
+2308,الفتح العربي الإسلامي للأندلس,dim4,1.0,0
+381,Sikhism: Guru Nanak to Guru Arjan,dim4,1.0,1
+392,Sikhism: Guru Hargobind to Guru Gobind Singh,dim4,1.0,1
+2143,City of God,dim4,1.0,1
+484,Northern Irish Protestants,dim4,1.0,2
+2232,"Lollards, Lollard, the Lollard movement, Lollardism,  Lollardy, Wycliffites",dim4,1.0,4
+182,Pauline Christianity,dim4,0.99,0
+416,Edinoverie,dim4,0.99,0
+919,Catholicism in contemporary Croatia,dim4,0.99,0
+1333,Cult of Thecla,dim4,0.99,0
+2075,L'Interprétation du Coran Intituléتفسير الجامع لأحكام ا Tafsir  Al-Jami' li Ahkam Al Coran par Al-Qurtubi تفسير الجامع لأحكام القرآن للقرطبي,dim4,0.99,0
+2087,"Al-Tabari’s interpretation of the Qur’an تفسير الطبري""جامع البيان في تأويل آي القرآن """,dim4,0.99,0
+894,Universal Fellowship of Metropolitan Community Churches,dim4,0.98,0
+455,Lan Na Buddhism,dim4,0.98,1
+174,Matthew-James-Didache Movement,dim4,0.97,0
+842,American Evangelicalism,dim4,0.97,0
+849,"""Gaiwiio Religion,"" ""Longhouse Religion,"" or ""The Way of Handsome Lake"" of the Seneca Tribe",dim4,0.97,0
+1335,Congregation of the Oratory,dim4,0.97,0
+1344,Tibetan Nonsectarianism (ris med),dim4,0.97,3
+771,Muscular Christianity,dim4,0.96,0
+2147,الدولة الحفصية 1229-1574,dim4,0.95,0
+2180,Cao Đài,dim4,0.95,0
+2248,الدولة المرادية في تونس,dim4,0.95,0
+1338,The Sayings of the Desert Fathers,dim4,0.93,3
+483,Northern Irish Roman Catholics,dim4,0.92,2
+839,19th century German Protestantism,dim4,0.91,0
+961,Romanian Orthodox Church,dim4,0.91,0
+974,"Greek Chalcedonian Christians, Nicaea",dim4,0.91,0
+984,Calvinism (Early/Reformation),dim4,0.91,0
+914,Tariqa Shadhiliyya,dim4,0.89,0
+892,Charismatic Renewal Movement in Christianity - Second Wave Pentecostalism,dim4,0.88,0
+975,Neo-Charismatic Movement - Third Wave Charismatic Movement,dim4,0.88,0
+1334,No-debt Movement in US Evangelicalism,dim4,0.88,0
+1356,The Lausiac History,dim4,0.88,0
+1972,Shepherding Movement,dim4,0.88,0
+958,Society of Jesus,dim4,0.87,1
+1172,Twofold Mystery (Chongxuan 重玄),dim4,0.86,1
+1180,Batak Traditional Religions,dim4,0.85,0
+184,Chinese Buddhism (Northern Wei),dim4,0.85,1
+263,Irish Catholicism,dim4,0.84,0
+661,Congregation of Savigny,dim4,0.84,0
+885,Contemporary West African Vodun,dim4,0.84,0
+942,African Methodist Episcopal Church,dim4,0.84,0
+2003,Nigerian Baptist Convention,dim4,0.84,0
+442,Donatism,dim4,0.84,4
+342,Jesus Associations and the Synoptic Gospels,dim4,0.83,8
+1012,Inhabitants of Medieval Kurgus,dim4,0.8,2
+1087,The Bogomils,dim4,0.79,5
+534,Roman Imperial Cult,dim4,0.78,7
+564,Tribal Christianity (and allied castes) in the Himalayas,dim4,0.74,0
+1997,Hundred and eighty precepts of Lord Lao,dim4,0.73,4
+899,Nahdlatul Ulama (NU),dim4,0.69,1
+857,Wesleyanism,dim4,0.68,0
+925,Rabbinic Judaism (Babylonia),dim4,0.66,0
+1653,Visigothic Homoian Christianity,dim4,0.65,6
+526,Hmong Christianity,dim4,0.59,0
+395,International Society for Krishna Consciousness (ISKCON),dim4,0.59,3
+940,Julio-Claudian Imperial Cult,dim4,0.58,1
+1192,Kaharingan,dim4,0.58,2
+935,Nigerian Pentecostalism,dim4,0.56,0
+1136,The Fellowship of Goodness 同善社 (Tongshanshe),dim4,0.55,16
+855,Middle-Class Migrant Muslims in the UAE,dim4,0.54,0
+888,Céli Dé monks,dim4,0.54,0
+972,Nestorian Christianity,dim4,0.54,0
+1374,The Reformed Church (Early Orthodoxy),dim4,0.54,0
+1829,Cherubim and Seraphim Unification Church of Nigeria (C&SUCN),dim4,0.54,0
+2046,L'Interprétation du Coran Intitulé Tafsir al-Manar تفسير المنار,dim4,0.54,0
+2078,"L'Interprétation du Coran ""Clés de l'Invisible"" تفسير ""مفاتيح الغيب""",dim4,0.54,0
+1241,Taiping 太平 Movement,dim4,0.48,4
+196,Pauline Christianity (ca. 45-60 CE),dim4,0.45,7
+1307,Southern Baptists,dim4,0.41,3
+598,Masai,dim4,0.26,16
+1434,Kuna,dim4,0.26,16
+660,Iban,dim4,0.26,18
+662,Goajiro,dim4,0.26,18
+481,Huichol,dim4,0.23,19
+577,Ganda,dim4,0.23,19
+1488,Botocudo,dim4,0.23,19
+190,Sri Lankan Buddhism (1948-Present),dim4,0.19,19
+209,Ancient Egypt,dim4,0.19,19
+245,Warring States Confucian Thought,dim4,0.19,19
+249,Tyva Republic (Animism-Totemism-Shamanism),dim4,0.19,19
+478,Early Indian Buddhism,dim4,0.19,19
+608,Kurd,dim4,0.19,19
+637,Yahgan,dim4,0.19,19
+783,Upper Egypt: Archaic/Early Dynastic Period,dim4,0.19,19
+784,Upper Egypt: Old Kingdom,dim4,0.19,19
+785,Upper Egypt: First Intermediate Period,dim4,0.19,19
+786,Upper Egypt: Middle Kingdom,dim4,0.19,19
+787,Upper Egypt: Second Intermediate Period,dim4,0.19,19
+809,British Isles III: Pre-Theodosian Roman Britain Continued,dim4,0.19,19
+810,British Isles IV: Pre-Theodosian Roman Britain Continued,dim4,0.19,19
+814,British Isles VI: Christian Roman Britain,dim4,0.19,19
+815,British Isles VII: Christian Roman Britain,dim4,0.19,19
+816,British Paganism.,dim4,0.19,19
+817,Early Medieval British Christianity,dim4,0.19,19
+828,Italy: The Franciscan Order,dim4,0.19,19
+902,British Isles: Christian,dim4,0.19,19
+904,Euboea/Central Macedonia: Nicaean-Chalcedonian Christianity,dim4,0.19,19
+911,Italy: Roman Catholic Christianity,dim4,0.19,19
+922,British Isles: Mixed Roman and British Polytheism,dim4,0.19,19
+923,British Isles: Introduction of Early Christianity through the End of Columban/Irish Christianity,dim4,0.19,19
+955,British Isles: Augustinian/Roman Christianity,dim4,0.19,19
+1210,Mende,dim4,0.19,19
+1921,Zhouxun 周訓,dim4,0.19,19
+300,Israelite Religion,dim5,1.0,0
+472,Karma Kagyu or Kamtsang Kagyu,dim5,1.0,0
+520,Cham Ahiér,dim5,1.0,0
+973,The Sarna religion of the Oraons of Jharkhand,dim5,1.0,0
+983,Tibetan and Himalayan Mundane and Landscape Cults,dim5,1.0,0
+993,Pontifex Maximus and Pontifices (Pontifical College),dim5,1.0,0
+1535,الجمعية الخيرية الإسلامية بمدينة سوق الأربعاء,dim5,1.0,0
+1659,The Conferences of John Cassian,dim5,1.0,0
+1759,الطريقة الشاذلية = Attarika Achadoulia,dim5,1.0,0
+1791,"الطريقة القادرية في بغداد: فترة التأسيس ق12 Attarika Al Qadiria à Bagdad: la période fondatrice, le XIIe siècle",dim5,1.0,0
+1904,الطريقة القادرية في تونس القرن  19 و20   =  L'ordre Qadiri en Tunisie aux XIXe et XXe siècles,dim5,1.0,0
+1905,(A brief introduction to the Islamic jurisprudence on the Maliki school of law)مختصر الأخضري في مذهب الإمام مالك,dim5,1.0,0
+2101,"Le livre Fasl al-Maqal d'Ibn Rushd concernant le lien entre la sagesse et la charia""فصل المقال فيما بين الحكمة والشريعة من اتّصال",dim5,1.0,0
+2111,Tsinburbura Traditional Religion,dim5,1.0,0
+2124,إراءة عرائس شموس فلك الحقائق العرفانية بأصابع حق ماهية التربية بالطريقة التجانية,dim5,1.0,0
+2231,جواهر المعاني وبلوغ الأماني,dim5,1.0,0
+2236,الرّسالة المفصّلة لأحوال المتعلّمين وأحكام المعلّمين والمتعلّمين لأبي الحسن  علي القابسي,dim5,1.0,0
+2238,XX ــــــــ    ـق  XVIII   الطريقة التجانية في الجزائر :ق,dim5,1.0,0
+2256,الطريقة الرحمانية في الجزائر  ق18-ق20,dim5,1.0,0
+2258,"Livre  des Règle  de conduite des maîtres كتاب "" آداب المعلّمين  "" محمد ابن سحنون""R",dim5,1.0,0
+2264,The Puritans,dim5,1.0,0
+2278,الطريقة القادرية البودشيشية في المغرب الأقصى,dim5,1.0,0
+2290,الطريقة القادرية في مصر ق13م-ق21م,dim5,1.0,0
+176,Qumran Movement,dim5,1.0,1
+1735,كتاب الملل والنحل لعبد الكريم ابو الفتح الشهرستاني,dim5,1.0,1
+1069,Religion at Deir el-Medina,dim5,1.0,2
+1098,Shuzi gua excavated material,dim5,1.0,2
+1683,Book of Leviticus,dim5,1.0,2
+1785,Carmen de Incendio,dim5,1.0,2
+633,Mādhva,dim5,1.0,3
+1357,Encratites,dim5,1.0,3
+2285,Enki and Ninḫursaĝa,dim5,1.0,4
+1871,Inana's descent to the nether world,dim5,0.99,1
+1737,الإمامية Al-Imamia,dim5,0.98,0
+2280,Enki and Ninmaḫ,dim5,0.98,6
+1297,Chen-Wei Texts,dim5,0.97,0
+2039,Psalm 109,dim5,0.97,0
+2092,Interpretation of Imam Ibn Arafaتفسير الامام ابن عرفة الورغمّي,dim5,0.96,0
+1441,Mexica (Aztec) Religion,dim5,0.96,2
+476,Cham Bani,dim5,0.94,0
+2170,Liber Pontificalis,dim5,0.88,1
+479,Mesopotamian city-state cults of the Early Dynastic periods,dim5,0.78,11
+1555,Al-Ahbash الأحباش,dim5,0.71,0
+976,Mising Community,dim5,0.68,3
+1255,Julian Romance,dim5,0.65,13
+751,Buddhism in the Mekong Delta,dim5,0.6,0
+1816,The Zhen'gao,dim5,0.56,8
+435,Mongol Religion,dim5,0.53,11
+1183,Religion at Nippur in the Ur III period,dim5,0.5,12
+1309,Circumcellions,dim5,0.49,3
+354,Priests and Scholars of Hellenistic Uruk,dim5,0.44,13
+1284,Religion of Phoenicia,dim5,0.34,13

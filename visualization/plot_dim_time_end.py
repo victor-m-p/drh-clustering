@@ -15,12 +15,11 @@ import matplotlib.ticker as ticker
 pd.options.mode.chained_assignment = None
 
 # setup
-c = 10
-x_min = -1000
+x_min = -2000
 superquestion = "shg"
 
-df_q = pd.read_csv(f"../data/EM/{superquestion}_q_{c}_all.csv")
-dimension_columns = [f"dim{x}" for x in range(c)]
+df_q = pd.read_csv(f"../data/EM/{superquestion}_q_all.csv")
+dimension_columns = [col for col in df_q.columns if col.startswith("dim")]
 temporal_columns = [
     "entry_id",
     "entry_name",
@@ -87,5 +86,5 @@ plt.legend(
 
 plt.tight_layout()
 plt.savefig(
-    f"../figures/{superquestion}_{c}_temporal_span.jpg", dpi=300, bbox_inches="tight"
+    f"../figures/{superquestion}_temporal_span.jpg", dpi=300, bbox_inches="tight"
 )

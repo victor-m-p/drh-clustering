@@ -108,6 +108,7 @@ entry_id,year_from,year_to,poll,entry_name
 563,1845.0,2018.0,Religious Group (v6),"Gaddi, a Hindu community of the Western Himalayas"
 564,1950.0,2018.0,Religious Group (v6),Tribal Christianity (and allied castes) in the Himalayas
 565,1925.0,1960.0,Religious Group (v5),Fellahin
+567,2001.0,2024.0,Religious Group (v5),Gay and Lesbian Vaishnava Association (GALVA-108)
 570,1986.0,2018.0,Religious Group (v5),Supreme Master Ching Hai World Society
 571,1855.0,1890.0,Religious Group (v5),Abkhaz
 572,1890.0,1930.0,Religious Group (v5),Trobrianders
@@ -534,6 +535,7 @@ entry_id,year_from,year_to,poll,entry_name
 1574,-2000.0,-1800.0,Religious Group (v6),Household religion at Ur
 1575,1905.0,1956.0,Religious Text (v1.0),L’esprit libéral du Coran
 1576,-760.0,-100.0,Religious Text (v1.0),Book of Amos
+1581,-620.0,200.0,Religious Text (v1.0),Book of Jeremiah
 1582,-300.0,500.0,Religious Group (v6),Cult of Bona Dea
 1584,1890.0,1956.0,Religious Text (v1.0),Tafattuq al-aḥkām
 1585,1004.0,1004.0,Religious Text (v1.0),Jingde chuandeng lu 景德傳燈錄
@@ -584,7 +586,7 @@ entry_id,year_from,year_to,poll,entry_name
 1763,1400.0,2009.0,Religious Text (v1.0),Uḍḍīśatantra
 1771,1781.0,1837.0,Religious Text (v1.0),إنفاق الميسور في تاريخ بلاد التكرار
 1774,-1557.0,1864.0,Religious Group (v6),إباضية جزيرة جربة
-1776,-1881.0,1939.0,Religious Group (v6),الطريقة القادرية في البلاد التونسية
+1776,1881.0,1939.0,Religious Group (v6),الطريقة القادرية في البلاد التونسية
 1777,-1881.0,1939.0,Religious Group (v6),الطريقة التّيجانية بالبلاد التونسية
 1778,300.0,990.0,Religious Text (v1.0),Le Conflit d'Adam et Eve contre Satan ou The first and the Second hidden book of Adam and Eve صراع آدم وحوّاء ضدّ الشيطان
 1779,-1956.0,2023.0,Religious Group (v6),المذهب المالكي بالبلاد التونسية
@@ -628,10 +630,13 @@ entry_id,year_from,year_to,poll,entry_name
 1928,-1793.0,1864.0,Religious Group (v6),(The gathering of the Messenger of God does not falter)وجمع رسول الله لا يتشعث
 1940,1950.0,2023.0,Religious Group (v6),"The Holy Apostles Community, Ori-Oke Iwamimo"
 1943,1990.0,2020.0,Religious Group (v6),Cult of Gauchito Gil
+1958,1915.0,2018.0,Religious Group (v6),The Apostolic Faith Mission in Zimbabwe
 1961,1990.0,2023.0,Religious Group (v6),"Grace Covenant Centre, Ado-Ekiti"
+1966,1972.0,2023.0,Religious Group (v6),Cherubim & Seraphim Movement Church (Worldwide) Ayo Ni O
 1971,-600.0,-550.0,Religious Text (v1.0),The Homeric Hymn to Demeter
 1972,1970.0,2000.0,Religious Group (v6),Shepherding Movement
 1973,-655.0,-522.0,Religious Text (v1.0),The Homeric Hymn to Apollo
+1974,1989.0,2023.0,Religious Group (v6),"Chapel of Grace, Ile-Ife"
 1976,916.0,991.0,Religious Text (v1.0),Who is not assisted by the religious scholar(The Jurist) (Man La Yahdhuruhu al-Faqih) من لا يحضره الفقيه
 1979,-550.0,-500.0,Religious Text (v1.0),The Homeric Hymn to Hermes
 1981,1246.0,1332.0,Religious Text (v1.0),(Guiding the traveler to the most honorable path in the jurisprudence of Imam Malik.)إرشاد السالك إلى أشرف المسالك في فقه الإمام مالك
@@ -639,13 +644,19 @@ entry_id,year_from,year_to,poll,entry_name
 1985,34.0,638.0,Religious Group (v6),Christianity in Antioch. From the Apostolic Era to the Islamic conquest
 1989,-600.0,300.0,Religious Group (v6),Iron Age Celtic Spain and Portugal (Celtiberia)
 1991,1804.0,1903.0,Religious Text (v1.0),(Laws of Sharia rulings and issues of the branches of jurisprudence.) قوانين الأحكام الشرعية ومسائل الفروع الفقهية
+1992,1556.0,1557.0,Religious Text (v1.0),Kitab tesviyetü't-teveccüh ila'l hak: The Guide for One's Turning toward Truth
 1993,-600.0,400.0,Religious Group (v6),Ancient Boeotians
+1994,1968.0,2023.0,Religious Group (v6),Nigeria Fellowship of Evangelical Students (NIFES)
 1996,-138.0,-128.0,Religious Text (v1.0),Delphic Hymns 1 and 2
 1997,300.0,500.0,Religious Text (v1.0),Hundred and eighty precepts of Lord Lao
-1998,635.0,1000.0,Religious Text (v1.0),The Chinese Christian scroll Pelliot chinois 3847
+1998,635.0,1000.0,Religious Text (v1.0),The Chinese Christian Scroll Pelliot chinois 3847
+2000,1933.0,2023.0,Religious Group (v6),"The Community Church of Apostles Nigeria and Oversea (COCANO), Ajegunle"
 2001,-700.0,-500.0,Religious Text (v1.0),The Book of Deuteronomy
+2003,1914.0,2023.0,Religious Group (v6),Nigerian Baptist Convention
+2006,1970.0,2023.0,Religious Group (v6),New Life for All Nations Ministries
 2008,1804.0,1903.0,Religious Text (v1.0),(The beginning of the diligent and the end of the frugal) بداية المجتهد ونهاية المقتصد
 2009,-800.0,300.0,Religious Group (v6),Ancient Arcadians
+2010,1240.0,2023.0,Religious Group (v6),Bektashi Tarika
 2016,-909.0,1171.0,Religious Group (v6),الدولة الفاطمية 909 - 1171م
 2021,1905.0,2023.0,Religious Group (v6),The United Missionary Church of Africa
 2023,971.0,1152.0,Religious Group (v6),الدولة الزيرية 971 - 1152
@@ -654,14 +665,21 @@ entry_id,year_from,year_to,poll,entry_name
 2031,800.0,909.0,Religious Group (v6),الدولة الأغلبية  184-296 هجري
 2032,-1767.0,1828.0,Religious Text (v1.0),(The light of the rulers regarding what is best for them and on them) ضياء الحكام فيما لهم وعليهم من الأحكم
 2038,1000.0,1300.0,Religious Group (v6),"Cathars, Catharism, Albigenses, Albigensians, Cathari, Catharistae, ""Pure Christians"""
+2039,-1000.0,50.0,Religious Text (v1.0),Psalm 109
 2040,-1752.0,1804.0,Religious Text (v1.0),(Condolences to the Al-Azhar community) المقدمة العزية للجماعة الأزهرية
 2046,1905.0,1935.0,Religious Text (v1.0),L'Interprétation du Coran Intitulé Tafsir al-Manar تفسير المنار
 2048,-777.0,909.0,Religious Group (v6),الدولة الرستمية
+2052,1992.0,2023.0,Religious Group (v6),Christ Way Ministries International
 2053,1804.0,1903.0,Religious Text (v1.0),(Alert the unwary)تنبيه الغافلين
+2054,1918.0,2023.0,Religious Group (v6),Christ Apostolic Church
 2055,-1800.0,-600.0,Religious Text (v1.0),An Akkadian Tamitu-Query
+2057,-1400.0,-1200.0,Religious Text (v1.0),Paskuwatti’s Ritual to Cure Sexual Dysfunction
 2059,1804.0,1903.0,Religious Text (v1.0),(The Garden of Knowers)بستان العارفين
+2061,1800.0,1900.0,Religious Group (v6),OYA RELIGIOUS GROUP IN OYO
 2064,1911.0,1998.0,Religious Text (v1.0),Sha'rawi interpretation of the Coran تفسير محمّد متولّي الشعراوي
 2069,1969.0,2022.0,Religious Group (v6),L'ordre Soufi Qasimite Hadfite الطريقة الصوفية القاسميّة الهادفية
+2070,2003.0,2018.0,Religious Group (v6),Overcomers Evangelical Mission International (Ori-Oke Asegun)
+2071,-30.0,30.0,Religious Text (v1.0),"Songs of the Sage (4Q510, 4Q511)"
 2072,700.0,900.0,Religious Text (v1.0),Unguja Ukuu Amulet Seal
 2074,1905.0,1906.0,Religious Group (v6),"Revolutionary Mahdism and Resistance to Colonial Rule in the Sokoto Caliphate, 1905-1906"
 2075,600.0,671.0,Religious Text (v1.0),L'Interprétation du Coran Intituléتفسير الجامع لأحكام ا Tafsir  Al-Jami' li Ahkam Al Coran par Al-Qurtubi تفسير الجامع لأحكام القرآن للقرطبي
@@ -669,9 +687,13 @@ entry_id,year_from,year_to,poll,entry_name
 2077,1812.0,1828.0,Religious Text (v1.0),ضياء السياسات والفتاوى والنوازل مما هو في فروع الدين من المسائل
 2078,1149.0,1208.0,Religious Text (v1.0),"L'Interprétation du Coran ""Clés de l'Invisible"" تفسير ""مفاتيح الغيب"""
 2079,1804.0,1903.0,Religious Text (v1.0),(Jewels of meanings and fulfillment of wishes)جواهر المعاني و بلوغ الأماني
+2080,50.0,1000.0,Religious Text (v1.0),Daily Communal Petitions (Tefillah/Amidah)
+2081,-180.0,132.0,Religious Text (v1.0),Ben Sira 36:1–22
 2082,1804.0,1903.0,Religious Text (v1.0),(The spears of the Merciful Party on the Throat of the Servants of the Merciful.) رماح حزب الرحيم على نحور حزب الرحيم
 2083,1900.0,1975.0,Religious Text (v1.0),(The spirit of Morality)روح الأدب
+2084,1980.0,1985.0,Religious Group (v6),MAITATSINE: NIGERIA'S BLOODY RELIGIOUS TERRORIST MOVEMENT
 2085,1766.0,1828.0,Religious Text (v1.0),الحصن الرصين في علم التصريف
+2086,1462.0,2023.0,Religious Text (v1.0),Mathnawi ma'nawi
 2087,224.0,310.0,Religious Text (v1.0),"Al-Tabari’s interpretation of the Qur’an تفسير الطبري""جامع البيان في تأويل آي القرآن """
 2088,1766.0,1828.0,Religious Text (v1.0),مصباح الراوي في علم الحديث
 2089,1974.0,2023.0,Religious Group (v6),L'ordre Soufit karkariya en Tunisie الطريقة الكركرية في تونس
@@ -681,6 +703,73 @@ entry_id,year_from,year_to,poll,entry_name
 2100,1235.0,1554.0,Religious Group (v6),الدولة الزيانية
 2101,1126.0,1198.0,Religious Text (v1.0),"Le livre Fasl al-Maqal d'Ibn Rushd concernant le lien entre la sagesse et la charia""فصل المقال فيما بين الحكمة والشريعة من اتّصال"
 2103,1804.0,1903.0,Religious Text (v1.0),"(Revising the strong statement, an explanation of the chapter on hadith) تنقيح القول الحثيث شرح لباب الحديث"
+2104,1700.0,1900.0,Religious Group (v6),الطريقة التجانية في تونس ق18-ق19 ATARIKA TJENIA FI TOUNES  XVIII-XIXème siècle
 2111,700.0,1463.0,Religious Group (v6),Tsinburbura Traditional Religion
+2112,-323.0,-314.0,Religious Text (v1.0),Mengzi
 2114,1837.0,1990.0,Religious Group (v6),Tijaniyyah Sufi Movement in North-Western Nigeria
 2116,1804.0,1923.0,Religious Group (v6),Qadiriyyah Movement in the Sokoto Caliphate.
+2118,200.0,1800.0,Religious Text (v1.0),Samaritan Hymn by Amram Dare
+2122,1978.0,2008.0,Religious Group (v6),Jama'at Izalat al-Bid'ah wa Iqamat al-Sunnah (JIBWIS)
+2124,1934.0,2024.0,Religious Text (v1.0),إراءة عرائس شموس فلك الحقائق العرفانية بأصابع حق ماهية التربية بالطريقة التجانية
+2125,1917.0,1992.0,Religious Text (v1.0),الإسلام في نيجيريا والشيخ عثمان بن فوديو الفلاتي-أدم عبد الله الالوري
+2126,1984.0,2023.0,Religious Group (v6),Nasrul-lahi-li Fathi Society of Nigeria (NASFAT)
+2128,650.0,1700.0,Religious Group (v6),Paulicians
+2131,900.0,1470.0,Religious Group (v6),Chimú Empire Religion
+2133,1923.0,2000.0,Religious Group (v6),ANSAR-UD-DEEN SOCIETY OF NIGERIA
+2138,1916.0,2024.0,Religious Group (v6),الجماعة الأحمدية الإسلامية في نيجيريا
+2139,1980.0,2020.0,Religious Group (v6),Shi'a Group in Nigeria
+2140,347.0,407.0,Religious Text (v1.0),"St. John Chrysostom, Homilies On the Incomprehensible Nature of God"
+2141,2002.0,2022.0,Religious Group (v6),(Ahl al-Sunnah Group for Preaching and Jihad)جماعة أهل السنة للدعوة والجهاد
+2143,410.0,426.0,Religious Text (v1.0),City of God
+2147,-100.0,1574.0,Religious Group (v6),الدولة الحفصية 1229-1574
+2148,1705.0,1957.0,Religious Group (v6),الدولة الحسينية 1705م -1957م
+2149,330.0,1453.0,Religious Group (v6),Judaism in Byzantium
+2153,-400.0,-300.0,Religious Text (v1.0),Guishen zhi ming 鬼神之明
+2157,1775.0,1815.0,Religious Group (v6),Blue Light Evangelicals in the Late Eighteenth-Century Royal Navy
+2160,250.0,843.0,Religious Group (v6),Manichaeans
+2166,395.0,1453.0,Religious Group (v6),Judaism in Byzantium
+2168,-600.0,1100.0,Religious Group (v6),"Dzibilchaltún, arquitectura, poder y cambio religioso en el norte de Yucatán"
+2170,450.0,1500.0,Religious Text (v1.0),Liber Pontificalis
+2177,-100.0,0.0,Religious Text (v1.0),The Covenant Ceremony in the Community Rule (1QS)
+2180,1921.0,2024.0,Religious Group (v6),Cao Đài
+2181,-150.0,70.0,Religious Text (v1.0),Communal Petitions for Days of the Week: Prayer for Friday (4Q504)
+2187,-900.0,-500.0,Religious Text (v1.0),1 Samuel 2:1-10
+2190,-400.0,350.0,Religious Text (v1.0),Ezra 9
+2191,-700.0,-700.0,Religious Text (v1.0),Two Aramaic Mortuary Stelae from Nerab
+2194,1952.0,2023.0,Religious Group (v6),The Redeemed Christian Church of God
+2199,401.0,500.0,Religious Text (v1.0),"Prayer for Vengeance against Mariam, Kallinikos, and Others"
+2200,1480.0,2024.0,Religious Group (v6),The Roman Catholic Mission in Nigeria
+2208,-160.0,80.0,Religious Text (v1.0),The Book of Judith
+2210,1981.0,2024.0,Religious Group (v6),Living Faith Church Worldwide
+2225,700.0,1100.0,Religious Group (v6),"Culdees, Céli Dé, Céili Dé, Céle Dé,  ""Clients of God"", ""Servants of God"", ""Spouses of God"", ""Companions of God"", Kelidei, Kaledei; Céile Dé"
+2228,1972.0,2024.0,Religious Group (v6),Church of God Mission
+2231,1798.0,2024.0,Religious Text (v1.0),جواهر المعاني وبلوغ الأماني
+2232,1350.0,1500.0,Religious Group (v6),"Lollards, Lollard, the Lollard movement, Lollardism,  Lollardy, Wycliffites"
+2233,1734.0,2024.0,Religious Group (v6),The Way of Former Heaven (Xiantiandao 先天道)
+2236,-935.0,1012.0,Religious Text (v1.0),الرّسالة المفصّلة لأحوال المتعلّمين وأحكام المعلّمين والمتعلّمين لأبي الحسن  علي القابسي
+2237,1217.0,2024.0,Religious Group (v6),"Order of Preachers, Dominicans, Friars Preachers, Black Friars, Jacobins"
+2238,1700.0,2000.0,Religious Group (v6),XX ــــــــ    ـق  XVIII   الطريقة التجانية في الجزائر :ق
+2243,700.0,2024.0,Religious Group (v6),Hui People
+2244,1204.0,1261.0,Religious Group (v6),"Catholicism in the Latin Empire, Catholicism in the Eastern Roman Empire (Byzantium), the Latin Patriarchate of Constantinople"
+2245,-652.0,1240.0,Religious Group (v6),صقلية الإسلامية
+2246,-819.0,1957.0,Religious Group (v6),المذهب الحنفي بالبلاد التونسية
+2247,647.0,712.0,Religious Group (v6),الفتح العربي الإسلامي لشمال إفريقيا
+2248,1631.0,1702.0,Religious Group (v6),الدولة المرادية في تونس
+2255,1340.0,2024.0,Religious Group (v6),Dongxiang
+2256,1700.0,2000.0,Religious Group (v6),الطريقة الرحمانية في الجزائر  ق18-ق20
+2258,-202.0,256.0,Religious Text (v1.0),"Livre  des Règle  de conduite des maîtres كتاب "" آداب المعلّمين  "" محمد ابن سحنون""R"
+2262,1301.0,1373.0,Religious Text (v1.0),Le Commencement et la Fin البداية والنهاية de Ibn Kathir لابن كثير
+2263,1058.0,1111.0,Religious Text (v1.0),"lettre au disciple Ayyuha-l-walad par Al Ghazâlî رسالة ""ايّها الولد لأبي حامد الغزالي"
+2264,1560.0,1720.0,Religious Group (v6),The Puritans
+2265,610.0,2024.0,Religious Text (v1.0),القرآن الكريم Le Noble Coran
+2272,450.0,505.0,Religious Text (v1.0),Abou Hamid Al-Ghazali:   Le livre d'Al-Jam Al-Awam sur la science de la théologie الجام العوام عن علم الكلام
+2273,1291.0,1368.0,Religious Group (v6),Yuan divination schools
+2274,1920.0,2023.0,Religious Group (v6),Ìjọ Àdìmúlà (An Institutionalised Indigenous Religious Movement in Yorubaland
+2277,-1046.0,-771.0,Religious Text (v1.0),Western Zhou Bronze Inscriptions (Xi Zhou jinwen 西周金文)
+2278,1700.0,2024.0,Religious Group (v6),الطريقة القادرية البودشيشية في المغرب الأقصى
+2280,-1900.0,-1600.0,Religious Text (v1.0),Enki and Ninmaḫ
+2285,-1900.0,-1600.0,Religious Text (v1.0),Enki and Ninḫursaĝa
+2290,1200.0,2024.0,Religious Group (v6),الطريقة القادرية في مصر ق13م-ق21م
+2294,220.0,330.0,Religious Text (v1.0),Baopuzi neipian 抱朴子內篇
+2295,-1600.0,-500.0,Religious Text (v1.0),Nergal and Ereškigal
+2308,711.0,726.0,Religious Group (v6),الفتح العربي الإسلامي للأندلس

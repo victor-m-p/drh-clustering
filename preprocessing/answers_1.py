@@ -13,8 +13,8 @@ answer_value coded as:
 0: No
 -1: Field doesn't know / I don't know (we recode this to np.nan)
 
-n answers = 276.239 (many values before subsetting questions)
-n entries = 1.288
+n answers = 321.007 (many values before subsetting questions)
+n entries = 1.463
 """
 
 # load data
@@ -43,8 +43,8 @@ For each question (id) find the related question (id) in the "Religious Group (v
 This is important for subsetting questions from various polls that correspond 
 to each other, but might be named differently. 
 
-n answers = 211.925
-n entries = 1.288
+n answers = 243.080
+n entries = 1.463
 """
 
 question_relation = pd.read_csv("../data/raw/question_relation.csv")
@@ -77,8 +77,8 @@ These are:
 - "Is supernatural monitoring present:"
 and most of their child questions. 
 
-n answers = 21.687 (1: 12.987, 0: 6.661, -1: 2.039)
-n entries = 1.247
+n answers = 25.256 (1: 15.158, 0: 7.828, -1: 2.270)
+n entries = 1.422
 """
 
 from constants import question_coding
@@ -107,8 +107,8 @@ Select only relevant polls:
 - Religious Group (v6)
 - Religious Text (v1.0)
 
-n answers = 19.239 (1: 11.927, 0: 5.563, -1: 1749)
-n entries = 974
+n answers = 22.282 (1: 13.891, 0: 6.481, -1: 1.910)
+n entries = 1.083
 """
 
 from constants import polls
@@ -123,8 +123,8 @@ Select only sub-questions for the two main questions:
 
 And only select the ones where the parent question was answered with "Yes".
 
-n answers = 16.560 (1: 9.910, 0: 5.043, -1: 1.607)
-n entries = 685
+n answers = 19.292 (1: 11.626, 0: 5.908, -1: 1.758)
+n entries = 774
 """
 
 # to subset based on parent_question_id we need related_parent_question_id
@@ -160,10 +160,18 @@ check_data(answers_subset)
 
 """ 
 Clean inconsistent answers (manually coded).
-I have also manually coded inconsistent parent questions although they are not used here.
 
-n answers = 16.531 (1: 9.905, 0: 5.034, -1: 1.592)
-n entries = 685
+answers_inconsistent = (
+    answers_subset.groupby(["entry_id", "question_id", "question_name"])
+    .size()
+    .reset_index(name="n")
+    .sort_values("n", ascending=False)
+)
+answers_inconsistent = answers_inconsistent[answers_inconsistent["n"] > 1]
+answers_inconsistent = answers_inconsistent.sort_values(by=["entry_id", "question_id"])
+
+n answers = 19.263 (1: 11.621, 0: 5.899, -1: 1.743)
+n entries = 774
 """
 
 from constants import correct_answers
@@ -191,8 +199,8 @@ check_data(answers_subset)
 """ 
 Fill in missing values with np.nan 
 
-n answers = 24.666 (1: 9.905, 0: 5.034, NaN: 9.727) 
-n entries = 685
+n answers = 27.875 (1: 11.621, 0: 5.899, NaN: 10.355) 
+n entries = 774
 """
 
 # rename to related
@@ -248,8 +256,8 @@ answers_subset = answers_subset.merge(
 Now we assign weight to the data:
 weight = 1 / number of answers for the same entry_id and question_id
 
-n answers = 24.666 (1: 9.905, 0: 5.034, NaN: 9.727)
-n entries = 685
+n answers = 27.875 (1: 11.621, 0: 5.899, NaN: 10.355)
+n entries = 774
 """
 
 from helper_functions import assign_weight
@@ -263,11 +271,11 @@ Now we split data into two subsets:
 - subquestions of "A supreme high god is present:" (shg)
 - subquestions of "Is supernatural monitoring present:" (monitoring)
 
-shg answers = 10.963 (1: 3787, 0: 3451, NaN: 3725)
-shg entries = 685
+shg answers = 12.392 (1: 4.425, 0: 4.011, NaN: 3.956)
+shg entries = 774
 
-monitoring answers = 13.703 (1: 6118, 0: 1583, NaN: 6002)
-monitoring entries = 685
+monitoring answers = 15.483 (1: 7.196, 0: 1.888, NaN: 6.399)
+monitoring entries = 774
 """
 
 shg = answers_subset[answers_subset["parent_question_id"] == 4828]
@@ -275,12 +283,21 @@ monitoring = answers_subset[answers_subset["parent_question_id"] == 4954]
 check_data(shg)
 check_data(monitoring)
 
+# save data
+shg.to_csv("../data/preprocessed/shg_long.csv", index=False)
+monitoring.to_csv("../data/preprocessed/monitoring_long.csv", index=False)
+
 """ 
 Then we expand the data to have one row per entry_id with all the answers.
 The function removes entries that have all NaN values on answers. 
 
-shg entries = 559
-monitoring entries = 526
+total:
+shg entries = 638
+monitoring entries = 599
+
+complete: 
+shg entries = 354
+monitoring entries = 266
 """
 
 from helper_functions import expand_data
@@ -295,8 +312,12 @@ monitoring_expanded["entry_id"].nunique()
 
 # how many have complete answer sets?
 def check_complete(df):
+
+    # take first occurence of entry_id (does not matter which one)
+    df_unique = df.drop_duplicates(subset="entry_id", keep="first")
+
     num_na = (
-        df.drop(columns=["entry_id", "weight"])
+        df_unique.drop(columns=["entry_id", "weight"])
         .isna()
         .sum(axis=1)
         .reset_index(name="n_nan")
