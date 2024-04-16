@@ -1,0 +1,775 @@
+entry_id,year_from,year_to,poll,entry_name,christian,islamic,chinese,buddhist
+23,-1200.0,-1045.0,Religious Group (v5),Late Shang Religion,False,False,True,False
+173,90.0,120.0,Religious Group (v5),Johannine Christianity,True,False,False,False
+174,50.0,160.0,Religious Group (v5),Matthew-James-Didache Movement,True,False,False,False
+176,-150.0,68.0,Religious Group (v5),Qumran Movement,False,False,False,False
+178,-206.0,220.0,Religious Group (v5),Ancestral Cult of the Han,False,False,True,False
+180,-350.0,200.0,Religious Group (v5),Chinese Folk Religion,False,False,True,False
+182,48.0,56.0,Religious Group (v5),Pauline Christianity,True,False,False,False
+184,386.0,534.0,Religious Group (v5),Chinese Buddhism (Northern Wei),False,False,True,True
+185,1936.0,2013.0,Religious Group (v5),Shinnyo-en,False,False,False,False
+186,1590.0,1644.0,Religious Group (v5),Buddhism (Late Ming),False,False,True,True
+187,-1750.0,-850.0,Religious Group (v5),Chinese State Religion (Shang and Western Zhou),False,False,True,False
+189,-1200.0,-400.0,Religious Group (v5),Israelite Religion,False,False,False,False
+190,1948.0,2015.0,Religious Group (v5),Sri Lankan Buddhism (1948-Present),False,False,False,True
+193,2000.0,2013.0,Religious Group (v5),Fijian Religion (contemporary),False,False,False,False
+195,500.0,1100.0,Religious Group (v5),Shakta Religion,False,False,False,False
+196,45.0,60.0,Religious Group (v5),Pauline Christianity (ca. 45-60 CE),True,False,False,False
+197,1604.0,1958.0,Religious Group (v5),Gönlung Monastery (dgon lung byams pa gling),False,False,False,True
+199,100.0,400.0,Religious Group (v5),Mithraism,False,False,False,False
+200,1650.0,1850.0,Religious Group (v5),Nechung Cult,False,False,False,True
+201,-500.0,500.0,Religious Group (v5),Mediterranean,False,False,False,False
+202,-1046.0,-771.0,Religious Group (v5),Early Zhou Religion,False,False,True,False
+203,-790.0,-223.0,Religious Group (v5),Pre-imperial Chu Religion,False,False,True,False
+204,-206.0,220.0,Religious Group (v5),Han Confucianism,False,False,True,False
+209,-2000.0,-30.0,Religious Group (v5),Ancient Egypt,False,False,False,False
+211,-1350.0,-1320.0,Religious Group (v5),Amarna Religion,False,False,False,False
+212,-481.0,-206.0,Religious Group (v5),Warring States (China) Religion,False,False,True,False
+217,-202.0,-44.0,Religious Group (v5),Roman private religion,False,False,False,False
+224,600.0,1100.0,Religious Group (v5),Old Norse Fornsed,False,False,False,False
+227,1980.0,2000.0,Religious Group (v5),Hindu Goddess Worship in Northwest India—Modern Period,False,False,False,False
+228,1600.0,1900.0,Religious Group (v5),Late Chosŏn Korea,False,False,False,False
+230,-3300.0,-539.0,Religious Group (v5),Religion in Mesopotamia,False,False,False,False
+231,-600.0,-202.0,Religious Group (v5),Roman private religion,False,False,False,False
+240,775.0,960.0,Religious Group (v5),Late Medieval Chinese State Religion,False,False,True,False
+245,-450.0,-221.0,Religious Group (v5),Warring States Confucian Thought,False,False,True,False
+249,1990.0,2013.0,Religious Group (v5),Tyva Republic (Animism-Totemism-Shamanism),False,False,False,False
+250,960.0,1279.0,Religious Group (v5),"Tiantai Buddhism (Song Dynasty, Liangzhe Circuit)",False,False,False,True
+255,-200.0,500.0,Religious Group (v5),Talismanic Religion,False,False,True,False
+256,-10.0,-1.0,Religious Group (v5),Etruscan Religion,False,False,False,False
+263,2000.0,2015.0,Religious Group (v5),Irish Catholicism,True,False,False,False
+284,-3500.0,2015.0,Religious Group (v5),Yolngu religion,False,False,False,False
+287,100.0,400.0,Religious Group (v5),Mithraism,False,False,False,False
+294,200.0,600.0,Religious Group (v5),Xuanxue 玄學,False,False,True,False
+299,-1250.0,-1046.0,Religious Group (v5),Shang State Religion,False,False,True,False
+300,-1200.0,-515.0,Religious Group (v5),Israelite Religion,False,False,False,False
+308,-900.0,-501.0,Religious Group (v5),Neo-Assyrian Scholars,False,False,False,False
+325,-193.0,-168.0,Religious Group (v5),Religion at Mawangdui,False,False,True,False
+342,50.0,150.0,Religious Group (v5),Jesus Associations and the Synoptic Gospels,True,False,False,False
+354,-330.0,-125.0,Religious Group (v5),Priests and Scholars of Hellenistic Uruk,False,False,False,False
+355,50.0,60.0,Religious Group (v5),Paul the Apostle,True,False,False,False
+358,1500.0,1700.0,Religious Group (v5),16th-17th c. Gauḍīya Vaiṣṇava Tradition,False,False,False,False
+361,-500.0,-300.0,Religious Group (v5),Classical Greek Religion,False,False,False,False
+374,800.0,1600.0,Religious Group (v5),Non-dual Śaiva Tantra,False,False,False,False
+381,1469.0,1606.0,Religious Group (v5),Sikhism: Guru Nanak to Guru Arjan,False,False,False,False
+383,1200.0,1700.0,Religious Group (v5),Varkaris,False,False,False,False
+387,1889.0,2016.0,Religious Group (v5),Ahmadi; Ahmadiyya Muslim Jama'at; Ahmadiya,False,True,False,False
+389,1840.0,1970.0,Religious Group (v5),Iban traditional religion,False,False,False,False
+390,1610.0,2016.0,Religious Group (v5),Dasara,False,False,False,False
+392,1606.0,1708.0,Religious Group (v5),Sikhism: Guru Hargobind to Guru Gobind Singh,False,False,False,False
+395,1966.0,2016.0,Religious Group (v5),International Society for Krishna Consciousness (ISKCON),False,False,False,False
+400,1980.0,2015.0,Religious Group (v5),Singaporean Mega-Churches,True,False,False,False
+406,142.0,2014.0,Religious Group (v5),Daoism,False,False,True,False
+415,1970.0,2015.0,Religious Group (v5),Shaiva World Renouncers,False,False,False,False
+416,1800.0,1918.0,Religious Group (v5),Edinoverie,True,False,False,False
+419,1970.0,2016.0,Religious Group (v5),The Worship of Jagannath in Puri (Odisha),False,False,False,False
+420,1800.0,2017.0,Religious Group (v5),Swaminarayan Sampraday,False,False,False,False
+422,-1500.0,396.0,Religious Group (v5),Demeter Cult,False,False,False,False
+423,-500.0,500.0,Religious Group (v5),Mediterranean,False,False,False,False
+424,-550.0,-330.0,Religious Group (v5),Achaemenid Religion,False,False,False,False
+435,1206.0,1368.0,Religious Group (v5),Mongol Religion,False,False,True,False
+439,800.0,1500.0,Religious Group (v5),Śaiva Magic,False,False,False,False
+440,900.0,1200.0,Religious Group (v5),"Jain Digambara Tantra, Karnataka",False,False,False,False
+441,1690.0,2017.0,Religious Group (v5),Worshipers of Śītalā,False,False,False,True
+442,311.0,427.0,Religious Group (v5),Donatism,True,False,False,False
+443,1634.0,2017.0,Religious Group (v5),Tyva (Buddhism),False,False,False,True
+444,1920.0,2017.0,Religious Group (v5),Sursurunga,True,False,False,False
+453,1985.0,2017.0,Religious Group (v5),Guangzhou (Buddhism),False,False,False,True
+455,1292.0,1558.0,Religious Group (v5),Lan Na Buddhism,False,False,False,True
+456,-165.0,75.0,Religious Group (v5),The Essenes,False,False,False,False
+457,2013.0,2017.0,Religious Group (v5),Kananga - Pentacostal,True,False,False,False
+458,1869.0,2017.0,Religious Group (v5),Tanna - Christian,True,False,False,False
+459,-1100.0,2017.0,Religious Group (v5),Tanna - Kastom,False,False,False,False
+462,1550.0,1989.0,Religious Group (v5),Tukano,False,False,False,False
+465,2014.0,2016.0,Religious Group (v5),Mysore,False,False,False,False
+468,1870.0,2017.0,Religious Group (v5),Turkana,True,False,False,False
+470,-800.0,-500.0,Religious Group (v5),Archaic Spartan Cults,False,False,False,False
+471,2015.0,2016.0,Religious Group (v5),Urban Northern Ireland,True,False,False,False
+472,1110.0,2017.0,Religious Group (v5),Karma Kagyu or Kamtsang Kagyu,False,False,False,True
+476,1000.0,2015.0,Religious Group (v5),Cham Bani,False,True,False,False
+477,1833.0,1845.0,Religious Group (v5),Tractarian Movement,True,False,False,False
+478,-450.0,1.0,Religious Group (v5),Early Indian Buddhism,False,False,False,True
+479,-2900.0,-2300.0,Religious Group (v5),Mesopotamian city-state cults of the Early Dynastic periods,False,False,False,False
+481,1780.0,2000.0,Religious Group (v5),Huichol,False,False,False,False
+482,1700.0,2000.0,Religious Group (v5),Miskito,False,False,False,False
+483,2015.0,2016.0,Religious Group (v5),Northern Irish Roman Catholics,True,False,False,False
+484,2015.0,2016.0,Religious Group (v5),Northern Irish Protestants,True,False,False,False
+485,500.0,1500.0,Religious Group (v5),Sámi pre-Christian religion,False,False,False,False
+486,1820.0,2017.0,Religious Group (v5),Church of Jesus Christ of Latter-day Saints (early),True,False,False,False
+490,1260.0,1302.0,Religious Group (v5),Guglielmites,True,False,False,False
+492,-800.0,380.0,Religious Group (v5),Roman Divination,False,False,False,False
+493,1858.0,2017.0,Religious Group (v5),Krishna Worship in North India - Modern Period,False,False,False,False
+520,1600.0,2015.0,Religious Group (v5),Cham Ahiér,False,False,False,False
+525,1951.0,2018.0,Religious Group (v5),Church of Jesus Christ of Latter-day Saints (modern),True,False,False,False
+526,1900.0,2018.0,Religious Group (v5),Hmong Christianity,True,False,False,False
+534,-42.0,518.0,Religious Group (v5),Roman Imperial Cult,False,False,False,False
+535,200.0,1200.0,Religious Group (v5),Pāśupatas,False,False,False,False
+562,1017.0,1445.0,Religious Group (v6),Medieval Śrīvaiṣṇavism,False,False,False,False
+563,1845.0,2018.0,Religious Group (v6),"Gaddi, a Hindu community of the Western Himalayas",False,False,False,False
+564,1950.0,2018.0,Religious Group (v6),Tribal Christianity (and allied castes) in the Himalayas,True,False,False,False
+565,1925.0,1960.0,Religious Group (v5),Fellahin,False,False,False,False
+567,2001.0,2024.0,Religious Group (v5),Gay and Lesbian Vaishnava Association (GALVA-108),False,False,False,False
+570,1986.0,2018.0,Religious Group (v5),Supreme Master Ching Hai World Society,True,False,False,True
+571,1855.0,1890.0,Religious Group (v5),Abkhaz,True,True,False,False
+572,1890.0,1930.0,Religious Group (v5),Trobrianders,False,False,False,False
+574,1920.0,1967.0,Religious Group (v5),Konso,False,False,False,False
+576,1000.0,2018.0,Religious Group (v5),Kuy traditional religions,False,False,False,True
+577,1860.0,1900.0,Religious Group (v5),Ganda,False,False,False,False
+578,1875.0,1910.0,Religious Group (v5),Gond,False,False,False,False
+580,1700.0,2018.0,Religious Group (v5),Nāth Sampradāya,False,False,False,False
+581,1970.0,2018.0,Religious Group (v5),Mentawai (Rereiket),False,False,False,False
+586,1900.0,2017.0,Religious Group (v5),Kelantanese Thai Religion,False,False,False,True
+588,1905.0,1940.0,Religious Group (v5),Nyakyusa,False,False,False,False
+589,1915.0,1945.0,Religious Group (v5),Warrau,False,False,False,False
+590,670.0,712.0,Religious Group (v5),Huayan School (Early Tang),False,False,True,False
+592,11.0,12.0,Religious Group (v5),Veerashaivas,False,False,False,False
+594,1925.0,1955.0,Religious Group (v5),Wolof,False,True,False,False
+595,1804.0,1840.0,Religious Group (v5),Western Samoans,False,False,False,False
+597,-600.0,-200.0,Religious Group (v6),Confucianism - Eastern Zhou,False,False,True,False
+598,1875.0,1915.0,Religious Group (v6),Masai,False,False,False,False
+600,1900.0,1930.0,Religious Group (v6),Riffians,False,True,False,False
+602,1930.0,1960.0,Religious Group (v6),Amhara,True,False,False,False
+607,-400.0,-200.0,Religious Group (v6),Mohism,False,False,True,False
+608,1926.0,1955.0,Religious Group (v6),Kurd,False,True,False,False
+609,1915.0,1940.0,Religious Group (v6),Tallensi,False,False,False,False
+610,1900.0,1960.0,Religious Group (v6),Somali,False,True,False,False
+613,1800.0,1830.0,Religious Group (v6),Maori,False,False,False,False
+614,1925.0,1960.0,Religious Group (v6),!Kung,False,False,False,False
+618,1860.0,1890.0,Religious Group (v6),Nuxalk,False,False,False,False
+620,1900.0,1935.0,Religious Group (v6),Papago,False,False,False,False
+621,1910.0,1935.0,Religious Group (v6),Haitians,True,False,False,False
+622,1896.0,1921.0,Religious Group (v6),Miskito,True,False,False,False
+623,1965.0,2018.0,Religious Group (v6),Diasporic American Hinduism,False,False,False,False
+624,1550.0,1640.0,Religious Group (v6),The Roshaniyya,False,True,False,False
+625,1890.0,1915.0,Religious Group (v6),Copper Inuit,False,False,False,False
+626,1907.0,1935.0,Religious Group (v6),Barama River Carib,False,False,False,False
+629,1200.0,2018.0,Religious Group (v6),Newar Buddhists,False,False,False,True
+632,-650.0,-409.0,Religious Group (v6),Local Religion at Selinous,False,False,False,False
+633,1238.0,2018.0,Religious Group (v6),Mādhva,False,False,False,False
+635,1890.0,1920.0,Religious Group (v6),Ifugao,False,False,False,False
+636,1500.0,2018.0,Religious Group (v6),Balinese Śaiva priests (pedanda siwa),False,False,False,False
+637,1900.0,1924.0,Religious Group (v6),Yahgan,False,False,False,False
+639,716.0,900.0,Religious Group (v6),Chinese Esoteric Buddhism (Tang Tantrism),False,False,False,True
+645,1100.0,2020.0,Religious Group (v6),"Meo Muslim, Mev, Mewati Muslim",False,True,False,False
+646,1889.0,2018.0,Religious Group (v6),Lakota Religious Traditions,False,False,False,False
+649,700.0,2019.0,Religious Group (v6),"Worshippers at the Chidambaram Nataraja Temple, Modern Period",False,False,False,False
+650,1918.0,1945.0,Religious Group (v6),Manus,False,False,False,False
+651,1930.0,1955.0,Religious Group (v6),Kapauku,False,False,False,False
+652,1904.0,1930.0,Religious Group (v6),Tiwi,False,False,False,False
+654,1198.0,1250.0,Religious Group (v6),12th-13th c Cistercians,True,False,False,False
+655,1917.0,1943.0,Religious Group (v6),Siriono,False,False,False,False
+657,1912.0,1949.0,Religious Group (v6),Trukese,False,False,False,False
+658,1925.0,1951.0,Religious Group (v6),Mapuche,False,False,False,False
+660,1941.0,1966.0,Religious Group (v6),Iban,False,False,False,False
+661,1113.0,1147.0,Religious Group (v6),Congregation of Savigny,True,False,False,False
+662,1922.0,1947.0,Religious Group (v6),Goajiro,False,False,False,False
+671,1820.0,1840.0,Religious Group (v6),Mbau Fijians,False,False,False,False
+673,1842.0,1870.0,Religious Group (v6),Pawnee,False,False,False,False
+674,1915.0,1940.0,Religious Group (v6),Aymara,False,False,False,False
+675,1885.0,1910.0,Religious Group (v6),Chukchee,False,False,False,False
+676,1198.0,1500.0,Religious Group (v6),"The Order of the Holy Trinity for the Redemption of Captives, 1198-1500",True,False,False,False
+677,1885.0,1910.0,Religious Group (v6),Yapese,False,False,False,False
+679,1915.0,1940.0,Religious Group (v6),Santal,False,False,False,False
+680,1850.0,2019.0,Religious Group (v6),Gujarati Mata Worshipers,False,False,False,False
+681,-2350.0,-2150.0,Religious Group (v6),Sargonic Empire,False,False,False,False
+682,1905.0,1935.0,Religious Group (v6),Lakher,False,False,False,False
+684,1615.0,1640.0,Religious Group (v6),Huron,False,False,False,False
+685,1940.0,1966.0,Religious Group (v6),Badjau,False,False,False,False
+686,1915.0,1945.0,Religious Group (v6),Popoluca,True,False,False,False
+688,1866.0,2019.0,Religious Group (v6),Darul Uloom Deoband,False,True,False,False
+689,1869.0,1895.0,Religious Group (v6),Lengua,False,False,False,False
+690,1880.0,2019.0,Religious Group (v6),Ahl-e-Sunnat wa Jamaat,False,True,False,False
+691,1870.0,1895.0,Religious Group (v6),Fur,False,True,False,False
+710,1816.0,1840.0,Religious Group (v6),Hidatsa,False,False,False,False
+712,1880.0,1934.0,Religious Group (v6),Huichol,False,False,False,False
+714,550.0,850.0,Religious Group (v6),Tamil Śaiva Bhakti,False,False,False,False
+717,1910.0,1940.0,Religious Group (v6),Igbo,False,False,False,False
+719,1845.0,2018.0,Religious Group (v6),Hinduism in Trinidad,False,False,False,False
+721,1910.0,1940.0,Religious Group (v6),Semang,False,False,False,False
+722,1835.0,1885.0,Religious Group (v6),Gros Ventre,False,False,False,False
+727,1160.0,2017.0,Religious Group (v6),Raglai,False,False,False,False
+729,1895.0,1930.0,Religious Group (v6),Kikuyu,False,False,False,False
+738,-3000.0,300.0,Religious Group (v6),Ancient Egyptian,False,False,False,False
+739,1885.0,1910.0,Religious Group (v6),Lakalai,False,False,False,False
+744,1887.0,1915.0,Religious Group (v6),Rwala Bedouin,False,True,False,False
+745,1860.0,1885.0,Religious Group (v6),Buka,False,False,False,False
+749,1800.0,2020.0,Religious Group (v6),Korean shamanism,False,False,False,False
+751,2020.0,2025.0,Religious Group (v6),Buddhism in the Mekong Delta,False,False,False,True
+752,1470.0,2019.0,Religious Group (v6),Haroi,False,False,False,False
+755,1850.0,2020.0,Religious Group (v6),Uyghur Islam,False,True,False,False
+757,1795.0,1820.0,Religious Group (v6),Kiribati,False,False,False,False
+759,1855.0,1880.0,Religious Group (v6),Comanche,False,False,False,False
+763,1810.0,1835.0,Religious Group (v6),Moriori,False,False,False,False
+771,1762.0,2020.0,Religious Group (v6),Muscular Christianity,True,True,False,False
+775,-900.0,2020.0,Religious Group (v6),Jainism,False,False,False,False
+781,381.0,500.0,Religious Group (v6),Syria,True,False,False,False
+783,-3150.0,-2686.0,Religious Group (v6),Upper Egypt: Archaic/Early Dynastic Period,False,False,False,False
+784,-2686.0,-2181.0,Religious Group (v6),Upper Egypt: Old Kingdom,False,False,False,False
+785,-2181.0,-2055.0,Religious Group (v6),Upper Egypt: First Intermediate Period,False,False,False,False
+786,-2055.0,-1650.0,Religious Group (v6),Upper Egypt: Middle Kingdom,False,False,False,False
+787,-1650.0,-1550.0,Religious Group (v6),Upper Egypt: Second Intermediate Period,False,False,False,False
+788,-1500.0,-1200.0,Religious Group (v6),The Late Bronze Age City-State of Ugarit,False,False,False,False
+794,1840.0,1880.0,Religious Group (v6),Omaha,False,False,False,False
+802,1945.0,2020.0,Religious Group (v6),Chinese Nunnery in Myanmar,False,False,False,True
+807,-500.0,-43.0,Religious Group (v6),British Isles I: Pre-Roman Britain,False,False,False,False
+808,-43.0,380.0,Religious Group (v6),British Isles II: Pre-Theodosian Roman Britain,False,False,False,False
+809,-43.0,380.0,Religious Group (v6),British Isles III: Pre-Theodosian Roman Britain Continued,False,False,False,False
+810,-43.0,380.0,Religious Group (v6),British Isles IV: Pre-Theodosian Roman Britain Continued,True,False,False,False
+811,380.0,500.0,Religious Group (v6),British Isles V: Christian Roman Britain,True,False,False,False
+812,2007.0,2020.0,Religious Group (v6),Temple of the Jedi Order,False,False,False,False
+814,380.0,500.0,Religious Group (v6),British Isles VI: Christian Roman Britain,True,False,False,False
+815,380.0,500.0,Religious Group (v6),British Isles VII: Christian Roman Britain,True,False,False,False
+816,-500.0,350.0,Religious Group (v6),British Paganism.,False,False,False,False
+817,350.0,650.0,Religious Group (v6),Early Medieval British Christianity,True,False,False,False
+828,1209.0,1312.0,Religious Group (v6),Italy: The Franciscan Order,True,False,False,False
+835,-500.0,43.0,Religious Group (v6),British Isles: Pre-Roman,False,False,False,False
+836,43.0,500.0,Religious Group (v6),British Isles: Romano-British,False,False,False,False
+839,1788.0,1914.0,Religious Group (v6),19th century German Protestantism,True,True,False,False
+841,1073.0,2020.0,Religious Group (v6),Sa skya,False,False,False,True
+842,1730.0,2020.0,Religious Group (v6),American Evangelicalism,True,False,False,False
+843,300.0,900.0,Religious Group (v6),Bnay Qyāmā and Bnāt Qyāmā,True,False,False,False
+846,645.0,696.0,Religious Group (v6),Xuanzang's Yogācāra Tradition,False,False,False,True
+848,-200.0,70.0,Religious Group (v6),Sadducees,False,False,False,False
+849,1750.0,1850.0,Religious Group (v6),"""Gaiwiio Religion,"" ""Longhouse Religion,"" or ""The Way of Handsome Lake"" of the Seneca Tribe",False,False,False,False
+851,1899.0,2020.0,Religious Group (v6),Sikhism in the United States,False,False,False,False
+852,-500.0,900.0,Religious Group (v6),Pre-Christian Religion / Paganism in Ireland,False,False,False,False
+854,-400.0,900.0,Religious Group (v6),pre-Christian Irish,False,False,False,False
+855,1900.0,2020.0,Religious Group (v6),Middle-Class Migrant Muslims in the UAE,False,True,False,False
+857,1738.0,2020.0,Religious Group (v6),Wesleyanism,True,False,False,False
+858,165.0,550.0,Religious Group (v6),"The New Prophecy or ""Montanism""",True,False,False,False
+859,135.0,400.0,Religious Group (v6),Valentinians,True,False,False,False
+860,1704.0,1706.0,Religious Group (v6),Kimpa Vita,False,False,False,False
+862,1907.0,2020.0,Religious Group (v6),Ilm-e-Khshnoom,False,False,False,False
+863,-550.0,450.0,Religious Group (v6),Orphism,False,False,False,False
+867,1200.0,1500.0,Religious Group (v6),Nyingma Treasure,False,False,False,True
+869,855.0,1279.0,Religious Group (v6),Sichuan Esoteric Buddhist Cult,False,False,True,True
+870,1990.0,2020.0,Religious Group (v6),Postsocialist Mongolian Buddhism,False,False,False,True
+871,1848.0,2020.0,Religious Group (v6),Spiritualism,False,False,False,False
+873,1962.0,1993.0,Religious Group (v6),The Branch Davidians,True,False,False,False
+879,1860.0,2020.0,Religious Group (v6),Free Methodist Church,True,False,False,False
+880,1870.0,2015.0,Religious Group (v6),Egyptian Salafism (inluding North Africa and West Asia),False,True,False,False
+882,-450.0,425.0,Religious Group (v6),Orphism,False,False,False,False
+883,1949.0,2020.0,Religious Group (v6),Catholics in the People's Republic of China (PRC),True,False,True,False
+884,1907.0,2022.0,Religious Group (v6),Sub Saharan Africa Pentecostalism,False,False,False,False
+885,-1960.0,2022.0,Religious Group (v6),Contemporary West African Vodun,False,False,False,False
+886,1990.0,2020.0,Religious Group (v6),Pushtimarg (The Path of Grace) in the UK and Gujarat,False,False,False,False
+887,1990.0,2020.0,Religious Group (v6),Postsocialist Mongolian Shamanism,False,False,False,False
+888,780.0,900.0,Religious Group (v6),Céli Dé monks,True,True,False,False
+891,1956.0,2020.0,Religious Group (v6),Peruvian Mormons,True,False,False,False
+892,1960.0,2020.0,Religious Group (v6),Charismatic Renewal Movement in Christianity - Second Wave Pentecostalism,True,False,False,False
+893,100.0,400.0,Religious Group (v6),Sethian Gnostic,True,True,False,False
+894,1968.0,2020.0,Religious Group (v6),Universal Fellowship of Metropolitan Community Churches,True,False,False,False
+896,800.0,1571.0,Religious Group (v6),Sannō Shintō,False,False,False,True
+897,1945.0,2020.0,Religious Group (v6),Gaengjeongyudo,False,False,False,False
+898,1930.0,2020.0,Religious Group (v6),Rastafari of Jamaica,False,False,False,False
+899,1926.0,2020.0,Religious Group (v6),Nahdlatul Ulama (NU),False,True,False,False
+900,-150.0,70.0,Religious Group (v6),Pharisees,True,True,False,False
+902,300.0,500.0,Religious Group (v6),British Isles: Christian,True,False,False,False
+904,397.0,500.0,Religious Group (v6),Euboea/Central Macedonia: Nicaean-Chalcedonian Christianity,True,False,False,False
+906,1963.0,2020.0,Religious Group (v6),The Church of England,True,True,False,False
+908,1980.0,2020.0,Religious Group (v6),Sino-Christian Theology,True,False,True,False
+910,1968.0,1998.0,Religious Group (v6),Christian Base Community movement,True,False,False,False
+911,1260.0,1302.0,Religious Group (v6),Italy: Roman Catholic Christianity,True,False,False,False
+914,1258.0,2020.0,Religious Group (v6),Tariqa Shadhiliyya,False,True,False,False
+915,2000.0,2020.0,Religious Group (v6),Protestantism welcoming People with Disabilities,True,False,False,False
+917,-500.0,-50.0,Religious Group (v6),British Isles: Predominantly Celtic Polytheism,False,False,False,False
+918,-475.0,220.0,Religious Group (v6),Fangshi,False,False,True,False
+919,1995.0,2020.0,Religious Group (v6),Catholicism in contemporary Croatia,True,True,False,False
+921,1900.0,2020.0,Religious Group (v6),Bhils,True,False,False,False
+922,-50.0,400.0,Religious Group (v6),British Isles: Mixed Roman and British Polytheism,False,False,False,False
+923,200.0,700.0,Religious Group (v6),British Isles: Introduction of Early Christianity through the End of Columban/Irish Christianity,True,False,False,False
+925,220.0,650.0,Religious Group (v6),Rabbinic Judaism (Babylonia),False,False,False,False
+926,842.0,2020.0,Religious Group (v6),Ladakhi Buddhism,False,False,False,True
+927,0.0,74.0,Religious Group (v6),Zealots,False,False,False,False
+928,1860.0,1910.0,Religious Group (v6),The Ghost Dance Movement and the Lakota Sioux,False,False,False,False
+929,1143.0,2020.0,Religious Group (v6),Drikung Kagyu,False,False,False,True
+931,1580.0,2020.0,Religious Group (v6),The Society of Jesus (Jesuits) in Britain,True,False,False,False
+933,144.0,1000.0,Religious Group (v6),Marcionites,True,False,False,False
+934,1911.0,1940.0,Religious Group (v6),Mongolian Buddhism during the Revolutionary Period,False,False,False,True
+935,1910.0,2020.0,Religious Group (v6),Nigerian Pentecostalism,True,False,False,False
+937,-800.0,394.0,Religious Group (v6),Vestal Virgins,False,False,False,False
+938,-1600.0,-1185.0,Religious Group (v6),Ugarit,False,False,False,False
+940,-31.0,68.0,Religious Group (v6),Julio-Claudian Imperial Cult,False,False,False,False
+941,1600.0,1700.0,Religious Group (v6),Chan Buddhists in early Qing period,False,False,True,True
+942,1816.0,2020.0,Religious Group (v6),African Methodist Episcopal Church,True,False,False,False
+943,1752.0,2020.0,Religious Group (v6),Moravian Missionaries in Nunatsiavut,True,False,False,False
+944,1620.0,1700.0,Religious Group (v6),Mohyla's Ukrainian Church,False,False,False,False
+946,700.0,1959.0,Religious Group (v6),Nyingma (rnying ma),False,False,False,True
+948,120.0,300.0,Religious Group (v6),Christianity in Ephesus,True,False,False,False
+950,1652.0,2020.0,Religious Group (v6),The Religious Society of Friends,True,False,False,False
+952,1980.0,2020.0,Religious Group (v6),Ethiopian Jews,False,False,False,False
+953,1975.0,2020.0,Religious Group (v6),Sachchai,False,False,False,False
+955,600.0,800.0,Religious Group (v6),British Isles: Augustinian/Roman Christianity,True,False,False,False
+957,-800.0,-300.0,Religious Group (v6),Spartan Religion,False,False,False,False
+958,1540.0,1773.0,Religious Group (v6),Society of Jesus,True,False,False,False
+960,1000.0,2020.0,Religious Group (v6),Bön (Bon),False,False,False,True
+961,1885.0,2020.0,Religious Group (v6),Romanian Orthodox Church,False,False,False,False
+963,1119.0,1312.0,Religious Group (v6),The Knights Templar,True,True,False,False
+964,1800.0,2020.0,Religious Group (v6),Baul Fakirs of Bengal,False,False,False,True
+965,323.0,548.0,Religious Group (v6),Pachomian Monasticism,True,False,False,False
+966,1318.0,2020.0,Religious Group (v6),"Naqshbandī Order, Naqshbandī Tarīqa, Naqshbandīyyah, Khwājagān,",False,True,False,False
+968,1683.0,2021.0,Religious Group (v6),"Anabaptist Mennonites in North America, 1683-2021",True,True,False,False
+970,-323.0,500.0,Religious Group (v6),Cult of Isis (Mysteries of Isis),False,False,False,False
+971,500.0,2020.0,Religious Group (v6),Gāṇapatya,False,False,False,False
+972,431.0,1500.0,Religious Group (v6),Nestorian Christianity,False,False,False,False
+973,1845.0,2019.0,Religious Group (v6),The Sarna religion of the Oraons of Jharkhand,False,False,False,False
+974,1204.0,1261.0,Religious Group (v6),"Greek Chalcedonian Christians, Nicaea",True,True,False,False
+975,1980.0,2020.0,Religious Group (v6),Neo-Charismatic Movement - Third Wave Charismatic Movement,True,False,False,False
+976,1187.0,2019.0,Religious Group (v6),Mising Community,False,False,False,False
+977,1200.0,2020.0,Religious Group (v6),Chishti Sufis,False,True,False,False
+978,1500.0,2020.0,Religious Group (v6),Indonesian Catholicism,True,False,False,False
+980,1175.0,1333.0,Religious Group (v6),Pure Land Buddhist Schools in Early Medieval Japan,False,False,False,True
+981,1930.0,2020.0,Religious Group (v6),Nation of Islam,False,True,False,False
+982,-500.0,100.0,Religious Group (v6),The Samaritans (Persian to early Roman periods),True,True,False,False
+983,600.0,2020.0,Religious Group (v6),Tibetan and Himalayan Mundane and Landscape Cults,False,False,False,True
+984,1530.0,2020.0,Religious Group (v6),Calvinism (Early/Reformation),True,False,False,False
+985,1108.0,1299.0,Religious Group (v6),The Victorines,True,False,False,False
+986,150.0,529.0,Religious Group (v6),Theurgy,False,False,False,False
+987,1600.0,2020.0,Religious Group (v6),"Parsis, Zoroastrians of India",False,False,False,False
+988,1832.0,2020.0,Religious Group (v6),Churches of Christ- United States,True,False,False,False
+989,1928.0,2020.0,Religious Group (v6),Opus Dei,True,False,False,False
+993,-712.0,380.0,Religious Group (v6),Pontifex Maximus and Pontifices (Pontifical College),False,False,False,False
+994,330.0,470.0,Religious Group (v6),"Monastic Communities of Lower Egypt: Nitria, Kellia, Scetis",True,False,False,False
+995,1841.0,2020.0,Religious Group (v6),Tamil Neo-Saivism,False,False,False,False
+997,-2950.0,-2670.0,Religious Group (v6),Ancient Egypt - Early Dynastic Period,False,False,False,False
+1004,-200.0,300.0,Religious Group (v6),Religion in Roman Ostia,False,False,False,False
+1006,-2670.0,-2168.0,Religious Group (v6),Ancient Egypt - Old Kingdom,False,False,False,False
+1008,-2168.0,-2010.0,Religious Group (v6),Ancient Egypt - First Intermediate Period,False,False,False,False
+1011,-800.0,-550.0,Religious Group (v6),Kingdom of Edom,False,False,False,False
+1012,550.0,1500.0,Religious Group (v6),Inhabitants of Medieval Kurgus,True,False,False,False
+1013,1510.0,1640.0,Religious Group (v6),Estado da Índia Renegades in Deccan,True,True,False,False
+1024,1200.0,1368.0,Religious Group (v6),Universal Salvation Ritual,False,False,True,True
+1028,1100.0,1250.0,Religious Group (v6),German Pietists (Hasidei Ashkenaz),False,False,False,False
+1029,-325.0,-278.0,Religious Text (v1.0),Zigao 子羔,False,False,True,False
+1030,-325.0,-278.0,Religious Text (v1.0),The Way of Tang and Yu (Tang yu zhi dao 唐虞之道),False,False,True,False
+1031,300.0,600.0,Religious Group (v6),Eastern Roman Manichaeism,True,False,False,False
+1034,-325.0,-278.0,Religious Text (v1.0),Rongchengshi 容成氏,False,False,True,False
+1037,-1100.0,-650.0,Religious Group (v6),Third Intermediate Period in Ancient Egypt,False,False,False,False
+1038,1644.0,1911.0,Religious Group (v6),Sino-Muslims in Qing China,False,False,True,False
+1041,1600.0,2021.0,Religious Group (v6),Korean Catholicism,True,True,False,False
+1042,1078.0,1271.0,Religious Text (v1.0),Zichiji 資持記,False,False,False,False
+1043,1500.0,2020.0,Religious Group (v6),Islam in Aceh,True,True,False,False
+1044,-141.0,-87.0,Religious Group (v6),Han Imperial Cult under Emperor Wu,False,False,True,False
+1051,-1960.0,-1550.0,Religious Group (v6),Religion at Tell el-Dab'a (ancient Avaris) in Ancient Egypt,False,False,False,False
+1058,1780.0,1920.0,Religious Text (v1.0),Syŏnggyŏng chikhae kwang-ik,False,False,False,False
+1069,-1504.0,-1069.0,Religious Group (v6),Religion at Deir el-Medina,False,False,False,False
+1071,2001.0,2021.0,Religious Group (v6),Digital Shinto Communities,False,False,False,False
+1074,-139.0,140.0,Religious Text (v1.0),Chuci zhangju,False,False,True,False
+1075,402.0,406.0,Religious Text (v1.0),Dazhidu lun 大智度論,False,False,True,True
+1076,1560.0,1687.0,Religious Group (v6),Inquisitors of Goa's Santo Ofício,True,False,False,False
+1077,-325.0,-278.0,Religious Text (v1.0),The Cherished Instruction (Baoxun 保訓),False,False,True,False
+1078,-1352.0,-1336.0,Religious Text (v1.0),Hymns to the Aten,False,False,False,False
+1083,1625.0,2021.0,Religious Group (v6),Drukpa Kagyü School (Bhutan),False,False,False,True
+1087,969.0,1400.0,Religious Group (v6),The Bogomils,True,False,False,False
+1095,1947.0,1958.0,Religious Group (v6),Punjabi (West),False,True,False,False
+1098,-1200.0,300.0,Religious Text (v1.0),Shuzi gua excavated material,False,False,True,False
+1101,1710.0,1730.0,Religious Group (v6),Natchez,False,False,False,False
+1108,0.0,600.0,Religious Group (v6),Early Christianity and Monasticism in Egypt,True,True,False,False
+1109,960.0,1279.0,Religious Group (v6),Chan Buddhism in the Song,False,False,True,False
+1117,-1145.0,-1139.0,Religious Text (v1.0),Ancient Egyptian Book of the Earth – Tomb of Ramesses VI,False,False,False,False
+1120,-551.0,220.0,Religious Text (v1.0),Liji 禮記,False,False,True,False
+1124,-2000.0,-1840.0,Religious Text (v1.0),The ancient Egyptian Book of Two Ways,False,False,False,False
+1125,-1292.0,-1070.0,Religious Group (v6),Ancient Egypt - the Ramesside Period,False,False,False,False
+1127,1890.0,2021.0,Religious Group (v6),Anglican Church of Korea,True,True,False,False
+1129,-700.0,476.0,Religious Group (v6),Ancient Thessalians,False,False,False,False
+1133,-305.0,284.0,Religious Group (v6),Religion in Greco-Roman Egypt,False,False,False,False
+1134,600.0,2021.0,Religious Group (v6),Tiantai,False,False,True,False
+1136,1910.0,1951.0,Religious Group (v6),The Fellowship of Goodness 同善社 (Tongshanshe),False,False,True,True
+1140,220.0,589.0,Religious Group (v6),Early Medieval Confucianism,False,False,True,False
+1144,-1554.0,2021.0,Religious Text (v1.0),The Yijing 易經 (The Classic of Changes),False,False,True,False
+1149,618.0,906.0,Religious Group (v6),Christianity in Tang China,False,False,True,False
+1158,200.0,500.0,Religious Text (v1.0),Early Daoist text—Commands and Admonitions for the Families of the Great Dao (Dadaojia lingjie大道家令戒),False,False,True,False
+1160,1075.0,1078.0,Religious Text (v1.0),Wuzhen pian 悟真篇,False,False,False,False
+1162,400.0,1400.0,Religious Group (v6),Lingbao dafa,False,False,True,False
+1172,500.0,700.0,Religious Group (v6),Twofold Mystery (Chongxuan 重玄),False,False,True,False
+1175,-1500.0,-300.0,Religious Group (v6),Religion in Northern Hejaz,False,False,False,False
+1176,-700.0,1911.0,Religious Text (v1.0),Shijing 詩經 (Classic/Book of Odes/Songs),False,False,True,False
+1178,1997.0,2021.0,Religious Group (v6),Modern Mystery School (MMS),False,False,False,False
+1180,1600.0,2020.0,Religious Group (v6),Batak Traditional Religions,False,False,False,False
+1183,-2100.0,-2000.0,Religious Group (v6),Religion at Nippur in the Ur III period,False,False,False,False
+1187,-850.0,-700.0,Religious Group (v6),Sanctuary at Tell Damiyah,False,False,False,False
+1189,-920.0,-713.0,Religious Group (v6),Yādiya/Sam'al,False,False,False,False
+1190,-850.0,-580.0,Religious Group (v6),Ancient state of Urartu,False,False,False,False
+1191,-300.0,300.0,Religious Group (v6),Religion in Greco-Roman Alexandria,False,False,False,False
+1192,1945.0,2021.0,Religious Group (v6),Kaharingan,False,False,False,False
+1196,1910.0,1940.0,Religious Group (v6),K’iche’ (Quiché),False,False,False,False
+1203,-586.0,100.0,Religious Text (v1.0),Book(s) of Daniel,True,True,False,False
+1207,1550.0,2021.0,Religious Text (v1.0),Female alchemy Tradition,False,False,False,False
+1210,1920.0,1950.0,Religious Group (v6),Mende,False,False,False,False
+1218,1870.0,2021.0,Religious Group (v6),Yiguan Dao/I-Kuan Tao 一貫道,False,False,False,False
+1219,-2.0,7.0,Religious Text (v1.0),Chunqiu fanlu,False,False,True,False
+1223,1885.0,1910.0,Religious Group (v6),Toda,False,False,False,False
+1224,400.0,500.0,Religious Text (v1.0),Duren jing,False,False,False,False
+1227,-900.0,360.0,Religious Group (v6),Polytheistic Pre-Islamic South Arabia,False,False,False,False
+1229,1950.0,2021.0,Religious Group (v6),Three Self Patriotic Movement (TSPM),True,False,True,False
+1231,1100.0,2021.0,Religious Group (v6),"Shenxiao 神霄 (""Divine Empyrean"") Daoism",False,False,True,False
+1232,-1300.0,200.0,Religious Text (v1.0),Book of Nut,False,False,False,False
+1234,1880.0,1910.0,Religious Group (v6),Ashanti,False,False,False,False
+1240,1900.0,1935.0,Religious Group (v6),Azande,False,False,False,False
+1241,1837.0,1866.0,Religious Group (v6),Taiping 太平 Movement,False,False,True,False
+1243,1636.0,1900.0,Religious Text (v1.0),Shengjing zhijie,True,False,False,False
+1246,1895.0,1925.0,Religious Group (v6),Shilluk,False,False,False,False
+1247,1885.0,1885.0,Religious Group (v6),Exovedate,True,True,False,False
+1248,-1972.0,-1718.0,Religious Group (v6),Religion in the Old Assyrian Period,False,False,False,False
+1250,850.0,1350.0,Religious Group (v6),Hanbalism,True,True,False,False
+1251,1880.0,1910.0,Religious Group (v6),Tsonga,False,False,False,False
+1253,-200.0,50.0,Religious Text (v1.0),Damascus Document,True,True,False,False
+1255,361.0,599.0,Religious Text (v1.0),Julian Romance,True,True,False,False
+1257,-1000.0,-500.0,Religious Group (v6),Ammonite Religion,False,False,False,False
+1258,-1000.0,-586.0,Religious Group (v6),Religion in Judah,True,True,False,False
+1259,1200.0,1900.0,Religious Group (v6),"The LuWang School, the School of Lu Xiangshan and Wang Yangming",False,False,False,False
+1260,850.0,1250.0,Religious Text (v1.0),Qiṣṣat Dhī al-Qarnayn,False,True,False,False
+1263,-500.0,-399.0,Religious Group (v6),Judean/Yehudite Colony at Elephantine (Persian period),True,True,False,False
+1265,-400.0,200.0,Religious Text (v1.0),Mozi 墨子,False,False,True,False
+1268,360.0,570.0,Religious Group (v6),Monotheistic Pre-Islamic South Arabia,False,False,False,False
+1269,266.0,664.0,Religious Text (v1.0),Ji shenzhou sanbao gantong lu 集神州三寶感通錄,False,False,True,True
+1270,-551.0,1911.0,Religious Text (v1.0),The Zhuangzi,False,False,True,False
+1279,1593.0,2004.0,Religious Group (v6),Mandarese Muslims,False,True,False,False
+1283,1500.0,2002.0,Religious Group (v6),Butonese Muslims,False,True,False,False
+1284,-1200.0,-330.0,Religious Group (v6),Religion of Phoenicia,False,False,False,False
+1288,1510.0,1650.0,Religious Group (v6),Bailadeiras of Goa,False,False,False,False
+1289,1500.0,2004.0,Religious Group (v6),Buginese Muslims,False,True,False,False
+1290,-100.0,50.0,Religious Text (v1.0),4QInstruction,False,False,False,False
+1293,-2000.0,2022.0,Religious Group (v6),The Zapotec or Ben 'Zaa (The Cloud People),True,False,False,False
+1294,-649.0,-539.0,Religious Text (v1.0),The Autobiography of Adad-guppi,False,False,False,False
+1295,311.0,600.0,Religious Group (v6),Donatism,True,False,False,False
+1297,56.0,907.0,Religious Text (v1.0),Chen-Wei Texts,False,False,True,False
+1299,1940.0,1965.0,Religious Group (v6),Russians (of Viriatino Village),True,False,False,False
+1300,1990.0,2022.0,Religious Group (v6),"Enlace de Agentes de Pastoral Indígena (EAPI, Network of Indigenous Ministry Agents)",True,False,False,False
+1304,1875.0,2022.0,Religious Group (v6),Peyote Religion (Peyotism) and the Native American Church,True,False,False,False
+1307,1845.0,2022.0,Religious Group (v6),Southern Baptists,True,False,False,False
+1308,275.0,530.0,Religious Group (v6),Jews and Jewish-Sympathizers in South Arabia,True,True,False,False
+1309,315.0,500.0,Religious Group (v6),Circumcellions,True,False,False,False
+1311,1870.0,2022.0,Religious Group (v6),Jehovah's Witnesses,True,False,False,False
+1312,1400.0,2022.0,Religious Group (v6),Bishnoi,False,False,False,False
+1321,1853.0,2022.0,Religious Group (v6),Mourides (Muridiyya),False,False,False,False
+1322,361.0,363.0,Religious Group (v6),Pagans under the Emperor Julian,False,False,False,False
+1323,1910.0,1935.0,Religious Group (v6),Luguru,False,False,False,False
+1324,150.0,2022.0,Religious Text (v1.0),Taiping jing,False,False,True,False
+1326,-820.0,-580.0,Religious Text (v1.0),Meher Kapısı inscription (Urartian text),False,False,False,False
+1333,150.0,600.0,Religious Group (v6),Cult of Thecla,False,False,False,False
+1334,1980.0,2022.0,Religious Group (v6),No-debt Movement in US Evangelicalism,True,False,False,False
+1335,1575.0,1700.0,Religious Group (v6),Congregation of the Oratory,True,False,False,False
+1337,-1200.0,-600.0,Religious Group (v6),Tell Afis (Syria),False,False,False,False
+1338,390.0,500.0,Religious Text (v1.0),The Sayings of the Desert Fathers,True,False,False,False
+1340,1957.0,2023.0,Religious Group (v6),International Sivananda Yoga Vedanta Centers,False,False,False,False
+1341,1960.0,2022.0,Religious Group (v6),Muslim Students Association of the United States and Canada,False,True,False,False
+1342,50.0,62.0,Religious Text (v1.0),Pauline Epistles,True,True,False,False
+1344,1840.0,1920.0,Religious Group (v6),Tibetan Nonsectarianism (ris med),False,False,False,True
+1347,500.0,1500.0,Religious Text (v1.0),"The Praise of the Bees, Exultet Hymn",True,False,False,False
+1348,2012.0,2022.0,Religious Group (v6),Disability-focused Christianity for Palestinians,True,True,False,False
+1349,1124.0,1991.0,Religious Group (v6),The Dingxiang Wang Cult,False,False,True,False
+1352,2.0,21.0,Religious Group (v6),Śākadvīpīya Brāhmaṇas,False,False,False,False
+1356,419.0,420.0,Religious Text (v1.0),The Lausiac History,True,False,False,False
+1357,100.0,400.0,Religious Group (v6),Encratites,True,False,False,False
+1367,70.0,601.0,Religious Text (v1.0),Targums,False,False,False,False
+1370,1935.0,1960.0,Religious Group (v6),Teda,False,True,False,False
+1371,1979.0,2022.0,Religious Group (v6),Twelver Shi'ism in post-revolutionary Iran,True,True,False,False
+1374,1560.0,1620.0,Religious Group (v6),The Reformed Church (Early Orthodoxy),True,True,False,False
+1375,-1900.0,-130.0,Religious Text (v1.0),Epic of Gilgamesh,False,False,False,False
+1376,1900.0,2022.0,Religious Group (v6),African Initiated Churches,True,False,False,False
+1386,1807.0,1950.0,Religious Group (v6),Liumen (Liu School),False,False,True,False
+1387,-247.0,-239.0,Religious Text (v1.0),Spring and Autumn annals of Master Lü,False,False,True,False
+1389,200.0,1200.0,Religious Text (v1.0),Writ of the Three Sovereigns,False,False,True,False
+1390,1855.0,1880.0,Religious Group (v6),Eastern Apache,False,False,False,False
+1392,360.0,900.0,Religious Group (v6),Messalians,True,False,False,False
+1393,579.0,650.0,Religious Text (v1.0),The Ladder of Divine Ascent,True,False,False,False
+1396,-304.0,-30.0,Religious Group (v6),Ptolemaic Egypt - Egyptian Religion,False,False,False,False
+1399,-1550.0,-1350.0,Religious Group (v6),Religion in the Mittani Empire,False,False,False,False
+1401,485.0,528.0,Religious Text (v1.0),"The ""On the Divine Names"" of Pseudo Denys the Areopagite",True,False,False,False
+1404,-300.0,450.0,Religious Group (v6),Religion in Nabataea,False,False,False,False
+1406,750.0,1700.0,Religious Text (v1.0),Barlaam and Ioasaph,True,False,False,True
+1409,-1500.0,-400.0,Religious Group (v6),Formative Olmec,False,False,False,False
+1412,1838.0,2022.0,Religious Group (v6),Tenrikyo,False,False,False,False
+1415,350.0,398.0,Religious Group (v6),Anomeans,True,False,False,False
+1418,-800.0,-200.0,Religious Text (v1.0),Book of Jonah,True,True,False,False
+1419,-1550.0,-1425.0,Religious Group (v6),Ancient Egyptian Religion in the Early 18th Dynasty,False,False,False,False
+1420,1785.0,1810.0,Religious Group (v6),Creek,False,False,False,False
+1421,-340.0,140.0,Religious Text (v1.0),Tian wen 天問,False,False,True,False
+1422,726.0,730.0,Religious Text (v1.0),Defense of Icon Veneration by John of Damascus,True,False,False,False
+1424,420.0,430.0,Religious Text (v1.0),Santian neijie jing 三天內解經,False,False,True,False
+1426,1580.0,1740.0,Religious Group (v6),Early Missionary Christianity in China,True,False,True,False
+1427,100.0,199.0,Religious Text (v1.0),The Chaldaean Oracles,False,False,False,False
+1429,-2300.0,1700.0,Religious Text (v1.0),Enheduana's Exaltation of Inana,False,False,False,False
+1431,412.0,485.0,Religious Text (v1.0),Elements of Theology,False,False,False,False
+1432,312.0,324.0,Religious Text (v1.0),Preparation for the Gospel-Demonstration of the Gospel,True,False,False,False
+1434,1912.0,1937.0,Religious Group (v6),Kuna,False,False,False,False
+1441,1325.0,1521.0,Religious Group (v6),Mexica (Aztec) Religion,False,False,False,False
+1450,1855.0,1880.0,Religious Group (v6),Tehuelche,False,False,False,False
+1452,100.0,350.0,Religious Text (v1.0),Soushen ji 搜神記,False,False,True,False
+1454,1337.0,1351.0,Religious Group (v6),Hesychastic Controversy,True,False,False,False
+1458,1935.0,1960.0,Religious Group (v6),Mbuti,False,False,False,False
+1466,1800.0,1980.0,Religious Group (v6),Islamic modernists,False,True,False,False
+1468,325.0,451.0,Religious Group (v6),Eastern Christianity From Nicaea to Chalcedon,True,False,False,False
+1469,300.0,1532.0,Religious Group (v6),Huamachuco Religion,False,False,False,False
+1471,-593.0,-100.0,Religious Text (v1.0),Book of Ezekiel,True,True,False,False
+1484,-2500.0,50.0,Religious Text (v1.0),Mesopotamian Exorcistic Texts,False,False,False,False
+1488,1869.0,1894.0,Religious Group (v6),Botocudo,False,False,False,False
+1508,1936.0,1955.0,Religious Text (v1.0),Zaytuna Magazine/ المجلة الزيتونية,False,True,False,False
+1511,1804.0,1903.0,Religious Group (v6),Sokoto,True,True,False,False
+1513,1927.0,1930.0,Religious Text (v1.0),Imrā’atu-nā fī l-šarīʻa wa-l-muŷtamaʻ / امرأتنا في الشريعة والمجتمع,False,True,False,False
+1517,1936.0,1962.0,Religious Group (v6),Tunisian Women's Associations,False,True,False,False
+1520,995.0,1066.0,Religious Text (v1.0),Kitāb al-Khilāf fῑ al-Aḥkām by Al-Shaykh al-Ṭūsī,False,True,False,False
+1521,1256.0,1400.0,Religious Group (v6),Order of the Hermits of St Augustine (Augustinian friars),True,False,False,False
+1522,1781.0,2022.0,Religious Group (v6),Tijaniyya Tariqa الطريقة التجانية,False,True,False,False
+1523,1936.0,2022.0,Religious Text (v1.0),Tafsīr al-taḥrīr wa al-tanwīr,False,True,False,False
+1525,-400.0,-300.0,Religious Text (v1.0),Changsha Zidanku Chu bo shu 長沙子彈庫楚帛書 1 (Chu Silk Manuscript),False,False,True,False
+1529,720.0,743.0,Religious Group (v6),Byzantine Iconoclasts (726-787 CE),True,False,False,False
+1534,100.0,2022.0,Religious Text (v1.0),Shorter Sukhāvatīvyūha Sūtra,False,False,True,True
+1535,1921.0,1956.0,Religious Group (v6),الجمعية الخيرية الإسلامية بمدينة سوق الأربعاء,False,True,False,False
+1539,1947.0,2022.0,Religious Text (v1.0),Maqāṣid al-šarī῾a al-islāmiyya,False,True,False,False
+1540,1100.0,1400.0,Religious Text (v1.0),The Sanskrit Yasna,False,False,False,False
+1542,1913.0,2022.0,Religious Group (v6),Umbanda,True,False,False,False
+1544,1596.0,2022.0,Religious Group (v6),Ukrainian Greek Catholic Church,True,False,False,False
+1546,-150.0,-25.0,Religious Text (v1.0),4QPseudo Ezekiel,False,False,False,False
+1549,1150.0,1250.0,Religious Text (v1.0),Slaying of Husayn Texts,False,True,False,False
+1551,-1970.0,-1850.0,Religious Text (v1.0),Donation Texts from Ur during the Isin-Larsa Period,False,False,False,False
+1552,1911.0,2022.0,Religious Text (v1.0),The Key of Ilme Kṣnum to Understand the Zoroastrian Religion,False,False,False,False
+1554,1942.0,1950.0,Religious Text (v1.0),"Mustafa Sabri, Mawqif al-ʿAql",False,True,False,False
+1555,1970.0,2022.0,Religious Group (v6),Al-Ahbash الأحباش,False,True,False,False
+1558,150.0,200.0,Religious Text (v1.0),Acts of Paul and Thecla,True,False,False,False
+1559,1650.0,1850.0,Religious Text (v1.0),Al-manhaj al-farîd fî ma'rifat 'ilm al-tawhîd.,False,True,False,False
+1560,1036.0,2022.0,Religious Text (v1.0),‘Ara’is al-Majalis fi Qasas al-Anbiya' عَرَائِسُ الْمَجَالِسِ فِي قَصَصِ الْأَنْبِيَاءِ,False,True,False,False
+1570,9.0,21.0,Religious Group (v6),Tamil Muslims,False,True,False,False
+1573,767.0,820.0,Religious Text (v1.0),Al-Risala (The Message) الرسالة,False,True,False,False
+1574,-2000.0,-1800.0,Religious Group (v6),Household religion at Ur,False,False,False,False
+1575,1905.0,1956.0,Religious Text (v1.0),L’esprit libéral du Coran,False,True,False,False
+1576,-760.0,-100.0,Religious Text (v1.0),Book of Amos,True,True,False,False
+1581,-620.0,200.0,Religious Text (v1.0),Book of Jeremiah,True,True,False,False
+1582,-300.0,500.0,Religious Group (v6),Cult of Bona Dea,False,False,False,False
+1584,1890.0,1956.0,Religious Text (v1.0),Tafattuq al-aḥkām,False,True,False,False
+1585,1004.0,1004.0,Religious Text (v1.0),Jingde chuandeng lu 景德傳燈錄,False,False,True,True
+1588,1951.0,2023.0,Religious Text (v1.0),In the Shade of the Qur'an في ظلال القرآن,False,True,False,False
+1589,2.0,21.0,Religious Text (v1.0),Peshitta,True,True,False,False
+1595,-335.0,-275.0,Religious Text (v1.0),The Five Yi Yin Texts,False,False,True,False
+1606,990.0,2022.0,Religious Text (v1.0),Kitab Sara'ir wa Asrar an-Nutaqa' كتاب سرائر وأسرار النّطقاء,False,True,False,False
+1607,897.0,1700.0,Religious Group (v6),Zaydism and the state in Yemen,False,True,False,False
+1615,-300.0,400.0,Religious Group (v6),Teuchitlan Tradition,False,False,False,False
+1618,1766.0,1828.0,Religious Text (v1.0),Diya'u al-Ta'aweel fee Ma'ani al-Tanzeel (The Bright interpretation of the meanings of the Qur'an),False,True,False,False
+1624,-900.0,-612.0,Religious Group (v6),Neo-Assyrian Healers (āšipu/mašmaššu-exorcists),False,False,False,False
+1626,-800.0,-400.0,Religious Group (v6),The Cult of Maritime Hera,False,False,False,False
+1628,1100.0,2023.0,Religious Text (v1.0),Bad' al-Khalq wa Qasas al-Anbiya' of Kisa'i كتاب بدء الخلق وقصص الأنبياء للكسائي,False,True,False,False
+1639,1703.0,1762.0,Religious Text (v1.0),Hujjat Allāh al-Bāligha,False,True,False,False
+1650,1332.0,1406.0,Religious Text (v1.0),"كتاب"" المقدّمة ""لابن  خلدون livre  Mou qaddîma d'Abd Al Rahman Ibn Khaldoun",False,True,False,False
+1652,874.0,936.0,Religious Text (v1.0),Le Livre de al-'Ibana 'an 'Usul al-Diyana de al-Ash'ari كتاب الإبانة عن أصول الديانة للأشعري,False,True,False,False
+1653,341.0,399.0,Religious Group (v6),Visigothic Homoian Christianity,True,True,False,False
+1654,1981.0,2023.0,Religious Group (v6),Le Parti du Mouvement de La Nahda حزب حركة النهضة,False,True,False,False
+1657,420.0,430.0,Religious Text (v1.0),The Institutes of John Cassian,True,False,False,False
+1659,420.0,430.0,Religious Text (v1.0),The Conferences of John Cassian,True,False,False,False
+1661,-1300.0,-300.0,Religious Text (v1.0),Ludlul Bel Nemeqi,False,False,False,False
+1664,50.0,110.0,Religious Text (v1.0),The Didache,True,False,False,False
+1667,1850.0,1951.0,Religious Group (v6),Medérsiens,False,True,False,False
+1674,1833.0,2023.0,Religious Text (v1.0),New Hampshire Declaration of Faith,False,False,False,False
+1677,-1650.0,-1180.0,Religious Group (v6),Royal Hittite Religion,False,False,False,False
+1683,-800.0,-400.0,Religious Text (v1.0),Book of Leviticus,True,True,False,False
+1684,347.0,414.0,Religious Text (v1.0),The Lives of the Philosophers and Sophists,False,False,False,False
+1686,1924.0,2023.0,Religious Text (v1.0),L'islam et les origines de la gouvernance Ali Abdel Razek الإسلام وأصول الحكم علي عبد الرازق,False,True,False,False
+1688,200.0,800.0,Religious Group (v6),Arianism,True,True,False,False
+1689,1516.0,1919.0,Religious Group (v6),The Isma'ilis in the Ottoman Empire,True,True,False,False
+1690,843.0,1054.0,Religious Group (v6),Christianity in Byzantium: between the end of Iconoclasm and the Schism,True,False,False,False
+1694,1054.0,1204.0,Religious Group (v6),Christianity in Byzantium: Between the Schism and the Fourth Crusade,True,False,False,False
+1695,-230.0,1911.0,Religious Text (v1.0),"Xiaojing ""Classic of Filial Piety""",False,False,True,False
+1697,450.0,1450.0,Religious Group (v6),Stylite Monks,True,False,False,False
+1700,-800.0,-500.0,Religious Text (v1.0),The Book of Hosea,True,False,False,False
+1701,1120.0,2023.0,Religious Group (v6),The Premonstratensian Order in the Middle Ages,True,False,False,False
+1703,1265.0,1310.0,Religious Group (v6),Arsenites,True,False,False,False
+1705,1088.0,1148.0,Religious Text (v1.0),The Historia Compostellana,True,True,False,False
+1708,708.0,2023.0,Religious Group (v6),الإباضية  Al-Ibadia,False,True,False,False
+1709,1115.0,1269.0,Religious Group (v6),Almohads (al-Muwaḥḥidūn),False,True,False,False
+1714,2019.0,2022.0,Religious Group (v6),Syncretic Polytheism in Curious Pastimes LARP,True,False,False,False
+1721,-890.0,750.0,Religious Text (v1.0),Tell Fekheriyeh Inscription,False,False,False,False
+1735,1127.0,2023.0,Religious Text (v1.0),كتاب الملل والنحل لعبد الكريم ابو الفتح الشهرستاني,True,True,False,False
+1736,1754.0,1817.0,Religious Text (v1.0),Ihya'u Sunnah wa Ikhmadul Bid'ah,False,True,False,False
+1737,661.0,2023.0,Religious Group (v6),الإمامية Al-Imamia,True,True,False,False
+1741,1891.0,2023.0,Religious Group (v6),Methodism in Zimbabwe or Methodist Church in Zimbabwe,True,False,False,False
+1759,1195.0,2023.0,Religious Group (v6),الطريقة الشاذلية = Attarika Achadoulia,True,True,False,False
+1763,1400.0,2009.0,Religious Text (v1.0),Uḍḍīśatantra,False,False,False,False
+1771,1781.0,1837.0,Religious Text (v1.0),إنفاق الميسور في تاريخ بلاد التكرار,False,True,False,False
+1774,-1557.0,1864.0,Religious Group (v6),إباضية جزيرة جربة,False,False,False,False
+1776,1881.0,1939.0,Religious Group (v6),الطريقة القادرية في البلاد التونسية,False,False,False,False
+1777,-1881.0,1939.0,Religious Group (v6),الطريقة التّيجانية بالبلاد التونسية,False,True,False,False
+1778,300.0,990.0,Religious Text (v1.0),Le Conflit d'Adam et Eve contre Satan ou The first and the Second hidden book of Adam and Eve صراع آدم وحوّاء ضدّ الشيطان,True,False,False,False
+1779,-1956.0,2023.0,Religious Group (v6),المذهب المالكي بالبلاد التونسية,False,True,False,False
+1780,1881.0,1939.0,Religious Group (v6),الطريقة الشاذلية في تونس,False,False,False,False
+1781,1969.0,2023.0,Religious Group (v6),المذهب الشيعي في تونس,False,False,False,False
+1785,1197.0,1197.0,Religious Text (v1.0),Carmen de Incendio,True,False,False,False
+1787,1190.0,1200.0,Religious Text (v1.0),Ekphrasis of the Church of the Holy Apostles,True,False,False,False
+1791,1100.0,1200.0,Religious Group (v6),"الطريقة القادرية في بغداد: فترة التأسيس ق12 Attarika Al Qadiria à Bagdad: la période fondatrice, le XIIe siècle",True,True,False,False
+1795,1965.0,2023.0,Religious Text (v1.0),‘Adhwā‘ Al-Bayān fi ‘Idhāḥ Al-Qur‘ān bi Al-Qur‘ān: أضواء البيان في إيضاح القرآن بالقرآن,False,True,False,False
+1803,1766.0,1828.0,Religious Text (v1.0),مفتاح التفسير,False,True,False,False
+1805,1744.0,1819.0,Religious Group (v6),Wahhabisme الوهّابيّة,False,True,False,False
+1806,1800.0,1900.0,Religious Group (v6),Sango Religious group in Oyo,False,False,False,False
+1808,1793.0,1864.0,Religious Group (v6),'yan Taru (Women Cadre of the Nana Asma'u),False,True,False,False
+1810,-1200.0,-1046.0,Religious Text (v1.0),Shang Oracle Bone Inscriptions,False,False,True,False
+1811,1793.0,1864.0,Religious Text (v1.0),كتاب قصيدة المرثية (Kitab Qasidat al-Marsiyyah).,True,True,False,False
+1816,365.0,2023.0,Religious Text (v1.0),The Zhen'gao,False,False,True,False
+1818,1403.0,1445.0,Religious Text (v1.0),(Urjuzat al-Wildan) أرجوزة الولدان,False,True,False,False
+1820,1980.0,2019.0,Religious Group (v6),"Cherubim and Seraphim Church Unification, Campus Fellowship",True,False,False,False
+1829,1986.0,2019.0,Religious Group (v6),Cherubim and Seraphim Unification Church of Nigeria (C&SUCN),True,False,False,False
+1835,1948.0,2023.0,Religious Group (v6),"The Cherubim and Seraphim Church of Zion, Ugbonla",False,False,False,False
+1845,1018.0,1536.0,Religious Group (v6),Benedictine Order in Denmark,True,False,False,False
+1847,-300.0,200.0,Religious Text (v1.0),Arthaśāstra,False,False,False,False
+1852,1987.0,1997.0,Religious Text (v1.0),The Communion Letters by Whitley and Anne Strieber,False,False,False,False
+1855,-1700.0,-600.0,Religious Text (v1.0),Atra-Hasīs,False,False,False,False
+1858,185.0,373.0,Religious Group (v6),Christianity in Alexandria: From Origen to Athanasius,True,False,False,False
+1869,1930.0,2015.0,Religious Group (v6),IFA RELIGIOUS GROUP IN ILE- IFE,False,False,False,False
+1871,-1900.0,-1600.0,Religious Text (v1.0),Inana's descent to the nether world,False,False,False,False
+1872,1947.0,2023.0,Religious Group (v6),"The Holy Apostles Community, Ayetoro",False,False,False,False
+1875,1440.0,1505.0,Religious Text (v1.0),"Jalal al-Din al-Suyuti, Perfect Guide to Qur'anic Studies (al-Itqan fi 'Ulum al-Qur'an)",False,True,False,False
+1882,512.0,518.0,Religious Text (v1.0),The Life of Severus,True,False,False,False
+1897,1951.0,2023.0,Religious Group (v6),"The Episcopal Church of Cherubim and Seraphim, Zion Pepe",False,False,False,False
+1898,-1300.0,-610.0,Religious Text (v1.0),Shurpu Incantation Series,False,False,False,False
+1903,750.0,1258.0,Religious Group (v6),The 'Abbāsids,True,True,False,True
+1904,1800.0,2000.0,Religious Group (v6),الطريقة القادرية في تونس القرن  19 و20   =  L'ordre Qadiri en Tunisie aux XIXe et XXe siècles,True,True,False,False
+1905,-1514.0,1575.0,Religious Text (v1.0),(A brief introduction to the Islamic jurisprudence on the Maliki school of law)مختصر الأخضري في مذهب الإمام مالك,False,True,False,False
+1906,1872.0,1895.0,Religious Text (v1.0),"(Acceptable means of praising the Prophet, may God bless him and grant him peace)الوسائل المتقبلة في مدح النبي صلى الله عليه و سلم",False,True,False,False
+1907,-1425.0,1505.0,Religious Text (v1.0),A treatise on the rulings of the people of Dhimma (رسالة في أحكام اهل الذمة),False,True,False,False
+1908,1100.0,1300.0,Religious Group (v6),"Buddhist Traders in the Chinese Quarter in Hakata, Japan",False,False,True,True
+1921,-340.0,-240.0,Religious Text (v1.0),Zhouxun 周訓,False,False,True,False
+1924,-700.0,-300.0,Religious Text (v1.0),The Deuteronomistic History,False,False,False,False
+1928,-1793.0,1864.0,Religious Group (v6),(The gathering of the Messenger of God does not falter)وجمع رسول الله لا يتشعث,False,True,False,False
+1940,1950.0,2023.0,Religious Group (v6),"The Holy Apostles Community, Ori-Oke Iwamimo",False,False,False,False
+1943,1990.0,2020.0,Religious Group (v6),Cult of Gauchito Gil,True,False,False,False
+1958,1915.0,2018.0,Religious Group (v6),The Apostolic Faith Mission in Zimbabwe,False,False,False,False
+1961,1990.0,2023.0,Religious Group (v6),"Grace Covenant Centre, Ado-Ekiti",True,False,False,False
+1966,1972.0,2023.0,Religious Group (v6),Cherubim & Seraphim Movement Church (Worldwide) Ayo Ni O,False,False,False,False
+1971,-600.0,-550.0,Religious Text (v1.0),The Homeric Hymn to Demeter,False,False,False,False
+1972,1970.0,2000.0,Religious Group (v6),Shepherding Movement,True,False,False,False
+1973,-655.0,-522.0,Religious Text (v1.0),The Homeric Hymn to Apollo,False,False,False,False
+1974,1989.0,2023.0,Religious Group (v6),"Chapel of Grace, Ile-Ife",True,False,False,False
+1976,916.0,991.0,Religious Text (v1.0),Who is not assisted by the religious scholar(The Jurist) (Man La Yahdhuruhu al-Faqih) من لا يحضره الفقيه,False,True,False,False
+1979,-550.0,-500.0,Religious Text (v1.0),The Homeric Hymn to Hermes,False,False,False,False
+1981,1246.0,1332.0,Religious Text (v1.0),(Guiding the traveler to the most honorable path in the jurisprudence of Imam Malik.)إرشاد السالك إلى أشرف المسالك في فقه الإمام مالك,False,True,False,False
+1983,400.0,600.0,Religious Group (v6),Early Byzantine Asceticism,True,False,False,False
+1985,34.0,638.0,Religious Group (v6),Christianity in Antioch. From the Apostolic Era to the Islamic conquest,True,False,False,False
+1989,-600.0,300.0,Religious Group (v6),Iron Age Celtic Spain and Portugal (Celtiberia),False,False,False,False
+1991,1804.0,1903.0,Religious Text (v1.0),(Laws of Sharia rulings and issues of the branches of jurisprudence.) قوانين الأحكام الشرعية ومسائل الفروع الفقهية,False,True,False,False
+1992,1556.0,1557.0,Religious Text (v1.0),Kitab tesviyetü't-teveccüh ila'l hak: The Guide for One's Turning toward Truth,False,True,False,False
+1993,-600.0,400.0,Religious Group (v6),Ancient Boeotians,False,False,False,False
+1994,1968.0,2023.0,Religious Group (v6),Nigeria Fellowship of Evangelical Students (NIFES),True,False,False,False
+1996,-138.0,-128.0,Religious Text (v1.0),Delphic Hymns 1 and 2,False,False,False,False
+1997,300.0,500.0,Religious Text (v1.0),Hundred and eighty precepts of Lord Lao,False,False,True,False
+1998,635.0,1000.0,Religious Text (v1.0),The Chinese Christian Scroll Pelliot chinois 3847,True,True,False,False
+2000,1933.0,2023.0,Religious Group (v6),"The Community Church of Apostles Nigeria and Oversea (COCANO), Ajegunle",True,False,False,False
+2001,-700.0,-500.0,Religious Text (v1.0),The Book of Deuteronomy,True,False,False,False
+2003,1914.0,2023.0,Religious Group (v6),Nigerian Baptist Convention,False,False,False,False
+2006,1970.0,2023.0,Religious Group (v6),New Life for All Nations Ministries,True,False,False,False
+2008,1804.0,1903.0,Religious Text (v1.0),(The beginning of the diligent and the end of the frugal) بداية المجتهد ونهاية المقتصد,False,True,False,False
+2009,-800.0,300.0,Religious Group (v6),Ancient Arcadians,False,False,False,False
+2010,1240.0,2023.0,Religious Group (v6),Bektashi Tarika,False,True,False,False
+2016,-909.0,1171.0,Religious Group (v6),الدولة الفاطمية 909 - 1171م,False,False,False,False
+2021,1905.0,2023.0,Religious Group (v6),The United Missionary Church of Africa,True,False,False,False
+2023,971.0,1152.0,Religious Group (v6),الدولة الزيرية 971 - 1152,False,True,False,False
+2025,1000.0,1898.0,Religious Text (v1.0),"The Satisfaction of Souls and Words of the Wise concerning the scholars and righteous ones buried in Fez, by Muhammad ibn Ja'far al-Kattani",False,True,False,False
+2027,1953.0,2023.0,Religious Group (v6),Hizb-ut-Tahrir,False,True,False,False
+2031,800.0,909.0,Religious Group (v6),الدولة الأغلبية  184-296 هجري,False,True,False,False
+2032,-1767.0,1828.0,Religious Text (v1.0),(The light of the rulers regarding what is best for them and on them) ضياء الحكام فيما لهم وعليهم من الأحكم,False,True,False,False
+2038,1000.0,1300.0,Religious Group (v6),"Cathars, Catharism, Albigenses, Albigensians, Cathari, Catharistae, ""Pure Christians""",True,False,False,False
+2039,-1000.0,50.0,Religious Text (v1.0),Psalm 109,True,True,False,False
+2040,-1752.0,1804.0,Religious Text (v1.0),(Condolences to the Al-Azhar community) المقدمة العزية للجماعة الأزهرية,False,True,False,False
+2046,1905.0,1935.0,Religious Text (v1.0),L'Interprétation du Coran Intitulé Tafsir al-Manar تفسير المنار,False,True,False,False
+2048,-777.0,909.0,Religious Group (v6),الدولة الرستمية,False,True,False,False
+2052,1992.0,2023.0,Religious Group (v6),Christ Way Ministries International,True,False,False,False
+2053,1804.0,1903.0,Religious Text (v1.0),(Alert the unwary)تنبيه الغافلين,False,True,False,False
+2054,1918.0,2023.0,Religious Group (v6),Christ Apostolic Church,False,False,False,False
+2055,-1800.0,-600.0,Religious Text (v1.0),An Akkadian Tamitu-Query,False,False,False,False
+2057,-1400.0,-1200.0,Religious Text (v1.0),Paskuwatti’s Ritual to Cure Sexual Dysfunction,False,False,False,False
+2059,1804.0,1903.0,Religious Text (v1.0),(The Garden of Knowers)بستان العارفين,False,True,False,False
+2061,1800.0,1900.0,Religious Group (v6),OYA RELIGIOUS GROUP IN OYO,False,False,False,False
+2064,1911.0,1998.0,Religious Text (v1.0),Sha'rawi interpretation of the Coran تفسير محمّد متولّي الشعراوي,False,True,False,False
+2069,1969.0,2022.0,Religious Group (v6),L'ordre Soufi Qasimite Hadfite الطريقة الصوفية القاسميّة الهادفية,False,True,False,False
+2070,2003.0,2018.0,Religious Group (v6),Overcomers Evangelical Mission International (Ori-Oke Asegun),True,True,False,False
+2071,-30.0,30.0,Religious Text (v1.0),"Songs of the Sage (4Q510, 4Q511)",True,True,False,False
+2072,700.0,900.0,Religious Text (v1.0),Unguja Ukuu Amulet Seal,True,True,False,False
+2074,1905.0,1906.0,Religious Group (v6),"Revolutionary Mahdism and Resistance to Colonial Rule in the Sokoto Caliphate, 1905-1906",False,False,False,False
+2075,600.0,671.0,Religious Text (v1.0),L'Interprétation du Coran Intituléتفسير الجامع لأحكام ا Tafsir  Al-Jami' li Ahkam Al Coran par Al-Qurtubi تفسير الجامع لأحكام القرآن للقرطبي,False,True,False,False
+2076,1107.0,2023.0,Religious Text (v1.0),Kizimkazi Dimbani Mosque Inscription,True,True,False,False
+2077,1812.0,1828.0,Religious Text (v1.0),ضياء السياسات والفتاوى والنوازل مما هو في فروع الدين من المسائل,False,True,False,False
+2078,1149.0,1208.0,Religious Text (v1.0),"L'Interprétation du Coran ""Clés de l'Invisible"" تفسير ""مفاتيح الغيب""",False,True,False,False
+2079,1804.0,1903.0,Religious Text (v1.0),(Jewels of meanings and fulfillment of wishes)جواهر المعاني و بلوغ الأماني,False,True,False,False
+2080,50.0,1000.0,Religious Text (v1.0),Daily Communal Petitions (Tefillah/Amidah),False,False,False,False
+2081,-180.0,132.0,Religious Text (v1.0),Ben Sira 36:1–22,False,False,False,False
+2082,1804.0,1903.0,Religious Text (v1.0),(The spears of the Merciful Party on the Throat of the Servants of the Merciful.) رماح حزب الرحيم على نحور حزب الرحيم,False,True,False,False
+2083,1900.0,1975.0,Religious Text (v1.0),(The spirit of Morality)روح الأدب,False,True,False,False
+2084,1980.0,1985.0,Religious Group (v6),MAITATSINE: NIGERIA'S BLOODY RELIGIOUS TERRORIST MOVEMENT,False,False,False,False
+2085,1766.0,1828.0,Religious Text (v1.0),الحصن الرصين في علم التصريف,False,True,False,False
+2086,1462.0,2023.0,Religious Text (v1.0),Mathnawi ma'nawi,True,True,False,False
+2087,224.0,310.0,Religious Text (v1.0),"Al-Tabari’s interpretation of the Qur’an تفسير الطبري""جامع البيان في تأويل آي القرآن """,True,True,False,False
+2088,1766.0,1828.0,Religious Text (v1.0),مصباح الراوي في علم الحديث,False,True,False,False
+2089,1974.0,2023.0,Religious Group (v6),L'ordre Soufit karkariya en Tunisie الطريقة الكركرية في تونس,False,True,False,False
+2090,1892.0,1976.0,Religious Text (v1.0),أسهل المدارك شرح إرشاد السالك في فقه إمام الأئمة مالك,False,True,False,False
+2092,716.0,803.0,Religious Text (v1.0),Interpretation of Imam Ibn Arafaتفسير الامام ابن عرفة الورغمّي,False,True,False,False
+2094,100.0,1521.0,Religious Group (v6),Feathered Serpent's cult,False,False,False,False
+2100,1235.0,1554.0,Religious Group (v6),الدولة الزيانية,False,False,False,False
+2101,1126.0,1198.0,Religious Text (v1.0),"Le livre Fasl al-Maqal d'Ibn Rushd concernant le lien entre la sagesse et la charia""فصل المقال فيما بين الحكمة والشريعة من اتّصال",False,True,False,False
+2103,1804.0,1903.0,Religious Text (v1.0),"(Revising the strong statement, an explanation of the chapter on hadith) تنقيح القول الحثيث شرح لباب الحديث",False,True,False,False
+2104,1700.0,1900.0,Religious Group (v6),الطريقة التجانية في تونس ق18-ق19 ATARIKA TJENIA FI TOUNES  XVIII-XIXème siècle,True,True,False,False
+2111,700.0,1463.0,Religious Group (v6),Tsinburbura Traditional Religion,False,False,False,False
+2112,-323.0,-314.0,Religious Text (v1.0),Mengzi,False,False,True,False
+2114,1837.0,1990.0,Religious Group (v6),Tijaniyyah Sufi Movement in North-Western Nigeria,False,True,False,False
+2116,1804.0,1923.0,Religious Group (v6),Qadiriyyah Movement in the Sokoto Caliphate.,False,True,False,False
+2118,200.0,1800.0,Religious Text (v1.0),Samaritan Hymn by Amram Dare,True,True,False,False
+2122,1978.0,2008.0,Religious Group (v6),Jama'at Izalat al-Bid'ah wa Iqamat al-Sunnah (JIBWIS),False,True,False,False
+2124,1934.0,2024.0,Religious Text (v1.0),إراءة عرائس شموس فلك الحقائق العرفانية بأصابع حق ماهية التربية بالطريقة التجانية,True,True,False,False
+2125,1917.0,1992.0,Religious Text (v1.0),الإسلام في نيجيريا والشيخ عثمان بن فوديو الفلاتي-أدم عبد الله الالوري,True,True,False,False
+2126,1984.0,2023.0,Religious Group (v6),Nasrul-lahi-li Fathi Society of Nigeria (NASFAT),False,True,False,False
+2128,650.0,1700.0,Religious Group (v6),Paulicians,True,True,False,False
+2131,900.0,1470.0,Religious Group (v6),Chimú Empire Religion,False,False,False,False
+2133,1923.0,2000.0,Religious Group (v6),ANSAR-UD-DEEN SOCIETY OF NIGERIA,False,True,False,False
+2138,1916.0,2024.0,Religious Group (v6),الجماعة الأحمدية الإسلامية في نيجيريا,True,True,False,False
+2139,1980.0,2020.0,Religious Group (v6),Shi'a Group in Nigeria,False,False,False,False
+2140,347.0,407.0,Religious Text (v1.0),"St. John Chrysostom, Homilies On the Incomprehensible Nature of God",True,False,False,False
+2141,2002.0,2022.0,Religious Group (v6),(Ahl al-Sunnah Group for Preaching and Jihad)جماعة أهل السنة للدعوة والجهاد,False,True,False,False
+2143,410.0,426.0,Religious Text (v1.0),City of God,True,False,False,False
+2147,-100.0,1574.0,Religious Group (v6),الدولة الحفصية 1229-1574,False,True,False,False
+2148,1705.0,1957.0,Religious Group (v6),الدولة الحسينية 1705م -1957م,False,False,False,False
+2149,330.0,1453.0,Religious Group (v6),Judaism in Byzantium,True,True,False,False
+2153,-400.0,-300.0,Religious Text (v1.0),Guishen zhi ming 鬼神之明,False,False,True,False
+2157,1775.0,1815.0,Religious Group (v6),Blue Light Evangelicals in the Late Eighteenth-Century Royal Navy,True,False,False,False
+2160,250.0,843.0,Religious Group (v6),Manichaeans,False,False,False,False
+2166,395.0,1453.0,Religious Group (v6),Judaism in Byzantium,True,True,False,False
+2168,-600.0,1100.0,Religious Group (v6),"Dzibilchaltún, arquitectura, poder y cambio religioso en el norte de Yucatán",False,False,False,False
+2170,450.0,1500.0,Religious Text (v1.0),Liber Pontificalis,True,False,False,False
+2177,-100.0,0.0,Religious Text (v1.0),The Covenant Ceremony in the Community Rule (1QS),True,True,False,False
+2180,1921.0,2024.0,Religious Group (v6),Cao Đài,False,False,False,False
+2181,-150.0,70.0,Religious Text (v1.0),Communal Petitions for Days of the Week: Prayer for Friday (4Q504),False,False,False,False
+2187,-900.0,-500.0,Religious Text (v1.0),1 Samuel 2:1-10,False,False,False,False
+2190,-400.0,350.0,Religious Text (v1.0),Ezra 9,False,False,False,False
+2191,-700.0,-700.0,Religious Text (v1.0),Two Aramaic Mortuary Stelae from Nerab,False,False,False,False
+2194,1952.0,2023.0,Religious Group (v6),The Redeemed Christian Church of God,True,False,False,False
+2199,401.0,500.0,Religious Text (v1.0),"Prayer for Vengeance against Mariam, Kallinikos, and Others",True,True,False,False
+2200,1480.0,2024.0,Religious Group (v6),The Roman Catholic Mission in Nigeria,True,False,False,False
+2208,-160.0,80.0,Religious Text (v1.0),The Book of Judith,True,True,False,False
+2210,1981.0,2024.0,Religious Group (v6),Living Faith Church Worldwide,True,False,False,False
+2225,700.0,1100.0,Religious Group (v6),"Culdees, Céli Dé, Céili Dé, Céle Dé,  ""Clients of God"", ""Servants of God"", ""Spouses of God"", ""Companions of God"", Kelidei, Kaledei; Céile Dé",True,True,False,False
+2228,1972.0,2024.0,Religious Group (v6),Church of God Mission,True,False,False,False
+2231,1798.0,2024.0,Religious Text (v1.0),جواهر المعاني وبلوغ الأماني,True,True,False,False
+2232,1350.0,1500.0,Religious Group (v6),"Lollards, Lollard, the Lollard movement, Lollardism,  Lollardy, Wycliffites",True,False,False,False
+2233,1734.0,2024.0,Religious Group (v6),The Way of Former Heaven (Xiantiandao 先天道),False,False,True,True
+2236,-935.0,1012.0,Religious Text (v1.0),الرّسالة المفصّلة لأحوال المتعلّمين وأحكام المعلّمين والمتعلّمين لأبي الحسن  علي القابسي,False,True,False,False
+2237,1217.0,2024.0,Religious Group (v6),"Order of Preachers, Dominicans, Friars Preachers, Black Friars, Jacobins",True,False,False,False
+2238,1700.0,2000.0,Religious Group (v6),XX ــــــــ    ـق  XVIII   الطريقة التجانية في الجزائر :ق,True,True,False,False
+2243,700.0,2024.0,Religious Group (v6),Hui People,False,True,False,False
+2244,1204.0,1261.0,Religious Group (v6),"Catholicism in the Latin Empire, Catholicism in the Eastern Roman Empire (Byzantium), the Latin Patriarchate of Constantinople",True,False,False,False
+2245,-652.0,1240.0,Religious Group (v6),صقلية الإسلامية,False,True,False,False
+2246,-819.0,1957.0,Religious Group (v6),المذهب الحنفي بالبلاد التونسية,False,False,False,False
+2247,647.0,712.0,Religious Group (v6),الفتح العربي الإسلامي لشمال إفريقيا,False,False,False,False
+2248,1631.0,1702.0,Religious Group (v6),الدولة المرادية في تونس,False,False,False,False
+2255,1340.0,2024.0,Religious Group (v6),Dongxiang,False,True,False,False
+2256,1700.0,2000.0,Religious Group (v6),الطريقة الرحمانية في الجزائر  ق18-ق20,True,True,False,False
+2258,-202.0,256.0,Religious Text (v1.0),"Livre  des Règle  de conduite des maîtres كتاب "" آداب المعلّمين  "" محمد ابن سحنون""R",False,True,False,False
+2262,1301.0,1373.0,Religious Text (v1.0),Le Commencement et la Fin البداية والنهاية de Ibn Kathir لابن كثير,False,True,False,False
+2263,1058.0,1111.0,Religious Text (v1.0),"lettre au disciple Ayyuha-l-walad par Al Ghazâlî رسالة ""ايّها الولد لأبي حامد الغزالي",True,True,False,False
+2264,1560.0,1720.0,Religious Group (v6),The Puritans,False,False,False,False
+2265,610.0,2024.0,Religious Text (v1.0),القرآن الكريم Le Noble Coran,False,True,False,False
+2272,450.0,505.0,Religious Text (v1.0),Abou Hamid Al-Ghazali:   Le livre d'Al-Jam Al-Awam sur la science de la théologie الجام العوام عن علم الكلام,True,True,False,False
+2273,1291.0,1368.0,Religious Group (v6),Yuan divination schools,False,False,True,False
+2274,1920.0,2023.0,Religious Group (v6),Ìjọ Àdìmúlà (An Institutionalised Indigenous Religious Movement in Yorubaland,False,False,False,False
+2277,-1046.0,-771.0,Religious Text (v1.0),Western Zhou Bronze Inscriptions (Xi Zhou jinwen 西周金文),False,False,True,False
+2278,1700.0,2024.0,Religious Group (v6),الطريقة القادرية البودشيشية في المغرب الأقصى,True,True,False,False
+2280,-1900.0,-1600.0,Religious Text (v1.0),Enki and Ninmaḫ,False,False,False,False
+2285,-1900.0,-1600.0,Religious Text (v1.0),Enki and Ninḫursaĝa,False,False,False,False
+2290,1200.0,2024.0,Religious Group (v6),الطريقة القادرية في مصر ق13م-ق21م,True,True,False,False
+2294,220.0,330.0,Religious Text (v1.0),Baopuzi neipian 抱朴子內篇,False,False,True,False
+2295,-1600.0,-500.0,Religious Text (v1.0),Nergal and Ereškigal,False,False,False,False
+2308,711.0,726.0,Religious Group (v6),الفتح العربي الإسلامي للأندلس,False,False,False,False

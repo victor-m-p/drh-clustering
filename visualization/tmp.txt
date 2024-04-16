@@ -1,6 +1,0 @@
-
-In terms of checking whether "Christianity" is driving the effect, I am wondering how broadly you want to cast the net Willis.
-Some entries that are not tagged directly as Christian are part of the broader tradition, e.g.
-- Irish Catholicism (tagged as "Catholic")
-- Romanian Orthodox Church (tagged as "Orthodoxy").
-Actually, I am surprised that these are not (also) tagged as Christianity (e.g., "Catholic" is a level 3 tag and should have "Christian traditions" as a level 2 tag I believe, but has no tag at level 2). 

@@ -10,52 +10,22 @@ x_min = -2000
 bin_width = 500
 step_size = 100
 
-# find christian entries
-entry_tags = pd.read_csv("../data/raw/entry_tags.csv")
-
-# find out what we match with "Christ":
-entrytag_id = [
-    18,  # Christian Traditions
-    905,  # Abrahamic Traditions
-    915,  # Evangelicalism
-    971,  # Methodism
-    1032,  # Protestantism
-    996,  # Roman Catholic
-    999,  # Catholic
-    1031,  # Pentecostal
-    1570,  # Christianity
-]
-entry_string_match = "Christian"
-
-# find christian entries
-christian_entries = (
-    entry_tags[
-        (entry_tags["entrytag_id"].isin(entrytag_id))
-        | (entry_tags["parent_tag_id"].isin(entrytag_id))
-        | (entry_tags["entry_tag"].str.contains(entry_string_match))
-    ]["entry_id"]
-    .unique()
-    .tolist()
-)
-
-# find non-christian entries
-non_christian_entries = (
-    entry_tags[~entry_tags["entry_id"].isin(christian_entries)]["entry_id"]
-    .unique()
-    .tolist()
-)
 
 # load and merge
 df = pd.read_csv(f"../data/preprocessed/{superquestion}_long.csv")
 df = df[["entry_id", "question_short", "question_id", "answer_value", "weight"]]
-entry_metadata = pd.read_csv(f"../data/preprocessed/entry_metadata.csv")
-entry_metadata = entry_metadata[["entry_id", "year_from", "year_to"]]
+
+# get entry tags
+entry_metadata = pd.read_csv(f"../controls/entry_tags.csv")
 df = df.merge(entry_metadata, on="entry_id", how="inner")
 df["year_from"] = df["year_from"].astype(int)
 df["year_to"] = df["year_to"].astype(int)
 df = df.dropna()
 df["answer_value"] = df["answer_value"].astype(int)
-df = df[df["entry_id"].isin(non_christian_entries)]
+df = df[df["christian"] == False]
+# df = df[df["islamic"] == False]
+# df = df[df["chinese"] == False]
+# df = df[df["buddhist"] == False]
 
 # select questions to show (all is too chaotic)
 if superquestion == "shg":
