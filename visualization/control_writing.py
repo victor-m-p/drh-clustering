@@ -1,3 +1,8 @@
+"""
+VMP 2023-05-06: 
+Control for writing. 
+"""
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt

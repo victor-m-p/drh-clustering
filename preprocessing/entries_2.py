@@ -20,6 +20,9 @@ entry_metadata = mode_timespan.merge(data_subset, on="entry_id", how="inner")
 data_raw = data_raw[["entry_id", "entry_name"]].drop_duplicates()
 entry_metadata = entry_metadata.merge(data_raw, on="entry_id", how="inner")
 
+# fix dates for some (islamic) entries
+# we would need a spreadsheet of corrected dates here.
+
 # sanity check and save
 assert len(entry_metadata) == entry_metadata["entry_id"].nunique()
 entry_metadata.to_csv("../data/preprocessed/entry_metadata.csv", index=False)

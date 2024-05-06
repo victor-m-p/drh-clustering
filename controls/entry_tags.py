@@ -10,16 +10,12 @@ entry_tags_lvl2[entry_tags_lvl2["entry_tag"].str.contains("Buddh")][
     ["entry_tag", "entrytag_id", "level"]
 ].drop_duplicates().sort_values("entrytag_id")
 
-entry_tags_lvl2.groupby("entry_tag").size().reset_index(name="count").sort_values(
-    by="count", ascending=False
-).head(20)
-
 # christian tags
 christian_tags = [
     18,  # Christian Traditions
     774,  # Early Christianity
     775,  # Early Christianity
-    905,  # Abrahamic (?)
+    # 905,  # Abrahamic (?)
     915,  # Evangelicalism
     971,  # Methodism
     984,  # Medieval Christianity
@@ -96,12 +92,16 @@ def find_entries(entry_tags, entrytag_id):
     return matched_entries
 
 
+"""
+First check for all entries that we have in the DRH.
+"""
+
 # total unique entries
 entry_tags["entry_id"].nunique()  # 1881
 
 # Christian entries
 christian_entries = find_entries(entry_tags, christian_tags)
-len(christian_entries)  # 488
+len(christian_entries)  # 399
 
 # Islamic entries
 islamic_entries = find_entries(entry_tags, islamic_tags)
@@ -120,6 +120,16 @@ entry_metadata["christian"] = entry_metadata["entry_id"].isin(christian_entries)
 entry_metadata["islamic"] = entry_metadata["entry_id"].isin(islamic_entries)
 entry_metadata["chinese"] = entry_metadata["entry_id"].isin(chinese_entries)
 entry_metadata["buddhist"] = entry_metadata["entry_id"].isin(buddhist_entries)
+
+"""
+Then check for all entries in the dataset.
+"""
+
+entry_metadata["entry_id"].nunique()  # 774
+len(entry_metadata[entry_metadata["christian"] == True])  # 181
+len(entry_metadata[entry_metadata["islamic"] == True])  # 191
+len(entry_metadata[entry_metadata["chinese"] == True])  # 80
+len(entry_metadata[entry_metadata["buddhist"] == True])  # 46
 
 # write to csv
 entry_metadata.to_csv("entry_tags.csv", index=False)

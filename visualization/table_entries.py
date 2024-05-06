@@ -1,7 +1,7 @@
 import pandas as pd
 
 # setup
-superquestion = "monitoring"
+superquestion = "shg"
 
 # load data
 df_q = pd.read_csv(f"../data/EM/{superquestion}_q_all.csv")

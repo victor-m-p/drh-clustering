@@ -1,5 +1,6 @@
 """ 
-Also considers end time. 
+Also considers end time.
+This is what we are currently using.  
 """
 
 # consider automatic selection of y axis
@@ -15,8 +16,8 @@ import matplotlib.ticker as ticker
 pd.options.mode.chained_assignment = None
 
 # setup
-x_min = -2000
-superquestion = "shg"
+x_min = -1000
+superquestion = "monitoring"  # shg
 
 df_q = pd.read_csv(f"../data/EM/{superquestion}_q_all.csv")
 dimension_columns = [col for col in df_q.columns if col.startswith("dim")]
@@ -86,5 +87,5 @@ plt.legend(
 
 plt.tight_layout()
 plt.savefig(
-    f"../figures/{superquestion}_temporal_span.jpg", dpi=300, bbox_inches="tight"
+    f"../figures/{superquestion}_temporal_span_zoom.jpg", dpi=300, bbox_inches="tight"
 )

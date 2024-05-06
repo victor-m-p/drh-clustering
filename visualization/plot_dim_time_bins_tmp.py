@@ -1,5 +1,7 @@
 """ 
-Also considers end time. 
+Also considers end time.
+Non-linear time bins.
+Not using this currently.  
 """
 
 # consider automatic selection of y axis

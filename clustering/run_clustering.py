@@ -5,8 +5,8 @@ from helper_functions import fit, custom_matmul
 np.random.seed(1)
 
 ## setup ##
-c_grid = [c + 1 for c in range(10)]
-filename = "shg"
+c_grid = [c + 1 for c in range(10)]  # ran with n=20 as a test
+filename = "monitoring"
 subset = "all"
 
 # load data
