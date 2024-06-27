@@ -5,12 +5,12 @@ from helper_functions import fit, custom_matmul
 np.random.seed(1)
 
 ## setup ##
-c_grid = [c + 1 for c in range(10)]  # ran with n=20 as a test
-filename = "monitoring"
+c_grid = [c + 1 for c in range(20)]  # ran with n=20
+filename = "shg"  # monitoring
 subset = "all"
 
 # load data
-entry_metadata = pd.read_csv("../data/preprocessed/entry_metadata.csv")
+entry_metadata = pd.read_csv("../data/raw/entry_data.csv")
 questions = pd.read_csv("../data/preprocessed/answers_subset.csv")
 questions = questions[["question_id", "question_short"]].drop_duplicates()
 answers = pd.read_csv(f"../data/preprocessed/{filename}_expanded.csv")

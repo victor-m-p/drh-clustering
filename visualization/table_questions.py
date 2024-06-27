@@ -1,8 +1,8 @@
 # write the tables of questions
 import pandas as pd
 
-#### setup ####
-superquestion = "shg"
+# setup
+superquestion = "monitoring"  # shg
 df_theta = pd.read_csv(f"../data/EM/{superquestion}_theta_all.csv")
 
 # write questions to file:

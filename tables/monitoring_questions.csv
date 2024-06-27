@@ -1,21 +1,21 @@
 question_id,question_short
-4955,prosocial norm adherence
-4956,taboos
-4961,murder coreligionists
-4962,murder other religions
-4963,murder other polities
-4964,sex
-4968,lying
-4969,honouring oaths
-4970,laziness
-4971,sorcery
-4972,non-lethal fighting
-4973,shirking risk
-4974,disrespecting elders
-4975,gossiping
-4976,property crimes
-4977,ritual observance
-4978,performance of rituals
-4979,conversion non-religionists
-4980,economic fairness
-4981,personal hygiene
+2861,murder other religions
+2883,murder coreligionists
+2887,honouring oaths
+2898,ritual observance
+2902,non-lethal fighting
+2911,lying
+2917,laziness
+2921,property crimes
+2923,shirking risk
+2928,prosocial norm adherence
+2930,performance of rituals
+2939,personal hygiene
+2942,gossiping
+2962,sorcery
+2970,taboos
+2972,murder other polities
+2974,disrespecting elders
+2978,sex
+2982,conversion non-religionists
+2985,economic fairness

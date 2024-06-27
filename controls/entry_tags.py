@@ -1,21 +1,14 @@
-import numpy as np
 import pandas as pd
 
 # loads
-entry_tags = pd.read_csv("../data/raw/entry_tags.csv")
-entry_metadata = pd.read_csv("../data/preprocessed/entry_metadata.csv")
-
-entry_tags_lvl2 = entry_tags[entry_tags["level"] == 2]
-entry_tags_lvl2[entry_tags_lvl2["entry_tag"].str.contains("Buddh")][
-    ["entry_tag", "entrytag_id", "level"]
-].drop_duplicates().sort_values("entrytag_id")
+entry_tags = pd.read_csv("../data/raw/entity_tags.csv")
+entry_metadata = pd.read_csv("../data/raw/entry_data.csv")
 
 # christian tags
 christian_tags = [
     18,  # Christian Traditions
     774,  # Early Christianity
     775,  # Early Christianity
-    # 905,  # Abrahamic (?)
     915,  # Evangelicalism
     971,  # Methodism
     984,  # Medieval Christianity
@@ -40,7 +33,6 @@ christian_tags = [
 # islamic tags
 islamic_tags = [
     24,  # Islamic traditions
-    905,  # Abrahamic (?)
     1305,  # Hispano-Islamic
     1513,  # Islamic Theology
     27689,  # Islamic Law
@@ -83,7 +75,7 @@ def find_entries(entry_tags, entrytag_id):
     matched_entries = (
         entry_tags[
             (entry_tags["entrytag_id"].isin(entrytag_id))
-            | (entry_tags["parent_tag_id"].isin(entrytag_id))
+            | (entry_tags["parent_entrytag_id"].isin(entrytag_id))
         ]["entry_id"]
         .unique()
         .tolist()
@@ -97,39 +89,29 @@ First check for all entries that we have in the DRH.
 """
 
 # total unique entries
-entry_tags["entry_id"].nunique()  # 1881
+entry_tags["entry_id"].nunique()  # 1578
 
 # Christian entries
 christian_entries = find_entries(entry_tags, christian_tags)
-len(christian_entries)  # 399
+len(christian_entries)  # 351
 
 # Islamic entries
 islamic_entries = find_entries(entry_tags, islamic_tags)
-len(islamic_entries)  # 336
+len(islamic_entries)  # 224
 
 # Chinese entries
 chinese_entries = find_entries(entry_tags, chinese_tags)
-len(chinese_entries)  # 195
+len(chinese_entries)  # 161
 
 # Buddhist entries
 buddhist_entries = find_entries(entry_tags, buddhist_tags)
-len(buddhist_entries)  # 139
+len(buddhist_entries)  # 118
 
 # join with entry_metadata
 entry_metadata["christian"] = entry_metadata["entry_id"].isin(christian_entries)
 entry_metadata["islamic"] = entry_metadata["entry_id"].isin(islamic_entries)
 entry_metadata["chinese"] = entry_metadata["entry_id"].isin(chinese_entries)
 entry_metadata["buddhist"] = entry_metadata["entry_id"].isin(buddhist_entries)
-
-"""
-Then check for all entries in the dataset.
-"""
-
-entry_metadata["entry_id"].nunique()  # 774
-len(entry_metadata[entry_metadata["christian"] == True])  # 181
-len(entry_metadata[entry_metadata["islamic"] == True])  # 191
-len(entry_metadata[entry_metadata["chinese"] == True])  # 80
-len(entry_metadata[entry_metadata["buddhist"] == True])  # 46
 
 # write to csv
 entry_metadata.to_csv("entry_tags.csv", index=False)

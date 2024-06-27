@@ -1,4 +1,1 @@
-data/raw/data_dump.csv
-data/dump/postgres.dump_2024_04_07.tar
-preprocessing/answers_1_legacy.py
-preprocessing/select_columns.py
+data/raw/answerset.csv
