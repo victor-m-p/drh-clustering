@@ -17,8 +17,8 @@ def plot_spatiotemporal(
     centroid=True,
     active_geometry="geometry",
     alpha=0.2,
-    color_mapping=None,
     color_column=None,
+    zoom=False,
     outpath=False,
 ):
     fig, ax = plt.subplots(figsize=(15, 10))
@@ -49,6 +49,11 @@ def plot_spatiotemporal(
                 color=color,
                 markersize=5,
             )
+
+    # if zoom set
+    if zoom:
+        ax.set_xlim([zoom.get("xmin"), zoom.get("xmax")])
+        ax.set_ylim([zoom.get("ymin"), zoom.get("ymax")])
 
     # Create legend patches using consistent color mapping
     # legend_patches = [
@@ -128,7 +133,7 @@ def create_animation(
         import matplotlib.animation as animation
 
         # Set up the figure
-        fig = plt.figure(dpi=100)
+        fig = plt.figure(dpi=300)
         ax = fig.add_subplot(111)
         ax.axis("off")  # Hide axes
 

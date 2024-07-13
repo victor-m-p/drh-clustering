@@ -55,21 +55,10 @@ for time in time_cutoff:
         centroid=True,
         active_geometry="geometry",
         alpha=0.2,
-        color_mapping=color_mapping,
         color_column="color_code",
+        zoom=False,
         outpath=f"{time_slice_path}/{time_format}.png",
     )
-
-plot_spatiotemporal(
-    gdf=gdf,
-    time=time,
-    centroid=True,
-    active_geometry="geometry",
-    alpha=0.2,
-    color_mapping=color_mapping,
-    color_column="color_code",
-    # outpath=f"{time_slice_path}/{time_format}.png",
-)
 
 # mp4
 animation_dir = "spatiotemporal_animation"
