@@ -51,12 +51,6 @@ n_cols = 2
 entry_tags = ["christian", "islamic", "chinese", "buddhist"]
 n_before_filtering = df["entry_id"].nunique()
 
-# find ones without indirect causal efficacy
-causal_eff = df[df["question_id"] == 3288]
-causal_eff_no = causal_eff[causal_eff["answer_value"] == 0]
-causal_eff_no_prior_neg_1000 = causal_eff_no[causal_eff_no["year_from"] < 0]
-causal_eff_no_prior_neg_1000
-
 
 def plot_entry_tags(df, x_min=-2000, bottom_vspace=0.2, include=False, outpath=None):
     n_rows = 2
