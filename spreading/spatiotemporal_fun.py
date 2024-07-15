@@ -29,16 +29,16 @@ def plot_spatiotemporal(
     world.plot(ax=ax, color="lightgray")
 
     # threshold
-    gdf = gdf[gdf["year_from"] < time]
+    gdf_threshold = gdf[gdf["time_slice_start"] == time]
 
     # Plot polygons with consistent colors
-    for color in gdf[color_column].unique():
-        poll_data = gdf[gdf[color_column] == color]
+    for color in gdf_threshold[color_column].unique():
+        poll_data = gdf_threshold[gdf_threshold[color_column] == color]
         poll_data.plot(ax=ax, color=color, alpha=alpha)
 
     # plot centroids
     if centroid:
-        centroid_data = gdf.copy()
+        centroid_data = gdf_threshold.copy()
         centroid_data[active_geometry] = centroid_data[active_geometry].centroid
         for _, row in centroid_data.iterrows():
             color = row[color_column]
