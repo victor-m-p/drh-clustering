@@ -5,14 +5,18 @@ import networkx as nx
 
 df_edges = pd.read_csv("data/overlap_christianity.csv")
 df_nodes = pd.read_csv("data/entry_data_subset.csv")
-df_nodes = df_nodes[["entry_id", "year_from"]]
+df_nodes = df_nodes[["entry_id", "year_from", "christian_tradition"]]
 
 # Create a graph
 G = nx.Graph()
 
 # Add nodes with start_year attribute
 for _, node in df_nodes.iterrows():
-    G.add_node(node["entry_id"], year_from=node["year_from"])
+    G.add_node(
+        node["entry_id"],
+        year_from=node["year_from"],
+        christian=node["christian_tradition"],
+    )
 
 # Add edges from DataFrame
 for _, edge in df_edges.iterrows():
@@ -30,7 +34,7 @@ gcc_y_positions = {
 }  # Extract the second element for y-coordinate
 
 # Create plot
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(10, 8))
 
 # Plot each connection in the GCC
 for u, v in gcc_subgraph.edges():
@@ -43,20 +47,55 @@ for u, v in gcc_subgraph.edges():
     ax.plot(
         [x_from, x_to],
         [y_from, y_to],
-        marker="o",
         linestyle="-",
-        color="b",
+        color="tab:grey",
         alpha=0.2,
         linewidth=0.2,
-        markersize=0.8,
-    )  # 'o' for the nodes, '-' for the line
+    )
+
+for node in gcc_subgraph:
+    y = gcc_y_positions[node]
+    x = gcc_subgraph.nodes[node]["year_from"]
+    ax.plot(
+        x,
+        y,
+        marker="o",
+        color=["tab:orange" if gcc_subgraph.nodes[node]["christian"] else "tab:blue"][
+            0
+        ],
+        markersize=1,
+    )
 
 # Set axes labels and title
 ax.set_xlabel("Start Year")
-ax.set_ylabel("Entry IDs")
-ax.set_title("Visualizing Phylogenetic Relationships with Node Start Years")
+ax.set_ylabel("")
+ax.set_title("Phylogenetic Relationships by Christianity")
 ax.grid(True)
-plt.xlim(-3000, 1600)
+plt.xlim(-1000, 1650)
+
+from matplotlib.lines import Line2D
+
+legend_elements = [
+    Line2D(
+        [0],
+        [0],
+        marker="o",
+        color="w",
+        label="Christian Traditions",
+        markerfacecolor="tab:orange",
+        markersize=10,
+    ),
+    Line2D(
+        [0],
+        [0],
+        marker="o",
+        color="w",
+        label="Non-Christian Traditions",
+        markerfacecolor="tab:blue",
+        markersize=10,
+    ),
+]
+ax.legend(handles=legend_elements, loc="upper left")
 
 # Show the plot
 plt.tight_layout()

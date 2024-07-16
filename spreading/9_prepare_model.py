@@ -5,6 +5,7 @@ import arviz as az
 
 # load data
 spatiotemporal_data = pd.read_csv("data/overlap_christianity.csv")
+entry_data = pd.read_csv("data/entry_data_subset.csv")
 
 ### select a feature to investigate ###
 question_name = "is unquestionably good"
