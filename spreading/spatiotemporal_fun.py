@@ -16,6 +16,7 @@ def plot_spatiotemporal(
     active_geometry="geometry",
     alpha=0.2,
     color_column=None,
+    label_column=None,
     zoom=False,
     outpath=False,
 ):
@@ -54,22 +55,26 @@ def plot_spatiotemporal(
         ax.set_ylim([zoom.get("ymin"), zoom.get("ymax")])
 
     # Create legend patches using consistent color mapping
-    # legend_patches = [
-    #    mpatches.Patch(color=color_mapping[poll_type], label=poll_type)
-    #    for poll_type in gdf[
-    #        color_column
-    #    ].unique()  # Use all regions from the full dataset
-    # ]
+    unique_combinations = gdf.drop_duplicates(subset=["color_code", "color_label"])
+
+    # Create dictionary from unique combinations
+    color_dict = dict(
+        zip(unique_combinations["color_label"], unique_combinations["color_code"])
+    )
+
+    legend_patches = [
+        mpatches.Patch(color=color, label=label) for label, color in color_dict.items()
+    ]
 
     # Add legend to the plot with a consistent position
-    # legend = ax.legend(
-    #    handles=legend_patches,
-    #    title=color_column,
-    #    fontsize=16,
-    #    bbox_to_anchor=(1, 0.03),
-    #    loc="lower right",
-    # )
-    # plt.setp(legend.get_title(), fontsize=16)
+    legend = ax.legend(
+        handles=legend_patches,
+        title="",
+        fontsize=16,
+        bbox_to_anchor=(1, 0.03),
+        loc="lower left",
+    )
+    plt.setp(legend.get_title(), fontsize=16)
 
     # Add title
     title = plt.suptitle(f"{time}", fontsize=25)
@@ -100,11 +105,8 @@ def create_animation(
     inpath="spatiotemporal_png",
     outpath="spatiotemporal_animation",
     outname="animation",
-    format="gif",  # Add format parameter with default as 'gif'
+    format="mp4",  # Add format parameter with default as 'gif'
 ):
-    # Ensure output directory exists
-    if not os.path.exists(outpath):
-        os.makedirs(outpath)
 
     # Loop through time slices and append each PNG file to frames
     filenames = os.listdir(inpath)
@@ -120,12 +122,14 @@ def create_animation(
 
     # Save the frames as an animation
     if format.lower() == "gif":
+        print("Creating GIF animation...")
         # Save as GIF
         gif_filename = os.path.join(outpath, outname + ".gif")
         frames[0].save(
             gif_filename, save_all=True, append_images=frames[1:], duration=500, loop=0
         )
     elif format.lower() == "mp4":
+        print("Creating MP4 animation...")
         # Save as MP4
         import matplotlib.pyplot as plt
         import matplotlib.animation as animation
