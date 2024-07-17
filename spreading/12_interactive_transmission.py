@@ -14,7 +14,6 @@ df_edges = pd.read_csv("data/overlap_christianity.csv")
 df_nodes = pd.read_csv("data/entry_data_subset.csv")
 df_nodes = df_nodes[["entry_id", "entry_name", "year_from", "christian_tradition"]]
 
-
 # Get all of the nodes that actually exist for the question
 # With consistent answers
 answers = pd.read_csv(f"../data/preprocessed/{question_group}_long.csv")
