@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 
 # convenience functions
@@ -55,8 +56,19 @@ def calculate_metrics(spatiotemporal_answers):
         .mean()
         .reset_index(name="christian_children")
     )
-
+    n_children = (
+        spatiotemporal_answers.groupby("entry_id_from")
+        .size()
+        .reset_index(name="n_children")
+    )
+    n_parents = (
+        spatiotemporal_answers.groupby("entry_id_to")
+        .size()
+        .reset_index(name="n_parents")
+    )
     # gather data
+    n_children = n_children.rename(columns={"entry_id_from": "entry_id"})
+    n_parents = n_parents.rename(columns={"entry_id_to": "entry_id"})
     yes_parents = yes_parents.rename(columns={"entry_id_to": "entry_id"})
     yes_children = yes_children.rename(columns={"entry_id_from": "entry_id"})
     christian_parents = christian_parents.rename(columns={"entry_id_to": "entry_id"})
@@ -66,6 +78,9 @@ def calculate_metrics(spatiotemporal_answers):
     df_metrics = yes_parents.merge(yes_children, on="entry_id", how="outer")
     df_metrics = df_metrics.merge(christian_parents, on="entry_id", how="outer")
     df_metrics = df_metrics.merge(christian_children, on="entry_id", how="outer")
+    df_metrics = df_metrics.merge(n_children, on="entry_id", how="outer")
+    df_metrics = df_metrics.merge(n_parents, on="entry_id", how="outer")
+    df_metrics = np.round(df_metrics, 2)  # round all floats
     return df_metrics
 
 
