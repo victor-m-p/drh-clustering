@@ -1,0 +1,6 @@
+Hypothesis,Estimate,Est.Error,CI.Lower,CI.Upper,Evid.Ratio,Post.Prob
+(Intercept) > 0,-4.33,1.07,-6.48,-2.21,0,0
+(year_norm) > 0,3.55,1.09,1.35,5.67,274.86,1
+(islamic) > 0,1.41,0.41,0.62,2.24,7999,1
+(christian) > 0,2.57,0.43,1.77,3.45,Inf,1
+(literacy) > 0,0.92,0.57,-0.17,2.05,19.57,0.95

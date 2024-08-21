@@ -5,16 +5,21 @@ import seaborn as sns
 import matplotlib.ticker as ticker
 
 # setup
-superquestion = "monitoring"
+superquestion = "monitoring"  # shg
+subset = "group"  # all
 x_min = -2000
 bin_width = 500
-step_size = 100
+step_size = 50
 
 # load and merge
 df = pd.read_csv(f"../data/preprocessed/{superquestion}_long.csv")
 df = df[["entry_id", "question_short", "question_id", "answer_value", "weight"]]
 entry_metadata = pd.read_csv(f"../data/raw/entry_data.csv")
-entry_metadata = entry_metadata[["entry_id", "year_from", "year_to"]]
+entry_metadata = entry_metadata[["entry_id", "year_from", "year_to", "poll_name"]]
+
+if subset == "group":
+    entry_metadata = entry_metadata[entry_metadata["poll_name"].str.contains("Group")]
+
 df = df.merge(entry_metadata, on="entry_id", how="inner")
 df["year_from"] = df["year_from"].astype(int)
 df["year_to"] = df["year_to"].astype(int)
@@ -36,12 +41,12 @@ elif superquestion == "monitoring":
         2928,  # prosocial norms
         2970,  # taboos
         2972,  # murder other polities
-        2978,  # sex
         2923,  # shirking risk
         2930,  # performance rituals
         2982,  # conversion
+        2985,  # econ fair
     ]
-df[["question_id", "question_short"]].drop_duplicates()
+
 df = df[df["question_id"].isin(question_subset)]
 
 # time-slices
@@ -61,15 +66,30 @@ df_agg_subset = df_agg[df_agg["time_bin"] >= x_min - step_size]
 y_max = df_agg_subset["fraction_yes"].max()
 y_max = y_max + 0.05
 
+# fix question labels
+if superquestion == "shg":
+    df_agg_subset["question_short"] = df_agg_subset["question_short"].replace(
+        {
+            "indirect causal efficacy the world": "indirect causal efficacy\nin this world",
+            "permissible to worship other god?": "permissible to worship\nother god?",
+        }
+    )
+if superquestion == "monitoring":
+    df_agg_subset["question_short"] = df_agg_subset["question_short"].replace(
+        {
+            "conversion non-religionists": "conversion\nnon-religionists",
+            "prosocial norm adherence": "prosocial norm\nadherence",
+        }
+    )
+
 # Plot
-plt.figure(figsize=(10, 4), dpi=300)
+plt.figure(figsize=(10, 5), dpi=300)
 sns.lineplot(data=df_agg_subset, x="time_bin", y="fraction_yes", hue="question_short")
 plt.xticks(rotation=45)
 plt.yticks()
 delta = int(np.round(bin_width / 2, 0))
 plt.xlabel(f"Year", size=12)
 plt.ylabel("Fraction yes", size=12)
-# plt.xlim(x_min, x_max)
 plt.ylim(0, y_max)
 
 # Adjust y axis ticks
@@ -80,14 +100,16 @@ ncol = 1
 
 # Place the legend below the plot without a title and without a box
 plt.legend(
-    fontsize=12,
+    fontsize=14,
     loc="upper center",
-    bbox_to_anchor=(1.5, 1.05),
+    bbox_to_anchor=(1.3, 1.05),
     ncol=ncol,
     frameon=False,
 )
 
 plt.tight_layout()
 plt.savefig(
-    f"../figures/{superquestion}_question_time.jpg", dpi=300, bbox_inches="tight"
+    f"../figures/{superquestion}_question_time_{subset}.jpg",
+    dpi=300,
+    bbox_inches="tight",
 )

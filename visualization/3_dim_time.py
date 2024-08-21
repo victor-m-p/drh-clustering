@@ -16,10 +16,11 @@ import matplotlib.ticker as ticker
 pd.options.mode.chained_assignment = None
 
 # setup
-x_min = -1000
-superquestion = "shg"  # monitoring
+x_min = -2000
+superquestion = "combined"  # "shg"  # monitoring
+subset = "group"  # all
 
-df_q = pd.read_csv(f"../data/EM/{superquestion}_q_all.csv")
+df_q = pd.read_csv(f"../data/EM/{superquestion}_q_{subset}.csv")
 dimension_columns = [col for col in df_q.columns if col.startswith("dim")]
 temporal_columns = [
     "entry_id",
@@ -87,5 +88,7 @@ plt.legend(
 
 plt.tight_layout()
 plt.savefig(
-    f"../figures/{superquestion}_temporal_span_zoom.jpg", dpi=300, bbox_inches="tight"
+    f"../figures/{superquestion}_temporal_span_zoom_{subset}.jpg",
+    dpi=300,
+    bbox_inches="tight",
 )

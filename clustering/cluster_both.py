@@ -7,13 +7,28 @@ np.random.seed(1)
 ## setup ##
 c_grid = [c + 1 for c in range(10)]  # ran with n=20
 filename = "shg"  # shg
-subset = "all"  # group
+subset = "group"  # group
 
 # load data
 entry_metadata = pd.read_csv("../data/raw/entry_data.csv")
 questions = pd.read_csv("../data/preprocessed/answers_subset.csv")
 questions = questions[["question_id", "question_short"]].drop_duplicates()
-answers = pd.read_csv(f"../data/preprocessed/{filename}_expanded.csv")
+answers_shg = pd.read_csv(f"../data/preprocessed/shg_expanded.csv")
+answers_monitoring = pd.read_csv(f"../data/preprocessed/monitoring_expanded.csv")
+
+# bind them together and then only take okay coverage
+answers_shg = answers_shg.rename(columns={"weight": "weight_shg"})
+answers_monitoring = answers_monitoring.rename(columns={"weight": "weight_monitoring"})
+answers_complete = answers_shg.merge(answers_monitoring, on="entry_id", how="inner")
+answers_complete["weight"] = (
+    answers_complete["weight_shg"] * answers_complete["weight_monitoring"]
+)
+answers_complete = answers_complete.drop(columns=["weight_shg", "weight_monitoring"])
+
+# require at least 50% coverage
+n_columns = answers_complete.shape[1]
+threshold = n_columns - int(np.round(36 * 0.5))
+answers = answers_complete.dropna(thresh=threshold)
 
 # (optionally) subset
 if subset == "group":
@@ -58,7 +73,6 @@ for c in c_grid:  # For each number of clusters
 
 # select the number C that minimized BIC.
 c = min(BIC_dict, key=BIC_dict.get)
-c = 9  # first one to dip
 theta, q = fit(X, c)
 
 # gather question dimensions (theta)
@@ -74,7 +88,7 @@ theta_df = pd.concat([question_selection, theta_df], axis=1)
 # calculate log change and save theta
 question_means = np.nanmean(Y, axis=0)
 theta_df["question_mean"] = question_means
-theta_df.to_csv(f"../data/EM/{filename}_theta_{subset}.csv", index=False)
+theta_df.to_csv(f"../data/EM/combined_theta_{subset}.csv", index=False)
 
 # gather entry dimension (q)
 entry_ids = answers[["entry_id"]]
@@ -84,4 +98,4 @@ df_entries = pd.concat([df_entries, q_df], axis=1)
 df_entries = df_entries.sort_values("entry_id")
 
 # save
-df_entries.to_csv(f"../data/EM/{filename}_q_{subset}.csv", index=False)
+df_entries.to_csv(f"../data/EM/combined_q_{subset}.csv", index=False)

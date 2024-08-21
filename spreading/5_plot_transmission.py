@@ -267,6 +267,12 @@ def create_figure(gcc_subgraph, pos, question_name):
 questions_short = ["conversion", "unquestionably"]
 questions_name = ["conversion non-religionists", "is unquestionably good"]
 
+#
+df_nodes, df_edges = load_data(questions_short[0])
+gcc_subgraph = create_graph(df_nodes, df_edges)
+in_gcc = pd.DataFrame(list(gcc_subgraph.nodes), columns=["entry_id"])
+
+
 for question_short, question_name in zip(questions_short, questions_name):
 
     # Load your data
@@ -274,6 +280,10 @@ for question_short, question_name in zip(questions_short, questions_name):
 
     # Create a graph
     gcc_subgraph = create_graph(df_nodes, df_edges)
+
+    # Save the nodes that are in the GCC
+    gcc_nodes = pd.DataFrame(list(gcc_subgraph.nodes), columns=["entry_id"])
+    gcc_nodes.to_csv(f"data/gcc_nodes_{question_short}.csv", index=False)
 
     # Compute positions using spring layout
     pos = nx.spring_layout(gcc_subgraph, seed=110)

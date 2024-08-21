@@ -4,6 +4,11 @@ import pandas as pd
 entry_tags = pd.read_csv("../data/raw/entity_tags.csv")
 entry_metadata = pd.read_csv("../data/raw/entry_data.csv")
 
+entry_tags_lvl2 = entry_tags[entry_tags["entrytag_level"] == 2]
+entry_tags_lvl2.groupby("entrytag_name").size().reset_index(name="count").sort_values(
+    "count", ascending=False
+).head(20)
+
 # christian tags
 christian_tags = [
     18,  # Christian Traditions
@@ -34,9 +39,11 @@ christian_tags = [
 islamic_tags = [
     24,  # Islamic traditions
     1305,  # Hispano-Islamic
+    1390,  # Shi'a Islam
     1513,  # Islamic Theology
     27689,  # Islamic Law
     27702,  # Islamic Ethics
+    43600,  # Sunni Islam
 ]
 
 # chinese

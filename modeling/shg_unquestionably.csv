@@ -1,0 +1,396 @@
+entry_id,question_short,answer_value,entry_name,year_from,christian,islamic,chinese,buddhist,poll_group,world_region,literacy,year_norm
+173,is unquestionably good,1,Johannine Christianity,90,1,0,0,0,1,Southwest Asia,1,0.636978579481398
+174,is unquestionably good,1,Matthew-James-Didache Movement,50,1,0,0,0,1,Southwest Asia,1,0.6294626080420894
+176,is unquestionably good,1,Qumran Movement,-150,0,0,0,0,1,Southwest Asia,1,0.5918827508455468
+182,is unquestionably good,1,Pauline Christianity,48,1,0,0,0,1,Europe,1,0.629086809470124
+184,is unquestionably good,1,Chinese Buddhism (Northern Wei),386,0,0,1,1,1,East Asia,0,0.6925967681322811
+185,is unquestionably good,1,Shinnyo-en,1936,0,0,0,0,1,East Asia,0,0.9838406614054866
+190,is unquestionably good,1,Sri Lankan Buddhism (1948-Present),1948,0,0,0,1,1,South Asia,1,0.9860954528372792
+196,is unquestionably good,1,Pauline Christianity (ca. 45-60 CE),45,1,0,0,0,1,Europe,1,0.6285231116121759
+197,is unquestionably good,1,Gönlung Monastery (dgon lung byams pa gling),1604,0,0,0,1,1,East Asia,0,0.9214580984592259
+199,is unquestionably good,1,Mithraism,100,0,0,0,0,1,Europe,0,0.6388575723412251
+211,is unquestionably good,1,Amarna Religion,-1350,0,0,0,0,1,Africa,1,0.3664036076662909
+212,is unquestionably good,0,Warring States (China) Religion,-481,0,0,1,0,1,East Asia,1,0.5296880871852687
+224,is unquestionably good,0,Old Norse Fornsed,600,0,0,0,0,1,Europe,1,0.7328072153325818
+228,is unquestionably good,1,Late Chosŏn Korea,1600,0,0,0,0,1,East Asia,1,0.920706501315295
+230,is unquestionably good,0,Religion in Mesopotamia,-3300,0,0,0,0,1,Southwest Asia,1,0.0
+245,is unquestionably good,1,Warring States Confucian Thought,-450,0,0,1,0,1,East Asia,0,0.5355129650507328
+263,is unquestionably good,1,Irish Catholicism,2000,1,0,0,0,1,Europe,1,0.9958662157083803
+294,is unquestionably good,0,Xuanxue 玄學,200,0,0,1,0,1,East Asia,1,0.6576475009394964
+308,is unquestionably good,0,Neo-Assyrian Scholars,-900,0,0,0,0,1,Southwest Asia,0,0.4509582863585118
+355,is unquestionably good,1,Paul the Apostle,50,1,0,0,0,1,Europe,1,0.6294626080420894
+358,is unquestionably good,1,16th-17th c. Gauḍīya Vaiṣṇava Tradition,1500,0,0,0,0,1,South Asia,1,0.9019165727170236
+361,is unquestionably good,0,Classical Greek Religion,-500,0,0,0,0,1,Europe,1,0.5261180007515971
+381,is unquestionably good,1,Sikhism: Guru Nanak to Guru Arjan,1469,0,0,0,0,1,South Asia,1,0.8960916948515596
+383,is unquestionably good,1,Varkaris,1200,0,0,0,0,1,South Asia,1,0.8455467869222097
+390,is unquestionably good,0,Dasara,1610,0,0,0,0,1,South Asia,1,0.9225854941751221
+392,is unquestionably good,1,Sikhism: Guru Hargobind to Guru Gobind Singh,1606,0,0,0,0,1,South Asia,1,0.9218338970311912
+395,is unquestionably good,1,International Society for Krishna Consciousness (ISKCON),1966,0,0,0,0,1,Africa,1,0.9894776399849681
+400,is unquestionably good,1,Singaporean Mega-Churches,1980,1,0,0,0,1,Southeast Asia,1,0.992108229988726
+416,is unquestionably good,1,Edinoverie,1800,1,0,0,0,1,Europe,1,0.9582863585118376
+420,is unquestionably good,1,Swaminarayan Sampraday,1800,0,0,0,0,1,Africa,1,0.9582863585118376
+424,is unquestionably good,1,Achaemenid Religion,-550,0,0,0,0,1,Southwest Asia,1,0.5167230364524614
+439,is unquestionably good,0,Śaiva Magic,800,0,0,0,0,1,South Asia,0,0.7703870725291244
+441,is unquestionably good,0,Worshipers of Śītalā,1690,0,0,0,1,1,South Asia,1,0.9376174370537392
+442,is unquestionably good,1,Donatism,311,1,0,0,0,1,Africa,1,0.6785043216835775
+456,is unquestionably good,1,The Essenes,-165,0,0,0,0,1,Southwest Asia,1,0.589064261555806
+472,is unquestionably good,1,Karma Kagyu or Kamtsang Kagyu,1110,0,0,0,1,1,South Asia,1,0.8286358511837655
+476,is unquestionably good,1,Cham Bani,1000,0,1,0,0,1,Southeast Asia,1,0.8079669297256671
+477,is unquestionably good,1,Tractarian Movement,1833,1,0,0,0,1,Europe,1,0.9644870349492672
+479,is unquestionably good,0,Mesopotamian city-state cults of the Early Dynastic periods,-2900,0,0,0,0,1,Southwest Asia,1,0.0751597143930853
+483,is unquestionably good,1,Northern Irish Roman Catholics,2015,1,0,0,0,1,Europe,1,0.998684704998121
+484,is unquestionably good,1,Northern Irish Protestants,2015,1,0,0,0,1,Europe,1,0.998684704998121
+486,is unquestionably good,1,Church of Jesus Christ of Latter-day Saints (early),1830,1,0,0,0,1,North America,1,0.963923337091319
+490,is unquestionably good,1,Guglielmites,1260,1,0,0,0,1,Europe,1,0.8568207440811725
+492,is unquestionably good,0,Roman Divination,-800,0,0,0,0,1,Europe,1,0.46974821495678315
+520,is unquestionably good,0,Cham Ahiér,1600,0,0,0,0,1,Southeast Asia,1,0.920706501315295
+525,is unquestionably good,1,Church of Jesus Christ of Latter-day Saints (modern),1951,1,0,0,0,1,Africa,1,0.9866591506952274
+526,is unquestionably good,1,Hmong Christianity,1900,1,0,0,0,1,Southeast Asia,1,0.977076287110109
+535,is unquestionably good,0,Pāśupatas,200,0,0,0,0,1,South Asia,1,0.6576475009394964
+562,is unquestionably good,1,Medieval Śrīvaiṣṇavism,1017,0,0,0,0,1,South Asia,1,0.8111612175873731
+563,is unquestionably good,1,"Gaddi, a Hindu community of the Western Himalayas",1845,0,0,0,0,1,South Asia,1,0.9667418263810598
+564,is unquestionably good,1,Tribal Christianity (and allied castes) in the Himalayas,1950,1,0,0,0,1,South Asia,1,0.9864712514092446
+567,is unquestionably good,1,Gay and Lesbian Vaishnava Association (GALVA-108),2001,0,0,0,0,1,Europe,1,0.996054114994363
+570,is unquestionably good,1,Supreme Master Ching Hai World Society,1986,1,0,0,1,1,Southeast Asia,1,0.9932356257046223
+580,is unquestionably good,0,Nāth Sampradāya,1700,0,0,0,0,1,South Asia,1,0.9394964299135663
+589,is unquestionably good,0,Warrau,1915,0,0,0,0,1,South America,0,0.9798947763998497
+592,is unquestionably good,0,Veerashaivas,1200,0,0,0,0,1,South Asia,1,0.8455467869222097
+607,is unquestionably good,0,Mohism,-400,0,0,1,0,1,East Asia,1,0.5449079293498684
+613,is unquestionably good,1,Maori,1800,0,0,0,0,1,Oceania-Australia,1,0.9582863585118376
+620,is unquestionably good,0,Papago,1900,0,0,0,0,1,North America,0,0.977076287110109
+624,is unquestionably good,1,The Roshaniyya,1550,0,1,0,0,1,South Asia,1,0.9113115370161593
+632,is unquestionably good,0,Local Religion at Selinous,-650,0,0,0,0,1,Europe,1,0.49793310785419015
+633,is unquestionably good,1,Mādhva,1238,0,0,0,0,1,South Asia,1,0.8526869597895528
+636,is unquestionably good,0,Balinese Śaiva priests (pedanda siwa),1500,0,0,0,0,1,Southeast Asia,1,0.9019165727170236
+639,is unquestionably good,1,Chinese Esoteric Buddhism (Tang Tantrism),716,0,0,0,1,1,East Asia,1,0.7546035325065765
+645,is unquestionably good,1,"Meo Muslim, Mev, Mewati Muslim",1100,0,1,0,0,1,South Asia,1,0.8267568583239384
+649,is unquestionably good,1,"Worshippers at the Chidambaram Nataraja Temple, Modern Period",700,0,0,0,0,1,South Asia,1,0.7515971439308531
+661,is unquestionably good,1,Congregation of Savigny,1113,1,0,0,0,1,Europe,1,0.8291995490417137
+676,is unquestionably good,1,"The Order of the Holy Trinity for the Redemption of Captives, 1198-1500",1198,1,0,0,0,1,Europe,1,0.8451709883502443
+680,is unquestionably good,1,Gujarati Mata Worshipers,1850,0,0,0,0,1,South Asia,1,0.9676813228109733
+688,is unquestionably good,1,Darul Uloom Deoband,1866,0,1,0,0,1,South Asia,1,0.9706877113866967
+690,is unquestionably good,1,Ahl-e-Sunnat wa Jamaat,1880,0,1,0,0,1,South Asia,1,0.9733183013904547
+714,is unquestionably good,0,Tamil Śaiva Bhakti,550,0,0,0,0,1,South Asia,1,0.7234122510334461
+717,is unquestionably good,1,Igbo,1910,0,0,0,0,1,Africa,0,0.9789552799699361
+719,is unquestionably good,1,Hinduism in Trinidad,1845,0,0,0,0,1,North America,1,0.9667418263810598
+727,is unquestionably good,1,Raglai,1160,0,0,0,0,1,Southeast Asia,1,0.8380308154829011
+738,is unquestionably good,0,Ancient Egyptian,-3000,0,0,0,0,1,Africa,1,0.05636978579481398
+752,is unquestionably good,1,Haroi,1470,0,0,0,0,1,Southeast Asia,1,0.8962795941375423
+755,is unquestionably good,1,Uyghur Islam,1850,0,1,0,0,1,Central Eurasia,1,0.9676813228109733
+759,is unquestionably good,1,Comanche,1855,0,0,0,0,1,North America,0,0.9686208192408868
+771,is unquestionably good,1,Muscular Christianity,1762,1,0,0,0,1,Europe,1,0.9511461856444946
+788,is unquestionably good,0,The Late Bronze Age City-State of Ugarit,-1500,0,0,0,0,1,Southwest Asia,1,0.3382187147688839
+812,is unquestionably good,0,Temple of the Jedi Order,2007,0,0,0,0,1,Africa,1,0.9971815107102593
+839,is unquestionably good,1,19th century German Protestantism,1788,1,0,0,0,1,Europe,1,0.9560315670800451
+842,is unquestionably good,1,American Evangelicalism,1730,1,0,0,0,1,North America,1,0.9451334084930477
+843,is unquestionably good,1,Bnay Qyāmā and Bnāt Qyāmā,300,1,0,0,0,1,Southwest Asia,1,0.6764374295377678
+846,is unquestionably good,1,Xuanzang's Yogācāra Tradition,645,0,0,0,1,1,East Asia,1,0.7412626832018039
+848,is unquestionably good,0,Sadducees,-200,0,0,0,0,1,Southwest Asia,1,0.5824877865464111
+849,is unquestionably good,1,"""Gaiwiio Religion,"" ""Longhouse Religion,"" or ""The Way of Handsome Lake"" of the Seneca Tribe",1750,0,0,0,0,1,North America,0,0.948891394212702
+851,is unquestionably good,1,Sikhism in the United States,1899,0,0,0,0,1,North America,1,0.9768883878241262
+854,is unquestionably good,1,pre-Christian Irish,-400,0,0,0,0,1,Europe,1,0.5449079293498684
+855,is unquestionably good,1,Middle-Class Migrant Muslims in the UAE,1900,0,1,0,0,1,Southwest Asia,1,0.977076287110109
+857,is unquestionably good,1,Wesleyanism,1738,1,0,0,0,1,Africa,1,0.9466366027809094
+858,is unquestionably good,1,"The New Prophecy or ""Montanism""",165,1,0,0,0,1,Europe,1,0.6510710259301015
+859,is unquestionably good,1,Valentinians,135,1,0,0,0,1,Europe,1,0.64543404735062
+860,is unquestionably good,1,Kimpa Vita,1704,0,0,0,0,1,Africa,0,0.9402480270574972
+862,is unquestionably good,0,Ilm-e-Khshnoom,1907,0,0,0,0,1,South Asia,1,0.978391582111988
+863,is unquestionably good,1,Orphism,-550,0,0,0,0,1,Europe,1,0.5167230364524614
+867,is unquestionably good,0,Nyingma Treasure,1200,0,0,0,1,1,South Asia,1,0.8455467869222097
+869,is unquestionably good,1,Sichuan Esoteric Buddhist Cult,855,0,0,1,1,1,East Asia,1,0.7807215332581736
+871,is unquestionably good,1,Spiritualism,1848,0,0,0,0,1,North America,1,0.9673055242390078
+873,is unquestionably good,1,The Branch Davidians,1962,1,0,0,0,1,North America,1,0.9887260428410372
+879,is unquestionably good,1,Free Methodist Church,1860,1,0,0,0,1,Africa,1,0.9695603156708005
+880,is unquestionably good,1,Egyptian Salafism (inluding North Africa and West Asia),1870,0,1,0,0,1,Southwest Asia,1,0.9714393085306275
+882,is unquestionably good,1,Orphism,-450,0,0,0,0,1,Europe,1,0.5355129650507328
+883,is unquestionably good,1,Catholics in the People's Republic of China (PRC),1949,1,0,1,0,1,Central Eurasia,1,0.9862833521232619
+884,is unquestionably good,1,Sub Saharan Africa Pentecostalism,1907,0,0,0,0,1,Africa,1,0.978391582111988
+885,is unquestionably good,1,Contemporary West African Vodun,-1960,0,0,0,0,1,Africa,1,0.25178504321683576
+886,is unquestionably good,1,Pushtimarg (The Path of Grace) in the UK and Gujarat,1990,0,0,0,0,1,Europe,1,0.9939872228485531
+887,is unquestionably good,0,Postsocialist Mongolian Shamanism,1990,0,0,0,0,1,Central Eurasia,1,0.9939872228485531
+888,is unquestionably good,1,Céli Dé monks,780,1,0,0,0,1,Europe,1,0.7666290868094702
+891,is unquestionably good,1,Peruvian Mormons,1956,1,0,0,0,1,South America,1,0.9875986471251409
+892,is unquestionably good,1,Charismatic Renewal Movement in Christianity - Second Wave Pentecostalism,1960,1,0,0,0,1,North America,1,0.9883502442690718
+893,is unquestionably good,0,Sethian Gnostic,100,1,0,0,0,1,Europe,1,0.6388575723412251
+894,is unquestionably good,1,Universal Fellowship of Metropolitan Community Churches,1968,1,0,0,0,1,North America,1,0.9898534385569335
+896,is unquestionably good,1,Sannō Shintō,800,0,0,0,1,1,East Asia,1,0.7703870725291244
+897,is unquestionably good,1,Gaengjeongyudo,1928,0,0,0,0,1,East Asia,1,0.9823374671176249
+899,is unquestionably good,1,Nahdlatul Ulama (NU),1926,0,1,0,0,1,Southeast Asia,1,0.9819616685456595
+900,is unquestionably good,1,Pharisees,-150,0,0,0,0,1,Southwest Asia,1,0.5918827508455468
+906,is unquestionably good,1,The Church of England,1963,1,0,0,0,1,Europe,1,0.9889139421270199
+910,is unquestionably good,1,Christian Base Community movement,1968,1,0,0,0,1,North America,1,0.9898534385569335
+914,is unquestionably good,1,Tariqa Shadhiliyya,1258,0,1,0,0,1,Africa,1,0.856444945509207
+915,is unquestionably good,1,Protestantism welcoming People with Disabilities,2000,1,0,0,0,1,North America,1,0.9958662157083803
+919,is unquestionably good,1,Catholicism in contemporary Croatia,1995,1,0,0,0,1,Europe,1,0.9949267192784668
+921,is unquestionably good,0,Bhils,1700,1,0,0,0,1,South Asia,1,0.9394964299135663
+925,is unquestionably good,1,Rabbinic Judaism (Babylonia),220,0,0,0,0,1,Southwest Asia,1,0.6614054866591507
+927,is unquestionably good,1,Zealots,0,0,0,0,0,1,Southwest Asia,1,0.6200676437429538
+931,is unquestionably good,1,The Society of Jesus (Jesuits) in Britain,1580,1,0,0,0,1,Europe,1,0.9169485155956407
+933,is unquestionably good,1,Marcionites,144,1,0,0,0,1,Europe,1,0.6471251409244645
+935,is unquestionably good,1,Nigerian Pentecostalism,1910,1,0,0,0,1,Africa,1,0.9789552799699361
+937,is unquestionably good,1,Vestal Virgins,-800,0,0,0,0,1,Europe,1,0.46974821495678315
+938,is unquestionably good,1,Ugarit,-1600,0,0,0,0,1,Southwest Asia,1,0.31942878617061254
+941,is unquestionably good,1,Chan Buddhists in early Qing period,1600,0,0,1,1,1,East Asia,1,0.920706501315295
+942,is unquestionably good,1,African Methodist Episcopal Church,1816,1,0,0,0,1,Africa,1,0.9612927470875611
+943,is unquestionably good,1,Moravian Missionaries in Nunatsiavut,1752,1,0,0,0,1,North America,1,0.9492671927846674
+944,is unquestionably good,1,Mohyla's Ukrainian Church,1620,0,0,0,0,1,Europe,1,0.9244644870349493
+948,is unquestionably good,1,Christianity in Ephesus,120,1,0,0,0,1,Southwest Asia,1,0.6426155580608793
+950,is unquestionably good,1,The Religious Society of Friends,1652,1,0,0,0,1,Africa,1,0.9304772641863961
+953,is unquestionably good,1,Sachchai,1975,0,0,0,0,1,South Asia,1,0.9911687335588125
+957,is unquestionably good,0,Spartan Religion,-800,0,0,0,0,1,Europe,1,0.46974821495678315
+958,is unquestionably good,1,Society of Jesus,1540,1,0,0,0,1,Europe,1,0.9094325441563322
+961,is unquestionably good,1,Romanian Orthodox Church,1885,0,0,0,0,1,Europe,1,0.9742577978203683
+963,is unquestionably good,1,The Knights Templar,1119,1,0,0,0,1,Europe,1,0.8303269447576099
+964,is unquestionably good,0,Baul Fakirs of Bengal,1800,0,0,0,1,1,South Asia,1,0.9582863585118376
+965,is unquestionably good,1,Pachomian Monasticism,323,1,0,0,0,1,Africa,1,0.6807591131153702
+966,is unquestionably good,1,"Naqshbandī Order, Naqshbandī Tarīqa, Naqshbandīyyah, Khwājagān,",1318,0,1,0,0,1,Central Eurasia,1,0.8677189026681699
+968,is unquestionably good,1,"Anabaptist Mennonites in North America, 1683-2021",1683,1,0,0,0,1,North America,1,0.9363021420518602
+970,is unquestionably good,1,Cult of Isis (Mysteries of Isis),-323,0,0,0,0,1,Europe,1,0.5593761743705374
+971,is unquestionably good,0,Gāṇapatya,500,0,0,0,0,1,South Asia,1,0.7140172867343104
+972,is unquestionably good,1,Nestorian Christianity,431,0,0,0,0,1,Southwest Asia,1,0.7010522360015032
+973,is unquestionably good,1,The Sarna religion of the Oraons of Jharkhand,1845,0,0,0,0,1,South Asia,1,0.9667418263810598
+974,is unquestionably good,1,"Greek Chalcedonian Christians, Nicaea",1204,1,0,0,0,1,Southwest Asia,1,0.8462983840661406
+975,is unquestionably good,1,Neo-Charismatic Movement - Third Wave Charismatic Movement,1980,1,0,0,0,1,North America,1,0.992108229988726
+976,is unquestionably good,1,Mising Community,1187,0,0,0,0,1,South Asia,1,0.8431040962044344
+977,is unquestionably good,1,Chishti Sufis,1200,0,1,0,0,1,South Asia,1,0.8455467869222097
+978,is unquestionably good,1,Indonesian Catholicism,1500,1,0,0,0,1,Southeast Asia,1,0.9019165727170236
+980,is unquestionably good,1,Pure Land Buddhist Schools in Early Medieval Japan,1175,0,0,0,1,1,East Asia,1,0.8408493047726419
+981,is unquestionably good,1,Nation of Islam,1930,0,1,0,0,1,North America,1,0.9827132656895904
+982,is unquestionably good,1,The Samaritans (Persian to early Roman periods),-499,0,0,0,0,1,Southwest Asia,1,0.5263059000375798
+984,is unquestionably good,1,Calvinism (Early/Reformation),1520,1,0,0,0,1,Europe,1,0.905674558436678
+985,is unquestionably good,1,The Victorines,1108,1,0,0,0,1,Europe,1,0.8282600526118
+986,is unquestionably good,1,Theurgy,150,0,0,0,0,1,Europe,1,0.6482525366403608
+987,is unquestionably good,1,"Parsis, Zoroastrians of India",1600,0,0,0,0,1,South Asia,1,0.920706501315295
+988,is unquestionably good,1,Churches of Christ- United States,1832,1,0,0,0,1,North America,1,0.9642991356632845
+989,is unquestionably good,1,Opus Dei,1928,1,0,0,0,1,Europe,1,0.9823374671176249
+993,is unquestionably good,1,Pontifex Maximus and Pontifices (Pontifical College),-712,0,0,0,0,1,Europe,1,0.48628335212326196
+994,is unquestionably good,1,"Monastic Communities of Lower Egypt: Nitria, Kellia, Scetis",330,1,0,0,0,1,Africa,1,0.6820744081172492
+995,is unquestionably good,1,Tamil Neo-Saivism,1841,0,0,0,0,1,South Asia,1,0.9659902292371289
+1004,is unquestionably good,0,Religion in Roman Ostia,-200,0,0,0,0,1,Europe,1,0.5824877865464111
+1011,is unquestionably good,0,Kingdom of Edom,-800,0,0,0,0,1,Southwest Asia,1,0.46974821495678315
+1012,is unquestionably good,1,Inhabitants of Medieval Kurgus,550,1,0,0,0,1,Africa,1,0.7234122510334461
+1013,is unquestionably good,1,Estado da Índia Renegades in Deccan,1510,1,1,0,0,1,South Asia,1,0.9037955655768508
+1024,is unquestionably good,1,Universal Salvation Ritual,1200,0,0,1,1,1,East Asia,1,0.8455467869222097
+1028,is unquestionably good,1,German Pietists (Hasidei Ashkenaz),1100,0,0,0,0,1,Europe,1,0.8267568583239384
+1031,is unquestionably good,1,Eastern Roman Manichaeism,300,1,0,0,0,1,Europe,1,0.6764374295377678
+1037,is unquestionably good,0,Third Intermediate Period in Ancient Egypt,-1100,0,0,0,0,1,Africa,1,0.4133784291619692
+1038,is unquestionably good,1,Sino-Muslims in Qing China,1644,0,0,1,0,1,East Asia,1,0.9289740698985344
+1041,is unquestionably good,1,Korean Catholicism,1600,1,0,0,0,1,East Asia,1,0.920706501315295
+1043,is unquestionably good,1,Islam in Aceh,1500,0,1,0,0,1,Southeast Asia,1,0.9019165727170236
+1044,is unquestionably good,0,Han Imperial Cult under Emperor Wu,-141,0,0,1,0,1,East Asia,1,0.5935738444193912
+1051,is unquestionably good,0,Religion at Tell el-Dab'a (ancient Avaris) in Ancient Egypt,-1960,0,0,0,0,1,Africa,1,0.25178504321683576
+1069,is unquestionably good,1,Religion at Deir el-Medina,-1504,0,0,0,0,1,Africa,1,0.337467117624953
+1076,is unquestionably good,1,Inquisitors of Goa's Santo Ofício,1560,1,0,0,0,1,South Asia,1,0.9131905298759865
+1087,is unquestionably good,1,The Bogomils,969,1,0,0,0,1,Europe,1,0.8021420518602029
+1095,is unquestionably good,1,Punjabi (West),1947,0,1,0,0,1,South Asia,0,0.9859075535512966
+1101,is unquestionably good,1,Natchez,1710,0,0,0,0,1,North America,0,0.9413754227733935
+1108,is unquestionably good,1,Early Christianity and Monasticism in Egypt,0,1,0,0,0,1,Southwest Asia,1,0.6200676437429538
+1109,is unquestionably good,0,Chan Buddhism in the Song,960,0,0,1,0,1,East Asia,1,0.8004509582863585
+1125,is unquestionably good,1,Ancient Egypt - the Ramesside Period,-1292,0,0,0,0,1,Africa,1,0.37730176625328826
+1127,is unquestionably good,1,Anglican Church of Korea,1890,1,0,0,0,1,East Asia,1,0.9751972942502819
+1129,is unquestionably good,0,Ancient Thessalians,-700,0,0,0,0,1,Europe,1,0.4885381435550545
+1133,is unquestionably good,1,Religion in Greco-Roman Egypt,-305,0,0,0,0,1,Africa,1,0.5627583615182262
+1134,is unquestionably good,1,Tiantai,538,0,0,1,0,1,East Asia,1,0.7211574596016536
+1140,is unquestionably good,1,Early Medieval Confucianism,220,0,0,1,0,1,East Asia,1,0.6614054866591507
+1149,is unquestionably good,1,Christianity in Tang China,618,0,0,1,0,1,East Asia,1,0.7361894024802705
+1162,is unquestionably good,0,Lingbao dafa,400,0,0,1,0,1,East Asia,1,0.6952273581360391
+1172,is unquestionably good,1,Twofold Mystery (Chongxuan 重玄),500,0,0,1,0,1,East Asia,1,0.7140172867343104
+1178,is unquestionably good,1,Modern Mystery School (MMS),1997,0,0,0,0,1,South America,1,0.9953025178504322
+1180,is unquestionably good,1,Batak Traditional Religions,1600,0,0,0,0,1,Southeast Asia,1,0.920706501315295
+1183,is unquestionably good,0,Religion at Nippur in the Ur III period,-2100,0,0,0,0,1,Southwest Asia,1,0.2254791431792559
+1187,is unquestionably good,0,Sanctuary at Tell Damiyah,-850,0,0,0,0,1,Southwest Asia,1,0.4603532506576475
+1189,is unquestionably good,1,Yādiya/Sam'al,-920,0,0,0,0,1,Southwest Asia,1,0.4472003006388576
+1190,is unquestionably good,0,Ancient state of Urartu,-850,0,0,0,0,1,Southwest Asia,1,0.4603532506576475
+1192,is unquestionably good,1,Kaharingan,1945,0,0,0,0,1,Southeast Asia,1,0.9855317549793311
+1218,is unquestionably good,1,Yiguan Dao/I-Kuan Tao 一貫道,1870,0,0,0,0,1,East Asia,1,0.9714393085306275
+1229,is unquestionably good,1,Three Self Patriotic Movement (TSPM),1950,1,0,1,0,1,Central Eurasia,1,0.9864712514092446
+1241,is unquestionably good,1,Taiping 太平 Movement,1837,0,0,1,0,1,East Asia,1,0.965238632093198
+1247,is unquestionably good,1,Exovedate,1885,1,0,0,0,1,North America,1,0.9742577978203683
+1248,is unquestionably good,1,Religion in the Old Assyrian Period,-1972,0,0,0,0,1,Southwest Asia,1,0.2495302517850432
+1250,is unquestionably good,1,Hanbalism,850,0,1,0,0,1,Southwest Asia,0,0.7797820368282601
+1258,is unquestionably good,1,Religion in Judah,-1000,0,0,0,0,1,Southwest Asia,1,0.4321683577602405
+1259,is unquestionably good,0,"The LuWang School, the School of Lu Xiangshan and Wang Yangming",1200,0,0,0,0,1,Central Eurasia,1,0.8455467869222097
+1279,is unquestionably good,0,Mandarese Muslims,1593,0,1,0,0,1,Southeast Asia,1,0.919391206313416
+1283,is unquestionably good,1,Butonese Muslims,1500,0,1,0,0,1,Southeast Asia,1,0.9019165727170236
+1288,is unquestionably good,0,Bailadeiras of Goa,1510,0,0,0,0,1,South Asia,1,0.9037955655768508
+1293,is unquestionably good,1,The Zapotec or Ben 'Zaa (The Cloud People),-2000,1,0,0,0,1,North America,1,0.24426907177752724
+1295,is unquestionably good,1,Donatism,311,1,0,0,0,1,Africa,1,0.6785043216835775
+1300,is unquestionably good,1,"Enlace de Agentes de Pastoral Indígena (EAPI, Network of Indigenous Ministry Agents)",1990,1,0,0,0,1,North America,1,0.9939872228485531
+1304,is unquestionably good,1,Peyote Religion (Peyotism) and the Native American Church,1875,1,0,0,0,1,North America,1,0.9723788049605412
+1307,is unquestionably good,1,Southern Baptists,1845,1,0,0,0,1,North America,1,0.9667418263810598
+1309,is unquestionably good,1,Circumcellions,315,1,0,0,0,1,Africa,1,0.6792559188275085
+1311,is unquestionably good,1,Jehovah's Witnesses,1870,1,0,0,0,1,North America,1,0.9714393085306275
+1312,is unquestionably good,1,Bishnoi,1400,0,0,0,0,1,South Asia,1,0.8831266441187523
+1321,is unquestionably good,1,Mourides (Muridiyya),1853,0,0,0,0,1,Africa,1,0.9682450206689215
+1322,is unquestionably good,0,Pagans under the Emperor Julian,361,0,0,0,0,1,Europe,1,0.6878992859827132
+1323,is unquestionably good,0,Luguru,1910,0,0,0,0,1,Africa,1,0.9789552799699361
+1333,is unquestionably good,1,Cult of Thecla,150,0,0,0,0,1,Europe,1,0.6482525366403608
+1334,is unquestionably good,1,No-debt Movement in US Evangelicalism,1980,1,0,0,0,1,North America,1,0.992108229988726
+1335,is unquestionably good,1,Congregation of the Oratory,1575,1,0,0,0,1,Europe,1,0.9160090191657272
+1340,is unquestionably good,1,International Sivananda Yoga Vedanta Centers,1957,0,0,0,0,1,Europe,1,0.9877865464111236
+1341,is unquestionably good,1,Muslim Students Association of the United States and Canada,1960,0,1,0,0,1,North America,1,0.9883502442690718
+1348,is unquestionably good,1,Disability-focused Christianity for Palestinians,2012,1,0,0,0,1,Southwest Asia,1,0.9981210071401728
+1352,is unquestionably good,0,Śākadvīpīya Brāhmaṇas,2,0,0,0,0,1,South Asia,1,0.6204434423149192
+1357,is unquestionably good,1,Encratites,100,1,0,0,0,1,Southwest Asia,1,0.6388575723412251
+1371,is unquestionably good,1,Twelver Shi'ism in post-revolutionary Iran,1979,0,1,0,0,1,Southwest Asia,1,0.9919203307027433
+1374,is unquestionably good,1,The Reformed Church (Early Orthodoxy),1560,1,0,0,0,1,Europe,1,0.9131905298759865
+1376,is unquestionably good,1,African Initiated Churches,1900,1,0,0,0,1,Africa,1,0.977076287110109
+1392,is unquestionably good,1,Messalians,360,1,0,0,0,1,Southwest Asia,0,0.6877113866967306
+1399,is unquestionably good,0,Religion in the Mittani Empire,-1550,0,0,0,0,1,Southwest Asia,1,0.3288237504697482
+1412,is unquestionably good,1,Tenrikyo,1838,0,0,0,0,1,Central Eurasia,1,0.9654265313791808
+1415,is unquestionably good,1,Anomeans,350,1,0,0,0,1,Europe,1,0.6858323938369034
+1419,is unquestionably good,1,Ancient Egyptian Religion in the Early 18th Dynasty,-1550,0,0,0,0,1,Africa,1,0.3288237504697482
+1426,is unquestionably good,1,Early Missionary Christianity in China,1580,1,0,1,0,1,East Asia,1,0.9169485155956407
+1450,is unquestionably good,1,Tehuelche,1855,0,0,0,0,1,South America,0,0.9686208192408868
+1454,is unquestionably good,1,Hesychastic Controversy,1337,1,0,0,0,1,Europe,1,0.8712889891018414
+1458,is unquestionably good,1,Mbuti,1935,0,0,0,0,1,Africa,0,0.9836527621195039
+1468,is unquestionably good,1,Eastern Christianity From Nicaea to Chalcedon,325,1,0,0,0,1,Europe,1,0.6811349116873356
+1511,is unquestionably good,0,Sokoto,1804,0,1,0,0,1,Africa,1,0.9590379556557685
+1517,is unquestionably good,1,Tunisian Women's Associations,1936,0,1,0,0,1,Africa,1,0.9838406614054866
+1521,is unquestionably good,1,Order of the Hermits of St Augustine (Augustinian friars),1256,1,0,0,0,1,Europe,0,0.8560691469372417
+1522,is unquestionably good,1,Tijaniyya Tariqa الطريقة التجانية,1781,0,1,0,0,1,Africa,1,0.9547162720781661
+1535,is unquestionably good,1,الجمعية الخيرية الإسلامية بمدينة سوق الأربعاء The Islamic Benevolent Society in Souk-el-Arba,1921,0,1,0,0,1,Africa,1,0.9810221721157459
+1544,is unquestionably good,1,Ukrainian Greek Catholic Church,1596,1,0,0,0,1,Europe,1,0.9199549041713642
+1555,is unquestionably good,1,Al-Ahbash الأحباش,1970,0,1,0,0,1,Southwest Asia,1,0.9902292371288989
+1570,is unquestionably good,1,Tamil Muslims,1900,0,1,0,0,1,South Asia,1,0.977076287110109
+1574,is unquestionably good,0,Household religion at Ur,-2000,0,0,0,0,1,Southwest Asia,1,0.24426907177752724
+1582,is unquestionably good,1,Cult of Bona Dea,-300,0,0,0,0,1,Europe,1,0.5636978579481398
+1607,is unquestionably good,1,Zaydism and the state in Yemen,897,0,1,0,0,1,Southwest Asia,0,0.7886133032694476
+1654,is unquestionably good,1,Le Parti du Mouvement de La Nahda حزب حركة النهضة,1981,0,1,0,0,1,Africa,1,0.9922961292747088
+1677,is unquestionably good,0,Royal Hittite Religion,-1650,0,0,0,0,1,Southwest Asia,1,0.3100338218714769
+1688,is unquestionably good,1,Arianism,325,0,0,0,0,1,Europe,1,0.6811349116873356
+1689,is unquestionably good,1,The Isma'ilis in the Ottoman Empire,1516,0,1,0,0,1,Southwest Asia,1,0.9049229612927471
+1690,is unquestionably good,1,Christianity in Byzantium: between the end of Iconoclasm and the Schism,843,1,0,0,0,1,Europe,1,0.7784667418263811
+1694,is unquestionably good,1,Christianity in Byzantium: Between the Schism and the Fourth Crusade,1054,1,0,0,0,1,Europe,1,0.8181134911687336
+1697,is unquestionably good,1,Stylite Monks,450,1,0,0,0,1,Europe,1,0.7046223224351748
+1701,is unquestionably good,1,The Premonstratensian Order in the Middle Ages,1120,1,0,0,0,1,Europe,1,0.8305148440435927
+1708,is unquestionably good,1,الإباضية  Al-Ibadia,708,0,1,0,0,1,Southwest Asia,1,0.7531003382187148
+1709,is unquestionably good,1,Almohads (al-Muwaḥḥidūn),1115,0,1,0,0,1,Africa,1,0.829575347613679
+1714,is unquestionably good,0,Syncretic Polytheism in Curious Pastimes LARP,2019,1,0,0,0,1,Europe,1,0.9994363021420518
+1737,is unquestionably good,1,الإمامية Al-Imamia,661,0,1,0,0,1,Southwest Asia,1,0.7442690717775272
+1741,is unquestionably good,1,Methodism in Zimbabwe or Methodist Church in Zimbabwe,1891,1,0,0,0,1,Africa,1,0.9753851935362645
+1759,is unquestionably good,1,الطريقة الشاذلية = Attarika Achadoulia,1195,0,1,0,0,1,Africa,1,0.8446072904922961
+1774,is unquestionably good,1,إباضية جزيرة جربة Ibadis of Jerba,1557,0,0,0,0,1,Africa,1,0.9126268320180383
+1776,is unquestionably good,1,الطريقة القادرية في البلاد التونسية The Qadiriyya Order in Tunisia,1881,0,0,0,0,1,Africa,1,0.9735062006764374
+1777,is unquestionably good,1,الطريقة التّيجانية بالبلاد التونسية The Tijaniyya Order in Tunisia,1881,0,1,0,0,1,Africa,1,0.9735062006764374
+1779,is unquestionably good,1,المذهب المالكي بالبلاد التونسية The Maliki school in Tunisia,1956,0,1,0,0,1,Africa,1,0.9875986471251409
+1780,is unquestionably good,1,الطريقة الشاذلية في تونس The Shadhiliyya Order in Tunisia,1881,0,0,0,0,1,Africa,1,0.9735062006764374
+1791,is unquestionably good,1,"الطريقة القادرية في بغداد: فترة التأسيس ق12 Attarika Al Qadiria à Bagdad: la période fondatrice, le XIIe siècle",1100,0,1,0,0,1,Southwest Asia,1,0.8267568583239384
+1805,is unquestionably good,1,Wahhabisme الوهّابيّة,1744,0,1,0,0,1,Southwest Asia,1,0.9477639984968057
+1808,is unquestionably good,1,'yan Taru (Women Cadre of the Nana Asma'u),1793,0,1,0,0,1,Africa,0,0.9569710635099586
+1820,is unquestionably good,1,"Cherubim and Seraphim Church Unification, Campus Fellowship",1980,1,0,0,0,1,Africa,1,0.992108229988726
+1829,is unquestionably good,1,Cherubim and Seraphim Unification Church of Nigeria (C&SUCN),1986,1,0,0,0,1,Africa,1,0.9932356257046223
+1835,is unquestionably good,1,"The Cherubim and Seraphim Church of Zion, Ugbonla",1948,0,0,0,0,1,Africa,1,0.9860954528372792
+1845,is unquestionably good,1,Benedictine Order in Denmark,1018,1,0,0,0,1,Europe,1,0.8113491168733559
+1858,is unquestionably good,1,Christianity in Alexandria: From Origen to Athanasius,185,1,0,0,0,1,Africa,1,0.6548290116497557
+1869,is unquestionably good,1,IFA RELIGIOUS GROUP IN ILE- IFE,1930,0,0,0,0,1,Africa,1,0.9827132656895904
+1872,is unquestionably good,1,"The Holy Apostles Community, Ayetoro",1947,0,0,0,0,1,Africa,1,0.9859075535512966
+1897,is unquestionably good,1,"The Episcopal Church of Cherubim and Seraphim, Zion Pepe",1951,0,0,0,0,1,Africa,1,0.9866591506952274
+1903,is unquestionably good,1,The 'Abbāsids,750,1,1,0,1,1,Southwest Asia,1,0.7609921082299888
+1904,is unquestionably good,1,الطريقة القادرية في تونس القرن  19 و20   =  L'ordre Qadiri en Tunisie aux XIXe et XXe siècles,1800,0,1,0,0,1,Africa,0,0.9582863585118376
+1908,is unquestionably good,1,"Buddhist Traders in the Chinese Quarter in Hakata, Japan",1100,0,0,1,1,1,East Asia,1,0.8267568583239384
+1928,is unquestionably good,1,(The gathering of the Messenger of God does not falter)وجمع رسول الله لا يتشعث,1793,0,1,0,0,1,Africa,1,0.9569710635099586
+1940,is unquestionably good,1,"The Holy Apostles Community, Ori-Oke Iwamimo",1950,0,0,0,0,1,Africa,1,0.9864712514092446
+1943,is unquestionably good,1,Cult of Gauchito Gil,1990,1,0,0,0,1,South America,1,0.9939872228485531
+1958,is unquestionably good,1,The Apostolic Faith Mission in Zimbabwe,1915,0,0,0,0,1,Africa,1,0.9798947763998497
+1961,is unquestionably good,1,"Grace Covenant Centre, Ado-Ekiti",1990,1,0,0,0,1,Africa,1,0.9939872228485531
+1966,is unquestionably good,1,Cherubim & Seraphim Movement Church (Worldwide) Ayo Ni O,1972,1,0,0,0,1,Africa,1,0.9906050357008643
+1972,is unquestionably good,1,Shepherding Movement,1970,1,0,0,0,1,North America,1,0.9902292371288989
+1974,is unquestionably good,1,"Chapel of Grace, Ile-Ife",1989,1,0,0,0,1,Africa,1,0.9937993235625705
+1985,is unquestionably good,1,Christianity in Antioch. From the Apostolic Era to the Islamic conquest,34,1,0,0,0,1,Southwest Asia,1,0.626456219466366
+1993,is unquestionably good,0,Ancient Boeotians,-600,0,0,0,0,1,Europe,1,0.5073280721533259
+1994,is unquestionably good,1,Nigeria Fellowship of Evangelical Students (NIFES),1968,1,0,0,0,1,Africa,1,0.9898534385569335
+2000,is unquestionably good,1,"The Community Church of Apostles Nigeria and Oversea (COCANO), Ajegunle",1933,1,0,0,0,1,Africa,1,0.9832769635475386
+2003,is unquestionably good,1,Nigerian Baptist Convention,1914,0,0,0,0,1,Africa,1,0.979706877113867
+2006,is unquestionably good,1,New Life for All Nations Ministries,1972,1,0,0,0,1,Africa,1,0.9906050357008643
+2009,is unquestionably good,0,Ancient Arcadians,-800,0,0,0,0,1,Europe,1,0.46974821495678315
+2010,is unquestionably good,1,Bektashi Tarika,1240,0,1,0,0,1,Europe,1,0.8530627583615182
+2011,is unquestionably good,1,Scripture Union Nigeria,1885,1,0,0,0,1,Africa,1,0.9742577978203683
+2016,is unquestionably good,1,الدولة الفاطمية Fatimid Dynasty,909,0,0,0,0,1,Southwest Asia,1,0.7908680947012401
+2021,is unquestionably good,1,The United Missionary Church of Africa,1905,1,0,0,0,1,Africa,1,0.9780157835400225
+2023,is unquestionably good,1,الدولة الزيرية Zirid Dynasty,971,0,1,0,0,1,Africa,1,0.8025178504321684
+2031,is unquestionably good,1,الدولة الأغلبية The Aghlabid Dynasty,800,0,1,0,0,1,Africa,0,0.7703870725291244
+2038,is unquestionably good,1,"Cathars, Catharism, Albigenses, Albigensians, Cathari, Catharistae, ""Pure Christians""",1000,1,0,0,0,1,Europe,1,0.8079669297256671
+2048,is unquestionably good,1,الدولة الرستمية Rustamid Dynasty,777,0,1,0,0,1,Africa,1,0.766065388951522
+2051,is unquestionably good,1,Tibeto-Vietnamese Đạo Mẫu,2022,0,0,0,1,1,Southeast Asia,1,1.0
+2052,is unquestionably good,1,Christ Way Ministries International,1992,1,0,0,0,1,Africa,1,0.9943630214205186
+2054,is unquestionably good,1,Christ Apostolic Church,1918,0,0,0,0,1,Africa,1,0.9804584742577979
+2061,is unquestionably good,1,OYA RELIGIOUS GROUP IN OYO,1800,0,0,0,0,1,Africa,1,0.9582863585118376
+2069,is unquestionably good,1,L'ordre Soufi Qasimite Hadfite الطريقة الصوفية القاسميّة الهادفية,1969,0,1,0,0,1,Africa,1,0.9900413378429161
+2070,is unquestionably good,1,Overcomers Evangelical Mission International (Ori-Oke Asegun),2003,1,0,0,0,1,Africa,1,0.9964299135663285
+2074,is unquestionably good,1,"Revolutionary Mahdism and Resistance to Colonial Rule in the Sokoto Caliphate, 1905-1906",1905,0,0,0,0,1,Africa,1,0.9780157835400225
+2084,is unquestionably good,1,MAITATSINE: NIGERIA'S BLOODY RELIGIOUS TERRORIST MOVEMENT,1980,0,0,0,0,1,Africa,1,0.992108229988726
+2089,is unquestionably good,1,L'ordre Soufit karkariya en Tunisie الطريقة الكركرية في تونس,1974,0,1,0,0,1,Africa,1,0.9909808342728298
+2100,is unquestionably good,1,الدولة الزيانية Zayyanid Dynasty,1235,0,0,0,0,1,Africa,1,0.8521232619316047
+2104,is unquestionably good,1,الطريقة التجانية في تونس ق18-ق19 ATARIKA TJENIA FI TOUNES  XVIII-XIXème siècle,1700,0,1,0,0,1,Africa,1,0.9394964299135663
+2111,is unquestionably good,1,Tsinburbura Traditional Religion,700,0,0,0,0,1,Africa,1,0.7515971439308531
+2114,is unquestionably good,1,Tijaniyyah Sufi Movement in North-Western Nigeria,1837,0,1,0,0,1,Africa,1,0.965238632093198
+2116,is unquestionably good,1,Qadiriyyah Movement in the Sokoto Caliphate.,1804,0,1,0,0,1,Africa,1,0.9590379556557685
+2122,is unquestionably good,1,Jama'at Izalat al-Bid'ah wa Iqamat al-Sunnah (JIBWIS),1978,0,1,0,0,1,Africa,1,0.9917324314167606
+2126,is unquestionably good,1,Nasrul-lahi-li Fathi Society of Nigeria (NASFAT),1984,0,1,0,0,1,Africa,1,0.9928598271326569
+2128,is unquestionably good,1,Paulicians,650,1,0,0,0,1,Europe,0,0.7422021796317174
+2133,is unquestionably good,1,ANSAR-UD-DEEN SOCIETY OF NIGERIA,1923,0,1,0,0,1,Africa,1,0.9813979706877114
+2138,is unquestionably good,1,الجماعة الأحمدية الإسلامية في نيجيريا,1916,0,0,0,0,1,Africa,1,0.9800826756858324
+2139,is unquestionably good,1,Shi'a Group in Nigeria,1980,0,0,0,0,1,Africa,1,0.992108229988726
+2147,is unquestionably good,1,الدولة الحفصية Hafsid Dynasty,1229,0,1,0,0,1,Africa,1,0.8509958662157083
+2148,is unquestionably good,1,الدولة الحسينية The Husaynid Dynasty,1705,0,0,0,0,1,Africa,1,0.9404359263434799
+2149,is unquestionably good,1,Judaism in Byzantium,330,0,0,0,0,1,Europe,1,0.6820744081172492
+2157,is unquestionably good,1,Blue Light Evangelicals in the Late Eighteenth-Century Royal Navy,1775,1,0,0,0,1,North America,1,0.9535888763622699
+2160,is unquestionably good,1,Manichaeans,250,0,0,0,0,1,Southwest Asia,1,0.6670424652386321
+2166,is unquestionably good,1,Judaism in Byzantium,395,0,0,0,0,1,Europe,1,0.6942878617061256
+2178,is unquestionably good,1,Aladura Christianity in Nigeria,1918,1,0,0,0,1,Africa,1,0.9804584742577979
+2180,is unquestionably good,1,Cao Đài,1921,0,0,0,0,1,North America,1,0.9810221721157459
+2194,is unquestionably good,1,The Redeemed Christian Church of God,1952,1,0,0,0,1,Africa,1,0.9868470499812101
+2200,is unquestionably good,1,The Roman Catholic Mission in Nigeria,1480,1,0,0,0,1,Africa,1,0.8981585869973694
+2209,is unquestionably good,1,The Church of Nigeria Anglican Communion,1842,1,0,0,0,1,Africa,1,0.9661781285231116
+2210,is unquestionably good,1,Living Faith Church Worldwide,1981,1,0,0,0,1,Africa,1,0.9922961292747088
+2220,is unquestionably good,1,Ansar-ud-deen Society of Nigeria,1923,0,0,0,0,1,Africa,1,0.9813979706877114
+2225,is unquestionably good,1,"Culdees, Céli Dé, Céili Dé, Céle Dé,  ""Clients of God"", ""Servants of God"", ""Spouses of God"", ""Companions of God"", Kelidei, Kaledei; Céile Dé",700,1,0,0,0,1,Europe,1,0.7515971439308531
+2228,is unquestionably good,1,Church of God Mission,1972,1,0,0,0,1,Africa,1,0.9906050357008643
+2232,is unquestionably good,1,"Lollards, Lollard, the Lollard movement, Lollardism,  Lollardy, Wycliffites",1350,1,0,0,0,1,Europe,1,0.8737316798196166
+2233,is unquestionably good,1,The Way of Former Heaven (Xiantiandao 先天道),1734,0,0,1,1,1,East Asia,1,0.9458850056369785
+2237,is unquestionably good,1,"Order of Preachers, Dominicans, Friars Preachers, Black Friars, Jacobins",1217,1,0,0,0,1,Europe,1,0.8487410747839158
+2238,is unquestionably good,1,XX ــــــــ    ـق  XVIII   الطريقة التجانية في الجزائر :ق,1700,0,1,0,0,1,Africa,1,0.9394964299135663
+2240,is unquestionably good,1,"Inka and non-Inka groups in Cusco, Peru",900,0,0,0,0,1,South America,0,0.7891770011273957
+2243,is unquestionably good,1,Hui People,700,0,1,0,0,1,Central Eurasia,1,0.7515971439308531
+2244,is unquestionably good,1,"Catholicism in the Latin Empire, Catholicism in the Eastern Roman Empire (Byzantium), the Latin Patriarchate of Constantinople",1204,1,0,0,0,1,Europe,1,0.8462983840661406
+2245,is unquestionably good,1,صقلية الإسلامية Islamic Sicily,652,0,1,0,0,1,Europe,1,0.7425779782036829
+2246,is unquestionably good,1,المذهب الحنفي بالبلاد التونسية The Hanafi school in Tunisia,819,0,0,0,0,1,Africa,1,0.7739571589627959
+2247,is unquestionably good,1,الفتح العربي الإسلامي لشمال إفريقيا The Arab-Islamic Conquest of North Africa,647,0,0,0,0,1,Africa,1,0.7416384817737692
+2248,is unquestionably good,1,الدولة المرادية في تونس The Muradid Dynasty in Tunisia,1631,0,0,0,0,1,Africa,1,0.9265313791807591
+2255,is unquestionably good,1,Dongxiang,1340,0,1,0,0,1,Central Eurasia,1,0.8718526869597896
+2256,is unquestionably good,1,الطريقة الرحمانية في الجزائر  ق18-ق20,1700,0,1,0,0,1,Africa,1,0.9394964299135663
+2264,is unquestionably good,1,Puritans,1560,0,0,0,0,1,Europe,1,0.9131905298759865
+2271,is unquestionably good,1,The Gideons International in Ngeria,1964,1,0,0,0,1,Africa,1,0.9891018414130026
+2274,is unquestionably good,1,Ìjọ Àdìmúlà (An Institutionalised Indigenous Religious Movement in Yorubaland,1920,0,0,0,0,1,Africa,1,0.9808342728297632
+2278,is unquestionably good,1,الطريقة القادرية البودشيشية في المغرب الأقصى,1700,0,1,0,0,1,Africa,1,0.9394964299135663
+2279,is unquestionably good,1,The Ndau people of Chimanimani area in Zimbabwe,1890,0,0,0,0,1,Africa,1,0.9751972942502819
+2290,is unquestionably good,1,الطريقة القادرية في مصر ق13م-ق21م,1200,0,1,0,0,1,Africa,1,0.8455467869222097
+2297,is unquestionably good,1,Waldensians (Waldenses),1173,1,0,0,0,1,Europe,1,0.8404735062006764
+2299,is unquestionably good,1,الحشاشين  ق11-ق13   =   Assassins   XI-XIII,1100,0,1,0,0,1,Southwest Asia,1,0.8267568583239384
+2308,is unquestionably good,1,الفتح العربي الإسلامي للأندلس The Arab-Islamic Conquest of the Iberian Peninsula,711,0,0,0,0,1,Europe,1,0.7536640360766629
+2309,is unquestionably good,1,الدولة الأموية بالأندلس The Umayyad Dynasty in the Iberian Peninsula,756,0,0,0,0,1,Europe,1,0.762119503945885
+2312,is unquestionably good,1,The philosophical system of 'Ubuntu' in Southern Africa,-1800,0,0,0,0,1,Africa,1,0.2818489289740699
+2313,is unquestionably good,1,Dungan people,600,0,0,0,0,1,Central Eurasia,1,0.7328072153325818
+2320,is unquestionably good,1,Sanjiejiao (三階教),500,0,0,0,1,1,East Asia,1,0.7140172867343104
+2322,is unquestionably good,1,الدّولة الأمويّة في المشرق  بين662 م و750م (The Umayyad State in the Mashriq from 662 to 750),661,0,0,0,0,1,Southwest Asia,1,0.7442690717775272
+2324,is unquestionably good,1,"Justice and Development Party (PJD), Morocco",1970,0,1,0,0,1,Africa,1,0.9902292371288989
+2325,is unquestionably good,1,"Outer alchemy (外丹, waidan)",-200,0,0,1,0,1,East Asia,0,0.5824877865464111
+2327,is unquestionably good,1,ỌBÀTÁLA RELIGIOUS GROUP AMONG THE YORUBA OF ILÉ-IFẸ̀,1900,0,0,0,0,1,Africa,1,0.977076287110109
+2328,is unquestionably good,1,Church of Almighty God (Quannengshen jiaohui 全能神教會) / Eastern Lightning (Dongfang shandian 東方閃電),1991,1,0,1,0,1,East Asia,0,0.9941751221345358
+2329,is unquestionably good,1,Hòa Hảo,1937,0,0,0,0,1,Southeast Asia,1,0.9840285606914694
+2330,is unquestionably good,1,Evangelical Church Winning All,1893,1,0,0,0,1,Africa,1,0.97576099210823
+2331,is unquestionably good,1,الدولة العباسيبّة في المشرق  من 750 م الى 1517 م (The Abbasid State in the Mashriq from 750 to 1517),750,0,1,0,0,1,Southwest Asia,1,0.7609921082299888
+2335,is unquestionably good,1,The Seventh-day Adventist Church in Nigeria,1914,0,0,0,0,1,Africa,1,0.979706877113867
+2339,is unquestionably good,1,Yorùbá Traditional Religion,1100,0,0,0,0,1,Africa,1,0.8267568583239384
+2341,is unquestionably good,0,The Totonacapan Culture-Religion,600,0,0,0,0,1,North America,1,0.7328072153325818
+2346,is unquestionably good,1,Igbo Traditional Religion,1800,0,0,0,0,1,Africa,1,0.9582863585118376
+2348,is unquestionably good,1,Ancient Israelite Religion (Iron Age),-1200,0,0,0,0,1,Southwest Asia,0,0.3945885005636979
+2349,is unquestionably good,1,Methodism (Wesleyanism),1738,1,0,0,0,1,Africa,1,0.9466366027809094
+2360,is unquestionably good,1,Toltecas,600,0,0,0,0,1,North America,1,0.7328072153325818
+2361,is unquestionably good,1,Mississippian Religion,1000,0,0,0,0,1,North America,0,0.8079669297256671
+2362,is unquestionably good,1,الدّولة السلجوقيّة(1037 م - 1194م),1037,0,1,0,0,1,Southwest Asia,1,0.8149192033070274
+2363,is unquestionably good,1,"L'ordre Soufi Tunisien ""al-Hasaniyya"" الطريقة الحسنية التونسية",1940,0,1,0,0,1,Africa,1,0.9845922585494176
+2365,is unquestionably good,1,Moriscos,1502,1,1,0,0,1,Africa,1,0.9022923712889891
+2366,is unquestionably good,1,Islam in Hausaland,1500,0,0,0,0,1,Africa,1,0.9019165727170236
+2369,is unquestionably good,1,Le Mouvement Sanussiyya الحركة السنوسيّة,1787,0,1,0,0,1,Africa,1,0.9558436677940624

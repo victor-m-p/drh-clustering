@@ -1,0 +1,369 @@
+entry_id,question_short,answer_value,entry_name,year_from,christian,islamic,chinese,buddhist,poll_group,world_region,literacy,year_norm
+23,conversion non-religionists,0,Late Shang Religion,-1250,0,0,1,0,1,East Asia,1,0.4074610648315828
+174,conversion non-religionists,1,Matthew-James-Didache Movement,50,1,0,0,0,1,Southwest Asia,1,0.6428830134009417
+182,conversion non-religionists,1,Pauline Christianity,48,1,0,0,0,1,Europe,1,0.642520825787758
+184,conversion non-religionists,1,Chinese Buddhism (Northern Wei),386,0,0,1,1,1,East Asia,0,0.7037305324157914
+185,conversion non-religionists,1,Shinnyo-en,1936,0,0,0,0,1,East Asia,0,0.984425932633104
+196,conversion non-religionists,1,Pauline Christianity (ca. 45-60 CE),45,1,0,0,0,1,Europe,1,0.6419775443679826
+200,conversion non-religionists,1,Nechung Cult,1650,0,0,0,1,1,South Asia,1,0.9326331039478449
+212,conversion non-religionists,0,Warring States (China) Religion,-481,0,0,1,0,1,East Asia,1,0.5467222021006881
+217,conversion non-religionists,0,Roman private religion,-202,0,0,0,0,1,Europe,1,0.5972473741398044
+224,conversion non-religionists,0,Old Norse Fornsed,600,0,0,0,0,1,Europe,1,0.7424846070264397
+227,conversion non-religionists,0,Hindu Goddess Worship in Northwest India—Modern Period,1980,0,0,0,0,1,South Asia,1,0.9923940601231438
+228,conversion non-religionists,0,Late Chosŏn Korea,1600,0,0,0,0,1,East Asia,1,0.9235784136182542
+230,conversion non-religionists,0,Religion in Mesopotamia,-3300,0,0,0,0,1,Southwest Asia,1,0.036218761318362915
+231,conversion non-religionists,0,Roman private religion,-600,0,0,0,0,1,Europe,1,0.5251720391162622
+263,conversion non-religionists,1,Irish Catholicism,2000,1,0,0,0,1,Europe,1,0.9960159362549801
+284,conversion non-religionists,0,Yolngu religion,-3500,0,0,0,0,1,Oceania-Australia,1,0.0
+300,conversion non-religionists,0,Israelite Religion,-1200,0,0,0,0,1,Southwest Asia,0,0.4165157551611735
+308,conversion non-religionists,0,Neo-Assyrian Scholars,-900,0,0,0,0,1,Southwest Asia,0,0.4708438971387179
+342,conversion non-religionists,1,Jesus Associations and the Synoptic Gospels,50,1,0,0,0,1,Europe,0,0.6428830134009417
+354,conversion non-religionists,0,Priests and Scholars of Hellenistic Uruk,-330,0,0,0,0,1,Southwest Asia,1,0.5740673668960522
+355,conversion non-religionists,1,Paul the Apostle,50,1,0,0,0,1,Europe,1,0.6428830134009417
+358,conversion non-religionists,1,16th-17th c. Gauḍīya Vaiṣṇava Tradition,1500,0,0,0,0,1,South Asia,1,0.9054690329590728
+361,conversion non-religionists,0,Classical Greek Religion,-500,0,0,0,0,1,Europe,1,0.5432814197754436
+381,conversion non-religionists,1,Sikhism: Guru Nanak to Guru Arjan,1469,0,0,0,0,1,South Asia,1,0.8998551249547265
+383,conversion non-religionists,0,Varkaris,1200,0,0,0,0,1,South Asia,1,0.8511408909815285
+387,conversion non-religionists,1,Ahmadi; Ahmadiyya Muslim Jama'at; Ahmadiya,1889,0,1,0,0,1,South Asia,1,0.9759145237232887
+390,conversion non-religionists,0,Dasara,1610,0,0,0,0,1,South Asia,1,0.9253893516841724
+392,conversion non-religionists,0,Sikhism: Guru Hargobind to Guru Gobind Singh,1606,0,0,0,0,1,South Asia,1,0.9246649764578051
+395,conversion non-religionists,1,International Society for Krishna Consciousness (ISKCON),1966,0,0,0,0,1,Africa,1,0.9898587468308584
+400,conversion non-religionists,1,Singaporean Mega-Churches,1980,1,0,0,0,1,Southeast Asia,1,0.9923940601231438
+415,conversion non-religionists,1,Shaiva World Renouncers,1970,0,0,0,0,1,South Asia,1,0.9905831220572257
+416,conversion non-religionists,1,Edinoverie,1800,1,0,0,0,1,Europe,1,0.9597971749366172
+419,conversion non-religionists,1,The Worship of Jagannath in Puri (Odisha),1970,0,0,0,0,1,South Asia,1,0.9905831220572257
+422,conversion non-religionists,0,Demeter Cult,-1500,0,0,0,0,1,Europe,1,0.36218761318362913
+424,conversion non-religionists,0,Achaemenid Religion,-550,0,0,0,0,1,Southwest Asia,1,0.5342267294458529
+439,conversion non-religionists,0,Śaiva Magic,800,0,0,0,0,1,South Asia,0,0.7787033683448026
+440,conversion non-religionists,1,"Jain Digambara Tantra, Karnataka",900,0,0,0,0,1,South Asia,1,0.796812749003984
+441,conversion non-religionists,0,Worshipers of Śītalā,1690,0,0,0,1,1,South Asia,1,0.9398768562115176
+442,conversion non-religionists,1,Donatism,311,1,0,0,0,1,Africa,1,0.6901484969214053
+455,conversion non-religionists,1,Lan Na Buddhism,1292,0,0,0,1,1,Southeast Asia,1,0.8678015211879754
+470,conversion non-religionists,0,Archaic Spartan Cults,-800,0,0,0,0,1,Europe,1,0.4889532777978993
+472,conversion non-religionists,0,Karma Kagyu or Kamtsang Kagyu,1110,0,0,0,1,1,South Asia,1,0.8348424483882652
+476,conversion non-religionists,1,Cham Bani,1000,0,1,0,0,1,Southeast Asia,1,0.8149221296631656
+483,conversion non-religionists,1,Northern Irish Roman Catholics,2015,1,0,0,0,1,Europe,1,0.9987323433538573
+484,conversion non-religionists,1,Northern Irish Protestants,2015,1,0,0,0,1,Europe,1,0.9987323433538573
+485,conversion non-religionists,0,Sámi pre-Christian religion,500,0,0,0,0,1,Europe,0,0.7243752263672583
+486,conversion non-religionists,1,Church of Jesus Christ of Latter-day Saints (early),1830,1,0,0,0,1,North America,1,0.9652299891343716
+492,conversion non-religionists,0,Roman Divination,-800,0,0,0,0,1,Europe,1,0.4889532777978993
+520,conversion non-religionists,0,Cham Ahiér,1600,0,0,0,0,1,Southeast Asia,1,0.9235784136182542
+525,conversion non-religionists,1,Church of Jesus Christ of Latter-day Saints (modern),1951,1,0,0,0,1,Africa,1,0.9871423397319812
+526,conversion non-religionists,1,Hmong Christianity,1900,1,0,0,0,1,Southeast Asia,1,0.9779065555957986
+562,conversion non-religionists,1,Medieval Śrīvaiṣṇavism,1017,0,0,0,0,1,South Asia,1,0.8180007243752264
+563,conversion non-religionists,0,"Gaddi, a Hindu community of the Western Himalayas",1845,0,0,0,0,1,South Asia,1,0.9679463962332489
+564,conversion non-religionists,1,Tribal Christianity (and allied castes) in the Himalayas,1950,1,0,0,0,1,South Asia,1,0.9869612459253894
+567,conversion non-religionists,1,Gay and Lesbian Vaishnava Association (GALVA-108),2001,0,0,0,0,1,Europe,1,0.9961970300615719
+570,conversion non-religionists,0,Supreme Master Ching Hai World Society,1986,1,0,0,1,1,Southeast Asia,1,0.9934806229626947
+576,conversion non-religionists,0,Kuy traditional religions,1000,0,0,0,1,1,Southeast Asia,1,0.8149221296631656
+581,conversion non-religionists,0,Mentawai (Rereiket),1970,0,0,0,0,1,Southeast Asia,0,0.9905831220572257
+586,conversion non-religionists,0,Kelantanese Thai Religion,1900,0,0,0,1,1,Southeast Asia,1,0.9779065555957986
+592,conversion non-religionists,0,Veerashaivas,1200,0,0,0,0,1,South Asia,1,0.8511408909815285
+623,conversion non-religionists,0,Diasporic American Hinduism,1893,0,0,0,0,1,North America,1,0.9766388989496559
+624,conversion non-religionists,1,The Roshaniyya,1550,0,1,0,0,1,South Asia,1,0.9145237232886635
+629,conversion non-religionists,0,Newar Buddhists,1200,0,0,0,1,1,South Asia,1,0.8511408909815285
+632,conversion non-religionists,0,Local Religion at Selinous,-650,0,0,0,0,1,Europe,1,0.5161173487866715
+633,conversion non-religionists,0,Mādhva,1238,0,0,0,0,1,South Asia,1,0.8580224556320174
+639,conversion non-religionists,1,Chinese Esoteric Buddhism (Tang Tantrism),716,0,0,0,1,1,East Asia,1,0.7634914885910902
+645,conversion non-religionists,1,"Meo Muslim, Mev, Mewati Muslim",1100,0,1,0,0,1,South Asia,1,0.833031510322347
+646,conversion non-religionists,0,Lakota Religious Traditions,1889,0,0,0,0,1,North America,1,0.9759145237232887
+654,conversion non-religionists,1,12th-13th c Cistercians,1198,1,0,0,0,1,Europe,1,0.8507787033683448
+661,conversion non-religionists,1,Congregation of Savigny,1113,1,0,0,0,1,Europe,1,0.8353857298080406
+676,conversion non-religionists,1,"The Order of the Holy Trinity for the Redemption of Captives, 1198-1500",1198,1,0,0,0,1,Europe,1,0.8507787033683448
+680,conversion non-religionists,0,Gujarati Mata Worshipers,1850,0,0,0,0,1,South Asia,1,0.9688518652662079
+681,conversion non-religionists,0,Sargonic Empire,-2350,0,0,0,0,1,Southwest Asia,1,0.20825787758058675
+688,conversion non-religionists,1,Darul Uloom Deoband,1866,0,1,0,0,1,South Asia,1,0.971749366171677
+690,conversion non-religionists,1,Ahl-e-Sunnat wa Jamaat,1880,0,1,0,0,1,South Asia,1,0.9742846794639624
+714,conversion non-religionists,0,Tamil Śaiva Bhakti,550,0,0,0,0,1,South Asia,1,0.733429916696849
+738,conversion non-religionists,0,Ancient Egyptian,-3000,0,0,0,0,1,Africa,1,0.09054690329590728
+739,conversion non-religionists,0,Lakalai,1885,0,0,0,0,1,Oceania-Australia,0,0.9751901484969214
+745,conversion non-religionists,0,Buka,1860,0,0,0,0,1,Oceania-Australia,0,0.9706628033321261
+749,conversion non-religionists,0,Korean shamanism,1800,0,0,0,0,1,East Asia,1,0.9597971749366172
+751,conversion non-religionists,0,Buddhism in the Mekong Delta,2000,0,0,0,1,1,Southeast Asia,1,0.9960159362549801
+763,conversion non-religionists,0,Moriori,1810,0,0,0,0,1,Oceania-Australia,0,0.9616081130025353
+771,conversion non-religionists,1,Muscular Christianity,1762,1,0,0,0,1,Europe,1,0.9529156102861283
+775,conversion non-religionists,0,Jainism,-600,0,0,0,0,1,South Asia,1,0.5251720391162622
+788,conversion non-religionists,0,The Late Bronze Age City-State of Ugarit,-1500,0,0,0,0,1,Southwest Asia,1,0.36218761318362913
+802,conversion non-religionists,0,Chinese Nunnery in Myanmar,1945,0,0,0,1,1,Southeast Asia,1,0.9860557768924303
+839,conversion non-religionists,1,19th century German Protestantism,1788,1,0,0,0,1,Europe,1,0.9576240492575154
+841,conversion non-religionists,0,Sa skya,1073,0,0,0,1,1,South Asia,1,0.828141977544368
+842,conversion non-religionists,1,American Evangelicalism,1730,1,0,0,0,1,North America,1,0.9471206084751902
+843,conversion non-religionists,1,Bnay Qyāmā and Bnāt Qyāmā,300,1,0,0,0,1,Southwest Asia,1,0.6881564650488954
+849,conversion non-religionists,0,"""Gaiwiio Religion,"" ""Longhouse Religion,"" or ""The Way of Handsome Lake"" of the Seneca Tribe",1750,0,0,0,0,1,North America,0,0.9507424846070265
+851,conversion non-religionists,0,Sikhism in the United States,1899,0,0,0,0,1,North America,1,0.9777254617892068
+852,conversion non-religionists,0,Pre-Christian Religion / Paganism in Ireland,-500,0,0,0,0,1,Europe,1,0.5432814197754436
+854,conversion non-religionists,0,pre-Christian Irish,-400,0,0,0,0,1,Europe,1,0.5613908004346251
+855,conversion non-religionists,1,Middle-Class Migrant Muslims in the UAE,1900,0,1,0,0,1,Southwest Asia,1,0.9779065555957986
+857,conversion non-religionists,1,Wesleyanism,1738,1,0,0,0,1,Africa,1,0.9485693589279247
+859,conversion non-religionists,0,Valentinians,135,1,0,0,0,1,Europe,1,0.6582759869612459
+860,conversion non-religionists,0,Kimpa Vita,1704,0,0,0,0,1,Africa,0,0.942412169503803
+870,conversion non-religionists,0,Postsocialist Mongolian Buddhism,1990,0,0,0,1,1,Central Eurasia,1,0.9942049981890619
+873,conversion non-religionists,1,The Branch Davidians,1962,1,0,0,0,1,North America,1,0.9891343716044911
+879,conversion non-religionists,1,Free Methodist Church,1860,1,0,0,0,1,Africa,1,0.9706628033321261
+880,conversion non-religionists,1,Egyptian Salafism (inluding North Africa and West Asia),1870,0,1,0,0,1,Southwest Asia,1,0.9724737413980442
+883,conversion non-religionists,1,Catholics in the People's Republic of China (PRC),1949,1,0,1,0,1,Central Eurasia,1,0.9867801521187975
+884,conversion non-religionists,1,Sub Saharan Africa Pentecostalism,1907,0,0,0,0,1,Africa,1,0.9791742122419413
+885,conversion non-religionists,1,Contemporary West African Vodun,-1960,0,0,0,0,1,Africa,1,0.2788844621513944
+886,conversion non-religionists,1,Pushtimarg (The Path of Grace) in the UK and Gujarat,1990,0,0,0,0,1,Europe,1,0.9942049981890619
+887,conversion non-religionists,0,Postsocialist Mongolian Shamanism,1990,0,0,0,0,1,Central Eurasia,1,0.9942049981890619
+888,conversion non-religionists,1,Céli Dé monks,780,1,0,0,0,1,Europe,1,0.7750814922129663
+891,conversion non-religionists,1,Peruvian Mormons,1956,1,0,0,0,1,South America,1,0.9880478087649402
+892,conversion non-religionists,1,Charismatic Renewal Movement in Christianity - Second Wave Pentecostalism,1960,1,0,0,0,1,North America,1,0.9887721839913075
+894,conversion non-religionists,1,Universal Fellowship of Metropolitan Community Churches,1968,1,0,0,0,1,North America,1,0.990220934444042
+896,conversion non-religionists,0,Sannō Shintō,800,0,0,0,1,1,East Asia,1,0.7787033683448026
+899,conversion non-religionists,1,Nahdlatul Ulama (NU),1926,0,1,0,0,1,Southeast Asia,1,0.9826149945671858
+906,conversion non-religionists,1,The Church of England,1963,1,0,0,0,1,Europe,1,0.989315465411083
+908,conversion non-religionists,0,Sino-Christian Theology,1980,1,0,1,0,1,East Asia,1,0.9923940601231438
+910,conversion non-religionists,0,Christian Base Community movement,1968,1,0,0,0,1,North America,1,0.990220934444042
+914,conversion non-religionists,1,Tariqa Shadhiliyya,1258,0,1,0,0,1,Africa,1,0.8616443317638537
+915,conversion non-religionists,1,Protestantism welcoming People with Disabilities,2000,1,0,0,0,1,North America,1,0.9960159362549801
+918,conversion non-religionists,0,Fangshi,-475,0,0,1,0,1,East Asia,1,0.547808764940239
+919,conversion non-religionists,0,Catholicism in contemporary Croatia,1995,1,0,0,0,1,Europe,1,0.995110467222021
+921,conversion non-religionists,0,Bhils,1700,1,0,0,0,1,South Asia,1,0.9416877942774358
+925,conversion non-religionists,0,Rabbinic Judaism (Babylonia),220,0,0,0,0,1,Southwest Asia,1,0.6736689605215501
+926,conversion non-religionists,0,Ladakhi Buddhism,842,0,0,0,1,1,South Asia,1,0.7863093082216588
+927,conversion non-religionists,0,Zealots,0,0,0,0,0,1,Southwest Asia,1,0.633828323071351
+928,conversion non-religionists,0,The Ghost Dance Movement and the Lakota Sioux,1860,0,0,0,0,1,North America,1,0.9706628033321261
+929,conversion non-religionists,0,Drikung Kagyu,1143,0,0,0,1,1,South Asia,1,0.840818544005795
+931,conversion non-religionists,1,The Society of Jesus (Jesuits) in Britain,1580,1,0,0,0,1,Europe,1,0.9199565374864179
+933,conversion non-religionists,0,Marcionites,144,1,0,0,0,1,Europe,1,0.6599058312205722
+934,conversion non-religionists,1,Mongolian Buddhism during the Revolutionary Period,1911,0,0,0,1,1,Central Eurasia,1,0.9798985874683086
+935,conversion non-religionists,1,Nigerian Pentecostalism,1910,1,0,0,0,1,Africa,1,0.9797174936617168
+937,conversion non-religionists,0,Vestal Virgins,-800,0,0,0,0,1,Europe,1,0.4889532777978993
+940,conversion non-religionists,1,Julio-Claudian Imperial Cult,-31,0,0,0,0,1,Europe,1,0.6282144150670047
+941,conversion non-religionists,0,Chan Buddhists in early Qing period,1600,0,0,1,1,1,East Asia,1,0.9235784136182542
+942,conversion non-religionists,1,African Methodist Episcopal Church,1816,1,0,0,0,1,Africa,1,0.9626946758420862
+943,conversion non-religionists,1,Moravian Missionaries in Nunatsiavut,1752,1,0,0,0,1,North America,1,0.9511046722202101
+944,conversion non-religionists,1,Mohyla's Ukrainian Church,1620,0,0,0,0,1,Europe,1,0.9272002897500905
+946,conversion non-religionists,0,Nyingma (rnying ma),700,0,0,0,1,1,South Asia,1,0.7605939876856211
+948,conversion non-religionists,1,Christianity in Ephesus,120,1,0,0,0,1,Southwest Asia,1,0.6555595798623687
+950,conversion non-religionists,1,The Religious Society of Friends,1652,1,0,0,0,1,Africa,1,0.9329952915610286
+952,conversion non-religionists,0,Ethiopian Jews,1980,0,0,0,0,1,Southwest Asia,1,0.9923940601231438
+953,conversion non-religionists,0,Sachchai,1975,0,0,0,0,1,South Asia,1,0.9914885910901847
+957,conversion non-religionists,0,Spartan Religion,-800,0,0,0,0,1,Europe,1,0.4889532777978993
+958,conversion non-religionists,1,Society of Jesus,1540,1,0,0,0,1,Europe,1,0.9127127852227453
+960,conversion non-religionists,0,Bön (Bon),1000,0,0,0,1,1,South Asia,1,0.8149221296631656
+961,conversion non-religionists,1,Romanian Orthodox Church,1885,0,0,0,0,1,Europe,1,0.9751901484969214
+963,conversion non-religionists,1,The Knights Templar,1119,1,0,0,0,1,Europe,1,0.8364722926475915
+965,conversion non-religionists,1,Pachomian Monasticism,323,1,0,0,0,1,Africa,1,0.6923216226005071
+966,conversion non-religionists,1,"Naqshbandī Order, Naqshbandī Tarīqa, Naqshbandīyyah, Khwājagān,",1318,0,1,0,0,1,Central Eurasia,1,0.8725099601593626
+968,conversion non-religionists,1,"Anabaptist Mennonites in North America, 1683-2021",1683,1,0,0,0,1,North America,1,0.9386091995653749
+970,conversion non-religionists,1,Cult of Isis (Mysteries of Isis),-323,0,0,0,0,1,Europe,1,0.5753350235421949
+971,conversion non-religionists,0,Gāṇapatya,500,0,0,0,0,1,South Asia,1,0.7243752263672583
+972,conversion non-religionists,1,Nestorian Christianity,431,0,0,0,0,1,Southwest Asia,1,0.7118797537124231
+973,conversion non-religionists,0,The Sarna religion of the Oraons of Jharkhand,1845,0,0,0,0,1,South Asia,1,0.9679463962332489
+974,conversion non-religionists,1,"Greek Chalcedonian Christians, Nicaea",1204,1,0,0,0,1,Southwest Asia,1,0.8518652662078957
+975,conversion non-religionists,1,Neo-Charismatic Movement - Third Wave Charismatic Movement,1980,1,0,0,0,1,North America,1,0.9923940601231438
+976,conversion non-religionists,0,Mising Community,1187,0,0,0,0,1,South Asia,1,0.8487866714958349
+977,conversion non-religionists,0,Chishti Sufis,1200,0,1,0,0,1,South Asia,1,0.8511408909815285
+978,conversion non-religionists,1,Indonesian Catholicism,1500,1,0,0,0,1,Southeast Asia,1,0.9054690329590728
+980,conversion non-religionists,0,Pure Land Buddhist Schools in Early Medieval Japan,1175,0,0,0,1,1,East Asia,1,0.8466135458167331
+983,conversion non-religionists,1,Tibetan and Himalayan Mundane and Landscape Cults,600,0,0,0,1,1,South Asia,1,0.7424846070264397
+984,conversion non-religionists,1,Calvinism (Early/Reformation),1520,1,0,0,0,1,Europe,1,0.9090909090909091
+987,conversion non-religionists,0,"Parsis, Zoroastrians of India",1600,0,0,0,0,1,South Asia,1,0.9235784136182542
+988,conversion non-religionists,1,Churches of Christ- United States,1832,1,0,0,0,1,North America,1,0.9655921767475553
+989,conversion non-religionists,1,Opus Dei,1928,1,0,0,0,1,Europe,1,0.9829771821803694
+993,conversion non-religionists,1,Pontifex Maximus and Pontifices (Pontifical College),-712,0,0,0,0,1,Europe,1,0.504889532777979
+994,conversion non-religionists,1,"Monastic Communities of Lower Egypt: Nitria, Kellia, Scetis",330,1,0,0,0,1,Africa,1,0.6935892792466498
+995,conversion non-religionists,0,Tamil Neo-Saivism,1841,0,0,0,0,1,South Asia,1,0.9672220210068816
+997,conversion non-religionists,0,Ancient Egypt - Early Dynastic Period,-2950,0,0,0,0,1,Africa,1,0.099601593625498
+1004,conversion non-religionists,0,Religion in Roman Ostia,-200,0,0,0,0,1,Europe,1,0.5976095617529881
+1006,conversion non-religionists,0,Ancient Egypt - Old Kingdom,-2670,0,0,0,0,1,Africa,1,0.1503078594712061
+1008,conversion non-religionists,0,Ancient Egypt - First Intermediate Period,-2168,0,0,0,0,1,Africa,1,0.241216950380297
+1012,conversion non-religionists,1,Inhabitants of Medieval Kurgus,550,1,0,0,0,1,Africa,1,0.733429916696849
+1013,conversion non-religionists,1,Estado da Índia Renegades in Deccan,1510,1,1,0,0,1,South Asia,1,0.9072799710249909
+1024,conversion non-religionists,1,Universal Salvation Ritual,1200,0,0,1,1,1,East Asia,1,0.8511408909815285
+1038,conversion non-religionists,1,Sino-Muslims in Qing China,1644,0,0,1,0,1,East Asia,1,0.931546541108294
+1041,conversion non-religionists,1,Korean Catholicism,1600,1,0,0,0,1,East Asia,1,0.9235784136182542
+1043,conversion non-religionists,1,Islam in Aceh,1500,0,1,0,0,1,Southeast Asia,1,0.9054690329590728
+1044,conversion non-religionists,0,Han Imperial Cult under Emperor Wu,-141,0,0,1,0,1,East Asia,1,0.6082940963419051
+1051,conversion non-religionists,0,Religion at Tell el-Dab'a (ancient Avaris) in Ancient Egypt,-1960,0,0,0,0,1,Africa,1,0.2788844621513944
+1069,conversion non-religionists,0,Religion at Deir el-Medina,-1504,0,0,0,0,1,Africa,1,0.3614632379572619
+1071,conversion non-religionists,0,Digital Shinto Communities,2001,0,0,0,0,1,Africa,1,0.9961970300615719
+1076,conversion non-religionists,1,Inquisitors of Goa's Santo Ofício,1560,1,0,0,0,1,South Asia,1,0.9163346613545816
+1083,conversion non-religionists,0,Drukpa Kagyü School (Bhutan),1625,0,0,0,1,1,South Asia,1,0.9281057587830496
+1087,conversion non-religionists,1,The Bogomils,969,1,0,0,0,1,Europe,1,0.8093082216588192
+1127,conversion non-religionists,1,Anglican Church of Korea,1890,1,0,0,0,1,East Asia,1,0.9760956175298805
+1129,conversion non-religionists,0,Ancient Thessalians,-700,0,0,0,0,1,Europe,1,0.5070626584570808
+1140,conversion non-religionists,0,Early Medieval Confucianism,220,0,0,1,0,1,East Asia,1,0.6736689605215501
+1149,conversion non-religionists,1,Christianity in Tang China,618,0,0,1,0,1,East Asia,1,0.7457442955450924
+1162,conversion non-religionists,1,Lingbao dafa,400,0,0,1,0,1,East Asia,1,0.7062658457080768
+1172,conversion non-religionists,1,Twofold Mystery (Chongxuan 重玄),500,0,0,1,0,1,East Asia,1,0.7243752263672583
+1178,conversion non-religionists,1,Modern Mystery School (MMS),1997,0,0,0,0,1,South America,1,0.9954726548352046
+1180,conversion non-religionists,1,Batak Traditional Religions,1600,0,0,0,0,1,Southeast Asia,1,0.9235784136182542
+1183,conversion non-religionists,0,Religion at Nippur in the Ur III period,-2100,0,0,0,0,1,Southwest Asia,1,0.2535313292285404
+1189,conversion non-religionists,0,Yādiya/Sam'al,-920,0,0,0,0,1,Southwest Asia,1,0.46722202100688154
+1191,conversion non-religionists,1,Religion in Greco-Roman Alexandria,-300,0,0,0,0,1,Africa,1,0.5795001810938066
+1192,conversion non-religionists,1,Kaharingan,1945,0,0,0,0,1,Southeast Asia,1,0.9860557768924303
+1218,conversion non-religionists,1,Yiguan Dao/I-Kuan Tao 一貫道,1870,0,0,0,0,1,East Asia,1,0.9724737413980442
+1227,conversion non-religionists,0,Polytheistic Pre-Islamic South Arabia,-800,0,0,0,0,1,Africa,1,0.4889532777978993
+1229,conversion non-religionists,1,Three Self Patriotic Movement (TSPM),1950,1,0,1,0,1,Central Eurasia,1,0.9869612459253894
+1241,conversion non-religionists,1,Taiping 太平 Movement,1837,0,0,1,0,1,East Asia,1,0.9664976457805143
+1247,conversion non-religionists,1,Exovedate,1885,1,0,0,0,1,North America,1,0.9751901484969214
+1248,conversion non-religionists,0,Religion in the Old Assyrian Period,-1972,0,0,0,0,1,Southwest Asia,1,0.2767113364722926
+1258,conversion non-religionists,0,Religion in Judah,-1000,0,0,0,0,1,Southwest Asia,1,0.4527345164795364
+1259,conversion non-religionists,0,"The LuWang School, the School of Lu Xiangshan and Wang Yangming",1200,0,0,0,0,1,Central Eurasia,1,0.8511408909815285
+1268,conversion non-religionists,1,Monotheistic Pre-Islamic South Arabia,360,0,0,0,0,1,Southwest Asia,0,0.6990220934444042
+1283,conversion non-religionists,0,Butonese Muslims,1500,0,1,0,0,1,Southeast Asia,1,0.9054690329590728
+1284,conversion non-religionists,0,Religion of Phoenicia,-1200,0,0,0,0,1,Southwest Asia,0,0.4165157551611735
+1293,conversion non-religionists,1,The Zapotec or Ben 'Zaa (The Cloud People),-2000,1,0,0,0,1,North America,1,0.2716407098877218
+1295,conversion non-religionists,1,Donatism,311,1,0,0,0,1,Africa,1,0.6901484969214053
+1300,conversion non-religionists,1,"Enlace de Agentes de Pastoral Indígena (EAPI, Network of Indigenous Ministry Agents)",1990,1,0,0,0,1,North America,1,0.9942049981890619
+1307,conversion non-religionists,1,Southern Baptists,1845,1,0,0,0,1,North America,1,0.9679463962332489
+1308,conversion non-religionists,0,Jews and Jewish-Sympathizers in South Arabia,275,0,0,0,0,1,Southwest Asia,1,0.6836291198840999
+1309,conversion non-religionists,1,Circumcellions,315,1,0,0,0,1,Africa,1,0.6908728721477726
+1311,conversion non-religionists,1,Jehovah's Witnesses,1870,1,0,0,0,1,North America,1,0.9724737413980442
+1321,conversion non-religionists,1,Mourides (Muridiyya),1853,0,0,0,0,1,Africa,1,0.9693951466859834
+1322,conversion non-religionists,0,Pagans under the Emperor Julian,361,0,0,0,0,1,Europe,1,0.6992031872509961
+1333,conversion non-religionists,1,Cult of Thecla,150,0,0,0,0,1,Europe,1,0.6609923940601231
+1334,conversion non-religionists,1,No-debt Movement in US Evangelicalism,1980,1,0,0,0,1,North America,1,0.9923940601231438
+1335,conversion non-religionists,1,Congregation of the Oratory,1575,1,0,0,0,1,Europe,1,0.9190510684534589
+1337,conversion non-religionists,0,Tell Afis (Syria),-1200,0,0,0,0,1,Southwest Asia,1,0.4165157551611735
+1341,conversion non-religionists,1,Muslim Students Association of the United States and Canada,1960,0,1,0,0,1,North America,1,0.9887721839913075
+1344,conversion non-religionists,1,Tibetan Nonsectarianism (ris med),1840,0,0,0,1,1,East Asia,1,0.9670409272002898
+1348,conversion non-religionists,1,Disability-focused Christianity for Palestinians,2012,1,0,0,0,1,Southwest Asia,1,0.9981890619340819
+1349,conversion non-religionists,0,The Dingxiang Wang Cult,1124,0,0,1,0,1,Central Eurasia,1,0.8373777616805506
+1352,conversion non-religionists,0,Śākadvīpīya Brāhmaṇas,2,0,0,0,0,1,South Asia,1,0.6341905106845346
+1357,conversion non-religionists,1,Encratites,100,1,0,0,0,1,Southwest Asia,1,0.6519377037305324
+1371,conversion non-religionists,1,Twelver Shi'ism in post-revolutionary Iran,1979,0,1,0,0,1,Southwest Asia,1,0.992212966316552
+1374,conversion non-religionists,1,The Reformed Church (Early Orthodoxy),1560,1,0,0,0,1,Europe,1,0.9163346613545816
+1426,conversion non-religionists,1,Early Missionary Christianity in China,1580,1,0,1,0,1,East Asia,1,0.9199565374864179
+1441,conversion non-religionists,0,Mexica (Aztec) Religion,1325,0,0,0,0,1,North America,1,0.8737776168055053
+1466,conversion non-religionists,1,Islamic modernists,1800,0,1,0,0,1,Africa,1,0.9597971749366172
+1529,conversion non-religionists,1,Byzantine Iconoclasts (726-787 CE),720,1,0,0,0,1,Europe,1,0.7642158638174574
+1535,conversion non-religionists,0,الجمعية الخيرية الإسلامية بمدينة سوق الأربعاء The Islamic Benevolent Society in Souk-el-Arba,1921,0,1,0,0,1,Africa,1,0.9817095255342267
+1542,conversion non-religionists,0,Umbanda,1913,1,0,0,0,1,South America,1,0.9802607750814922
+1544,conversion non-religionists,1,Ukrainian Greek Catholic Church,1596,1,0,0,0,1,Europe,1,0.922854038391887
+1555,conversion non-religionists,1,Al-Ahbash الأحباش,1970,0,1,0,0,1,Southwest Asia,1,0.9905831220572257
+1570,conversion non-religionists,1,Tamil Muslims,1900,0,1,0,0,1,South Asia,1,0.9779065555957986
+1574,conversion non-religionists,0,Household religion at Ur,-2000,0,0,0,0,1,Southwest Asia,1,0.2716407098877218
+1582,conversion non-religionists,1,Cult of Bona Dea,-300,0,0,0,0,1,Europe,1,0.5795001810938066
+1607,conversion non-religionists,1,Zaydism and the state in Yemen,897,0,1,0,0,1,Southwest Asia,0,0.7962694675842086
+1624,conversion non-religionists,0,Neo-Assyrian Healers (āšipu/mašmaššu-exorcists),-900,0,0,0,0,1,Southwest Asia,1,0.4708438971387179
+1626,conversion non-religionists,0,The Cult of Maritime Hera,-800,0,0,0,0,1,Europe,1,0.4889532777978993
+1653,conversion non-religionists,1,Visigothic Homoian Christianity,341,1,0,0,0,1,Europe,1,0.6955813111191598
+1654,conversion non-religionists,1,Le Parti du Mouvement de La Nahda حزب حركة النهضة,1981,0,1,0,0,1,Africa,1,0.9925751539297356
+1677,conversion non-religionists,0,Royal Hittite Religion,-1650,0,0,0,0,1,Southwest Asia,1,0.3350235421948569
+1689,conversion non-religionists,1,The Isma'ilis in the Ottoman Empire,1516,0,1,0,0,1,Southwest Asia,1,0.9083665338645418
+1697,conversion non-religionists,1,Stylite Monks,450,1,0,0,0,1,Europe,1,0.7153205360376675
+1701,conversion non-religionists,1,The Premonstratensian Order in the Middle Ages,1120,1,0,0,0,1,Europe,1,0.8366533864541833
+1708,conversion non-religionists,1,الإباضية  Al-Ibadia,708,0,1,0,0,1,Southwest Asia,1,0.7620427381383557
+1709,conversion non-religionists,1,Almohads (al-Muwaḥḥidūn),1115,0,1,0,0,1,Africa,1,0.8357479174212242
+1737,conversion non-religionists,0,الإمامية Al-Imamia,661,0,1,0,0,1,Southwest Asia,1,0.7535313292285404
+1741,conversion non-religionists,1,Methodism in Zimbabwe or Methodist Church in Zimbabwe,1891,1,0,0,0,1,Africa,1,0.9762767113364723
+1759,conversion non-religionists,1,الطريقة الشاذلية = Attarika Achadoulia,1195,0,1,0,0,1,Africa,1,0.8502354219485694
+1774,conversion non-religionists,1,إباضية جزيرة جربة Ibadis of Jerba,1557,0,0,0,0,1,Africa,1,0.9157913799348062
+1776,conversion non-religionists,1,الطريقة القادرية في البلاد التونسية The Qadiriyya Order in Tunisia,1881,0,0,0,0,1,Africa,1,0.9744657732705542
+1777,conversion non-religionists,1,الطريقة التّيجانية بالبلاد التونسية The Tijaniyya Order in Tunisia,1881,0,1,0,0,1,Africa,1,0.9744657732705542
+1779,conversion non-religionists,1,المذهب المالكي بالبلاد التونسية The Maliki school in Tunisia,1956,0,1,0,0,1,Africa,1,0.9880478087649402
+1780,conversion non-religionists,1,الطريقة الشاذلية في تونس The Shadhiliyya Order in Tunisia,1881,0,0,0,0,1,Africa,1,0.9744657732705542
+1781,conversion non-religionists,1,المذهب الشيعي في تونس The Shiʿi madhhab in Tunisia,1969,0,0,0,0,1,Africa,1,0.9904020282506338
+1791,conversion non-religionists,0,"الطريقة القادرية في بغداد: فترة التأسيس ق12 Attarika Al Qadiria à Bagdad: la période fondatrice, le XIIe siècle",1100,0,1,0,0,1,Southwest Asia,1,0.833031510322347
+1805,conversion non-religionists,1,Wahhabisme الوهّابيّة,1744,0,1,0,0,1,Southwest Asia,1,0.9496559217674756
+1806,conversion non-religionists,0,Sango Religious group in Oyo,1800,0,0,0,0,1,Africa,1,0.9597971749366172
+1808,conversion non-religionists,0,'yan Taru (Women Cadre of the Nana Asma'u),1793,0,1,0,0,1,Africa,0,0.9585295182904745
+1820,conversion non-religionists,1,"Cherubim and Seraphim Church Unification, Campus Fellowship",1980,1,0,0,0,1,Africa,1,0.9923940601231438
+1829,conversion non-religionists,1,Cherubim and Seraphim Unification Church of Nigeria (C&SUCN),1986,1,0,0,0,1,Africa,1,0.9934806229626947
+1835,conversion non-religionists,1,"The Cherubim and Seraphim Church of Zion, Ugbonla",1948,0,0,0,0,1,Africa,1,0.9865990583122057
+1869,conversion non-religionists,1,IFA RELIGIOUS GROUP IN ILE- IFE,1930,0,0,0,0,1,Africa,1,0.9833393697935531
+1872,conversion non-religionists,1,"The Holy Apostles Community, Ayetoro",1947,0,0,0,0,1,Africa,1,0.9864179645056139
+1897,conversion non-religionists,1,"The Episcopal Church of Cherubim and Seraphim, Zion Pepe",1951,0,0,0,0,1,Africa,1,0.9871423397319812
+1903,conversion non-religionists,1,The 'Abbāsids,750,1,1,0,1,1,Southwest Asia,1,0.7696486780152119
+1904,conversion non-religionists,0,الطريقة القادرية في تونس القرن  19 و20   =  L'ordre Qadiri en Tunisie aux XIXe et XXe siècles,1800,0,1,0,0,1,Africa,0,0.9597971749366172
+1908,conversion non-religionists,1,"Buddhist Traders in the Chinese Quarter in Hakata, Japan",1100,0,0,1,1,1,East Asia,1,0.833031510322347
+1928,conversion non-religionists,1,(The gathering of the Messenger of God does not falter)وجمع رسول الله لا يتشعث,1793,0,1,0,0,1,Africa,1,0.9585295182904745
+1940,conversion non-religionists,1,"The Holy Apostles Community, Ori-Oke Iwamimo",1950,0,0,0,0,1,Africa,1,0.9869612459253894
+1943,conversion non-religionists,0,Cult of Gauchito Gil,1990,1,0,0,0,1,South America,1,0.9942049981890619
+1958,conversion non-religionists,1,The Apostolic Faith Mission in Zimbabwe,1915,0,0,0,0,1,Africa,1,0.9806229626946759
+1961,conversion non-religionists,1,"Grace Covenant Centre, Ado-Ekiti",1990,1,0,0,0,1,Africa,1,0.9942049981890619
+1966,conversion non-religionists,1,Cherubim & Seraphim Movement Church (Worldwide) Ayo Ni O,1972,1,0,0,0,1,Africa,1,0.9909453096704093
+1972,conversion non-religionists,1,Shepherding Movement,1970,1,0,0,0,1,North America,1,0.9905831220572257
+1974,conversion non-religionists,1,"Chapel of Grace, Ile-Ife",1989,1,0,0,0,1,Africa,1,0.9940239043824701
+1983,conversion non-religionists,1,Early Byzantine Asceticism,400,1,0,0,0,1,Southwest Asia,1,0.7062658457080768
+1989,conversion non-religionists,0,Iron Age Celtic Spain and Portugal (Celtiberia),-600,0,0,0,0,1,Europe,1,0.5251720391162622
+1993,conversion non-religionists,0,Ancient Boeotians,-600,0,0,0,0,1,Europe,1,0.5251720391162622
+1994,conversion non-religionists,1,Nigeria Fellowship of Evangelical Students (NIFES),1968,1,0,0,0,1,Africa,1,0.990220934444042
+2000,conversion non-religionists,1,"The Community Church of Apostles Nigeria and Oversea (COCANO), Ajegunle",1933,1,0,0,0,1,Africa,1,0.9838826512133285
+2003,conversion non-religionists,1,Nigerian Baptist Convention,1914,0,0,0,0,1,Africa,1,0.980441868888084
+2006,conversion non-religionists,1,New Life for All Nations Ministries,1972,1,0,0,0,1,Africa,1,0.9909453096704093
+2009,conversion non-religionists,0,Ancient Arcadians,-800,0,0,0,0,1,Europe,1,0.4889532777978993
+2011,conversion non-religionists,1,Scripture Union Nigeria,1885,1,0,0,0,1,Africa,1,0.9751901484969214
+2016,conversion non-religionists,1,الدولة الفاطمية Fatimid Dynasty,909,0,0,0,0,1,Southwest Asia,1,0.7984425932633104
+2021,conversion non-religionists,1,The United Missionary Church of Africa,1905,1,0,0,0,1,Africa,1,0.9788120246287577
+2023,conversion non-religionists,1,الدولة الزيرية Zirid Dynasty,971,0,1,0,0,1,Africa,1,0.8096704092720028
+2027,conversion non-religionists,1,Hizb-ut-Tahrir,1953,0,1,0,0,1,Europe,1,0.9875045273451648
+2031,conversion non-religionists,1,الدولة الأغلبية The Aghlabid Dynasty,800,0,1,0,0,1,Africa,0,0.7787033683448026
+2038,conversion non-religionists,1,"Cathars, Catharism, Albigenses, Albigensians, Cathari, Catharistae, ""Pure Christians""",1000,1,0,0,0,1,Europe,1,0.8149221296631656
+2051,conversion non-religionists,1,Tibeto-Vietnamese Đạo Mẫu,2022,0,0,0,1,1,Southeast Asia,1,1.0
+2052,conversion non-religionists,1,Christ Way Ministries International,1992,1,0,0,0,1,Africa,1,0.9945671858022456
+2054,conversion non-religionists,1,Christ Apostolic Church,1918,0,0,0,0,1,Africa,1,0.9811662441144513
+2061,conversion non-religionists,0,OYA RELIGIOUS GROUP IN OYO,1800,0,0,0,0,1,Africa,1,0.9597971749366172
+2069,conversion non-religionists,1,L'ordre Soufi Qasimite Hadfite الطريقة الصوفية القاسميّة الهادفية,1969,0,1,0,0,1,Africa,1,0.9904020282506338
+2070,conversion non-religionists,1,Overcomers Evangelical Mission International (Ori-Oke Asegun),2003,1,0,0,0,1,Africa,1,0.9965592176747555
+2084,conversion non-religionists,1,MAITATSINE: NIGERIA'S BLOODY RELIGIOUS TERRORIST MOVEMENT,1980,0,0,0,0,1,Africa,1,0.9923940601231438
+2089,conversion non-religionists,1,L'ordre Soufit karkariya en Tunisie الطريقة الكركرية في تونس,1974,0,1,0,0,1,Africa,1,0.9913074972835929
+2104,conversion non-religionists,0,الطريقة التجانية في تونس ق18-ق19 ATARIKA TJENIA FI TOUNES  XVIII-XIXème siècle,1700,0,1,0,0,1,Africa,1,0.9416877942774358
+2111,conversion non-religionists,1,Tsinburbura Traditional Religion,700,0,0,0,0,1,Africa,1,0.7605939876856211
+2114,conversion non-religionists,1,Tijaniyyah Sufi Movement in North-Western Nigeria,1837,0,1,0,0,1,Africa,1,0.9664976457805143
+2116,conversion non-religionists,1,Qadiriyyah Movement in the Sokoto Caliphate.,1804,0,1,0,0,1,Africa,1,0.9605215501629845
+2122,conversion non-religionists,1,Jama'at Izalat al-Bid'ah wa Iqamat al-Sunnah (JIBWIS),1978,0,1,0,0,1,Africa,1,0.9920318725099602
+2126,conversion non-religionists,1,Nasrul-lahi-li Fathi Society of Nigeria (NASFAT),1984,0,1,0,0,1,Africa,1,0.993118435349511
+2128,conversion non-religionists,1,Paulicians,650,1,0,0,0,1,Europe,0,0.7515392973560304
+2133,conversion non-religionists,1,ANSAR-UD-DEEN SOCIETY OF NIGERIA,1923,0,1,0,0,1,Africa,1,0.9820717131474104
+2138,conversion non-religionists,1,الجماعة الأحمدية الإسلامية في نيجيريا,1916,0,0,0,0,1,Africa,1,0.9808040565012677
+2139,conversion non-religionists,1,Shi'a Group in Nigeria,1980,0,0,0,0,1,Africa,1,0.9923940601231438
+2147,conversion non-religionists,1,الدولة الحفصية Hafsid Dynasty,1229,0,1,0,0,1,Africa,1,0.8563926113726911
+2148,conversion non-religionists,1,الدولة الحسينية The Husaynid Dynasty,1705,0,0,0,0,1,Africa,1,0.9425932633103948
+2149,conversion non-religionists,0,Judaism in Byzantium,330,0,0,0,0,1,Europe,1,0.6935892792466498
+2157,conversion non-religionists,1,Blue Light Evangelicals in the Late Eighteenth-Century Royal Navy,1775,1,0,0,0,1,North America,1,0.9552698297718218
+2178,conversion non-religionists,1,Aladura Christianity in Nigeria,1918,1,0,0,0,1,Africa,1,0.9811662441144513
+2180,conversion non-religionists,1,Cao Đài,1921,0,0,0,0,1,North America,1,0.9817095255342267
+2194,conversion non-religionists,1,The Redeemed Christian Church of God,1952,1,0,0,0,1,Africa,1,0.987323433538573
+2209,conversion non-religionists,1,The Church of Nigeria Anglican Communion,1842,1,0,0,0,1,Africa,1,0.9674031148134734
+2210,conversion non-religionists,1,Living Faith Church Worldwide,1981,1,0,0,0,1,Africa,1,0.9925751539297356
+2220,conversion non-religionists,0,Ansar-ud-deen Society of Nigeria,1923,0,0,0,0,1,Africa,1,0.9820717131474104
+2228,conversion non-religionists,1,Church of God Mission,1972,1,0,0,0,1,Africa,1,0.9909453096704093
+2232,conversion non-religionists,1,"Lollards, Lollard, the Lollard movement, Lollardism,  Lollardy, Wycliffites",1350,1,0,0,0,1,Europe,1,0.8783049619703006
+2233,conversion non-religionists,1,The Way of Former Heaven (Xiantiandao 先天道),1734,0,0,1,1,1,East Asia,1,0.9478449837015575
+2238,conversion non-religionists,1,XX ــــــــ    ـق  XVIII   الطريقة التجانية في الجزائر :ق,1700,0,1,0,0,1,Africa,1,0.9416877942774358
+2240,conversion non-religionists,0,"Inka and non-Inka groups in Cusco, Peru",900,0,0,0,0,1,South America,0,0.796812749003984
+2243,conversion non-religionists,1,Hui People,700,0,1,0,0,1,Central Eurasia,1,0.7605939876856211
+2245,conversion non-religionists,1,صقلية الإسلامية Islamic Sicily,652,0,1,0,0,1,Europe,1,0.751901484969214
+2246,conversion non-religionists,1,المذهب الحنفي بالبلاد التونسية The Hanafi school in Tunisia,819,0,0,0,0,1,Africa,1,0.7821441506700471
+2247,conversion non-religionists,1,الفتح العربي الإسلامي لشمال إفريقيا The Arab-Islamic Conquest of North Africa,647,0,0,0,0,1,Africa,1,0.750996015936255
+2248,conversion non-religionists,1,الدولة المرادية في تونس The Muradid Dynasty in Tunisia,1631,0,0,0,0,1,Africa,1,0.9291923216226005
+2255,conversion non-religionists,1,Dongxiang,1340,0,1,0,0,1,Central Eurasia,1,0.8764940239043825
+2256,conversion non-religionists,0,الطريقة الرحمانية في الجزائر  ق18-ق20,1700,0,1,0,0,1,Africa,1,0.9416877942774358
+2264,conversion non-religionists,1,Puritans,1560,0,0,0,0,1,Europe,1,0.9163346613545816
+2271,conversion non-religionists,1,The Gideons International in Ngeria,1964,1,0,0,0,1,Africa,1,0.9894965592176748
+2273,conversion non-religionists,0,Yuan divination schools,1291,0,0,1,0,1,East Asia,1,0.8676204273813836
+2274,conversion non-religionists,1,Ìjọ Àdìmúlà (An Institutionalised Indigenous Religious Movement in Yorubaland,1920,0,0,0,0,1,Africa,1,0.9815284317276349
+2278,conversion non-religionists,0,الطريقة القادرية البودشيشية في المغرب الأقصى,1700,0,1,0,0,1,Africa,1,0.9416877942774358
+2279,conversion non-religionists,0,The Ndau people of Chimanimani area in Zimbabwe,1890,0,0,0,0,1,Africa,1,0.9760956175298805
+2290,conversion non-religionists,0,الطريقة القادرية في مصر ق13م-ق21م,1200,0,1,0,0,1,Africa,1,0.8511408909815285
+2297,conversion non-religionists,1,Waldensians (Waldenses),1173,1,0,0,0,1,Europe,1,0.8462513582035495
+2299,conversion non-religionists,1,الحشاشين  ق11-ق13   =   Assassins   XI-XIII,1100,0,1,0,0,1,Southwest Asia,1,0.833031510322347
+2301,conversion non-religionists,1,Kaloutsiani Mosque,1600,0,0,0,0,1,Europe,1,0.9235784136182542
+2308,conversion non-religionists,1,الفتح العربي الإسلامي للأندلس The Arab-Islamic Conquest of the Iberian Peninsula,711,0,0,0,0,1,Europe,1,0.7625860195581311
+2309,conversion non-religionists,1,الدولة الأموية بالأندلس The Umayyad Dynasty in the Iberian Peninsula,756,0,0,0,0,1,Europe,1,0.7707352408547627
+2312,conversion non-religionists,1,The philosophical system of 'Ubuntu' in Southern Africa,-1800,0,0,0,0,1,Africa,1,0.30785947120608476
+2313,conversion non-religionists,1,Dungan people,600,0,0,0,0,1,Central Eurasia,1,0.7424846070264397
+2321,conversion non-religionists,1,Falungong 法輪功 (Falun Gong) / Falun Dafa 法輪大法,1992,0,0,1,1,1,East Asia,0,0.9945671858022456
+2322,conversion non-religionists,1,الدّولة الأمويّة في المشرق  بين662 م و750م (The Umayyad State in the Mashriq from 662 to 750),661,0,0,0,0,1,Southwest Asia,1,0.7535313292285404
+2324,conversion non-religionists,1,"Justice and Development Party (PJD), Morocco",1970,0,1,0,0,1,Africa,1,0.9905831220572257
+2327,conversion non-religionists,0,ỌBÀTÁLA RELIGIOUS GROUP AMONG THE YORUBA OF ILÉ-IFẸ̀,1900,0,0,0,0,1,Africa,1,0.9779065555957986
+2328,conversion non-religionists,1,Church of Almighty God (Quannengshen jiaohui 全能神教會) / Eastern Lightning (Dongfang shandian 東方閃電),1991,1,0,1,0,1,East Asia,0,0.9943860919956538
+2329,conversion non-religionists,1,Hòa Hảo,1937,0,0,0,0,1,Southeast Asia,1,0.9846070264396958
+2330,conversion non-religionists,1,Evangelical Church Winning All,1893,1,0,0,0,1,Africa,1,0.9766388989496559
+2335,conversion non-religionists,1,The Seventh-day Adventist Church in Nigeria,1914,0,0,0,0,1,Africa,1,0.980441868888084
+2339,conversion non-religionists,0,Yorùbá Traditional Religion,1100,0,0,0,0,1,Africa,1,0.833031510322347
+2345,conversion non-religionists,1,Contemporary Shingon,1950,0,0,0,1,1,East Asia,1,0.9869612459253894
+2346,conversion non-religionists,0,Igbo Traditional Religion,1800,0,0,0,0,1,Africa,1,0.9597971749366172
+2348,conversion non-religionists,0,Ancient Israelite Religion (Iron Age),-1200,0,0,0,0,1,Southwest Asia,0,0.4165157551611735
+2349,conversion non-religionists,1,Methodism (Wesleyanism),1738,1,0,0,0,1,Africa,1,0.9485693589279247
+2362,conversion non-religionists,1,الدّولة السلجوقيّة(1037 م - 1194م),1037,0,1,0,0,1,Southwest Asia,1,0.8216226005070627
+2363,conversion non-religionists,1,"L'ordre Soufi Tunisien ""al-Hasaniyya"" الطريقة الحسنية التونسية",1940,0,1,0,0,1,Africa,1,0.9851503078594712
+2365,conversion non-religionists,1,Moriscos,1502,1,1,0,0,1,Africa,1,0.9058312205722564
+2366,conversion non-religionists,1,Islam in Hausaland,1500,0,0,0,0,1,Africa,1,0.9054690329590728
+2369,conversion non-religionists,1,Le Mouvement Sanussiyya الحركة السنوسيّة,1787,0,1,0,0,1,Africa,1,0.9574429554509236
+2371,conversion non-religionists,0,Tewa Pueblo Religion,1950,0,0,0,0,1,North America,1,0.9869612459253894

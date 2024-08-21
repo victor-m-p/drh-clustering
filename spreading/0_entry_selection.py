@@ -1,5 +1,8 @@
 """
 2023-07-17 VMP
+1. select entries that have relevant answers
+2. match christianity tags 
+3. select world regions (excluding global)
 """
 
 import pandas as pd

@@ -1,6 +1,79 @@
+"""
+Different ways of calculating overall metrics. 
+"""
+
 import pandas as pd
 
-spatiotemporal_data = pd.read_csv("data/overlap_christianity.csv")
+# load metrics
+df_metrics = pd.read_csv("data/conversion_node_metrics.csv")
+
+# load entries for overview
+df_entries = pd.read_csv("data/entry_data_subset.csv")
+df_entries = df_entries[
+    ["entry_id", "entry_name", "year_from", "world_region"]
+].drop_duplicates()
+
+# load GCC nodes
+gcc_nodes = pd.read_csv("data/gcc_nodes_conversion.csv")
+
+### overview of nodes not in GCC ###
+### ahhh this is like half of the nodes .... ###
+df_entries[~df_entries["entry_id"].isin(gcc_nodes["entry_id"])]
+
+### direct parents and children ###
+metrics_direct = df_metrics[
+    [
+        "entry_id",
+        "yes_parents",
+        "n_parents",
+        "yes_children",
+        "n_children",
+        "answer_value",
+        "christian_tradition",
+    ]
+]
+
+# if no parents then by definition a "yes" is important so seems okay
+metrics_direct["yes_parents"] = metrics_direct["yes_parents"].fillna(0)
+metrics_direct["n_parents"] = metrics_direct["n_parents"].fillna(0)
+
+# if no children then irrelevant
+metrics_direct = metrics_direct.dropna()
+
+# which ones stick out the most
+# some of these are "No" answers, which is interesting.
+metrics_direct["delta_yes"] = (
+    metrics_direct["yes_children"] - metrics_direct["yes_parents"]
+)
+
+# merge with entry data and GCC
+metrics_direct = metrics_direct.merge(df_entries, on="entry_id", how="inner")
+metrics_direct = metrics_direct.merge(
+    gcc_nodes, on="entry_id", how="left", indicator=True
+)
+metrics_direct = metrics_direct.rename(columns={"_merge": "in_gcc"})
+metrics_direct["in_gcc"] = metrics_direct["in_gcc"].replace(
+    {"both": True, "left_only": False}
+)
+
+metrics_direct.sort_values("delta_yes", ascending=False).head(10)
+
+"""
+This first approach captures a lot of things that are not christian
+and not even answered with "yes". 
+
+Additionally, some of the entries here are not in the GCC subgraph.
+For instance, "Old Norse Fornsed". 
+
+This suggests that what we have might be too broad to really capture
+which religions "drive" the spread from religions that are spatio-temporally
+co-located with the spread of Christianity. 
+
+Of course, we can condition on "yes" answers here. 
+"""
+
+metrics_yes = metrics_direct[metrics_direct["answer_value"] == 1]
+metrics_yes.sort_values("delta")
 
 ### select a feature to investigate ###
 question_name = "conversion non-religionists"
