@@ -306,7 +306,7 @@ entry_id,question_short,answer_value,entry_name,year_from,christian,islamic,chin
 2009,is unquestionably good,0,Ancient Arcadians,-800,0,0,0,0,1,Europe,1,0.46974821495678315
 2010,is unquestionably good,1,Bektashi Tarika,1240,0,1,0,0,1,Europe,1,0.8530627583615182
 2011,is unquestionably good,1,Scripture Union Nigeria,1885,1,0,0,0,1,Africa,1,0.9742577978203683
-2016,is unquestionably good,1,الدولة الفاطمية Fatimid Dynasty,909,0,0,0,0,1,Southwest Asia,1,0.7908680947012401
+2016,is unquestionably good,1,الدولة الفاطمية Fatimid Dynasty,909,0,1,0,0,1,Southwest Asia,1,0.7908680947012401
 2021,is unquestionably good,1,The United Missionary Church of Africa,1905,1,0,0,0,1,Africa,1,0.9780157835400225
 2023,is unquestionably good,1,الدولة الزيرية Zirid Dynasty,971,0,1,0,0,1,Africa,1,0.8025178504321684
 2031,is unquestionably good,1,الدولة الأغلبية The Aghlabid Dynasty,800,0,1,0,0,1,Africa,0,0.7703870725291244
@@ -331,7 +331,7 @@ entry_id,question_short,answer_value,entry_name,year_from,christian,islamic,chin
 2128,is unquestionably good,1,Paulicians,650,1,0,0,0,1,Europe,0,0.7422021796317174
 2133,is unquestionably good,1,ANSAR-UD-DEEN SOCIETY OF NIGERIA,1923,0,1,0,0,1,Africa,1,0.9813979706877114
 2138,is unquestionably good,1,الجماعة الأحمدية الإسلامية في نيجيريا,1916,0,0,0,0,1,Africa,1,0.9800826756858324
-2139,is unquestionably good,1,Shi'a Group in Nigeria,1980,0,0,0,0,1,Africa,1,0.992108229988726
+2139,is unquestionably good,1,Shi'a Group in Nigeria,1980,0,1,0,0,1,Africa,1,0.992108229988726
 2147,is unquestionably good,1,الدولة الحفصية Hafsid Dynasty,1229,0,1,0,0,1,Africa,1,0.8509958662157083
 2148,is unquestionably good,1,الدولة الحسينية The Husaynid Dynasty,1705,0,0,0,0,1,Africa,1,0.9404359263434799
 2149,is unquestionably good,1,Judaism in Byzantium,330,0,0,0,0,1,Europe,1,0.6820744081172492
@@ -392,5 +392,5 @@ entry_id,question_short,answer_value,entry_name,year_from,christian,islamic,chin
 2362,is unquestionably good,1,الدّولة السلجوقيّة(1037 م - 1194م),1037,0,1,0,0,1,Southwest Asia,1,0.8149192033070274
 2363,is unquestionably good,1,"L'ordre Soufi Tunisien ""al-Hasaniyya"" الطريقة الحسنية التونسية",1940,0,1,0,0,1,Africa,1,0.9845922585494176
 2365,is unquestionably good,1,Moriscos,1502,1,1,0,0,1,Africa,1,0.9022923712889891
-2366,is unquestionably good,1,Islam in Hausaland,1500,0,0,0,0,1,Africa,1,0.9019165727170236
+2366,is unquestionably good,1,Islam in Hausaland,1500,0,1,0,0,1,Africa,1,0.9019165727170236
 2369,is unquestionably good,1,Le Mouvement Sanussiyya الحركة السنوسيّة,1787,0,1,0,0,1,Africa,1,0.9558436677940624

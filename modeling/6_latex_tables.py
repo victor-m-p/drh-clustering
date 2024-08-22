@@ -16,10 +16,10 @@ monitoring_grp.to_latex(
 
 shg_pop = pd.read_csv("../data/mdl/shg_unquestionably_population.csv")
 shg_pop.to_latex(
-    "../tables/shg_conversion_population.tex", index=False, float_format="%.2f"
+    "../tables/shg_unquestionably_population.tex", index=False, float_format="%.2f"
 )
 
 shg_group = pd.read_csv("../data/mdl/shg_unquestionably_group.csv")
 shg_group.to_latex(
-    "../tables/shg_conversion_group.tex", index=False, float_format="%.2f"
+    "../tables/shg_unquestionably_group.tex", index=False, float_format="%.2f"
 )

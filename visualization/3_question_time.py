@@ -5,26 +5,24 @@ import seaborn as sns
 import matplotlib.ticker as ticker
 
 # setup
-superquestion = "monitoring"  # shg
-subset = "group"  # all
+superquestion = "shg"  # monitoring
+subset = "groups"  # all
 x_min = -2000
 bin_width = 500
 step_size = 50
 
 # load and merge
-df = pd.read_csv(f"../data/preprocessed/{superquestion}_long.csv")
+df = pd.read_csv(f"../data/preprocessed/answers_subset_{subset}.csv")
 df = df[["entry_id", "question_short", "question_id", "answer_value", "weight"]]
 entry_metadata = pd.read_csv(f"../data/raw/entry_data.csv")
 entry_metadata = entry_metadata[["entry_id", "year_from", "year_to", "poll_name"]]
-
-if subset == "group":
-    entry_metadata = entry_metadata[entry_metadata["poll_name"].str.contains("Group")]
-
 df = df.merge(entry_metadata, on="entry_id", how="inner")
 df["year_from"] = df["year_from"].astype(int)
 df["year_to"] = df["year_to"].astype(int)
 df = df.dropna()
 df["answer_value"] = df["answer_value"].astype(int)
+
+# note: some entries can have conflicting answers; keeping this.
 
 # select questions to show (all is too chaotic)
 if superquestion == "shg":
@@ -109,7 +107,7 @@ plt.legend(
 
 plt.tight_layout()
 plt.savefig(
-    f"../figures/{superquestion}_question_time_{subset}.jpg",
+    f"../figures/questions_temporal_{superquestion}_{subset}.jpg",
     dpi=300,
     bbox_inches="tight",
 )

@@ -6,20 +6,13 @@ np.random.seed(1)
 
 ## setup ##
 c_grid = [c + 1 for c in range(10)]  # ran with n=20
-filename = "shg"  # shg
-subset = "all"  # group
+subset = "group"  # group
 
 # load data
 entry_metadata = pd.read_csv("../data/raw/entry_data.csv")
-questions = pd.read_csv("../data/preprocessed/answers_subset.csv")
+questions = pd.read_csv("../data/preprocessed/answers_subset_groups.csv")
 questions = questions[["question_id", "question_short"]].drop_duplicates()
-answers = pd.read_csv(f"../data/preprocessed/{filename}_expanded.csv")
-
-# (optionally) subset
-if subset == "group":
-    entry_metadata = entry_metadata[entry_metadata["poll_name"].str.contains("Group")]
-    entry_id = entry_metadata["entry_id"].unique().tolist()
-    answers = answers[answers["entry_id"].isin(entry_id)]
+answers = pd.read_csv(f"../data/preprocessed/groups_expanded.csv")
 
 # preprocess data for EM
 answers = answers.fillna(100)  # everything not 1/0 treated as nan
@@ -58,7 +51,6 @@ for c in c_grid:  # For each number of clusters
 
 # select the number C that minimized BIC.
 c = min(BIC_dict, key=BIC_dict.get)
-c = 9  # first one to dip
 theta, q = fit(X, c)
 
 # gather question dimensions (theta)
@@ -74,7 +66,7 @@ theta_df = pd.concat([question_selection, theta_df], axis=1)
 # calculate log change and save theta
 question_means = np.nanmean(Y, axis=0)
 theta_df["question_mean"] = question_means
-theta_df.to_csv(f"../data/EM/{filename}_theta_{subset}.csv", index=False)
+theta_df.to_csv(f"../data/EM/EM_theta_{subset}.csv", index=False)
 
 # gather entry dimension (q)
 entry_ids = answers[["entry_id"]]
@@ -84,4 +76,4 @@ df_entries = pd.concat([df_entries, q_df], axis=1)
 df_entries = df_entries.sort_values("entry_id")
 
 # save
-df_entries.to_csv(f"../data/EM/{filename}_q_{subset}.csv", index=False)
+df_entries.to_csv(f"../data/EM/EM_q_{subset}.csv", index=False)

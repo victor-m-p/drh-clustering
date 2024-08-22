@@ -46,7 +46,7 @@ to each other, but might be named differently.
 question_relation = pd.read_csv("../data/raw/questionrelation.csv")
 answers = answers.merge(question_relation, on=["question_id", "poll_name"], how="inner")
 
-# There is one group of questions where we the related question
+# There is one group of questions where the related question
 # matches two types of questions:
 # "Has knowledge of this world" and "Has other knowledge of this world"
 # We only want the first type
@@ -170,8 +170,18 @@ n_entries = answers_filled["entry_id"].nunique()
 n_questions = answers_filled["question_id"].nunique()
 assert total_weight == n_entries * n_questions
 
-answers_filled.to_csv("../data/preprocessed/answers_subset.csv", index=False)
+answers_filled.to_csv("../data/preprocessed/answers_subset_all.csv", index=False)
 check_data(answers_filled)
+
+# this we have to do individually for groups #
+# also write for only groups
+answers_filled_groups = answers_filled[
+    answers_filled["poll_name"].str.contains("Group")
+].drop(columns="weight")
+answers_filled_groups = assign_weight(answers_filled_groups, "entry_id", "question_id")
+answers_filled_groups.to_csv(
+    "../data/preprocessed/answers_subset_groups.csv", index=False
+)
 
 """ 
 n rows = 29430
@@ -183,73 +193,56 @@ Now we split data into two subsets:
 """
 
 # need to sort out the parent question ids for this
-answers_raw = pd.read_csv("../data/raw/answerset.csv")
-answers_raw = answers_raw[["question_id", "parent_question_id"]].drop_duplicates()
+# answers_raw = pd.read_csv("../data/raw/answerset.csv")
+# answers_raw = answers_raw[["question_id", "parent_question_id"]].drop_duplicates()
 
-parents_monitoring = answers_raw[answers_raw["parent_question_id"] == 2890]
-parents_shg = answers_raw[answers_raw["parent_question_id"] == 2919]
+# parents_monitoring = answers_raw[answers_raw["parent_question_id"] == 2890]
+# parents_shg = answers_raw[answers_raw["parent_question_id"] == 2919]
 
-questions_monitoring = parents_monitoring["question_id"].tolist()
-questions_shg = parents_shg["question_id"].tolist()
+# questions_monitoring = parents_monitoring["question_id"].tolist()
+# questions_shg = parents_shg["question_id"].tolist()
 
-shg = answers_filled[answers_filled["question_id"].isin(questions_shg)]
-monitoring = answers_filled[answers_filled["question_id"].isin(questions_monitoring)]
+# shg = answers_filled[answers_filled["question_id"].isin(questions_shg)]
+# monitoring = answers_filled[answers_filled["question_id"].isin(questions_monitoring)]
 
 # sanity check
-assert len(shg) + len(monitoring) == len(answers_filled)
+# assert len(shg) + len(monitoring) == len(answers_filled)
 
 # save data
-shg.to_csv("../data/preprocessed/shg_long.csv", index=False)
-monitoring.to_csv("../data/preprocessed/monitoring_long.csv", index=False)
+# shg.to_csv("../data/preprocessed/shg_long.csv", index=False)
+# monitoring.to_csv("../data/preprocessed/monitoring_long.csv", index=False)
 
-check_data(shg)
-check_data(monitoring)
+# check_data(shg)
+# check_data(monitoring)
 
-""" 
-SHG: 
-n rows = 13.086
-entries = 817 (some will be only nan)
-
-Monitoring:
-n rows = 16.344
-entries = 817 (some will be only nan)
-
-Then we expand the data to have one row per entry_id with all the answers.
-The function removes entries that have all NaN values on answers. 
-"""
 
 from helper_functions import expand_data
 
-shg_expanded = expand_data(shg, "question_id", "entry_id")
-monitoring_expanded = expand_data(monitoring, "question_id", "entry_id")
+groups_expanded = expand_data(answers_filled_groups, "question_id", "entry_id")
 
-# check amount of data
-shg_expanded["entry_id"].nunique()  # n = 681
-monitoring_expanded["entry_id"].nunique()  # n = 639
+# how many total group entries?
+groups_expanded["entry_id"].nunique()  # n = 618
 
+# how many complete answer sets
+import numpy as np
 
-# how many have complete answer sets?
-def check_complete(df):
+np.sum(groups_expanded.isna().sum(axis=1) == 0)  # n = 193 rows of non-na
+groups_unique = groups_expanded.drop_duplicates(subset="entry_id", keep="first")
+np.sum(groups_unique.isna().sum(axis=1) == 0)  # n = 177 complete entries
 
-    # take first occurence of entry_id (does not matter which one)
-    df_unique = df.drop_duplicates(subset="entry_id", keep="first")
+# now remove those that have fewer than 50% answers
+n_columns = groups_expanded.shape[1]
+n_questions = 36
+threshold = 0.5
+threshold = n_columns - int(np.round(n_questions * threshold))
+groups_threshold = groups_expanded.dropna(thresh=threshold)
 
-    num_na = (
-        df_unique.drop(columns=["entry_id", "weight"])
-        .isna()
-        .sum(axis=1)
-        .reset_index(name="n_nan")
-    )
-    num_no_na = num_na[num_na["n_nan"] == 0]
-    return len(num_no_na)
-
-
-check_complete(shg_expanded)  # n = 381
-check_complete(monitoring_expanded)  # n = 287
-
-shg_expanded = shg_expanded.sort_values("entry_id").reset_index(drop=True)
-monitoring_expanded = monitoring_expanded.sort_values("entry_id").reset_index(drop=True)
+# how many observations now?
+len(groups_threshold)  # n = 376 rows
+groups_threshold["entry_id"].nunique()  # 358 unique groups
 
 # save
-shg_expanded.to_csv("../data/preprocessed/shg_expanded.csv", index=False)
-monitoring_expanded.to_csv("../data/preprocessed/monitoring_expanded.csv", index=False)
+groups_threshold.to_csv("../data/preprocessed/groups_expanded.csv", index=False)
+
+# shg_expanded.to_csv("../data/preprocessed/shg_expanded.csv", index=False)
+# monitoring_expanded.to_csv("../data/preprocessed/monitoring_expanded.csv", index=False)

@@ -1,8 +1,8 @@
 import pandas as pd
 
-superquestion = "monitoring"  # "shg"
-subquestion = "conversion non-religionists"  # "is unquestionably good"
-question_label = "conversion"  # "unquestionably"
+superquestion = "shg"  # "monitoring"
+subquestion = "is unquestionably good"  # "conversion non-religionists"
+question_label = "unquestionably"  # "conversion"
 
 ### data on tags and other entry level things ###
 entry_tags = pd.read_csv("entry_tags.csv")
@@ -12,7 +12,7 @@ entry_tags = entry_tags[
         "entry_id",
         "entry_name",
         "region_id",
-        "year_from",  # lacking the region information here
+        "year_from",
         "christian",
         "islamic",
         "chinese",
@@ -43,7 +43,7 @@ entry_data["poll_group"] = entry_data["poll_group"].astype(int)
 entry_data = entry_data[entry_data["poll_group"] == 1]
 
 ### answers to superquestion ###
-answers = pd.read_csv(f"../data/preprocessed/{superquestion}_long.csv")
+answers = pd.read_csv(f"../data/preprocessed/answers_subset_groups.csv")
 answers = answers[answers["question_short"] == subquestion]
 
 # only take answers with weight = 1 and non-NA

@@ -1,13 +1,22 @@
 import pandas as pd
 
+
+def find_entries(entry_tags, entrytag_id):
+    matched_entries = (
+        entry_tags[
+            (entry_tags["entrytag_id"].isin(entrytag_id))
+            | (entry_tags["parent_entrytag_id"].isin(entrytag_id))
+        ]["entry_id"]
+        .unique()
+        .tolist()
+    )
+
+    return matched_entries
+
+
 # loads
 entry_tags = pd.read_csv("../data/raw/entity_tags.csv")
 entry_metadata = pd.read_csv("../data/raw/entry_data.csv")
-
-entry_tags_lvl2 = entry_tags[entry_tags["entrytag_level"] == 2]
-entry_tags_lvl2.groupby("entrytag_name").size().reset_index(name="count").sort_values(
-    "count", ascending=False
-).head(20)
 
 # christian tags
 christian_tags = [
@@ -76,49 +85,22 @@ buddhist_tags = [
     43661,  # Buddhist Sutra
 ]
 
-
-def find_entries(entry_tags, entrytag_id):
-    # find christian entries
-    matched_entries = (
-        entry_tags[
-            (entry_tags["entrytag_id"].isin(entrytag_id))
-            | (entry_tags["parent_entrytag_id"].isin(entrytag_id))
-        ]["entry_id"]
-        .unique()
-        .tolist()
-    )
-
-    return matched_entries
-
-
-"""
-First check for all entries that we have in the DRH.
-"""
-
-# total unique entries
-entry_tags["entry_id"].nunique()  # 1578
-
 # Christian entries
 christian_entries = find_entries(entry_tags, christian_tags)
-len(christian_entries)  # 351
-
-# Islamic entries
 islamic_entries = find_entries(entry_tags, islamic_tags)
-len(islamic_entries)  # 224
-
-# Chinese entries
 chinese_entries = find_entries(entry_tags, chinese_tags)
-len(chinese_entries)  # 161
-
-# Buddhist entries
 buddhist_entries = find_entries(entry_tags, buddhist_tags)
-len(buddhist_entries)  # 118
 
 # join with entry_metadata
 entry_metadata["christian"] = entry_metadata["entry_id"].isin(christian_entries)
 entry_metadata["islamic"] = entry_metadata["entry_id"].isin(islamic_entries)
 entry_metadata["chinese"] = entry_metadata["entry_id"].isin(chinese_entries)
 entry_metadata["buddhist"] = entry_metadata["entry_id"].isin(buddhist_entries)
+
+# only take groups
+answers_groups = pd.read_csv("../data/preprocessed/answers_subset_groups.csv")
+answers_groups = answers_groups[["entry_id"]].drop_duplicates()
+entry_tags = entry_metadata.merge(answers_groups, on="entry_id", how="inner")
 
 # write to csv
 entry_metadata.to_csv("entry_tags.csv", index=False)

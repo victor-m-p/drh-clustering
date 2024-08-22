@@ -4,7 +4,7 @@ import numpy as np
 
 # check whether we have entries that are both islamic and christian
 def convert_logodds(x):
-    return 100 * np.exp(x) / (1 + np.exp(x))
+    return round(100 * np.exp(x) / (1 + np.exp(x)), 2)
 
 
 # extract logodds from monitoring data
@@ -23,6 +23,10 @@ christian_logodds = monitoring_population[
 intercept_natural = convert_logodds(intercept_logodds)
 late_entry = convert_logodds(intercept_logodds + year_logodds)
 christian = convert_logodds(intercept_logodds + year_logodds + christian_logodds)
+
+print(intercept_logodds, intercept_natural)
+print(intercept_logodds, year_logodds, late_entry)
+print(intercept_logodds, year_logodds, christian_logodds, christian)
 
 # check earliest and latest year from
 monitoring = pd.read_csv("monitoring_conversion.csv")

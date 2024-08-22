@@ -288,7 +288,7 @@ entry_id,question_short,answer_value,entry_name,year_from,christian,islamic,chin
 2006,conversion non-religionists,1,New Life for All Nations Ministries,1972,1,0,0,0,1,Africa,1,0.9909453096704093
 2009,conversion non-religionists,0,Ancient Arcadians,-800,0,0,0,0,1,Europe,1,0.4889532777978993
 2011,conversion non-religionists,1,Scripture Union Nigeria,1885,1,0,0,0,1,Africa,1,0.9751901484969214
-2016,conversion non-religionists,1,الدولة الفاطمية Fatimid Dynasty,909,0,0,0,0,1,Southwest Asia,1,0.7984425932633104
+2016,conversion non-religionists,1,الدولة الفاطمية Fatimid Dynasty,909,0,1,0,0,1,Southwest Asia,1,0.7984425932633104
 2021,conversion non-religionists,1,The United Missionary Church of Africa,1905,1,0,0,0,1,Africa,1,0.9788120246287577
 2023,conversion non-religionists,1,الدولة الزيرية Zirid Dynasty,971,0,1,0,0,1,Africa,1,0.8096704092720028
 2027,conversion non-religionists,1,Hizb-ut-Tahrir,1953,0,1,0,0,1,Europe,1,0.9875045273451648
@@ -311,7 +311,7 @@ entry_id,question_short,answer_value,entry_name,year_from,christian,islamic,chin
 2128,conversion non-religionists,1,Paulicians,650,1,0,0,0,1,Europe,0,0.7515392973560304
 2133,conversion non-religionists,1,ANSAR-UD-DEEN SOCIETY OF NIGERIA,1923,0,1,0,0,1,Africa,1,0.9820717131474104
 2138,conversion non-religionists,1,الجماعة الأحمدية الإسلامية في نيجيريا,1916,0,0,0,0,1,Africa,1,0.9808040565012677
-2139,conversion non-religionists,1,Shi'a Group in Nigeria,1980,0,0,0,0,1,Africa,1,0.9923940601231438
+2139,conversion non-religionists,1,Shi'a Group in Nigeria,1980,0,1,0,0,1,Africa,1,0.9923940601231438
 2147,conversion non-religionists,1,الدولة الحفصية Hafsid Dynasty,1229,0,1,0,0,1,Africa,1,0.8563926113726911
 2148,conversion non-religionists,1,الدولة الحسينية The Husaynid Dynasty,1705,0,0,0,0,1,Africa,1,0.9425932633103948
 2149,conversion non-religionists,0,Judaism in Byzantium,330,0,0,0,0,1,Europe,1,0.6935892792466498
@@ -343,7 +343,7 @@ entry_id,question_short,answer_value,entry_name,year_from,christian,islamic,chin
 2290,conversion non-religionists,0,الطريقة القادرية في مصر ق13م-ق21م,1200,0,1,0,0,1,Africa,1,0.8511408909815285
 2297,conversion non-religionists,1,Waldensians (Waldenses),1173,1,0,0,0,1,Europe,1,0.8462513582035495
 2299,conversion non-religionists,1,الحشاشين  ق11-ق13   =   Assassins   XI-XIII,1100,0,1,0,0,1,Southwest Asia,1,0.833031510322347
-2301,conversion non-religionists,1,Kaloutsiani Mosque,1600,0,0,0,0,1,Europe,1,0.9235784136182542
+2301,conversion non-religionists,1,Kaloutsiani Mosque,1600,0,1,0,0,1,Europe,1,0.9235784136182542
 2308,conversion non-religionists,1,الفتح العربي الإسلامي للأندلس The Arab-Islamic Conquest of the Iberian Peninsula,711,0,0,0,0,1,Europe,1,0.7625860195581311
 2309,conversion non-religionists,1,الدولة الأموية بالأندلس The Umayyad Dynasty in the Iberian Peninsula,756,0,0,0,0,1,Europe,1,0.7707352408547627
 2312,conversion non-religionists,1,The philosophical system of 'Ubuntu' in Southern Africa,-1800,0,0,0,0,1,Africa,1,0.30785947120608476
@@ -364,6 +364,6 @@ entry_id,question_short,answer_value,entry_name,year_from,christian,islamic,chin
 2362,conversion non-religionists,1,الدّولة السلجوقيّة(1037 م - 1194م),1037,0,1,0,0,1,Southwest Asia,1,0.8216226005070627
 2363,conversion non-religionists,1,"L'ordre Soufi Tunisien ""al-Hasaniyya"" الطريقة الحسنية التونسية",1940,0,1,0,0,1,Africa,1,0.9851503078594712
 2365,conversion non-religionists,1,Moriscos,1502,1,1,0,0,1,Africa,1,0.9058312205722564
-2366,conversion non-religionists,1,Islam in Hausaland,1500,0,0,0,0,1,Africa,1,0.9054690329590728
+2366,conversion non-religionists,1,Islam in Hausaland,1500,0,1,0,0,1,Africa,1,0.9054690329590728
 2369,conversion non-religionists,1,Le Mouvement Sanussiyya الحركة السنوسيّة,1787,0,1,0,0,1,Africa,1,0.9574429554509236
 2371,conversion non-religionists,0,Tewa Pueblo Religion,1950,0,0,0,0,1,North America,1,0.9869612459253894

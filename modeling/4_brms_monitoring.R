@@ -3,10 +3,7 @@ library(pacman)
 p_load(brms, tidyverse, HDInterval, stringr)
 
 ### first look at monitoring ###
-data <- read_csv("modeling/monitoring_conversion.csv")
-
-# exclude texts
-data_groups <- data |> filter(poll_group == 1) # n = 368
+data_groups <- read_csv("modeling/monitoring_conversion.csv") # n = 368
 
 # for now just do Islam or Christianity
 mdl_1 <- brm(

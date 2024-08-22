@@ -2,15 +2,10 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.cluster.hierarchy import linkage, leaves_list
-from constants import monitoring_question_order
-
-# setup
-superquestion = "combined"  # "shg"  # monitoring
-subset = "group"  # group
 
 # load data
-df_q = pd.read_csv(f"../data/EM/{superquestion}_q_{subset}.csv")
-df_theta = pd.read_csv(f"../data/EM/{superquestion}_theta_{subset}.csv")
+df_q = pd.read_csv(f"../data/EM/EM_q_group.csv")
+df_theta = pd.read_csv(f"../data/EM/EM_theta_group.csv")
 
 # First plot data preparation
 df_plot1 = df_theta.drop(columns=["question_id", "question_mean"])
@@ -27,7 +22,7 @@ df_plot1_reordered = df_plot1.iloc[row_order]
 # plot
 ndim = len(df_plot1_reordered.columns)
 fig, ax = plt.subplots(
-    1, 1, figsize=(ndim * 0.8, 8), dpi=300
+    1, 1, figsize=(ndim * 0.8, 7), dpi=300
 )  # Adjust the figsize as needed
 sns.heatmap(df_plot1_reordered, cmap="coolwarm", center=0, ax=ax)
 ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha="right")
@@ -37,7 +32,7 @@ plt.xticks(size=12)
 plt.yticks(size=12)
 plt.tight_layout()
 plt.savefig(
-    f"../figures/{superquestion}_dimensions_{subset}_new.jpg",
+    f"../figures/EM_dimensions.jpg",
     dpi=300,
     bbox_inches="tight",
 )

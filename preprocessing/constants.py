@@ -1,16 +1,14 @@
 question_coding = {
+    # monitoring
     "2861": "murder other religions",
     "2883": "murder coreligionists",
     "2887": "honouring oaths",
-    # "2890": "monitoring present",  # super-question
-    # "2893": "supernatural beings present",  # super-question
     "2898": "ritual observance",
     "2899": "other elite loyalty",
     "2902": "non-lethal fighting",
     "2910": "is kin to elites",
     "2911": "lying",
     "2917": "laziness",
-    # "2919": "supreme high god present",  # (sub)-super-question
     "2921": "property crimes",
     "2923": "shirking risk",
     "2928": "prosocial norm adherence",
@@ -18,6 +16,7 @@ question_coding = {
     "2939": "personal hygiene",
     "2941": "is anthropomorphic",
     "2942": "gossiping",
+    # shg
     "2944": "is chthonic",
     "2948": "is sky deity",
     "2958": "is monarch fused",

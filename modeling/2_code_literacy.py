@@ -51,8 +51,8 @@ religious_text_entries = religious_text["entry_id"].unique().tolist()
 # Combine the two lists (sets)
 written_language_entries = list(set(written_language_entries + religious_text_entries))
 
-# Write table
-all_entries = answerset["entry_id"].unique().tolist()
-df_entries = pd.DataFrame(all_entries, columns=["entry_id"])
-df_entries["literacy"] = df_entries.isin(written_language_entries).astype(int)
-df_entries.to_csv("literacy.csv", index=False)
+### now take only the ones that are groups ###
+answers_groups = pd.read_csv("../data/preprocessed/answers_subset_groups.csv")
+answers_groups = answers_groups[["entry_id"]].drop_duplicates()
+answers_groups["literacy"] = answers_groups.isin(written_language_entries).astype(int)
+answers_groups.to_csv("literacy.csv", index=False)
