@@ -6,7 +6,7 @@ p_load(brms, tidyverse, HDInterval, stringr)
 data <- read_csv("modeling/shg_unquestionably.csv")
 
 # exclude texts
-data_groups <- data |> filter(poll_group == 1) # n = 368
+data_groups <- data |> filter(poll_group == 1) # n = 395
 
 # for now just do Islam or Christianity
 mdl_1 <- brm(

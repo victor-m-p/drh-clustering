@@ -6,7 +6,6 @@ np.random.seed(1)
 
 ## setup ##
 c_grid = [c + 1 for c in range(10)]  # ran with n=20
-filename = "shg"  # shg
 subset = "group"  # group
 
 # load data

@@ -28,3 +28,9 @@ christian = convert_logodds(intercept_logodds + year_logodds + christian_logodds
 monitoring = pd.read_csv("monitoring_conversion.csv")
 monitoring["year_from"].min()  # -3500
 monitoring["year_from"].max()  # 2022
+
+# get N for each analysis
+monitoring = pd.read_csv("monitoring_conversion.csv")
+len(monitoring)  # 368
+shg = pd.read_csv("shg_unquestionably.csv")
+len(shg)  # 395
