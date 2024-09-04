@@ -26,19 +26,19 @@ df_merged = pd.merge(
     literacy_recode,
     on=["entry_id", "question_name"],
     how="outer",
-    suffixes=("", "_small"),
+    suffixes=("", "_recode"),
 )
 
 # sanity check
-assert len(literacy_recode) == len(df_merged[df_merged["answer_value_small"].notna()])
+assert len(literacy_recode) == len(df_merged[df_merged["answer_value_recode"].notna()])
 
 # Use the 'answer_value' from literacy recode where it exists
-df_merged["answer_value"] = df_merged["answer_value_small"].combine_first(
+df_merged["answer_value"] = df_merged["answer_value_recode"].combine_first(
     df_merged["answer_value"]
 )
 
 # Drop the auxiliary 'answer_value_small' column
-df_result = df_merged.drop(columns=["answer_value_small"])
+df_result = df_merged.drop(columns=["answer_value_recode"])
 
 # Now we can compute whether each entry has a "YES" for at least one of the questions
 written_language_yes = df_result[df_result["answer_value"] == 1]

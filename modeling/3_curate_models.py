@@ -31,6 +31,13 @@ entry_data = entry_data.drop(columns="region_id")  # not needed anymore
 literacy = pd.read_csv("literacy.csv")
 entry_data = entry_data.merge(literacy, on="entry_id", how="inner")
 
+### include social complexity ###
+social_complexity = pd.read_csv("social_complexity.csv")
+social_complexity = social_complexity[
+    ["entry_id", "social_complexity_large"]
+].drop_duplicates()
+entry_data = entry_data.merge(social_complexity, on="entry_id", how="left")  # keep
+
 ### cleanup ###
 # make everything True/False 1/0 for now
 entry_data["christian"] = entry_data["christian"].astype(int)

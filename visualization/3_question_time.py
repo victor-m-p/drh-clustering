@@ -21,7 +21,6 @@ df["year_from"] = df["year_from"].astype(int)
 df["year_to"] = df["year_to"].astype(int)
 df = df.dropna()
 df["answer_value"] = df["answer_value"].astype(int)
-
 # note: some entries can have conflicting answers; keeping this.
 
 # select questions to show (all is too chaotic)

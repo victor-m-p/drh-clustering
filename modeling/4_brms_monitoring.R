@@ -2,10 +2,10 @@
 library(pacman)
 p_load(brms, tidyverse, HDInterval, stringr)
 
-### first look at monitoring ###
+# load monitoring
 data_groups <- read_csv("modeling/monitoring_conversion.csv") # n = 368
 
-# for now just do Islam or Christianity
+### simple model ###
 mdl_1 <- brm(
     data = data_groups,
     family = bernoulli(link = logit),
@@ -21,7 +21,7 @@ mdl_1 <- brm(
     seed = 542
 )
 
-### population effects ###
+# population effects
 # so for a one-sided hypothesis posterior probability does exceed 95%
 # but we are plotting two-sided 95% credible intervals here
 # so does not exceed 97.5% is what a lack of star means.
@@ -38,7 +38,7 @@ df_population <- df_population |>
     select(-Star)
 write_csv(df_population, "data/mdl/monitoring_conversion_population.csv")
 
-### group effects ###
+# group effects
 # Coef is the sum of the population level effect and corresponding group-level effects
 # See here: https://cran.r-project.org/web/packages/brms/brms.pdf
 hypothesis_regions <- hypothesis(mdl_1, "year_norm > 0", scope = "coef", group = "world_region", alpha = 0.025)
@@ -50,7 +50,7 @@ df_group <- df_group |>
 
 write_csv(df_group, "data/mdl/monitoring_conversion_group.csv")
 
-### need summary as well for Rhat and ESS ###
+# need summary as well for Rhat and ESS
 model_summary <- summary(mdl_1)
 fixed_summary <- as.data.frame(model_summary$fixed)
 fixed_summary$parameter <- rownames(fixed_summary)
@@ -59,3 +59,5 @@ write_csv(fixed_summary, "data/mdl/monitoring_conversion_fixed.csv")
 random_summary <- as.data.frame(model_summary$random)
 random_summary$parameter <- rownames(random_summary)
 write_csv(random_summary, "data/mdl/monitoring_conversion_random.csv")
+
+### social complexity model
