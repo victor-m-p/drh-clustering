@@ -2,7 +2,7 @@
 Latent class (EM) clustering of group entries, with multiple random starts per c.
 For each c we run n_starts fits (seed = c * 1000 + start) and keep the best by logL.
 
-Writes to ../data/EM/:
+Writes to data/ (inside clustering/):
 - EM_starts_{subset}.csv: logL for every start (diagnostics).
 - EM_model_selection_{subset}.csv: best logL, AIC, BIC per c, and how many starts reached the best.
 - EM_theta_{subset}_c{c}.csv, EM_q_{subset}_c{c}.csv: best solution for each candidate c.
@@ -45,7 +45,7 @@ for c in c_grid:  # For each number of clusters
             best[c] = {"theta": theta, "q": q, "pi": pi, "logL": logL, "seed": seed}
 
 starts = pd.DataFrame(starts)
-starts.to_csv(f"../data/EM/EM_starts_{subset}.csv", index=False)
+starts.to_csv(f"data/EM_starts_{subset}.csv", index=False)
 
 # log likelihood and information criteria (for the best start per c)
 selection = []
@@ -73,7 +73,7 @@ for c in c_grid:
     )
 
 selection = pd.DataFrame(selection)
-selection.to_csv(f"../data/EM/EM_model_selection_{subset}.csv", index=False)
+selection.to_csv(f"data/EM_model_selection_{subset}.csv", index=False)
 print(f"c minimizing BIC: {selection.loc[selection['BIC'].idxmin(), 'c']}")
 
 # gather question dimensions (theta)
@@ -97,7 +97,7 @@ for c in candidates:
     theta_df["question_mean"] = question_means
     pi_row = pd.DataFrame([[-1, "pi (cluster share)", *pi]], columns=["question_id", "question_short", *dims])
     theta_df = pd.concat([pi_row, theta_df], ignore_index=True)
-    theta_df.to_csv(f"../data/EM/EM_theta_{subset}_c{c}.csv", index=False)
+    theta_df.to_csv(f"data/EM_theta_{subset}_c{c}.csv", index=False)
 
     # gather entry dimension (q); one row per expanded row, with its weight
     entry_ids = answers[["entry_id", "weight"]]
@@ -107,4 +107,4 @@ for c in candidates:
     df_entries = df_entries.sort_values("entry_id", kind="stable")
 
     # save
-    df_entries.to_csv(f"../data/EM/EM_q_{subset}_c{c}.csv", index=False)
+    df_entries.to_csv(f"data/EM_q_{subset}_c{c}.csv", index=False)
