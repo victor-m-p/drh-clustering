@@ -1,14 +1,12 @@
 name: drhcluster
 channels:
-    - conda-forge
-    - defaults
+  - conda-forge
 dependencies:
-  - python=3.12
+  - python>=3.12
   - numpy
-  - matplotlib
   - pandas
-  - scikit-learn
-  - ipykernel
+  - scipy
+  - matplotlib
   - seaborn
-  - plotly
-  - nbformat
+  - jinja2 # needed by pandas DataFrame.to_latex
+  - ipykernel

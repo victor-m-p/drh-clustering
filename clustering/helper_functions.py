@@ -1,39 +1,53 @@
-import re
 import numpy as np
-import pandas as pd
+from scipy.special import logsumexp
 
 
-def fit(X, c, weights=None, num_its=200, eps=1e-10):
+def fit(X, c, weights=None, num_its=2000, eps=1e-10, tol=1e-8, seed=None):
+    '''
+    Latent class EM for binary data.
+    X: rows x questions (1/0, anything else = missing).
+    seed: seed for this start (random initial q), so each start is reproducible.
+    Stops when logL improves by less than tol (or after num_its).
+    Returns:
+    theta: clusters x questions P(Yes)
+    q = rows x clusters P(cluster | row)
+    pi = cluster shares.
+    logL = weighted mixture log-likelihood at the returned parameters.
+    n_its = number of iterations run.
+    '''
+
+    rng = np.random.default_rng(seed)
+
     if weights is None:
         weights = np.ones(X.shape[0])  # Default to equal weights if none provided
 
     # Ensure weights are a NumPy array
     weights = np.array(weights)
 
-    theta = np.random.dirichlet([2] * X.shape[1], size=c)
-    q = np.random.dirichlet([2] * c, size=X.shape[0])
+    # Initialization step: random soft assignment of rows to clusters.
+    q = rng.dirichlet([2] * c, size=X.shape[0])
 
-    for _ in range(num_its):
-        # Modify these lines to incorporate weights
-        t0 = np.array([(q[:, r] * weights) @ (X == 0) for r in range(c)]) + eps
-        t1 = np.array([(q[:, r] * weights) @ (X == 1) for r in range(c)]) + eps
+    logL_old = -np.inf
+    for n_its in range(1, num_its + 1):
+        # M-step (update theta).
+        t0 = np.array([(q[:, r] * weights) @ (X == 0) for r in range(c)]) + eps # weighted count of "No" per (cluster, question); + eps prevents 0/0 and log(0)
+        t1 = np.array([(q[:, r] * weights) @ (X == 1) for r in range(c)]) + eps # same as above for "Yes".
+        theta = t1 / (t0 + t1) # weighted share of "Yes" per (cluster, question)
 
-        theta = t1 / (t0 + t1)
-        y = np.exp((X == 1) @ np.log(theta).T + (X == 0) @ np.log(1 - theta).T)
+        # mixing proportions: weighted share of entries in each cluster
+        pi = (q * weights[:, None]).sum(axis=0) / weights.sum()
 
-        # Normalize y by its sum, considering weights
-        q = (y * weights[:, np.newaxis]) / (y * weights[:, np.newaxis]).sum(axis=1)[
-            :, np.newaxis
-        ]
+        # E-step (update q), in log space to avoid underflow.
+        ll = (X == 1) @ np.log(theta).T + (X == 0) @ np.log(1 - theta).T + np.log(pi) # log[P(row | cluster) * pi], (rows, clusters)
+        row_logL = logsumexp(ll, axis=1) # log P(row) = log sum_r pi_r * P(row | r)
 
-    return theta, q
+        # Normalize per row (row weights would cancel)
+        q = np.exp(ll - row_logL[:, None])
 
+        # mixture log-likelihood, weighted by entry weights; stop when converged
+        logL = np.sum(weights * row_logL)
+        if logL - logL_old < tol:
+            break
+        logL_old = logL
 
-# custom matrix multiplication with np.nan
-def custom_matmul(A, B):
-    result = np.zeros((A.shape[0], B.shape[1]))
-    for i in range(A.shape[0]):
-        for j in range(B.shape[1]):
-            # Sum over the products of the non-NaN elements
-            result[i, j] = np.nansum([A[i, k] * B[k, j] for k in range(A.shape[1])])
-    return result
+    return theta, q, pi, logL, n_its

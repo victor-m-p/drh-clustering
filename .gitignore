@@ -1,1 +1,22 @@
+# data and manuscript
 data/raw/answerset.csv
+manuscript
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# OS and editors
+.DS_Store
+.vscode/
+.idea/
+*.swp

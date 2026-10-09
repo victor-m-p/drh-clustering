@@ -111,7 +111,6 @@ take only yes-no answers
 
 # take only yes-no answers
 answers_subset = answers_subset[answers_subset["answer_value"].isin([0, 1])]
-
 check_data(answers_subset)
 
 """ 
@@ -217,7 +216,6 @@ Now we split data into two subsets:
 
 
 from helper_functions import expand_data
-
 groups_expanded = expand_data(answers_filled_groups, "question_id", "entry_id")
 
 # how many total group entries?
