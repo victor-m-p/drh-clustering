@@ -1,6 +1,6 @@
 import pandas as pd
 
-answers = pd.read_csv("../data/raw/answerset.csv")
+answers = pd.read_csv("../data/sccsrv3/answerset.csv")
 
 # extract the relevant question
 social_complexity = answers[
@@ -14,7 +14,7 @@ social_complexity = social_complexity[
 ].drop_duplicates()
 
 # read the social complexity recode table
-social_complexity_recode = pd.read_csv("../data/raw/social_complexity_recode.csv")
+social_complexity_recode = pd.read_csv("../data/sccsrv3/social_complexity_recode.csv")
 social_complexity_recode = social_complexity_recode.drop(columns=["notes"])
 
 # take answer from social complexity recode where it exists
@@ -79,4 +79,4 @@ Inka and non-Inka groups in Cusco, Peru (2240) is "A chiefdom" and "An empire"
 
 # drop these cases from the analysis
 df_clean = df_clean[~df_clean["entry_id"].isin(df_inconsistency["entry_id"])]
-df_clean.to_csv("social_complexity.csv", index=False)
+df_clean.to_csv("data/social_complexity.csv", index=False)

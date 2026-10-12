@@ -17,13 +17,8 @@ answer_value coded as:
 """
 
 # load data
-data = pd.read_csv("../data/raw/answerset.csv")
-check_data(data)
-
-"""
-n answers = 364.376 (many values before subsetting questions)
-n entries = 1.578
-"""
+data = pd.read_csv("../data/sccsrv3/answerset.csv")
+check_data(data) # 1687 entries
 
 # take out the relevant columns
 answers = data[
@@ -43,7 +38,7 @@ This is important for subsetting questions from various polls that correspond
 to each other, but might be named differently. 
 """
 
-question_relation = pd.read_csv("../data/raw/questionrelation.csv")
+question_relation = pd.read_csv("../data/sccsrv3/questionrelation.csv")
 answers = answers.merge(question_relation, on=["question_id", "poll_name"], how="inner")
 
 # There is one group of questions where the related question
@@ -60,11 +55,11 @@ answers = answers.rename(
         "related_question_id": "question_id",
     }
 )
-check_data(answers)
+check_data(answers) 
 
 """
-n answers = 347.453
-n entries = 1.578
+n answers = 366150
+n entries = 1687
 
 Select all of the questions in "question_coding".
 
@@ -88,8 +83,8 @@ answers_subset = answers_subset.drop(columns=["question_name"])
 check_data(answers_subset)
 
 """
-n answers = 23.374
-n entries = 1.213
+n answers = 24679
+n entries = 1272
 
 Select only relevant polls: 
 - Religious Group (v5)
@@ -103,8 +98,8 @@ answers_subset = answers_subset[answers_subset["poll_name"].isin(polls)]
 check_data(answers_subset)
 
 """
-n answers = 20.734
-n entries = 824
+n answers = 21870
+n entries = 867
 
 take only yes-no answers
 """
@@ -114,8 +109,8 @@ answers_subset = answers_subset[answers_subset["answer_value"].isin([0, 1])]
 check_data(answers_subset)
 
 """ 
-n answers = 18.847
-n entries = 817
+n answers = 19822
+n entries = 860
 
 Fill in missing values with np.nan 
 
@@ -150,8 +145,8 @@ answers_filled = product_questions_entries.merge(
 check_data(answers_filled)
 
 """ 
-n rows = 29.430
-n entries = 817
+n rows = 30978
+n entries = 860
 
 
 Now we assign weight to the data:
@@ -183,8 +178,8 @@ answers_filled_groups.to_csv(
 )
 
 """ 
-n rows = 29430
-n entries = 817
+n rows = 30978
+n entries = 860
 
 Now we split data into two subsets: 
 - subquestions of "A supreme high god is present:" (shg)
@@ -192,7 +187,7 @@ Now we split data into two subsets:
 """
 
 # need to sort out the parent question ids for this
-# answers_raw = pd.read_csv("../data/raw/answerset.csv")
+# answers_raw = pd.read_csv("../data/sccsrv3/answerset.csv")
 # answers_raw = answers_raw[["question_id", "parent_question_id"]].drop_duplicates()
 
 # parents_monitoring = answers_raw[answers_raw["parent_question_id"] == 2890]
@@ -223,7 +218,6 @@ groups_expanded["entry_id"].nunique()  # n = 618
 
 # how many complete answer sets
 import numpy as np
-
 np.sum(groups_expanded.isna().sum(axis=1) == 0)  # n = 193 rows of non-na
 groups_unique = groups_expanded.drop_duplicates(subset="entry_id", keep="first")
 np.sum(groups_unique.isna().sum(axis=1) == 0)  # n = 177 complete entries

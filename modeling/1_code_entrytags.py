@@ -15,8 +15,8 @@ def find_entries(entry_tags, entrytag_id):
 
 
 # loads
-entry_tags = pd.read_csv("../data/raw/entity_tags.csv")
-entry_metadata = pd.read_csv("../data/raw/entry_data.csv")
+entry_tags = pd.read_csv("../data/sccsrv3/entity_tags.csv")
+entry_metadata = pd.read_csv("../data/sccsrv3/entry_data.csv")
 
 # christian tags
 christian_tags = [
@@ -103,4 +103,4 @@ answers_groups = answers_groups[["entry_id"]].drop_duplicates()
 entry_tags = entry_metadata.merge(answers_groups, on="entry_id", how="inner")
 
 # write to csv
-entry_metadata.to_csv("entry_tags.csv", index=False)
+entry_metadata.to_csv("data/entry_tags.csv", index=False)

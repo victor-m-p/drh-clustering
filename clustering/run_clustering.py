@@ -15,13 +15,13 @@ from helper_functions import fit
 
 ## setup ##
 c_grid = [c + 1 for c in range(10)]  # tried up to 20
-n_starts = 100  # random starts per c
+n_starts = 1000  # random starts per c
 candidates = [2, 3, 4, 5, 6, 7]  # save full solutions for these
 logL_tol = 0.01  # a start "reached the best" if within this of the best logL
 subset = "group" # only set up for groups
 
 # load data
-entry_metadata = pd.read_csv("../data/raw/entry_data.csv")
+entry_metadata = pd.read_csv("../data/sccsrv3/entry_data.csv")
 questions = pd.read_csv("../data/preprocessed/answers_subset_groups.csv")
 questions = questions[["question_id", "question_short"]].drop_duplicates()
 answers = pd.read_csv(f"../data/preprocessed/groups_expanded.csv")

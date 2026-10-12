@@ -25826,6 +25826,42 @@ entry_id,question_id,poll_name,question_short,answer_value,weight
 2140,2978,Religious Text (v1.0),sex,0.0,1.0
 2140,2985,Religious Text (v1.0),economic fairness,0.0,1.0
 2140,3218,Religious Text (v1.0),permissible to worship other god?,0.0,1.0
+2141,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2141,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2141,2898,Religious Group (v6),ritual observance,1.0,1.0
+2141,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2141,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2141,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2141,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2141,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2141,2941,Religious Group (v6),is anthropomorphic,0.0,1.0
+2141,2944,Religious Group (v6),is chthonic,1.0,1.0
+2141,2948,Religious Group (v6),is sky deity,1.0,1.0
+2141,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2141,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2141,3192,Religious Group (v6),positive emotion,0.0,1.0
+2141,3229,Religious Group (v6),negative emotion,0.0,1.0
+2141,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2141,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2141,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2141,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2141,3296,Religious Group (v6),communicates with living,1.0,1.0
+2141,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2141,2861,Religious Group (v6),murder other religions,1.0,1.0
+2141,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2141,2911,Religious Group (v6),lying,1.0,1.0
+2141,2917,Religious Group (v6),laziness,1.0,1.0
+2141,2921,Religious Group (v6),property crimes,1.0,1.0
+2141,2923,Religious Group (v6),shirking risk,1.0,1.0
+2141,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2141,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2141,2942,Religious Group (v6),gossiping,1.0,1.0
+2141,2962,Religious Group (v6),sorcery,1.0,1.0
+2141,2970,Religious Group (v6),taboos,1.0,1.0
+2141,2972,Religious Group (v6),murder other polities,1.0,1.0
+2141,2978,Religious Group (v6),sex,0.0,1.0
+2141,2985,Religious Group (v6),economic fairness,1.0,1.0
+2141,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
 2143,2883,Religious Text (v1.0),murder coreligionists,1.0,1.0
 2143,2887,Religious Text (v1.0),honouring oaths,0.0,1.0
 2143,2898,Religious Text (v1.0),ritual observance,,1.0
@@ -25862,6 +25898,42 @@ entry_id,question_id,poll_name,question_short,answer_value,weight
 2143,2978,Religious Text (v1.0),sex,1.0,1.0
 2143,2985,Religious Text (v1.0),economic fairness,1.0,1.0
 2143,3218,Religious Text (v1.0),permissible to worship other god?,,1.0
+2146,2883,Religious Group (v6),murder coreligionists,,1.0
+2146,2887,Religious Group (v6),honouring oaths,,1.0
+2146,2898,Religious Group (v6),ritual observance,,1.0
+2146,2930,Religious Group (v6),performance of rituals,,1.0
+2146,2974,Religious Group (v6),disrespecting elders,,1.0
+2146,2982,Religious Group (v6),conversion non-religionists,,1.0
+2146,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2146,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2146,2941,Religious Group (v6),is anthropomorphic,0.0,1.0
+2146,2944,Religious Group (v6),is chthonic,0.0,1.0
+2146,2948,Religious Group (v6),is sky deity,0.0,1.0
+2146,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2146,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2146,3192,Religious Group (v6),positive emotion,1.0,1.0
+2146,3229,Religious Group (v6),negative emotion,0.0,1.0
+2146,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2146,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2146,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2146,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2146,3296,Religious Group (v6),communicates with living,1.0,1.0
+2146,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2146,2861,Religious Group (v6),murder other religions,,1.0
+2146,2902,Religious Group (v6),non-lethal fighting,,1.0
+2146,2911,Religious Group (v6),lying,,1.0
+2146,2917,Religious Group (v6),laziness,,1.0
+2146,2921,Religious Group (v6),property crimes,,1.0
+2146,2923,Religious Group (v6),shirking risk,,1.0
+2146,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2146,2939,Religious Group (v6),personal hygiene,,1.0
+2146,2942,Religious Group (v6),gossiping,,1.0
+2146,2962,Religious Group (v6),sorcery,,1.0
+2146,2970,Religious Group (v6),taboos,,1.0
+2146,2972,Religious Group (v6),murder other polities,,1.0
+2146,2978,Religious Group (v6),sex,,1.0
+2146,2985,Religious Group (v6),economic fairness,,1.0
+2146,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
 2147,2883,Religious Group (v6),murder coreligionists,1.0,1.0
 2147,2887,Religious Group (v6),honouring oaths,1.0,1.0
 2147,2898,Religious Group (v6),ritual observance,0.0,1.0
@@ -27016,6 +27088,42 @@ entry_id,question_id,poll_name,question_short,answer_value,weight
 2240,2978,Religious Group (v6),sex,1.0,1.0
 2240,2985,Religious Group (v6),economic fairness,0.0,1.0
 2240,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2241,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2241,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2241,2898,Religious Group (v6),ritual observance,1.0,1.0
+2241,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2241,2974,Religious Group (v6),disrespecting elders,0.0,1.0
+2241,2982,Religious Group (v6),conversion non-religionists,0.0,1.0
+2241,2899,Religious Group (v6),other elite loyalty,1.0,1.0
+2241,2910,Religious Group (v6),is kin to elites,1.0,1.0
+2241,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2241,2944,Religious Group (v6),is chthonic,,1.0
+2241,2948,Religious Group (v6),is sky deity,0.0,1.0
+2241,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2241,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2241,3192,Religious Group (v6),positive emotion,1.0,1.0
+2241,3229,Religious Group (v6),negative emotion,1.0,1.0
+2241,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2241,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2241,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2241,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2241,3296,Religious Group (v6),communicates with living,1.0,1.0
+2241,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2241,2861,Religious Group (v6),murder other religions,1.0,1.0
+2241,2902,Religious Group (v6),non-lethal fighting,0.0,1.0
+2241,2911,Religious Group (v6),lying,,1.0
+2241,2917,Religious Group (v6),laziness,0.0,1.0
+2241,2921,Religious Group (v6),property crimes,1.0,1.0
+2241,2923,Religious Group (v6),shirking risk,0.0,1.0
+2241,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2241,2939,Religious Group (v6),personal hygiene,0.0,1.0
+2241,2942,Religious Group (v6),gossiping,0.0,1.0
+2241,2962,Religious Group (v6),sorcery,1.0,1.0
+2241,2970,Religious Group (v6),taboos,1.0,1.0
+2241,2972,Religious Group (v6),murder other polities,0.0,1.0
+2241,2978,Religious Group (v6),sex,1.0,1.0
+2241,2985,Religious Group (v6),economic fairness,0.0,1.0
+2241,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
 2243,2883,Religious Group (v6),murder coreligionists,1.0,1.0
 2243,2887,Religious Group (v6),honouring oaths,1.0,1.0
 2243,2898,Religious Group (v6),ritual observance,1.0,1.0
@@ -29429,3 +29537,1443 @@ entry_id,question_id,poll_name,question_short,answer_value,weight
 2372,2978,Religious Text (v1.0),sex,,1.0
 2372,2985,Religious Text (v1.0),economic fairness,,1.0
 2372,3218,Religious Text (v1.0),permissible to worship other god?,1.0,1.0
+2373,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2373,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2373,2898,Religious Group (v6),ritual observance,1.0,1.0
+2373,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2373,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2373,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2373,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2373,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2373,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2373,2944,Religious Group (v6),is chthonic,0.0,1.0
+2373,2948,Religious Group (v6),is sky deity,1.0,1.0
+2373,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2373,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2373,3192,Religious Group (v6),positive emotion,1.0,1.0
+2373,3229,Religious Group (v6),negative emotion,1.0,1.0
+2373,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2373,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2373,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2373,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2373,3296,Religious Group (v6),communicates with living,1.0,1.0
+2373,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2373,2861,Religious Group (v6),murder other religions,1.0,1.0
+2373,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2373,2911,Religious Group (v6),lying,1.0,1.0
+2373,2917,Religious Group (v6),laziness,,1.0
+2373,2921,Religious Group (v6),property crimes,1.0,1.0
+2373,2923,Religious Group (v6),shirking risk,,1.0
+2373,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2373,2939,Religious Group (v6),personal hygiene,,1.0
+2373,2942,Religious Group (v6),gossiping,1.0,1.0
+2373,2962,Religious Group (v6),sorcery,1.0,1.0
+2373,2970,Religious Group (v6),taboos,1.0,1.0
+2373,2972,Religious Group (v6),murder other polities,1.0,1.0
+2373,2978,Religious Group (v6),sex,1.0,1.0
+2373,2985,Religious Group (v6),economic fairness,0.0,1.0
+2373,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
+2375,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2375,2887,Religious Group (v6),honouring oaths,0.0,1.0
+2375,2898,Religious Group (v6),ritual observance,0.0,1.0
+2375,2930,Religious Group (v6),performance of rituals,0.0,1.0
+2375,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2375,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2375,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2375,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2375,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2375,2944,Religious Group (v6),is chthonic,0.0,1.0
+2375,2948,Religious Group (v6),is sky deity,0.0,1.0
+2375,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2375,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2375,3192,Religious Group (v6),positive emotion,1.0,1.0
+2375,3229,Religious Group (v6),negative emotion,1.0,1.0
+2375,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2375,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2375,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2375,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2375,3296,Religious Group (v6),communicates with living,1.0,1.0
+2375,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2375,2861,Religious Group (v6),murder other religions,1.0,1.0
+2375,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2375,2911,Religious Group (v6),lying,1.0,1.0
+2375,2917,Religious Group (v6),laziness,1.0,1.0
+2375,2921,Religious Group (v6),property crimes,1.0,1.0
+2375,2923,Religious Group (v6),shirking risk,1.0,1.0
+2375,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2375,2939,Religious Group (v6),personal hygiene,,1.0
+2375,2942,Religious Group (v6),gossiping,1.0,1.0
+2375,2962,Religious Group (v6),sorcery,,1.0
+2375,2970,Religious Group (v6),taboos,1.0,1.0
+2375,2972,Religious Group (v6),murder other polities,1.0,1.0
+2375,2978,Religious Group (v6),sex,1.0,1.0
+2375,2985,Religious Group (v6),economic fairness,1.0,1.0
+2375,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
+2376,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2376,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2376,2898,Religious Group (v6),ritual observance,1.0,1.0
+2376,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2376,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2376,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2376,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2376,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2376,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2376,2944,Religious Group (v6),is chthonic,0.0,1.0
+2376,2948,Religious Group (v6),is sky deity,1.0,1.0
+2376,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2376,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2376,3192,Religious Group (v6),positive emotion,1.0,1.0
+2376,3229,Religious Group (v6),negative emotion,1.0,1.0
+2376,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2376,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2376,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2376,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2376,3296,Religious Group (v6),communicates with living,1.0,1.0
+2376,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2376,2861,Religious Group (v6),murder other religions,1.0,1.0
+2376,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2376,2911,Religious Group (v6),lying,1.0,1.0
+2376,2917,Religious Group (v6),laziness,1.0,1.0
+2376,2921,Religious Group (v6),property crimes,1.0,1.0
+2376,2923,Religious Group (v6),shirking risk,,1.0
+2376,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2376,2939,Religious Group (v6),personal hygiene,,1.0
+2376,2942,Religious Group (v6),gossiping,1.0,1.0
+2376,2962,Religious Group (v6),sorcery,1.0,1.0
+2376,2970,Religious Group (v6),taboos,1.0,1.0
+2376,2972,Religious Group (v6),murder other polities,1.0,1.0
+2376,2978,Religious Group (v6),sex,1.0,1.0
+2376,2985,Religious Group (v6),economic fairness,1.0,1.0
+2376,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
+2418,2883,Religious Group (v6),murder coreligionists,,1.0
+2418,2887,Religious Group (v6),honouring oaths,,1.0
+2418,2898,Religious Group (v6),ritual observance,,1.0
+2418,2930,Religious Group (v6),performance of rituals,,1.0
+2418,2974,Religious Group (v6),disrespecting elders,,1.0
+2418,2982,Religious Group (v6),conversion non-religionists,,1.0
+2418,2899,Religious Group (v6),other elite loyalty,,1.0
+2418,2910,Religious Group (v6),is kin to elites,,1.0
+2418,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2418,2944,Religious Group (v6),is chthonic,,1.0
+2418,2948,Religious Group (v6),is sky deity,,1.0
+2418,2958,Religious Group (v6),is monarch fused,,1.0
+2418,2984,Religious Group (v6),is unquestionably good,,1.0
+2418,3192,Religious Group (v6),positive emotion,,1.0
+2418,3229,Religious Group (v6),negative emotion,,1.0
+2418,3233,Religious Group (v6),knowledge this world,,1.0
+2418,3247,Religious Group (v6),causal efficacy the world,,1.0
+2418,3283,Religious Group (v6),possesses hunger,,1.0
+2418,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2418,3296,Religious Group (v6),communicates with living,,1.0
+2418,3328,Religious Group (v6),is monarch manifestation,,1.0
+2418,2861,Religious Group (v6),murder other religions,,1.0
+2418,2902,Religious Group (v6),non-lethal fighting,,1.0
+2418,2911,Religious Group (v6),lying,,1.0
+2418,2917,Religious Group (v6),laziness,,1.0
+2418,2921,Religious Group (v6),property crimes,,1.0
+2418,2923,Religious Group (v6),shirking risk,,1.0
+2418,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2418,2939,Religious Group (v6),personal hygiene,,1.0
+2418,2942,Religious Group (v6),gossiping,,1.0
+2418,2962,Religious Group (v6),sorcery,,1.0
+2418,2970,Religious Group (v6),taboos,,1.0
+2418,2972,Religious Group (v6),murder other polities,,1.0
+2418,2978,Religious Group (v6),sex,,1.0
+2418,2985,Religious Group (v6),economic fairness,,1.0
+2418,3218,Religious Group (v6),permissible to worship other god?,,1.0
+2419,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2419,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2419,2898,Religious Group (v6),ritual observance,1.0,1.0
+2419,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2419,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2419,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2419,2899,Religious Group (v6),other elite loyalty,,1.0
+2419,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2419,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2419,2944,Religious Group (v6),is chthonic,0.0,1.0
+2419,2948,Religious Group (v6),is sky deity,1.0,1.0
+2419,2958,Religious Group (v6),is monarch fused,1.0,1.0
+2419,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2419,3192,Religious Group (v6),positive emotion,1.0,1.0
+2419,3229,Religious Group (v6),negative emotion,1.0,1.0
+2419,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2419,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2419,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2419,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2419,3296,Religious Group (v6),communicates with living,,1.0
+2419,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2419,2861,Religious Group (v6),murder other religions,0.0,1.0
+2419,2902,Religious Group (v6),non-lethal fighting,0.0,1.0
+2419,2911,Religious Group (v6),lying,1.0,1.0
+2419,2917,Religious Group (v6),laziness,0.0,1.0
+2419,2921,Religious Group (v6),property crimes,,1.0
+2419,2923,Religious Group (v6),shirking risk,0.0,1.0
+2419,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2419,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2419,2942,Religious Group (v6),gossiping,0.0,1.0
+2419,2962,Religious Group (v6),sorcery,1.0,1.0
+2419,2970,Religious Group (v6),taboos,1.0,1.0
+2419,2972,Religious Group (v6),murder other polities,0.0,1.0
+2419,2978,Religious Group (v6),sex,1.0,1.0
+2419,2985,Religious Group (v6),economic fairness,1.0,1.0
+2419,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
+2420,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2420,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2420,2898,Religious Group (v6),ritual observance,1.0,1.0
+2420,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2420,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2420,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2420,2899,Religious Group (v6),other elite loyalty,,1.0
+2420,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2420,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2420,2944,Religious Group (v6),is chthonic,0.0,1.0
+2420,2948,Religious Group (v6),is sky deity,1.0,1.0
+2420,2958,Religious Group (v6),is monarch fused,1.0,1.0
+2420,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2420,3192,Religious Group (v6),positive emotion,1.0,1.0
+2420,3229,Religious Group (v6),negative emotion,1.0,1.0
+2420,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2420,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2420,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2420,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2420,3296,Religious Group (v6),communicates with living,1.0,1.0
+2420,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2420,2861,Religious Group (v6),murder other religions,0.0,1.0
+2420,2902,Religious Group (v6),non-lethal fighting,0.0,1.0
+2420,2911,Religious Group (v6),lying,1.0,1.0
+2420,2917,Religious Group (v6),laziness,0.0,1.0
+2420,2921,Religious Group (v6),property crimes,,1.0
+2420,2923,Religious Group (v6),shirking risk,0.0,1.0
+2420,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2420,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2420,2942,Religious Group (v6),gossiping,0.0,1.0
+2420,2962,Religious Group (v6),sorcery,1.0,1.0
+2420,2970,Religious Group (v6),taboos,1.0,1.0
+2420,2972,Religious Group (v6),murder other polities,,1.0
+2420,2978,Religious Group (v6),sex,1.0,1.0
+2420,2985,Religious Group (v6),economic fairness,1.0,1.0
+2420,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
+2426,2883,Religious Group (v6),murder coreligionists,,1.0
+2426,2887,Religious Group (v6),honouring oaths,,1.0
+2426,2898,Religious Group (v6),ritual observance,,1.0
+2426,2930,Religious Group (v6),performance of rituals,,1.0
+2426,2974,Religious Group (v6),disrespecting elders,,1.0
+2426,2982,Religious Group (v6),conversion non-religionists,,1.0
+2426,2899,Religious Group (v6),other elite loyalty,,1.0
+2426,2910,Religious Group (v6),is kin to elites,,1.0
+2426,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2426,2944,Religious Group (v6),is chthonic,0.0,1.0
+2426,2948,Religious Group (v6),is sky deity,0.0,1.0
+2426,2958,Religious Group (v6),is monarch fused,,1.0
+2426,2984,Religious Group (v6),is unquestionably good,,1.0
+2426,3192,Religious Group (v6),positive emotion,,1.0
+2426,3229,Religious Group (v6),negative emotion,,1.0
+2426,3233,Religious Group (v6),knowledge this world,,1.0
+2426,3247,Religious Group (v6),causal efficacy the world,,1.0
+2426,3283,Religious Group (v6),possesses hunger,,1.0
+2426,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2426,3296,Religious Group (v6),communicates with living,,1.0
+2426,3328,Religious Group (v6),is monarch manifestation,,1.0
+2426,2861,Religious Group (v6),murder other religions,,1.0
+2426,2902,Religious Group (v6),non-lethal fighting,,1.0
+2426,2911,Religious Group (v6),lying,,1.0
+2426,2917,Religious Group (v6),laziness,,1.0
+2426,2921,Religious Group (v6),property crimes,,1.0
+2426,2923,Religious Group (v6),shirking risk,,1.0
+2426,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2426,2939,Religious Group (v6),personal hygiene,,1.0
+2426,2942,Religious Group (v6),gossiping,,1.0
+2426,2962,Religious Group (v6),sorcery,,1.0
+2426,2970,Religious Group (v6),taboos,,1.0
+2426,2972,Religious Group (v6),murder other polities,,1.0
+2426,2978,Religious Group (v6),sex,,1.0
+2426,2985,Religious Group (v6),economic fairness,,1.0
+2426,3218,Religious Group (v6),permissible to worship other god?,,1.0
+2429,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2429,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2429,2898,Religious Group (v6),ritual observance,1.0,1.0
+2429,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2429,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2429,2982,Religious Group (v6),conversion non-religionists,0.0,1.0
+2429,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2429,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2429,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2429,2944,Religious Group (v6),is chthonic,0.0,1.0
+2429,2948,Religious Group (v6),is sky deity,1.0,1.0
+2429,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2429,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2429,3192,Religious Group (v6),positive emotion,1.0,1.0
+2429,3229,Religious Group (v6),negative emotion,1.0,1.0
+2429,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2429,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2429,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2429,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2429,3296,Religious Group (v6),communicates with living,,1.0
+2429,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2429,2861,Religious Group (v6),murder other religions,1.0,1.0
+2429,2902,Religious Group (v6),non-lethal fighting,0.0,1.0
+2429,2911,Religious Group (v6),lying,1.0,1.0
+2429,2917,Religious Group (v6),laziness,0.0,1.0
+2429,2921,Religious Group (v6),property crimes,1.0,1.0
+2429,2923,Religious Group (v6),shirking risk,0.0,1.0
+2429,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2429,2939,Religious Group (v6),personal hygiene,0.0,1.0
+2429,2942,Religious Group (v6),gossiping,0.0,1.0
+2429,2962,Religious Group (v6),sorcery,1.0,1.0
+2429,2970,Religious Group (v6),taboos,1.0,1.0
+2429,2972,Religious Group (v6),murder other polities,1.0,1.0
+2429,2978,Religious Group (v6),sex,1.0,1.0
+2429,2985,Religious Group (v6),economic fairness,1.0,1.0
+2429,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
+2433,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2433,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2433,2898,Religious Group (v6),ritual observance,1.0,1.0
+2433,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2433,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2433,2982,Religious Group (v6),conversion non-religionists,0.0,1.0
+2433,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2433,2910,Religious Group (v6),is kin to elites,1.0,1.0
+2433,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2433,2944,Religious Group (v6),is chthonic,0.0,1.0
+2433,2948,Religious Group (v6),is sky deity,1.0,1.0
+2433,2958,Religious Group (v6),is monarch fused,,1.0
+2433,2984,Religious Group (v6),is unquestionably good,0.0,1.0
+2433,3192,Religious Group (v6),positive emotion,1.0,1.0
+2433,3229,Religious Group (v6),negative emotion,1.0,1.0
+2433,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2433,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2433,3283,Religious Group (v6),possesses hunger,,1.0
+2433,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2433,3296,Religious Group (v6),communicates with living,1.0,1.0
+2433,3328,Religious Group (v6),is monarch manifestation,,1.0
+2433,2861,Religious Group (v6),murder other religions,1.0,1.0
+2433,2902,Religious Group (v6),non-lethal fighting,0.0,1.0
+2433,2911,Religious Group (v6),lying,1.0,1.0
+2433,2917,Religious Group (v6),laziness,0.0,1.0
+2433,2921,Religious Group (v6),property crimes,1.0,1.0
+2433,2923,Religious Group (v6),shirking risk,1.0,1.0
+2433,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2433,2939,Religious Group (v6),personal hygiene,0.0,1.0
+2433,2942,Religious Group (v6),gossiping,,1.0
+2433,2962,Religious Group (v6),sorcery,0.0,1.0
+2433,2970,Religious Group (v6),taboos,1.0,1.0
+2433,2972,Religious Group (v6),murder other polities,1.0,1.0
+2433,2978,Religious Group (v6),sex,1.0,1.0
+2433,2985,Religious Group (v6),economic fairness,0.0,1.0
+2433,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2445,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2445,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2445,2898,Religious Group (v6),ritual observance,1.0,1.0
+2445,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2445,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2445,2982,Religious Group (v6),conversion non-religionists,0.0,1.0
+2445,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2445,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2445,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2445,2944,Religious Group (v6),is chthonic,1.0,1.0
+2445,2948,Religious Group (v6),is sky deity,1.0,1.0
+2445,2958,Religious Group (v6),is monarch fused,1.0,1.0
+2445,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2445,3192,Religious Group (v6),positive emotion,1.0,1.0
+2445,3229,Religious Group (v6),negative emotion,1.0,1.0
+2445,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2445,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2445,3283,Religious Group (v6),possesses hunger,1.0,1.0
+2445,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2445,3296,Religious Group (v6),communicates with living,1.0,1.0
+2445,3328,Religious Group (v6),is monarch manifestation,1.0,1.0
+2445,2861,Religious Group (v6),murder other religions,,1.0
+2445,2902,Religious Group (v6),non-lethal fighting,,1.0
+2445,2911,Religious Group (v6),lying,1.0,1.0
+2445,2917,Religious Group (v6),laziness,1.0,1.0
+2445,2921,Religious Group (v6),property crimes,1.0,1.0
+2445,2923,Religious Group (v6),shirking risk,,1.0
+2445,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2445,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2445,2942,Religious Group (v6),gossiping,,1.0
+2445,2962,Religious Group (v6),sorcery,,1.0
+2445,2970,Religious Group (v6),taboos,1.0,1.0
+2445,2972,Religious Group (v6),murder other polities,,1.0
+2445,2978,Religious Group (v6),sex,1.0,1.0
+2445,2985,Religious Group (v6),economic fairness,1.0,1.0
+2445,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2451,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2451,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2451,2898,Religious Group (v6),ritual observance,1.0,1.0
+2451,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2451,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2451,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2451,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2451,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2451,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2451,2944,Religious Group (v6),is chthonic,0.0,1.0
+2451,2948,Religious Group (v6),is sky deity,0.0,1.0
+2451,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2451,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2451,3192,Religious Group (v6),positive emotion,1.0,1.0
+2451,3229,Religious Group (v6),negative emotion,1.0,1.0
+2451,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2451,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2451,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2451,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2451,3296,Religious Group (v6),communicates with living,1.0,1.0
+2451,3328,Religious Group (v6),is monarch manifestation,1.0,1.0
+2451,2861,Religious Group (v6),murder other religions,1.0,1.0
+2451,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2451,2911,Religious Group (v6),lying,1.0,1.0
+2451,2917,Religious Group (v6),laziness,1.0,1.0
+2451,2921,Religious Group (v6),property crimes,1.0,1.0
+2451,2923,Religious Group (v6),shirking risk,1.0,1.0
+2451,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2451,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2451,2942,Religious Group (v6),gossiping,1.0,1.0
+2451,2962,Religious Group (v6),sorcery,1.0,1.0
+2451,2970,Religious Group (v6),taboos,1.0,1.0
+2451,2972,Religious Group (v6),murder other polities,1.0,1.0
+2451,2978,Religious Group (v6),sex,1.0,1.0
+2451,2985,Religious Group (v6),economic fairness,1.0,1.0
+2451,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
+2453,2883,Religious Group (v6),murder coreligionists,,1.0
+2453,2887,Religious Group (v6),honouring oaths,,1.0
+2453,2898,Religious Group (v6),ritual observance,,1.0
+2453,2930,Religious Group (v6),performance of rituals,,1.0
+2453,2974,Religious Group (v6),disrespecting elders,,1.0
+2453,2982,Religious Group (v6),conversion non-religionists,,1.0
+2453,2899,Religious Group (v6),other elite loyalty,1.0,1.0
+2453,2910,Religious Group (v6),is kin to elites,1.0,1.0
+2453,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2453,2944,Religious Group (v6),is chthonic,0.0,1.0
+2453,2948,Religious Group (v6),is sky deity,1.0,1.0
+2453,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2453,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2453,3192,Religious Group (v6),positive emotion,1.0,1.0
+2453,3229,Religious Group (v6),negative emotion,,1.0
+2453,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2453,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2453,3283,Religious Group (v6),possesses hunger,,1.0
+2453,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2453,3296,Religious Group (v6),communicates with living,1.0,1.0
+2453,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2453,2861,Religious Group (v6),murder other religions,,1.0
+2453,2902,Religious Group (v6),non-lethal fighting,,1.0
+2453,2911,Religious Group (v6),lying,,1.0
+2453,2917,Religious Group (v6),laziness,,1.0
+2453,2921,Religious Group (v6),property crimes,,1.0
+2453,2923,Religious Group (v6),shirking risk,,1.0
+2453,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2453,2939,Religious Group (v6),personal hygiene,,1.0
+2453,2942,Religious Group (v6),gossiping,,1.0
+2453,2962,Religious Group (v6),sorcery,,1.0
+2453,2970,Religious Group (v6),taboos,,1.0
+2453,2972,Religious Group (v6),murder other polities,,1.0
+2453,2978,Religious Group (v6),sex,,1.0
+2453,2985,Religious Group (v6),economic fairness,,1.0
+2453,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2456,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2456,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2456,2898,Religious Group (v6),ritual observance,1.0,1.0
+2456,2930,Religious Group (v6),performance of rituals,,1.0
+2456,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2456,2982,Religious Group (v6),conversion non-religionists,,1.0
+2456,2899,Religious Group (v6),other elite loyalty,,1.0
+2456,2910,Religious Group (v6),is kin to elites,,1.0
+2456,2941,Religious Group (v6),is anthropomorphic,,1.0
+2456,2944,Religious Group (v6),is chthonic,,1.0
+2456,2948,Religious Group (v6),is sky deity,,1.0
+2456,2958,Religious Group (v6),is monarch fused,,1.0
+2456,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2456,3192,Religious Group (v6),positive emotion,,1.0
+2456,3229,Religious Group (v6),negative emotion,,1.0
+2456,3233,Religious Group (v6),knowledge this world,,1.0
+2456,3247,Religious Group (v6),causal efficacy the world,,1.0
+2456,3283,Religious Group (v6),possesses hunger,,1.0
+2456,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2456,3296,Religious Group (v6),communicates with living,,1.0
+2456,3328,Religious Group (v6),is monarch manifestation,,1.0
+2456,2861,Religious Group (v6),murder other religions,1.0,1.0
+2456,2902,Religious Group (v6),non-lethal fighting,,1.0
+2456,2911,Religious Group (v6),lying,1.0,1.0
+2456,2917,Religious Group (v6),laziness,1.0,1.0
+2456,2921,Religious Group (v6),property crimes,,1.0
+2456,2923,Religious Group (v6),shirking risk,,1.0
+2456,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2456,2939,Religious Group (v6),personal hygiene,,1.0
+2456,2942,Religious Group (v6),gossiping,,1.0
+2456,2962,Religious Group (v6),sorcery,,1.0
+2456,2970,Religious Group (v6),taboos,1.0,1.0
+2456,2972,Religious Group (v6),murder other polities,1.0,1.0
+2456,2978,Religious Group (v6),sex,1.0,1.0
+2456,2985,Religious Group (v6),economic fairness,,1.0
+2456,3218,Religious Group (v6),permissible to worship other god?,,1.0
+2457,2883,Religious Group (v6),murder coreligionists,,1.0
+2457,2887,Religious Group (v6),honouring oaths,,1.0
+2457,2898,Religious Group (v6),ritual observance,,1.0
+2457,2930,Religious Group (v6),performance of rituals,,1.0
+2457,2974,Religious Group (v6),disrespecting elders,,1.0
+2457,2982,Religious Group (v6),conversion non-religionists,,1.0
+2457,2899,Religious Group (v6),other elite loyalty,,1.0
+2457,2910,Religious Group (v6),is kin to elites,,1.0
+2457,2941,Religious Group (v6),is anthropomorphic,,1.0
+2457,2944,Religious Group (v6),is chthonic,,1.0
+2457,2948,Religious Group (v6),is sky deity,1.0,1.0
+2457,2958,Religious Group (v6),is monarch fused,,1.0
+2457,2984,Religious Group (v6),is unquestionably good,,1.0
+2457,3192,Religious Group (v6),positive emotion,,1.0
+2457,3229,Religious Group (v6),negative emotion,,1.0
+2457,3233,Religious Group (v6),knowledge this world,,1.0
+2457,3247,Religious Group (v6),causal efficacy the world,,1.0
+2457,3283,Religious Group (v6),possesses hunger,,1.0
+2457,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2457,3296,Religious Group (v6),communicates with living,,1.0
+2457,3328,Religious Group (v6),is monarch manifestation,,1.0
+2457,2861,Religious Group (v6),murder other religions,,1.0
+2457,2902,Religious Group (v6),non-lethal fighting,,1.0
+2457,2911,Religious Group (v6),lying,,1.0
+2457,2917,Religious Group (v6),laziness,,1.0
+2457,2921,Religious Group (v6),property crimes,,1.0
+2457,2923,Religious Group (v6),shirking risk,,1.0
+2457,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2457,2939,Religious Group (v6),personal hygiene,,1.0
+2457,2942,Religious Group (v6),gossiping,,1.0
+2457,2962,Religious Group (v6),sorcery,,1.0
+2457,2970,Religious Group (v6),taboos,,1.0
+2457,2972,Religious Group (v6),murder other polities,,1.0
+2457,2978,Religious Group (v6),sex,,1.0
+2457,2985,Religious Group (v6),economic fairness,,1.0
+2457,3218,Religious Group (v6),permissible to worship other god?,,1.0
+2458,2883,Religious Group (v6),murder coreligionists,,1.0
+2458,2887,Religious Group (v6),honouring oaths,,1.0
+2458,2898,Religious Group (v6),ritual observance,,1.0
+2458,2930,Religious Group (v6),performance of rituals,,1.0
+2458,2974,Religious Group (v6),disrespecting elders,,1.0
+2458,2982,Religious Group (v6),conversion non-religionists,,1.0
+2458,2899,Religious Group (v6),other elite loyalty,,1.0
+2458,2910,Religious Group (v6),is kin to elites,,1.0
+2458,2941,Religious Group (v6),is anthropomorphic,,1.0
+2458,2944,Religious Group (v6),is chthonic,,1.0
+2458,2948,Religious Group (v6),is sky deity,,1.0
+2458,2958,Religious Group (v6),is monarch fused,,1.0
+2458,2984,Religious Group (v6),is unquestionably good,,1.0
+2458,3192,Religious Group (v6),positive emotion,,1.0
+2458,3229,Religious Group (v6),negative emotion,,1.0
+2458,3233,Religious Group (v6),knowledge this world,,1.0
+2458,3247,Religious Group (v6),causal efficacy the world,,1.0
+2458,3283,Religious Group (v6),possesses hunger,,1.0
+2458,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2458,3296,Religious Group (v6),communicates with living,1.0,1.0
+2458,3328,Religious Group (v6),is monarch manifestation,,1.0
+2458,2861,Religious Group (v6),murder other religions,,1.0
+2458,2902,Religious Group (v6),non-lethal fighting,,1.0
+2458,2911,Religious Group (v6),lying,,1.0
+2458,2917,Religious Group (v6),laziness,,1.0
+2458,2921,Religious Group (v6),property crimes,,1.0
+2458,2923,Religious Group (v6),shirking risk,,1.0
+2458,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2458,2939,Religious Group (v6),personal hygiene,,1.0
+2458,2942,Religious Group (v6),gossiping,,1.0
+2458,2962,Religious Group (v6),sorcery,,1.0
+2458,2970,Religious Group (v6),taboos,,1.0
+2458,2972,Religious Group (v6),murder other polities,,1.0
+2458,2978,Religious Group (v6),sex,,1.0
+2458,2985,Religious Group (v6),economic fairness,,1.0
+2458,3218,Religious Group (v6),permissible to worship other god?,,1.0
+2464,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2464,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2464,2898,Religious Group (v6),ritual observance,1.0,1.0
+2464,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2464,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2464,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2464,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2464,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2464,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2464,2944,Religious Group (v6),is chthonic,0.0,1.0
+2464,2948,Religious Group (v6),is sky deity,0.0,1.0
+2464,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2464,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2464,3192,Religious Group (v6),positive emotion,,1.0
+2464,3229,Religious Group (v6),negative emotion,,1.0
+2464,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2464,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2464,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2464,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0
+2464,3296,Religious Group (v6),communicates with living,1.0,1.0
+2464,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2464,2861,Religious Group (v6),murder other religions,1.0,1.0
+2464,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2464,2911,Religious Group (v6),lying,1.0,1.0
+2464,2917,Religious Group (v6),laziness,1.0,1.0
+2464,2921,Religious Group (v6),property crimes,1.0,1.0
+2464,2923,Religious Group (v6),shirking risk,1.0,1.0
+2464,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2464,2939,Religious Group (v6),personal hygiene,,1.0
+2464,2942,Religious Group (v6),gossiping,1.0,1.0
+2464,2962,Religious Group (v6),sorcery,1.0,1.0
+2464,2970,Religious Group (v6),taboos,1.0,1.0
+2464,2972,Religious Group (v6),murder other polities,1.0,1.0
+2464,2978,Religious Group (v6),sex,1.0,1.0
+2464,2985,Religious Group (v6),economic fairness,1.0,1.0
+2464,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
+2482,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2482,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2482,2898,Religious Group (v6),ritual observance,1.0,1.0
+2482,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2482,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2482,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2482,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2482,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2482,2941,Religious Group (v6),is anthropomorphic,0.0,1.0
+2482,2944,Religious Group (v6),is chthonic,0.0,1.0
+2482,2948,Religious Group (v6),is sky deity,1.0,1.0
+2482,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2482,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2482,3192,Religious Group (v6),positive emotion,0.0,1.0
+2482,3229,Religious Group (v6),negative emotion,0.0,1.0
+2482,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2482,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2482,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2482,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2482,3296,Religious Group (v6),communicates with living,1.0,1.0
+2482,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2482,2861,Religious Group (v6),murder other religions,1.0,1.0
+2482,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2482,2911,Religious Group (v6),lying,0.0,1.0
+2482,2917,Religious Group (v6),laziness,0.0,1.0
+2482,2921,Religious Group (v6),property crimes,1.0,1.0
+2482,2923,Religious Group (v6),shirking risk,1.0,1.0
+2482,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2482,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2482,2942,Religious Group (v6),gossiping,1.0,1.0
+2482,2962,Religious Group (v6),sorcery,1.0,1.0
+2482,2970,Religious Group (v6),taboos,0.0,1.0
+2482,2972,Religious Group (v6),murder other polities,1.0,1.0
+2482,2978,Religious Group (v6),sex,0.0,1.0
+2482,2985,Religious Group (v6),economic fairness,1.0,1.0
+2482,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
+2483,2883,Religious Group (v6),murder coreligionists,0.0,1.0
+2483,2887,Religious Group (v6),honouring oaths,0.0,1.0
+2483,2898,Religious Group (v6),ritual observance,1.0,1.0
+2483,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2483,2974,Religious Group (v6),disrespecting elders,0.0,1.0
+2483,2982,Religious Group (v6),conversion non-religionists,0.0,1.0
+2483,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2483,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2483,2941,Religious Group (v6),is anthropomorphic,0.0,1.0
+2483,2944,Religious Group (v6),is chthonic,0.0,1.0
+2483,2948,Religious Group (v6),is sky deity,0.0,1.0
+2483,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2483,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2483,3192,Religious Group (v6),positive emotion,1.0,1.0
+2483,3229,Religious Group (v6),negative emotion,,1.0
+2483,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2483,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2483,3283,Religious Group (v6),possesses hunger,,1.0
+2483,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2483,3296,Religious Group (v6),communicates with living,1.0,1.0
+2483,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2483,2861,Religious Group (v6),murder other religions,,1.0
+2483,2902,Religious Group (v6),non-lethal fighting,0.0,1.0
+2483,2911,Religious Group (v6),lying,1.0,1.0
+2483,2917,Religious Group (v6),laziness,0.0,1.0
+2483,2921,Religious Group (v6),property crimes,0.0,1.0
+2483,2923,Religious Group (v6),shirking risk,0.0,1.0
+2483,2928,Religious Group (v6),prosocial norm adherence,0.0,1.0
+2483,2939,Religious Group (v6),personal hygiene,0.0,1.0
+2483,2942,Religious Group (v6),gossiping,1.0,1.0
+2483,2962,Religious Group (v6),sorcery,1.0,1.0
+2483,2970,Religious Group (v6),taboos,0.0,1.0
+2483,2972,Religious Group (v6),murder other polities,0.0,1.0
+2483,2978,Religious Group (v6),sex,0.0,1.0
+2483,2985,Religious Group (v6),economic fairness,0.0,1.0
+2483,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2484,2883,Religious Group (v6),murder coreligionists,0.0,1.0
+2484,2887,Religious Group (v6),honouring oaths,0.0,1.0
+2484,2898,Religious Group (v6),ritual observance,1.0,1.0
+2484,2930,Religious Group (v6),performance of rituals,,1.0
+2484,2974,Religious Group (v6),disrespecting elders,,1.0
+2484,2982,Religious Group (v6),conversion non-religionists,,1.0
+2484,2899,Religious Group (v6),other elite loyalty,,1.0
+2484,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2484,2941,Religious Group (v6),is anthropomorphic,0.0,1.0
+2484,2944,Religious Group (v6),is chthonic,0.0,1.0
+2484,2948,Religious Group (v6),is sky deity,0.0,1.0
+2484,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2484,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2484,3192,Religious Group (v6),positive emotion,1.0,1.0
+2484,3229,Religious Group (v6),negative emotion,,1.0
+2484,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2484,3247,Religious Group (v6),causal efficacy the world,,1.0
+2484,3283,Religious Group (v6),possesses hunger,,1.0
+2484,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2484,3296,Religious Group (v6),communicates with living,,1.0
+2484,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2484,2861,Religious Group (v6),murder other religions,0.0,1.0
+2484,2902,Religious Group (v6),non-lethal fighting,0.0,1.0
+2484,2911,Religious Group (v6),lying,,1.0
+2484,2917,Religious Group (v6),laziness,0.0,1.0
+2484,2921,Religious Group (v6),property crimes,0.0,1.0
+2484,2923,Religious Group (v6),shirking risk,0.0,1.0
+2484,2928,Religious Group (v6),prosocial norm adherence,0.0,1.0
+2484,2939,Religious Group (v6),personal hygiene,,1.0
+2484,2942,Religious Group (v6),gossiping,,1.0
+2484,2962,Religious Group (v6),sorcery,,1.0
+2484,2970,Religious Group (v6),taboos,0.0,1.0
+2484,2972,Religious Group (v6),murder other polities,,1.0
+2484,2978,Religious Group (v6),sex,,1.0
+2484,2985,Religious Group (v6),economic fairness,0.0,1.0
+2484,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2485,2883,Religious Group (v6),murder coreligionists,0.0,1.0
+2485,2887,Religious Group (v6),honouring oaths,,1.0
+2485,2898,Religious Group (v6),ritual observance,,1.0
+2485,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2485,2974,Religious Group (v6),disrespecting elders,,1.0
+2485,2982,Religious Group (v6),conversion non-religionists,,1.0
+2485,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2485,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2485,2941,Religious Group (v6),is anthropomorphic,0.0,1.0
+2485,2944,Religious Group (v6),is chthonic,0.0,1.0
+2485,2948,Religious Group (v6),is sky deity,0.0,1.0
+2485,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2485,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2485,3192,Religious Group (v6),positive emotion,1.0,1.0
+2485,3229,Religious Group (v6),negative emotion,,1.0
+2485,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2485,3247,Religious Group (v6),causal efficacy the world,,1.0
+2485,3283,Religious Group (v6),possesses hunger,,1.0
+2485,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2485,3296,Religious Group (v6),communicates with living,1.0,1.0
+2485,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2485,2861,Religious Group (v6),murder other religions,0.0,1.0
+2485,2902,Religious Group (v6),non-lethal fighting,0.0,1.0
+2485,2911,Religious Group (v6),lying,,1.0
+2485,2917,Religious Group (v6),laziness,0.0,1.0
+2485,2921,Religious Group (v6),property crimes,,1.0
+2485,2923,Religious Group (v6),shirking risk,0.0,1.0
+2485,2928,Religious Group (v6),prosocial norm adherence,0.0,1.0
+2485,2939,Religious Group (v6),personal hygiene,0.0,1.0
+2485,2942,Religious Group (v6),gossiping,0.0,1.0
+2485,2962,Religious Group (v6),sorcery,,1.0
+2485,2970,Religious Group (v6),taboos,0.0,1.0
+2485,2972,Religious Group (v6),murder other polities,0.0,1.0
+2485,2978,Religious Group (v6),sex,0.0,1.0
+2485,2985,Religious Group (v6),economic fairness,,1.0
+2485,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2486,2883,Religious Group (v6),murder coreligionists,0.0,1.0
+2486,2887,Religious Group (v6),honouring oaths,,1.0
+2486,2898,Religious Group (v6),ritual observance,1.0,1.0
+2486,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2486,2974,Religious Group (v6),disrespecting elders,,1.0
+2486,2982,Religious Group (v6),conversion non-religionists,,1.0
+2486,2899,Religious Group (v6),other elite loyalty,,1.0
+2486,2910,Religious Group (v6),is kin to elites,,1.0
+2486,2941,Religious Group (v6),is anthropomorphic,,1.0
+2486,2944,Religious Group (v6),is chthonic,,1.0
+2486,2948,Religious Group (v6),is sky deity,,1.0
+2486,2958,Religious Group (v6),is monarch fused,,1.0
+2486,2984,Religious Group (v6),is unquestionably good,,1.0
+2486,3192,Religious Group (v6),positive emotion,,1.0
+2486,3229,Religious Group (v6),negative emotion,,1.0
+2486,3233,Religious Group (v6),knowledge this world,,1.0
+2486,3247,Religious Group (v6),causal efficacy the world,,1.0
+2486,3283,Religious Group (v6),possesses hunger,,1.0
+2486,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2486,3296,Religious Group (v6),communicates with living,,1.0
+2486,3328,Religious Group (v6),is monarch manifestation,,1.0
+2486,2861,Religious Group (v6),murder other religions,,1.0
+2486,2902,Religious Group (v6),non-lethal fighting,0.0,1.0
+2486,2911,Religious Group (v6),lying,,1.0
+2486,2917,Religious Group (v6),laziness,0.0,1.0
+2486,2921,Religious Group (v6),property crimes,,1.0
+2486,2923,Religious Group (v6),shirking risk,0.0,1.0
+2486,2928,Religious Group (v6),prosocial norm adherence,0.0,1.0
+2486,2939,Religious Group (v6),personal hygiene,0.0,1.0
+2486,2942,Religious Group (v6),gossiping,0.0,1.0
+2486,2962,Religious Group (v6),sorcery,,1.0
+2486,2970,Religious Group (v6),taboos,0.0,1.0
+2486,2972,Religious Group (v6),murder other polities,,1.0
+2486,2978,Religious Group (v6),sex,,1.0
+2486,2985,Religious Group (v6),economic fairness,0.0,1.0
+2486,3218,Religious Group (v6),permissible to worship other god?,,1.0
+2487,2883,Religious Group (v6),murder coreligionists,,1.0
+2487,2887,Religious Group (v6),honouring oaths,,1.0
+2487,2898,Religious Group (v6),ritual observance,,1.0
+2487,2930,Religious Group (v6),performance of rituals,,1.0
+2487,2974,Religious Group (v6),disrespecting elders,,1.0
+2487,2982,Religious Group (v6),conversion non-religionists,,1.0
+2487,2899,Religious Group (v6),other elite loyalty,,1.0
+2487,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2487,2941,Religious Group (v6),is anthropomorphic,0.0,1.0
+2487,2944,Religious Group (v6),is chthonic,0.0,1.0
+2487,2948,Religious Group (v6),is sky deity,0.0,1.0
+2487,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2487,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2487,3192,Religious Group (v6),positive emotion,,1.0
+2487,3229,Religious Group (v6),negative emotion,,1.0
+2487,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2487,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2487,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2487,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2487,3296,Religious Group (v6),communicates with living,1.0,1.0
+2487,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2487,2861,Religious Group (v6),murder other religions,,1.0
+2487,2902,Religious Group (v6),non-lethal fighting,,1.0
+2487,2911,Religious Group (v6),lying,,1.0
+2487,2917,Religious Group (v6),laziness,,1.0
+2487,2921,Religious Group (v6),property crimes,,1.0
+2487,2923,Religious Group (v6),shirking risk,,1.0
+2487,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2487,2939,Religious Group (v6),personal hygiene,,1.0
+2487,2942,Religious Group (v6),gossiping,,1.0
+2487,2962,Religious Group (v6),sorcery,,1.0
+2487,2970,Religious Group (v6),taboos,,1.0
+2487,2972,Religious Group (v6),murder other polities,,1.0
+2487,2978,Religious Group (v6),sex,,1.0
+2487,2985,Religious Group (v6),economic fairness,,1.0
+2487,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
+2488,2883,Religious Text (v1.0),murder coreligionists,0.0,1.0
+2488,2887,Religious Text (v1.0),honouring oaths,0.0,1.0
+2488,2898,Religious Text (v1.0),ritual observance,0.0,1.0
+2488,2930,Religious Text (v1.0),performance of rituals,0.0,1.0
+2488,2974,Religious Text (v1.0),disrespecting elders,0.0,1.0
+2488,2982,Religious Text (v1.0),conversion non-religionists,0.0,1.0
+2488,2899,Religious Text (v1.0),other elite loyalty,0.0,1.0
+2488,2910,Religious Text (v1.0),is kin to elites,0.0,1.0
+2488,2941,Religious Text (v1.0),is anthropomorphic,0.0,1.0
+2488,2944,Religious Text (v1.0),is chthonic,0.0,1.0
+2488,2948,Religious Text (v1.0),is sky deity,0.0,1.0
+2488,2958,Religious Text (v1.0),is monarch fused,0.0,1.0
+2488,2984,Religious Text (v1.0),is unquestionably good,0.0,1.0
+2488,3192,Religious Text (v1.0),positive emotion,0.0,1.0
+2488,3229,Religious Text (v1.0),negative emotion,0.0,1.0
+2488,3233,Religious Text (v1.0),knowledge this world,0.0,1.0
+2488,3247,Religious Text (v1.0),causal efficacy the world,0.0,1.0
+2488,3283,Religious Text (v1.0),possesses hunger,0.0,1.0
+2488,3288,Religious Text (v1.0),indirect causal efficacy the world,1.0,1.0
+2488,3296,Religious Text (v1.0),communicates with living,0.0,1.0
+2488,3328,Religious Text (v1.0),is monarch manifestation,0.0,1.0
+2488,2861,Religious Text (v1.0),murder other religions,0.0,1.0
+2488,2902,Religious Text (v1.0),non-lethal fighting,0.0,1.0
+2488,2911,Religious Text (v1.0),lying,0.0,1.0
+2488,2917,Religious Text (v1.0),laziness,0.0,1.0
+2488,2921,Religious Text (v1.0),property crimes,0.0,1.0
+2488,2923,Religious Text (v1.0),shirking risk,0.0,1.0
+2488,2928,Religious Text (v1.0),prosocial norm adherence,0.0,1.0
+2488,2939,Religious Text (v1.0),personal hygiene,0.0,1.0
+2488,2942,Religious Text (v1.0),gossiping,0.0,1.0
+2488,2962,Religious Text (v1.0),sorcery,0.0,1.0
+2488,2970,Religious Text (v1.0),taboos,0.0,1.0
+2488,2972,Religious Text (v1.0),murder other polities,0.0,1.0
+2488,2978,Religious Text (v1.0),sex,0.0,1.0
+2488,2985,Religious Text (v1.0),economic fairness,0.0,1.0
+2488,3218,Religious Text (v1.0),permissible to worship other god?,1.0,1.0
+2490,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2490,2887,Religious Group (v6),honouring oaths,0.0,1.0
+2490,2898,Religious Group (v6),ritual observance,1.0,1.0
+2490,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2490,2974,Religious Group (v6),disrespecting elders,,1.0
+2490,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2490,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2490,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2490,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2490,2944,Religious Group (v6),is chthonic,0.0,1.0
+2490,2948,Religious Group (v6),is sky deity,1.0,1.0
+2490,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2490,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2490,3192,Religious Group (v6),positive emotion,1.0,1.0
+2490,3229,Religious Group (v6),negative emotion,0.0,1.0
+2490,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2490,3247,Religious Group (v6),causal efficacy the world,,1.0
+2490,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2490,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2490,3296,Religious Group (v6),communicates with living,0.0,1.0
+2490,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2490,2861,Religious Group (v6),murder other religions,1.0,1.0
+2490,2902,Religious Group (v6),non-lethal fighting,0.0,1.0
+2490,2911,Religious Group (v6),lying,1.0,1.0
+2490,2917,Religious Group (v6),laziness,0.0,1.0
+2490,2921,Religious Group (v6),property crimes,1.0,1.0
+2490,2923,Religious Group (v6),shirking risk,0.0,1.0
+2490,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2490,2939,Religious Group (v6),personal hygiene,,1.0
+2490,2942,Religious Group (v6),gossiping,,1.0
+2490,2962,Religious Group (v6),sorcery,0.0,1.0
+2490,2970,Religious Group (v6),taboos,1.0,1.0
+2490,2972,Religious Group (v6),murder other polities,1.0,1.0
+2490,2978,Religious Group (v6),sex,,1.0
+2490,2985,Religious Group (v6),economic fairness,1.0,1.0
+2490,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2491,2883,Religious Text (v1.0),murder coreligionists,,1.0
+2491,2887,Religious Text (v1.0),honouring oaths,,1.0
+2491,2898,Religious Text (v1.0),ritual observance,,1.0
+2491,2930,Religious Text (v1.0),performance of rituals,,1.0
+2491,2974,Religious Text (v1.0),disrespecting elders,,1.0
+2491,2982,Religious Text (v1.0),conversion non-religionists,,1.0
+2491,2899,Religious Text (v1.0),other elite loyalty,0.0,1.0
+2491,2910,Religious Text (v1.0),is kin to elites,0.0,1.0
+2491,2941,Religious Text (v1.0),is anthropomorphic,1.0,1.0
+2491,2944,Religious Text (v1.0),is chthonic,1.0,1.0
+2491,2948,Religious Text (v1.0),is sky deity,1.0,1.0
+2491,2958,Religious Text (v1.0),is monarch fused,1.0,1.0
+2491,2984,Religious Text (v1.0),is unquestionably good,1.0,1.0
+2491,3192,Religious Text (v1.0),positive emotion,1.0,1.0
+2491,3229,Religious Text (v1.0),negative emotion,1.0,1.0
+2491,3233,Religious Text (v1.0),knowledge this world,1.0,1.0
+2491,3247,Religious Text (v1.0),causal efficacy the world,1.0,1.0
+2491,3283,Religious Text (v1.0),possesses hunger,1.0,1.0
+2491,3288,Religious Text (v1.0),indirect causal efficacy the world,1.0,1.0
+2491,3296,Religious Text (v1.0),communicates with living,1.0,1.0
+2491,3328,Religious Text (v1.0),is monarch manifestation,1.0,1.0
+2491,2861,Religious Text (v1.0),murder other religions,,1.0
+2491,2902,Religious Text (v1.0),non-lethal fighting,,1.0
+2491,2911,Religious Text (v1.0),lying,,1.0
+2491,2917,Religious Text (v1.0),laziness,,1.0
+2491,2921,Religious Text (v1.0),property crimes,,1.0
+2491,2923,Religious Text (v1.0),shirking risk,,1.0
+2491,2928,Religious Text (v1.0),prosocial norm adherence,,1.0
+2491,2939,Religious Text (v1.0),personal hygiene,,1.0
+2491,2942,Religious Text (v1.0),gossiping,,1.0
+2491,2962,Religious Text (v1.0),sorcery,,1.0
+2491,2970,Religious Text (v1.0),taboos,,1.0
+2491,2972,Religious Text (v1.0),murder other polities,,1.0
+2491,2978,Religious Text (v1.0),sex,,1.0
+2491,2985,Religious Text (v1.0),economic fairness,,1.0
+2491,3218,Religious Text (v1.0),permissible to worship other god?,1.0,1.0
+2492,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2492,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2492,2898,Religious Group (v6),ritual observance,1.0,1.0
+2492,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2492,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2492,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2492,2899,Religious Group (v6),other elite loyalty,,1.0
+2492,2910,Religious Group (v6),is kin to elites,,1.0
+2492,2941,Religious Group (v6),is anthropomorphic,,1.0
+2492,2944,Religious Group (v6),is chthonic,,1.0
+2492,2948,Religious Group (v6),is sky deity,,1.0
+2492,2958,Religious Group (v6),is monarch fused,,1.0
+2492,2984,Religious Group (v6),is unquestionably good,,1.0
+2492,3192,Religious Group (v6),positive emotion,,1.0
+2492,3229,Religious Group (v6),negative emotion,,1.0
+2492,3233,Religious Group (v6),knowledge this world,,1.0
+2492,3247,Religious Group (v6),causal efficacy the world,,1.0
+2492,3283,Religious Group (v6),possesses hunger,,1.0
+2492,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2492,3296,Religious Group (v6),communicates with living,,1.0
+2492,3328,Religious Group (v6),is monarch manifestation,,1.0
+2492,2861,Religious Group (v6),murder other religions,1.0,1.0
+2492,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2492,2911,Religious Group (v6),lying,1.0,1.0
+2492,2917,Religious Group (v6),laziness,1.0,1.0
+2492,2921,Religious Group (v6),property crimes,1.0,1.0
+2492,2923,Religious Group (v6),shirking risk,1.0,1.0
+2492,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2492,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2492,2942,Religious Group (v6),gossiping,1.0,1.0
+2492,2962,Religious Group (v6),sorcery,1.0,1.0
+2492,2970,Religious Group (v6),taboos,1.0,1.0
+2492,2972,Religious Group (v6),murder other polities,1.0,1.0
+2492,2978,Religious Group (v6),sex,1.0,1.0
+2492,2985,Religious Group (v6),economic fairness,1.0,1.0
+2492,3218,Religious Group (v6),permissible to worship other god?,,1.0
+2496,2883,Religious Group (v6),murder coreligionists,,1.0
+2496,2887,Religious Group (v6),honouring oaths,0.0,1.0
+2496,2898,Religious Group (v6),ritual observance,,1.0
+2496,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2496,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2496,2982,Religious Group (v6),conversion non-religionists,0.0,1.0
+2496,2899,Religious Group (v6),other elite loyalty,1.0,1.0
+2496,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2496,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2496,2944,Religious Group (v6),is chthonic,,1.0
+2496,2948,Religious Group (v6),is sky deity,1.0,1.0
+2496,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2496,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2496,3192,Religious Group (v6),positive emotion,1.0,1.0
+2496,3229,Religious Group (v6),negative emotion,1.0,1.0
+2496,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2496,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2496,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2496,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2496,3296,Religious Group (v6),communicates with living,1.0,1.0
+2496,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2496,2861,Religious Group (v6),murder other religions,0.0,1.0
+2496,2902,Religious Group (v6),non-lethal fighting,,1.0
+2496,2911,Religious Group (v6),lying,1.0,1.0
+2496,2917,Religious Group (v6),laziness,1.0,1.0
+2496,2921,Religious Group (v6),property crimes,1.0,1.0
+2496,2923,Religious Group (v6),shirking risk,,1.0
+2496,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2496,2939,Religious Group (v6),personal hygiene,,1.0
+2496,2942,Religious Group (v6),gossiping,,1.0
+2496,2962,Religious Group (v6),sorcery,1.0,1.0
+2496,2970,Religious Group (v6),taboos,0.0,1.0
+2496,2972,Religious Group (v6),murder other polities,,1.0
+2496,2978,Religious Group (v6),sex,0.0,1.0
+2496,2985,Religious Group (v6),economic fairness,,1.0
+2496,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2503,2883,Religious Text (v1.0),murder coreligionists,,1.0
+2503,2887,Religious Text (v1.0),honouring oaths,,1.0
+2503,2898,Religious Text (v1.0),ritual observance,,1.0
+2503,2930,Religious Text (v1.0),performance of rituals,,1.0
+2503,2974,Religious Text (v1.0),disrespecting elders,,1.0
+2503,2982,Religious Text (v1.0),conversion non-religionists,,1.0
+2503,2899,Religious Text (v1.0),other elite loyalty,0.0,1.0
+2503,2910,Religious Text (v1.0),is kin to elites,0.0,1.0
+2503,2941,Religious Text (v1.0),is anthropomorphic,1.0,1.0
+2503,2944,Religious Text (v1.0),is chthonic,1.0,1.0
+2503,2948,Religious Text (v1.0),is sky deity,0.0,1.0
+2503,2958,Religious Text (v1.0),is monarch fused,0.0,1.0
+2503,2984,Religious Text (v1.0),is unquestionably good,1.0,1.0
+2503,3192,Religious Text (v1.0),positive emotion,0.0,1.0
+2503,3229,Religious Text (v1.0),negative emotion,1.0,1.0
+2503,3233,Religious Text (v1.0),knowledge this world,1.0,1.0
+2503,3247,Religious Text (v1.0),causal efficacy the world,1.0,1.0
+2503,3283,Religious Text (v1.0),possesses hunger,0.0,1.0
+2503,3288,Religious Text (v1.0),indirect causal efficacy the world,1.0,1.0
+2503,3296,Religious Text (v1.0),communicates with living,1.0,1.0
+2503,3328,Religious Text (v1.0),is monarch manifestation,0.0,1.0
+2503,2861,Religious Text (v1.0),murder other religions,,1.0
+2503,2902,Religious Text (v1.0),non-lethal fighting,,1.0
+2503,2911,Religious Text (v1.0),lying,,1.0
+2503,2917,Religious Text (v1.0),laziness,,1.0
+2503,2921,Religious Text (v1.0),property crimes,,1.0
+2503,2923,Religious Text (v1.0),shirking risk,,1.0
+2503,2928,Religious Text (v1.0),prosocial norm adherence,,1.0
+2503,2939,Religious Text (v1.0),personal hygiene,,1.0
+2503,2942,Religious Text (v1.0),gossiping,,1.0
+2503,2962,Religious Text (v1.0),sorcery,,1.0
+2503,2970,Religious Text (v1.0),taboos,,1.0
+2503,2972,Religious Text (v1.0),murder other polities,,1.0
+2503,2978,Religious Text (v1.0),sex,,1.0
+2503,2985,Religious Text (v1.0),economic fairness,,1.0
+2503,3218,Religious Text (v1.0),permissible to worship other god?,1.0,1.0
+2509,2883,Religious Group (v6),murder coreligionists,,1.0
+2509,2887,Religious Group (v6),honouring oaths,,1.0
+2509,2898,Religious Group (v6),ritual observance,,1.0
+2509,2930,Religious Group (v6),performance of rituals,,1.0
+2509,2974,Religious Group (v6),disrespecting elders,,1.0
+2509,2982,Religious Group (v6),conversion non-religionists,,1.0
+2509,2899,Religious Group (v6),other elite loyalty,1.0,1.0
+2509,2910,Religious Group (v6),is kin to elites,1.0,1.0
+2509,2941,Religious Group (v6),is anthropomorphic,,1.0
+2509,2944,Religious Group (v6),is chthonic,1.0,1.0
+2509,2948,Religious Group (v6),is sky deity,1.0,1.0
+2509,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2509,2984,Religious Group (v6),is unquestionably good,,1.0
+2509,3192,Religious Group (v6),positive emotion,1.0,1.0
+2509,3229,Religious Group (v6),negative emotion,1.0,1.0
+2509,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2509,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2509,3283,Religious Group (v6),possesses hunger,,1.0
+2509,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2509,3296,Religious Group (v6),communicates with living,1.0,1.0
+2509,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2509,2861,Religious Group (v6),murder other religions,,1.0
+2509,2902,Religious Group (v6),non-lethal fighting,,1.0
+2509,2911,Religious Group (v6),lying,,1.0
+2509,2917,Religious Group (v6),laziness,,1.0
+2509,2921,Religious Group (v6),property crimes,,1.0
+2509,2923,Religious Group (v6),shirking risk,,1.0
+2509,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2509,2939,Religious Group (v6),personal hygiene,,1.0
+2509,2942,Religious Group (v6),gossiping,,1.0
+2509,2962,Religious Group (v6),sorcery,,1.0
+2509,2970,Religious Group (v6),taboos,,1.0
+2509,2972,Religious Group (v6),murder other polities,,1.0
+2509,2978,Religious Group (v6),sex,,1.0
+2509,2985,Religious Group (v6),economic fairness,,1.0
+2509,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2518,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2518,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2518,2898,Religious Group (v6),ritual observance,1.0,1.0
+2518,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2518,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2518,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2518,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2518,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2518,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2518,2944,Religious Group (v6),is chthonic,0.0,1.0
+2518,2948,Religious Group (v6),is sky deity,1.0,1.0
+2518,2958,Religious Group (v6),is monarch fused,,1.0
+2518,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2518,3192,Religious Group (v6),positive emotion,1.0,1.0
+2518,3229,Religious Group (v6),negative emotion,1.0,1.0
+2518,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2518,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2518,3283,Religious Group (v6),possesses hunger,1.0,1.0
+2518,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2518,3296,Religious Group (v6),communicates with living,1.0,1.0
+2518,3328,Religious Group (v6),is monarch manifestation,1.0,1.0
+2518,2861,Religious Group (v6),murder other religions,1.0,1.0
+2518,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2518,2911,Religious Group (v6),lying,1.0,1.0
+2518,2917,Religious Group (v6),laziness,1.0,1.0
+2518,2921,Religious Group (v6),property crimes,1.0,1.0
+2518,2923,Religious Group (v6),shirking risk,1.0,1.0
+2518,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2518,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2518,2942,Religious Group (v6),gossiping,1.0,1.0
+2518,2962,Religious Group (v6),sorcery,1.0,1.0
+2518,2970,Religious Group (v6),taboos,1.0,1.0
+2518,2972,Religious Group (v6),murder other polities,1.0,1.0
+2518,2978,Religious Group (v6),sex,1.0,1.0
+2518,2985,Religious Group (v6),economic fairness,1.0,1.0
+2518,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2525,2883,Religious Group (v6),murder coreligionists,,1.0
+2525,2887,Religious Group (v6),honouring oaths,,1.0
+2525,2898,Religious Group (v6),ritual observance,,1.0
+2525,2930,Religious Group (v6),performance of rituals,,1.0
+2525,2974,Religious Group (v6),disrespecting elders,,1.0
+2525,2982,Religious Group (v6),conversion non-religionists,,1.0
+2525,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2525,2910,Religious Group (v6),is kin to elites,1.0,1.0
+2525,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2525,2944,Religious Group (v6),is chthonic,0.0,1.0
+2525,2948,Religious Group (v6),is sky deity,1.0,1.0
+2525,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2525,2984,Religious Group (v6),is unquestionably good,0.0,1.0
+2525,3192,Religious Group (v6),positive emotion,,1.0
+2525,3229,Religious Group (v6),negative emotion,1.0,1.0
+2525,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2525,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2525,3283,Religious Group (v6),possesses hunger,1.0,1.0
+2525,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2525,3296,Religious Group (v6),communicates with living,1.0,1.0
+2525,3328,Religious Group (v6),is monarch manifestation,1.0,1.0
+2525,2861,Religious Group (v6),murder other religions,,1.0
+2525,2902,Religious Group (v6),non-lethal fighting,,1.0
+2525,2911,Religious Group (v6),lying,,1.0
+2525,2917,Religious Group (v6),laziness,,1.0
+2525,2921,Religious Group (v6),property crimes,,1.0
+2525,2923,Religious Group (v6),shirking risk,,1.0
+2525,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2525,2939,Religious Group (v6),personal hygiene,,1.0
+2525,2942,Religious Group (v6),gossiping,,1.0
+2525,2962,Religious Group (v6),sorcery,,1.0
+2525,2970,Religious Group (v6),taboos,,1.0
+2525,2972,Religious Group (v6),murder other polities,,1.0
+2525,2978,Religious Group (v6),sex,,1.0
+2525,2985,Religious Group (v6),economic fairness,,1.0
+2525,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2526,2883,Religious Group (v6),murder coreligionists,,1.0
+2526,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2526,2898,Religious Group (v6),ritual observance,1.0,1.0
+2526,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2526,2974,Religious Group (v6),disrespecting elders,,1.0
+2526,2982,Religious Group (v6),conversion non-religionists,,1.0
+2526,2899,Religious Group (v6),other elite loyalty,,1.0
+2526,2910,Religious Group (v6),is kin to elites,,1.0
+2526,2941,Religious Group (v6),is anthropomorphic,,1.0
+2526,2944,Religious Group (v6),is chthonic,,1.0
+2526,2948,Religious Group (v6),is sky deity,,1.0
+2526,2958,Religious Group (v6),is monarch fused,,1.0
+2526,2984,Religious Group (v6),is unquestionably good,,1.0
+2526,3192,Religious Group (v6),positive emotion,,1.0
+2526,3229,Religious Group (v6),negative emotion,,1.0
+2526,3233,Religious Group (v6),knowledge this world,,1.0
+2526,3247,Religious Group (v6),causal efficacy the world,,1.0
+2526,3283,Religious Group (v6),possesses hunger,,1.0
+2526,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2526,3296,Religious Group (v6),communicates with living,,1.0
+2526,3328,Religious Group (v6),is monarch manifestation,,1.0
+2526,2861,Religious Group (v6),murder other religions,0.0,1.0
+2526,2902,Religious Group (v6),non-lethal fighting,,1.0
+2526,2911,Religious Group (v6),lying,1.0,1.0
+2526,2917,Religious Group (v6),laziness,,1.0
+2526,2921,Religious Group (v6),property crimes,1.0,1.0
+2526,2923,Religious Group (v6),shirking risk,,1.0
+2526,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2526,2939,Religious Group (v6),personal hygiene,,1.0
+2526,2942,Religious Group (v6),gossiping,,1.0
+2526,2962,Religious Group (v6),sorcery,,1.0
+2526,2970,Religious Group (v6),taboos,,1.0
+2526,2972,Religious Group (v6),murder other polities,0.0,1.0
+2526,2978,Religious Group (v6),sex,,1.0
+2526,2985,Religious Group (v6),economic fairness,,1.0
+2526,3218,Religious Group (v6),permissible to worship other god?,,1.0
+2528,2883,Religious Group (v6),murder coreligionists,,1.0
+2528,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2528,2898,Religious Group (v6),ritual observance,1.0,1.0
+2528,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2528,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2528,2982,Religious Group (v6),conversion non-religionists,0.0,1.0
+2528,2899,Religious Group (v6),other elite loyalty,,1.0
+2528,2910,Religious Group (v6),is kin to elites,,1.0
+2528,2941,Religious Group (v6),is anthropomorphic,,1.0
+2528,2944,Religious Group (v6),is chthonic,,1.0
+2528,2948,Religious Group (v6),is sky deity,,1.0
+2528,2958,Religious Group (v6),is monarch fused,,1.0
+2528,2984,Religious Group (v6),is unquestionably good,,1.0
+2528,3192,Religious Group (v6),positive emotion,,1.0
+2528,3229,Religious Group (v6),negative emotion,,1.0
+2528,3233,Religious Group (v6),knowledge this world,,1.0
+2528,3247,Religious Group (v6),causal efficacy the world,,1.0
+2528,3283,Religious Group (v6),possesses hunger,,1.0
+2528,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2528,3296,Religious Group (v6),communicates with living,,1.0
+2528,3328,Religious Group (v6),is monarch manifestation,,1.0
+2528,2861,Religious Group (v6),murder other religions,,1.0
+2528,2902,Religious Group (v6),non-lethal fighting,,1.0
+2528,2911,Religious Group (v6),lying,,1.0
+2528,2917,Religious Group (v6),laziness,,1.0
+2528,2921,Religious Group (v6),property crimes,,1.0
+2528,2923,Religious Group (v6),shirking risk,,1.0
+2528,2928,Religious Group (v6),prosocial norm adherence,0.0,1.0
+2528,2939,Religious Group (v6),personal hygiene,,1.0
+2528,2942,Religious Group (v6),gossiping,,1.0
+2528,2962,Religious Group (v6),sorcery,,1.0
+2528,2970,Religious Group (v6),taboos,1.0,1.0
+2528,2972,Religious Group (v6),murder other polities,,1.0
+2528,2978,Religious Group (v6),sex,,1.0
+2528,2985,Religious Group (v6),economic fairness,,1.0
+2528,3218,Religious Group (v6),permissible to worship other god?,,1.0
+2548,2883,Religious Group (v6),murder coreligionists,0.0,1.0
+2548,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2548,2898,Religious Group (v6),ritual observance,1.0,1.0
+2548,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2548,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2548,2982,Religious Group (v6),conversion non-religionists,0.0,1.0
+2548,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2548,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2548,2941,Religious Group (v6),is anthropomorphic,1.0,1.0
+2548,2944,Religious Group (v6),is chthonic,,1.0
+2548,2948,Religious Group (v6),is sky deity,1.0,1.0
+2548,2958,Religious Group (v6),is monarch fused,,1.0
+2548,2984,Religious Group (v6),is unquestionably good,0.0,1.0
+2548,3192,Religious Group (v6),positive emotion,1.0,1.0
+2548,3229,Religious Group (v6),negative emotion,,1.0
+2548,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2548,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2548,3283,Religious Group (v6),possesses hunger,1.0,1.0
+2548,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2548,3296,Religious Group (v6),communicates with living,1.0,1.0
+2548,3328,Religious Group (v6),is monarch manifestation,,1.0
+2548,2861,Religious Group (v6),murder other religions,,1.0
+2548,2902,Religious Group (v6),non-lethal fighting,0.0,1.0
+2548,2911,Religious Group (v6),lying,1.0,1.0
+2548,2917,Religious Group (v6),laziness,1.0,1.0
+2548,2921,Religious Group (v6),property crimes,0.0,1.0
+2548,2923,Religious Group (v6),shirking risk,0.0,1.0
+2548,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2548,2939,Religious Group (v6),personal hygiene,0.0,1.0
+2548,2942,Religious Group (v6),gossiping,0.0,1.0
+2548,2962,Religious Group (v6),sorcery,0.0,1.0
+2548,2970,Religious Group (v6),taboos,1.0,1.0
+2548,2972,Religious Group (v6),murder other polities,,1.0
+2548,2978,Religious Group (v6),sex,,1.0
+2548,2985,Religious Group (v6),economic fairness,0.0,1.0
+2548,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0
+2564,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2564,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2564,2898,Religious Group (v6),ritual observance,1.0,1.0
+2564,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2564,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2564,2982,Religious Group (v6),conversion non-religionists,0.0,1.0
+2564,2899,Religious Group (v6),other elite loyalty,,1.0
+2564,2910,Religious Group (v6),is kin to elites,,1.0
+2564,2941,Religious Group (v6),is anthropomorphic,,1.0
+2564,2944,Religious Group (v6),is chthonic,,1.0
+2564,2948,Religious Group (v6),is sky deity,,1.0
+2564,2958,Religious Group (v6),is monarch fused,,1.0
+2564,2984,Religious Group (v6),is unquestionably good,,1.0
+2564,3192,Religious Group (v6),positive emotion,,1.0
+2564,3229,Religious Group (v6),negative emotion,,1.0
+2564,3233,Religious Group (v6),knowledge this world,,1.0
+2564,3247,Religious Group (v6),causal efficacy the world,,1.0
+2564,3283,Religious Group (v6),possesses hunger,,1.0
+2564,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2564,3296,Religious Group (v6),communicates with living,,1.0
+2564,3328,Religious Group (v6),is monarch manifestation,,1.0
+2564,2861,Religious Group (v6),murder other religions,1.0,1.0
+2564,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2564,2911,Religious Group (v6),lying,1.0,1.0
+2564,2917,Religious Group (v6),laziness,1.0,1.0
+2564,2921,Religious Group (v6),property crimes,1.0,1.0
+2564,2923,Religious Group (v6),shirking risk,1.0,1.0
+2564,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2564,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2564,2942,Religious Group (v6),gossiping,1.0,1.0
+2564,2962,Religious Group (v6),sorcery,0.0,1.0
+2564,2970,Religious Group (v6),taboos,1.0,1.0
+2564,2972,Religious Group (v6),murder other polities,1.0,1.0
+2564,2978,Religious Group (v6),sex,,1.0
+2564,2985,Religious Group (v6),economic fairness,1.0,1.0
+2564,3218,Religious Group (v6),permissible to worship other god?,,1.0
+2567,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2567,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2567,2898,Religious Group (v6),ritual observance,1.0,1.0
+2567,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2567,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2567,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2567,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2567,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2567,2941,Religious Group (v6),is anthropomorphic,0.0,1.0
+2567,2944,Religious Group (v6),is chthonic,0.0,1.0
+2567,2948,Religious Group (v6),is sky deity,0.0,1.0
+2567,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2567,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2567,3192,Religious Group (v6),positive emotion,1.0,1.0
+2567,3229,Religious Group (v6),negative emotion,0.0,1.0
+2567,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2567,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2567,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2567,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0
+2567,3296,Religious Group (v6),communicates with living,0.0,1.0
+2567,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2567,2861,Religious Group (v6),murder other religions,1.0,1.0
+2567,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2567,2911,Religious Group (v6),lying,1.0,1.0
+2567,2917,Religious Group (v6),laziness,1.0,1.0
+2567,2921,Religious Group (v6),property crimes,1.0,1.0
+2567,2923,Religious Group (v6),shirking risk,1.0,1.0
+2567,2928,Religious Group (v6),prosocial norm adherence,,1.0
+2567,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2567,2942,Religious Group (v6),gossiping,1.0,1.0
+2567,2962,Religious Group (v6),sorcery,1.0,1.0
+2567,2970,Religious Group (v6),taboos,1.0,1.0
+2567,2972,Religious Group (v6),murder other polities,1.0,1.0
+2567,2978,Religious Group (v6),sex,1.0,1.0
+2567,2985,Religious Group (v6),economic fairness,1.0,1.0
+2567,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0
+2578,2883,Religious Text (v1.0),murder coreligionists,,1.0
+2578,2887,Religious Text (v1.0),honouring oaths,,1.0
+2578,2898,Religious Text (v1.0),ritual observance,,1.0
+2578,2930,Religious Text (v1.0),performance of rituals,,1.0
+2578,2974,Religious Text (v1.0),disrespecting elders,,1.0
+2578,2982,Religious Text (v1.0),conversion non-religionists,,1.0
+2578,2899,Religious Text (v1.0),other elite loyalty,0.0,1.0
+2578,2910,Religious Text (v1.0),is kin to elites,0.0,1.0
+2578,2941,Religious Text (v1.0),is anthropomorphic,1.0,1.0
+2578,2944,Religious Text (v1.0),is chthonic,,1.0
+2578,2948,Religious Text (v1.0),is sky deity,,1.0
+2578,2958,Religious Text (v1.0),is monarch fused,0.0,1.0
+2578,2984,Religious Text (v1.0),is unquestionably good,1.0,1.0
+2578,3192,Religious Text (v1.0),positive emotion,1.0,1.0
+2578,3229,Religious Text (v1.0),negative emotion,1.0,1.0
+2578,3233,Religious Text (v1.0),knowledge this world,1.0,1.0
+2578,3247,Religious Text (v1.0),causal efficacy the world,1.0,1.0
+2578,3283,Religious Text (v1.0),possesses hunger,1.0,1.0
+2578,3288,Religious Text (v1.0),indirect causal efficacy the world,1.0,1.0
+2578,3296,Religious Text (v1.0),communicates with living,1.0,1.0
+2578,3328,Religious Text (v1.0),is monarch manifestation,0.0,1.0
+2578,2861,Religious Text (v1.0),murder other religions,,1.0
+2578,2902,Religious Text (v1.0),non-lethal fighting,,1.0
+2578,2911,Religious Text (v1.0),lying,,1.0
+2578,2917,Religious Text (v1.0),laziness,,1.0
+2578,2921,Religious Text (v1.0),property crimes,,1.0
+2578,2923,Religious Text (v1.0),shirking risk,,1.0
+2578,2928,Religious Text (v1.0),prosocial norm adherence,,1.0
+2578,2939,Religious Text (v1.0),personal hygiene,,1.0
+2578,2942,Religious Text (v1.0),gossiping,,1.0
+2578,2962,Religious Text (v1.0),sorcery,,1.0
+2578,2970,Religious Text (v1.0),taboos,,1.0
+2578,2972,Religious Text (v1.0),murder other polities,,1.0
+2578,2978,Religious Text (v1.0),sex,,1.0
+2578,2985,Religious Text (v1.0),economic fairness,,1.0
+2578,3218,Religious Text (v1.0),permissible to worship other god?,1.0,1.0
+2585,2883,Religious Text (v1.0),murder coreligionists,,1.0
+2585,2887,Religious Text (v1.0),honouring oaths,,1.0
+2585,2898,Religious Text (v1.0),ritual observance,,1.0
+2585,2930,Religious Text (v1.0),performance of rituals,,1.0
+2585,2974,Religious Text (v1.0),disrespecting elders,,1.0
+2585,2982,Religious Text (v1.0),conversion non-religionists,,1.0
+2585,2899,Religious Text (v1.0),other elite loyalty,0.0,1.0
+2585,2910,Religious Text (v1.0),is kin to elites,1.0,1.0
+2585,2941,Religious Text (v1.0),is anthropomorphic,1.0,1.0
+2585,2944,Religious Text (v1.0),is chthonic,1.0,1.0
+2585,2948,Religious Text (v1.0),is sky deity,1.0,1.0
+2585,2958,Religious Text (v1.0),is monarch fused,1.0,1.0
+2585,2984,Religious Text (v1.0),is unquestionably good,1.0,1.0
+2585,3192,Religious Text (v1.0),positive emotion,1.0,1.0
+2585,3229,Religious Text (v1.0),negative emotion,1.0,1.0
+2585,3233,Religious Text (v1.0),knowledge this world,1.0,1.0
+2585,3247,Religious Text (v1.0),causal efficacy the world,0.0,1.0
+2585,3283,Religious Text (v1.0),possesses hunger,0.0,1.0
+2585,3288,Religious Text (v1.0),indirect causal efficacy the world,0.0,1.0
+2585,3296,Religious Text (v1.0),communicates with living,0.0,1.0
+2585,3328,Religious Text (v1.0),is monarch manifestation,1.0,1.0
+2585,2861,Religious Text (v1.0),murder other religions,,1.0
+2585,2902,Religious Text (v1.0),non-lethal fighting,,1.0
+2585,2911,Religious Text (v1.0),lying,,1.0
+2585,2917,Religious Text (v1.0),laziness,,1.0
+2585,2921,Religious Text (v1.0),property crimes,,1.0
+2585,2923,Religious Text (v1.0),shirking risk,,1.0
+2585,2928,Religious Text (v1.0),prosocial norm adherence,,1.0
+2585,2939,Religious Text (v1.0),personal hygiene,,1.0
+2585,2942,Religious Text (v1.0),gossiping,,1.0
+2585,2962,Religious Text (v1.0),sorcery,,1.0
+2585,2970,Religious Text (v1.0),taboos,,1.0
+2585,2972,Religious Text (v1.0),murder other polities,,1.0
+2585,2978,Religious Text (v1.0),sex,,1.0
+2585,2985,Religious Text (v1.0),economic fairness,,1.0
+2585,3218,Religious Text (v1.0),permissible to worship other god?,1.0,1.0
+2590,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2590,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2590,2898,Religious Group (v6),ritual observance,1.0,1.0
+2590,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2590,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2590,2982,Religious Group (v6),conversion non-religionists,0.0,1.0
+2590,2899,Religious Group (v6),other elite loyalty,,1.0
+2590,2910,Religious Group (v6),is kin to elites,,1.0
+2590,2941,Religious Group (v6),is anthropomorphic,,1.0
+2590,2944,Religious Group (v6),is chthonic,,1.0
+2590,2948,Religious Group (v6),is sky deity,,1.0
+2590,2958,Religious Group (v6),is monarch fused,,1.0
+2590,2984,Religious Group (v6),is unquestionably good,,1.0
+2590,3192,Religious Group (v6),positive emotion,,1.0
+2590,3229,Religious Group (v6),negative emotion,,1.0
+2590,3233,Religious Group (v6),knowledge this world,,1.0
+2590,3247,Religious Group (v6),causal efficacy the world,,1.0
+2590,3283,Religious Group (v6),possesses hunger,,1.0
+2590,3288,Religious Group (v6),indirect causal efficacy the world,,1.0
+2590,3296,Religious Group (v6),communicates with living,,1.0
+2590,3328,Religious Group (v6),is monarch manifestation,,1.0
+2590,2861,Religious Group (v6),murder other religions,0.0,1.0
+2590,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2590,2911,Religious Group (v6),lying,1.0,1.0
+2590,2917,Religious Group (v6),laziness,1.0,1.0
+2590,2921,Religious Group (v6),property crimes,1.0,1.0
+2590,2923,Religious Group (v6),shirking risk,1.0,1.0
+2590,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2590,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2590,2942,Religious Group (v6),gossiping,,1.0
+2590,2962,Religious Group (v6),sorcery,1.0,1.0
+2590,2970,Religious Group (v6),taboos,1.0,1.0
+2590,2972,Religious Group (v6),murder other polities,0.0,1.0
+2590,2978,Religious Group (v6),sex,1.0,1.0
+2590,2985,Religious Group (v6),economic fairness,0.0,1.0
+2590,3218,Religious Group (v6),permissible to worship other god?,,1.0
+2614,2883,Religious Group (v6),murder coreligionists,1.0,1.0
+2614,2887,Religious Group (v6),honouring oaths,1.0,1.0
+2614,2898,Religious Group (v6),ritual observance,1.0,1.0
+2614,2930,Religious Group (v6),performance of rituals,1.0,1.0
+2614,2974,Religious Group (v6),disrespecting elders,1.0,1.0
+2614,2982,Religious Group (v6),conversion non-religionists,1.0,1.0
+2614,2899,Religious Group (v6),other elite loyalty,0.0,1.0
+2614,2910,Religious Group (v6),is kin to elites,0.0,1.0
+2614,2941,Religious Group (v6),is anthropomorphic,0.0,1.0
+2614,2944,Religious Group (v6),is chthonic,1.0,1.0
+2614,2948,Religious Group (v6),is sky deity,1.0,1.0
+2614,2958,Religious Group (v6),is monarch fused,0.0,1.0
+2614,2984,Religious Group (v6),is unquestionably good,1.0,1.0
+2614,3192,Religious Group (v6),positive emotion,1.0,1.0
+2614,3229,Religious Group (v6),negative emotion,0.0,1.0
+2614,3233,Religious Group (v6),knowledge this world,1.0,1.0
+2614,3247,Religious Group (v6),causal efficacy the world,1.0,1.0
+2614,3283,Religious Group (v6),possesses hunger,0.0,1.0
+2614,3288,Religious Group (v6),indirect causal efficacy the world,1.0,1.0
+2614,3296,Religious Group (v6),communicates with living,1.0,1.0
+2614,3328,Religious Group (v6),is monarch manifestation,0.0,1.0
+2614,2861,Religious Group (v6),murder other religions,1.0,1.0
+2614,2902,Religious Group (v6),non-lethal fighting,1.0,1.0
+2614,2911,Religious Group (v6),lying,1.0,1.0
+2614,2917,Religious Group (v6),laziness,1.0,1.0
+2614,2921,Religious Group (v6),property crimes,1.0,1.0
+2614,2923,Religious Group (v6),shirking risk,1.0,1.0
+2614,2928,Religious Group (v6),prosocial norm adherence,1.0,1.0
+2614,2939,Religious Group (v6),personal hygiene,1.0,1.0
+2614,2942,Religious Group (v6),gossiping,1.0,1.0
+2614,2962,Religious Group (v6),sorcery,1.0,1.0
+2614,2970,Religious Group (v6),taboos,0.0,1.0
+2614,2972,Religious Group (v6),murder other polities,1.0,1.0
+2614,2978,Religious Group (v6),sex,0.0,1.0
+2614,2985,Religious Group (v6),economic fairness,1.0,1.0
+2614,3218,Religious Group (v6),permissible to worship other god?,0.0,1.0

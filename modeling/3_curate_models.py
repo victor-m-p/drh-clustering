@@ -5,7 +5,7 @@ subquestion = "is unquestionably good"  # "conversion non-religionists"
 question_label = "unquestionably"  # "conversion"
 
 ### data on tags and other entry level things ###
-entry_tags = pd.read_csv("entry_tags.csv")
+entry_tags = pd.read_csv("data/entry_tags.csv")
 entry_tags["poll_group"] = entry_tags["poll_name"].str.contains("Group")
 entry_tags = entry_tags[
     [
@@ -22,17 +22,17 @@ entry_tags = entry_tags[
 ]
 
 ### include world regions ###
-region_data = pd.read_csv("../data/raw/region_data.csv")
+region_data = pd.read_csv("../data/sccsrv3/region_data.csv")
 region_data = region_data[["region_id", "world_region"]].drop_duplicates()
 entry_data = entry_tags.merge(region_data, on="region_id", how="inner")
 entry_data = entry_data.drop(columns="region_id")  # not needed anymore
 
 ### include literacy ###
-literacy = pd.read_csv("literacy.csv")
+literacy = pd.read_csv("data/literacy.csv")
 entry_data = entry_data.merge(literacy, on="entry_id", how="inner")
 
 ### include social complexity ###
-social_complexity = pd.read_csv("social_complexity.csv")
+social_complexity = pd.read_csv("data/social_complexity.csv")
 social_complexity = social_complexity[
     ["entry_id", "social_complexity_large"]
 ].drop_duplicates()
@@ -66,4 +66,4 @@ answers_mdl["year_norm"] = (
     answers_mdl["year_from"] - answers_mdl["year_from"].min()
 ) / (answers_mdl["year_from"].max() - answers_mdl["year_from"].min())
 
-answers_mdl.to_csv(f"{superquestion}_{question_label}.csv", index=False)
+answers_mdl.to_csv(f"data/{superquestion}_{question_label}.csv", index=False)

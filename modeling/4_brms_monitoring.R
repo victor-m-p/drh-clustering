@@ -1,9 +1,10 @@
 # VMP 2024-08-21
+# run from inside modeling/
 library(pacman)
 p_load(brms, tidyverse, HDInterval, stringr)
 
 # load monitoring
-data_groups <- read_csv("modeling/monitoring_conversion.csv") # n = 368
+data_groups <- read_csv("data/monitoring_conversion.csv") # n = 368
 
 ### simple model ###
 mdl_1 <- brm(
@@ -36,7 +37,7 @@ df_population <- map_dfr(hypothesis_list, evaluate_hypothesis, brms_mdl = mdl_1)
 df_population <- df_population |>
     mutate(across(c(Estimate, Est.Error, CI.Lower, CI.Upper, Evid.Ratio, Post.Prob), ~ round(., 2))) |>
     select(-Star)
-write_csv(df_population, "data/mdl/monitoring_conversion_population.csv")
+write_csv(df_population, "data/monitoring_conversion_population.csv")
 
 # group effects
 # Coef is the sum of the population level effect and corresponding group-level effects
@@ -48,16 +49,16 @@ df_group <- df_group |>
     mutate(across(c(Estimate, Est.Error, CI.Lower, CI.Upper, Evid.Ratio, Post.Prob), ~ round(., 2))) |>
     select(-Star)
 
-write_csv(df_group, "data/mdl/monitoring_conversion_group.csv")
+write_csv(df_group, "data/monitoring_conversion_group.csv")
 
 # need summary as well for Rhat and ESS
 model_summary <- summary(mdl_1)
 fixed_summary <- as.data.frame(model_summary$fixed)
 fixed_summary$parameter <- rownames(fixed_summary)
-write_csv(fixed_summary, "data/mdl/monitoring_conversion_fixed.csv")
+write_csv(fixed_summary, "data/monitoring_conversion_fixed.csv")
 
 random_summary <- as.data.frame(model_summary$random)
 random_summary$parameter <- rownames(random_summary)
-write_csv(random_summary, "data/mdl/monitoring_conversion_random.csv")
+write_csv(random_summary, "data/monitoring_conversion_random.csv")
 
 ### social complexity model

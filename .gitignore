@@ -1,6 +1,9 @@
 # data and manuscript
+data/raw/
+data/sccsrv3/*
+!data/sccsrv3/drh_tables.zip
 CLAUDE.md
-data/raw/answerset.csv
+notes/
 manuscript
 
 # Python

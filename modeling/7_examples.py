@@ -8,7 +8,7 @@ def convert_logodds(x):
 
 
 # extract logodds from monitoring data
-monitoring_population = pd.read_csv("../data/mdl/monitoring_conversion_population.csv")
+monitoring_population = pd.read_csv("data/monitoring_conversion_population.csv")
 intercept_logodds = monitoring_population[
     monitoring_population["Hypothesis"] == "(Intercept) > 0"
 ]["Estimate"].values[0]
@@ -29,12 +29,12 @@ print(intercept_logodds, year_logodds, late_entry)
 print(intercept_logodds, year_logodds, christian_logodds, christian)
 
 # check earliest and latest year from
-monitoring = pd.read_csv("monitoring_conversion.csv")
+monitoring = pd.read_csv("data/monitoring_conversion.csv")
 monitoring["year_from"].min()  # -3500
 monitoring["year_from"].max()  # 2022
 
 # get N for each analysis
-monitoring = pd.read_csv("monitoring_conversion.csv")
+monitoring = pd.read_csv("data/monitoring_conversion.csv")
 len(monitoring)  # 368
-shg = pd.read_csv("shg_unquestionably.csv")
+shg = pd.read_csv("data/shg_unquestionably.csv")
 len(shg)  # 395

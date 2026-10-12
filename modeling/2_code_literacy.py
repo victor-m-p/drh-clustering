@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 # find has writing
-answerset = pd.read_csv("../data/raw/answerset.csv")
+answerset = pd.read_csv("../data/sccsrv3/answerset.csv")
 
 # take written language super-questions
 written_language = answerset[
@@ -16,7 +16,7 @@ written_language = written_language[
 ].drop_duplicates()
 
 # now use the literacy recoding table
-literacy_recode = pd.read_csv("../data/raw/literacy_recode.csv")
+literacy_recode = pd.read_csv("../data/sccsrv3/literacy_recode.csv")
 literacy_recode = literacy_recode[["entry_id", "question_name", "answer_value"]]
 
 # take answer from literacy recode where it exists
@@ -55,4 +55,4 @@ written_language_entries = list(set(written_language_entries + religious_text_en
 answers_groups = pd.read_csv("../data/preprocessed/answers_subset_groups.csv")
 answers_groups = answers_groups[["entry_id"]].drop_duplicates()
 answers_groups["literacy"] = answers_groups.isin(written_language_entries).astype(int)
-answers_groups.to_csv("literacy.csv", index=False)
+answers_groups.to_csv("data/literacy.csv", index=False)
