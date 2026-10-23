@@ -1,0 +1,363 @@
+---
+title: "Time"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Overview
+
+How does P(yes) change over time, if we do not force a straight line (on the log-odds scale)?
+Groups only; the two parent questions and the 36 child questions (conditional). No traditions (for now).
+
+| model | formula |
+|---|---|
+| linear | `0 + Intercept + time + (1 | world_region)` |
+| smooth | `s(time) + (1 | world_region)` |
+
+- time: `year_from` / 1000 (0 = 0 CE)
+- `s(time)`: thin plate regression spline (brms/mgcv default, k = 10 basis functions). The wiggliness is
+  estimated from the data (SD of the spline coefficients, `sds`); a small SD gives an almost straight line.
+- priors: intercept normal(0, 1.5), linear slope normal(0, 1), SDs (world region, spline) exponential(1)
+- conflicting answers weighted 1/n; all entries kept (early and long entries: the smooth can bend where there
+  are few entries, see the number of entries per period)
+
+Run from inside `modeling/` after `3_prepare_data.py`. Fits are saved in `fits/` (delete them to refit),
+figures in `fig/time/`.
+
+```{r setup, message = FALSE}
+library(tidyverse)
+library(brms)
+library(posterior)
+
+options(mc.cores = 4, brms.backend = "cmdstanr")
+dir.create("fits", showWarnings = FALSE)
+theme_set(theme_bw(base_size = 11))
+
+# figures: shown in the session and saved as fig/time/<name>.jpg
+fig_dir <- "fig/time"
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+save_plot <- function(p, name, width, height) {
+  ggsave(file.path(fig_dir, paste0(name, ".jpg")), p, width = width, height = height, dpi = 300)
+  p
+}
+
+model_colors <- c(linear = "#898781", smooth = "#2a78d6")
+```
+
+# Data
+
+```{r data, message = FALSE}
+d <- read_csv("data/model_data.csv") |>
+  mutate(time = year_from / 1000)
+
+parent_questions <- c("supernatural monitoring present", "supreme high god present")
+topic_order <- c(
+  "murder coreligionists", "murder other religions", "murder other polities", "non-lethal fighting",
+  "prosocial norm adherence", "lying", "honouring oaths", "property crimes", "economic fairness",
+  "gossiping", "laziness", "shirking risk", "disrespecting elders", "sex",
+  "ritual observance", "performance of rituals", "taboos", "personal hygiene", "sorcery",
+  "conversion non-religionists",
+  "knowledge this world", "causal efficacy the world", "indirect causal efficacy the world", "communicates with living",
+  "is unquestionably good", "positive emotion", "negative emotion",
+  "is anthropomorphic", "possesses hunger", "is sky deity", "is chthonic",
+  "permissible to worship other god?",
+  "is monarch fused", "is monarch manifestation", "is kin to elites", "other elite loyalty"
+)
+all_questions <- c(parent_questions, topic_order)
+
+questions <- d |>
+  distinct(family, question_short) |>
+  filter(question_short %in% all_questions) |>
+  mutate(family = factor(family, levels = c("parent", "monitoring", "shg")))
+
+# groups only: parent questions and child questions (conditional)
+d_model <- d |>
+  filter(poll == "group") |>
+  filter(question_short %in% parent_questions | (family != "parent" & !inferred))
+```
+
+Entries per period (all questions together; `year_from`):
+
+```{r data_periods}
+periods <- c(-Inf, -1000, -500, 0, 250, 500, 750, 1000, 1250, 1500, 1750, Inf)
+period_mid <- c(-1500, -750, -250, 125, 375, 625, 875, 1125, 1375, 1625, 1875)  # where the points are drawn
+
+d_model |>
+  distinct(entry_id, year_from) |>
+  mutate(period = cut(year_from, periods, dig.lab = 5)) |>
+  count(period)
+```
+
+# Models
+
+```{r models}
+formulas <- list(
+  linear = bf(answer_value | weights(weight) ~ 0 + Intercept + time + (1 | world_region)),
+  smooth = bf(answer_value | weights(weight) ~ s(time) + (1 | world_region))
+)
+
+priors <- list(
+  linear = c(
+    prior(normal(0, 1), class = "b"),
+    prior(normal(0, 1.5), class = "b", coef = "Intercept"),
+    prior(exponential(1), class = "sd")
+  ),
+  smooth = c(
+    prior(normal(0, 1.5), class = "Intercept"),
+    prior(normal(0, 1), class = "b"),        # linear part of the spline
+    prior(exponential(1), class = "sd"),
+    prior(exponential(1), class = "sds")     # wiggliness of the spline
+  )
+)
+```
+
+# Fit
+
+Each model is compiled once (`chains = 0`) and then refit for each question with `update()`.
+
+```{r fit, message = FALSE, results = "hide"}
+templates <- map(names(formulas), function(m) {
+  suppressWarnings(brm(formulas[[m]], data = d_model, family = bernoulli(), prior = priors[[m]], chains = 0, refresh = 0, silent = 2))
+}) |> set_names(names(formulas))
+
+fit_question <- function(model, question) {
+  path <- sprintf("fits/time_%s_%s.rds", model, question)
+  if (file.exists(path)) return(readRDS(path))
+  fit <- update(
+    templates[[model]],
+    newdata = filter(d_model, question_short == question),
+    chains = 4, iter = 2000, seed = 2026, refresh = 0,
+    control = list(adapt_delta = 0.99, max_treedepth = 12)
+  )
+  saveRDS(fit, path)
+  fit
+}
+
+fits <- crossing(model = names(formulas), question = all_questions) |>
+  mutate(fit = map2(model, question, fit_question), model = factor(model, levels = names(formulas)))
+```
+
+# Diagnostics
+
+```{r diagnostics}
+diagnostics <- fits |>
+  mutate(diag = map(fit, function(fit) {
+    s <- summarise_draws(as_draws_df(fit, variable = "^b_|^bs_|^sd_|^sds_", regex = TRUE))
+    tibble(
+      max_rhat = max(s$rhat),
+      min_ess_bulk = min(s$ess_bulk),
+      min_ess_tail = min(s$ess_tail),
+      divergences = sum(subset(nuts_params(fit), Parameter == "divergent__")$Value)
+    )
+  })) |>
+  select(-fit) |>
+  unnest(diag)
+
+# worst values per model
+diagnostics |>
+  group_by(model) |>
+  summarise(max_rhat = max(max_rhat), min_ess_bulk = min(min_ess_bulk), min_ess_tail = min(min_ess_tail), divergences = sum(divergences))
+
+# fits with any problem
+diagnostics |> filter(max_rhat > 1.01 | min_ess_bulk < 400 | min_ess_tail < 400 | divergences > 0)
+```
+
+# Curves
+
+P(yes) over time (average world region; mean and 95% interval) for the linear and the smooth model, with the
+observed share yes per period (points; weighted; size = number of entries). Shown from 3000 BCE.
+
+```{r predictions}
+grid <- tibble(time = seq(-3, 2, by = 0.025), weight = 1)
+
+preds <- fits |>
+  mutate(
+    epred = map(fit, ~ posterior_epred(.x, newdata = grid, re_formula = NA, ndraws = 1000)),
+    linpred = map(fit, ~ posterior_linpred(.x, newdata = grid, re_formula = NA, ndraws = 1000))
+  )
+
+curves <- preds |>
+  mutate(curve = map(epred, ~ grid |> mutate(
+    mean = colMeans(.x), lower = apply(.x, 2, quantile, 0.025), upper = apply(.x, 2, quantile, 0.975)
+  ))) |>
+  select(model, question, curve) |>
+  unnest(curve)
+
+observed <- d_model |>
+  mutate(period = cut(year_from, periods, labels = period_mid)) |>
+  group_by(question = question_short, period) |>
+  summarise(yes = weighted.mean(answer_value, weight), n = n_distinct(entry_id), .groups = "drop") |>
+  mutate(year = as.numeric(as.character(period)))
+```
+
+```{r curves, fig.width = 12, fig.height = 20}
+p_curves <- ggplot(curves, aes(time * 1000)) +
+  geom_ribbon(aes(ymin = lower, ymax = upper, fill = model), alpha = 0.15) +
+  geom_line(aes(y = mean, colour = model)) +
+  geom_point(data = observed, aes(year, yes, size = n), colour = "grey30", alpha = 0.6) +
+  facet_wrap(~ factor(question, levels = all_questions), ncol = 4) +
+  scale_colour_manual(values = model_colors) +
+  scale_fill_manual(values = model_colors) +
+  scale_size_area(max_size = 3) +
+  coord_cartesian(ylim = c(0, 1)) +
+  labs(x = "Year (year_from)", y = "P(yes)", colour = NULL, fill = NULL) +
+  theme(legend.position = "top")
+save_plot(p_curves, "curves", 12, 20)
+```
+
+# Rate of change
+
+Slope of the smooth curve over time (derivative of the log-odds; per 1,000 years; mean and 95% interval),
+with the linear slope (grey, constant). Shaded: periods where the 95% interval of the smooth slope excludes 0.
+
+```{r derivatives}
+# slope per draw: difference of the linear predictor between neighbouring grid points
+step <- diff(grid$time)[1]
+derivatives <- preds |>
+  filter(model == "smooth") |>
+  mutate(deriv = map(linpred, function(lp) {
+    slope <- (lp[, -1] - lp[, -ncol(lp)]) / step
+    tibble(
+      time = (grid$time[-1] + grid$time[-nrow(grid)]) / 2,
+      mean = colMeans(slope), lower = apply(slope, 2, quantile, 0.025), upper = apply(slope, 2, quantile, 0.975)
+    )
+  })) |>
+  select(question, deriv) |>
+  unnest(deriv) |>
+  mutate(change = case_when(lower > 0 ~ "increase", upper < 0 ~ "decrease", TRUE ~ NA_character_))
+
+linear_slopes <- fits |>
+  filter(model == "linear") |>
+  mutate(est = map(fit, ~ summarise_draws(as_draws_df(.x, variable = "b_time"), mean, ~ quantile(.x, c(0.025, 0.975))))) |>
+  select(question, est) |>
+  unnest(est) |>
+  rename(lower = `2.5%`, upper = `97.5%`)
+```
+
+```{r derivative_plot, fig.width = 12, fig.height = 20}
+p_derivatives <- ggplot(derivatives, aes(time * 1000)) +
+  geom_rect(
+    data = filter(derivatives, !is.na(change)),
+    aes(xmin = time * 1000 - step * 500, xmax = time * 1000 + step * 500, ymin = -Inf, ymax = Inf, fill = change),
+    alpha = 0.15
+  ) +
+  geom_hline(yintercept = 0, colour = "grey60") +
+  geom_rect(data = linear_slopes, aes(xmin = -Inf, xmax = Inf, ymin = lower, ymax = upper), inherit.aes = FALSE, fill = "grey50", alpha = 0.15) +
+  geom_hline(data = linear_slopes, aes(yintercept = mean), colour = "grey40", linetype = "dashed") +
+  geom_ribbon(aes(ymin = lower, ymax = upper), fill = "#2a78d6", alpha = 0.2) +
+  geom_line(aes(y = mean), colour = "#2a78d6") +
+  facet_wrap(~ factor(question, levels = all_questions), ncol = 4) +
+  scale_fill_manual(values = c(increase = "#eb6834", decrease = "#2a78d6")) +
+  coord_cartesian(ylim = c(-4, 4)) +
+  labs(x = "Year (year_from)", y = "Slope (log-odds per 1,000 years)", fill = "95% interval excludes 0") +
+  theme(legend.position = "top")
+save_plot(p_derivatives, "derivatives", 12, 20)
+```
+
+Wiggliness of the smooth (SD of the spline coefficients; small = close to a straight line):
+
+```{r wiggliness, fig.width = 8, fig.height = 10}
+wiggliness <- fits |>
+  filter(model == "smooth") |>
+  mutate(est = map(fit, ~ summarise_draws(as_draws_df(.x, variable = "^sds_", regex = TRUE), mean, ~ quantile(.x, c(0.025, 0.975))))) |>
+  select(question, est) |>
+  unnest(est) |>
+  rename(lower = `2.5%`, upper = `97.5%`) |>
+  left_join(questions, by = c("question" = "question_short")) |>
+  mutate(question = factor(question, levels = rev(all_questions)))
+
+p_wiggliness <- ggplot(wiggliness, aes(mean, question)) +
+  geom_pointrange(aes(xmin = lower, xmax = upper), size = 0.2, colour = "#2a78d6") +
+  facet_grid(family ~ ., scales = "free_y", space = "free_y") +
+  labs(x = "SD of spline coefficients (sds)", y = NULL)
+save_plot(p_wiggliness, "wiggliness", 8, 10)
+```
+
+# Model comparison (LOO)
+
+Smooth vs. linear (elpd difference; positive = smooth predicts better; 95% interval as ±1.96 SE).
+
+```{r loo}
+loo_question <- function(model, question, fit) {
+  path <- sprintf("fits/time_loo_%s_%s.rds", model, question)
+  if (file.exists(path)) return(readRDS(path))
+  l <- loo(fit)
+  saveRDS(l, path)
+  l
+}
+loos <- fits |> mutate(loo = pmap(list(as.character(model), question, fit), loo_question))
+
+# Pareto k > 0.7 (unreliable LOO estimate) per model
+loos |>
+  mutate(high_k = map_int(loo, ~ sum(.x$diagnostics$pareto_k > 0.7))) |>
+  group_by(model) |>
+  summarise(fits_with_high_k = sum(high_k > 0), observations_high_k = sum(high_k))
+
+loo_diffs <- loos |>
+  select(model, question, loo) |>
+  pivot_wider(names_from = model, values_from = loo) |>
+  mutate(diff = map2(smooth, linear, function(a, b) {
+    d <- a$pointwise[, "elpd_loo"] - b$pointwise[, "elpd_loo"]
+    tibble(mean = sum(d), se = sqrt(length(d)) * sd(d))
+  })) |>
+  select(question, diff) |>
+  unnest(diff) |>
+  left_join(questions, by = c("question" = "question_short")) |>
+  mutate(question = factor(question, levels = rev(all_questions)))
+```
+
+```{r loo_plot, fig.width = 7, fig.height = 10}
+p_loo <- ggplot(loo_diffs, aes(mean, question)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = mean - 1.96 * se, xmax = mean + 1.96 * se), size = 0.2) +
+  facet_grid(family ~ ., scales = "free_y", space = "free_y") +
+  labs(x = "elpd difference (smooth - linear)", y = NULL)
+save_plot(p_loo, "loo", 7, 10)
+```
+
+# Posterior predictive check
+
+Observed share yes (points) against the 95% posterior predictive interval (bars) per period, for both models.
+
+```{r ppc}
+ppc_period <- function(fit, data) {
+  yrep <- posterior_predict(fit, ndraws = 1000)
+  map_dfr(levels(droplevels(data$period)), function(p) {
+    w <- data$weight * (data$period == p)
+    prop <- as.vector(yrep %*% w) / sum(w)
+    tibble(period = p, observed = sum(w * data$answer_value) / sum(w),
+           lower = quantile(prop, 0.025), upper = quantile(prop, 0.975))
+  })
+}
+
+period_labels <- levels(cut(0, periods, dig.lab = 5))
+ppc <- fits |>
+  mutate(check = map2(fit, question, ~ ppc_period(.x, filter(d_model, question_short == .y) |>
+    mutate(period = cut(year_from, periods, dig.lab = 5))))) |>
+  select(model, question, check) |>
+  unnest(check)
+```
+
+```{r ppc_plot, fig.width = 12, fig.height = 24}
+p_ppc <- ppc |>
+  mutate(period = factor(period, levels = rev(period_labels))) |>
+  ggplot(aes(y = period, colour = model)) +
+  geom_linerange(aes(xmin = lower, xmax = upper), linewidth = 2, alpha = 0.4, position = position_dodge(width = 0.6)) +
+  geom_point(aes(x = observed), size = 1.2, position = position_dodge(width = 0.6)) +
+  facet_wrap(~ factor(question, levels = all_questions), ncol = 4) +
+  scale_colour_manual(values = model_colors) +
+  labs(x = "Share yes", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_ppc, "ppc_period", 12, 24)
+```
+
+Share of observed values outside the 95% interval:
+
+```{r ppc_summary}
+ppc |>
+  mutate(outside = observed < lower | observed > upper) |>
+  group_by(model) |>
+  summarise(groups = n(), share_outside = round(mean(outside), 2), outside = sum(outside), .groups = "drop")
+```

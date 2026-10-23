@@ -1,0 +1,324 @@
+---
+title: "Packages"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Overview
+
+Exploratory: instead of one model per question, one model per **package** of related questions (items),
+using all entries that answered at least one item of the package. Groups only, conditional and unconditional
+answers (6 packages x 2 = 12 models). No traditions (for now).
+
+Packages (partly data-driven, partly theoretical; see `eda/item_correlations.py`):
+
+| package | items |
+|---|---|
+| moral monitoring | murder (3), non-lethal fighting, prosocial norms, lying, oaths, property, economic fairness, gossiping, laziness, shirking risk, elders, sex, sorcery, personal hygiene |
+| ritual monitoring | ritual observance, performance of rituals, taboos |
+| moralizing / universalizing | conversion, unquestionably good, worship other god not permissible (reversed) |
+| agency and mind | knowledge, causal efficacy, communicates, positive and negative emotion, hunger, anthropomorphic, indirect causal efficacy |
+| political | monarch fused, monarch manifestation, kin to elites, other elite loyalty |
+| cosmological | sky deity, chthonic |
+
+**Model** (item-response style, long format: one row per entry and item):
+
+$$
+\text{logit}(p_{ij}) = \alpha + \beta \cdot \text{time}_i + a_j + b_j \cdot \text{time}_i + e_i + u_{\text{region}(i)}
+$$
+
+- $e_i$ (`1 | entry_id`): the entry's overall tendency to answer "yes" on this package
+- $a_j, b_j$ (`1 + time | question`): item-specific level ("difficulty") and slope; $\beta$ is the package
+  slope (the average item slope), and the SD of $b_j$ shows how coherent the items' trends are
+- time: `year_from` / 1000 (0 = 0 CE); conflicting answers weighted 1/n; priors as before
+
+**Caveats**: the moralizing package crosses the two families (monitoring and supreme high god). In the
+**unconditional** data, entries whose parent is "No" have all items inferred "No" (3218 is inferred "Yes", so "No" once
+reversed); their entry effects
+become very negative, so the entry effects are a mixture of two groups rather than one normal distribution.
+The two-part approach (`4_baseline.Rmd`) is the cleaner way to get unconditional trends.
+
+Run from inside `modeling/` after `3_prepare_data.py`. Fits are saved in `fits/` (delete them to refit),
+figures in `fig/packages/`.
+
+```{r setup, message = FALSE}
+library(tidyverse)
+library(brms)
+library(posterior)
+
+options(mc.cores = 4, brms.backend = "cmdstanr")
+dir.create("fits", showWarnings = FALSE)
+theme_set(theme_bw(base_size = 11))
+
+# figures: shown in the session and saved as fig/packages/<name>.jpg
+fig_dir <- "fig/packages"
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+save_plot <- function(p, name, width, height) {
+  ggsave(file.path(fig_dir, paste0(name, ".jpg")), p, width = width, height = height, dpi = 300)
+  p
+}
+
+version_colors <- c(conditional = "#2a78d6", unconditional = "#eb6834")
+```
+
+# Data
+
+```{r data, message = FALSE}
+packages <- list(
+  moral = c(
+    "murder coreligionists", "murder other religions", "murder other polities", "non-lethal fighting",
+    "prosocial norm adherence", "lying", "honouring oaths", "property crimes", "economic fairness",
+    "gossiping", "laziness", "shirking risk", "disrespecting elders", "sex", "sorcery", "personal hygiene"
+  ),
+  ritual = c("ritual observance", "performance of rituals", "taboos"),
+  moralizing = c("conversion non-religionists", "is unquestionably good", "worship other god not permissible (reversed)"),
+  agency = c(
+    "knowledge this world", "causal efficacy the world", "communicates with living",
+    "positive emotion", "negative emotion", "possesses hunger", "is anthropomorphic", "indirect causal efficacy the world"
+  ),
+  political = c("is monarch fused", "is monarch manifestation", "is kin to elites", "other elite loyalty"),
+  cosmological = c("is sky deity", "is chthonic")
+)
+package_labels <- c(
+  moral = "moral monitoring", ritual = "ritual monitoring", moralizing = "moralizing / universalizing",
+  agency = "agency and mind", political = "political", cosmological = "cosmological"
+)
+
+# groups, child questions; "permissible to worship other god?" reversed (yes = not permissible)
+d <- read_csv("data/model_data.csv") |>
+  filter(poll == "group", family != "parent") |>
+  mutate(
+    time = year_from / 1000,
+    reversed = question_short == "permissible to worship other god?",
+    answer_value = if_else(reversed, 1 - answer_value, answer_value),
+    question_short = if_else(reversed, "worship other god not permissible (reversed)", question_short),
+    entry_id = factor(entry_id)
+  )
+
+versions <- list(
+  conditional = filter(d, !inferred),
+  unconditional = d
+)
+
+# data for one package and version
+package_data <- function(version, package) {
+  filter(versions[[version]], question_short %in% packages[[package]])
+}
+
+crossing(version = names(versions), package = names(packages)) |>
+  mutate(data = map2(version, package, package_data)) |>
+  mutate(answers = map_int(data, nrow), entries = map_int(data, ~ n_distinct(.x$entry_id)), items = map_int(data, ~ n_distinct(.x$question_short))) |>
+  select(-data) |>
+  pivot_wider(names_from = version, values_from = c(answers, entries))
+```
+
+# Model and priors
+
+- intercept: normal(0, 1.5); package slope: normal(0, 1)
+- SDs (entry, item level and slope, world region): exponential(1); item level-slope correlation: lkj(2)
+
+```{r model}
+formula <- bf(answer_value | weights(weight) ~ 0 + Intercept + time + (1 + time | question_short) + (1 | entry_id) + (1 | world_region))
+priors <- c(
+  prior(normal(0, 1), class = "b"),
+  prior(normal(0, 1.5), class = "b", coef = "Intercept"),
+  prior(exponential(1), class = "sd"),
+  prior(lkj(2), class = "cor")
+)
+```
+
+# Fit
+
+The model is compiled once (`chains = 0`) and then refit for each package and version with `update()`.
+
+```{r fit, message = FALSE, results = "hide"}
+template <- suppressWarnings(brm(formula, data = package_data("conditional", "ritual"), family = bernoulli(),
+                                 prior = priors, chains = 0, refresh = 0, silent = 2))
+
+fit_package <- function(version, package) {
+  path <- sprintf("fits/packages_%s_%s.rds", version, package)
+  if (file.exists(path)) return(readRDS(path))
+  fit <- update(
+    template,
+    newdata = package_data(version, package),
+    chains = 4, iter = 2000, seed = 2026, refresh = 0,
+    control = list(adapt_delta = 0.95)
+  )
+  saveRDS(fit, path)
+  fit
+}
+
+fits <- crossing(version = names(versions), package = names(packages)) |>
+  mutate(fit = map2(version, package, fit_package))
+```
+
+# Diagnostics
+
+```{r diagnostics}
+diagnostics <- fits |>
+  mutate(diag = map(fit, function(fit) {
+    s <- summarise_draws(as_draws_df(fit, variable = "^b_|^sd_|^cor_", regex = TRUE))
+    tibble(
+      max_rhat = max(s$rhat),
+      min_ess_bulk = min(s$ess_bulk),
+      min_ess_tail = min(s$ess_tail),
+      divergences = sum(subset(nuts_params(fit), Parameter == "divergent__")$Value)
+    )
+  })) |>
+  select(-fit) |>
+  unnest(diag)
+diagnostics
+```
+
+# Package slopes and spread
+
+```{r estimates}
+estimates <- fits |>
+  mutate(est = map(fit, function(fit) {
+    as_draws_df(fit, variable = "^b_|^sd_|^cor_", regex = TRUE) |>
+      summarise_draws(mean, ~ quantile(.x, c(0.025, 0.975))) |>
+      rename(lower = `2.5%`, upper = `97.5%`)
+  })) |>
+  select(-fit) |>
+  unnest(est) |>
+  mutate(package = factor(package_labels[package], levels = rev(package_labels)))
+```
+
+Package slope ($\beta$; log-odds per 1,000 years; 95% interval):
+
+```{r slopes, fig.width = 7, fig.height = 4}
+p_slopes <- estimates |>
+  filter(variable == "b_time") |>
+  ggplot(aes(mean, package, colour = version)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.5), size = 0.3) +
+  scale_colour_manual(values = version_colors) +
+  labs(x = "Package slope (log-odds per 1,000 years)", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_slopes, "slopes", 7, 4)
+```
+
+SDs: entries (overall tendency), items (level and slope), world regions:
+
+```{r sds, fig.width = 11, fig.height = 4}
+p_sds <- estimates |>
+  filter(str_starts(variable, "sd_")) |>
+  mutate(term = recode(variable,
+    sd_entry_id__Intercept = "entry", sd_question_short__Intercept = "item level",
+    sd_question_short__time = "item slope", sd_world_region__Intercept = "world region"
+  )) |>
+  ggplot(aes(mean, package, colour = version)) +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.5), size = 0.3) +
+  facet_wrap(~ term, nrow = 1, scales = "free_x") +
+  scale_colour_manual(values = version_colors) +
+  labs(x = "SD (log-odds)", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_sds, "sds", 11, 4)
+```
+
+Item slopes ($\beta + b_j$; 95% interval), per package:
+
+```{r item_slopes, fig.width = 10, fig.height = 10}
+item_slopes <- fits |>
+  mutate(co = map(fit, function(fit) {
+    s <- coef(fit)$question_short[, , "time"]
+    tibble(question = rownames(s), mean = s[, "Estimate"], lower = s[, "Q2.5"], upper = s[, "Q97.5"])
+  })) |>
+  select(version, package, co) |>
+  unnest(co) |>
+  mutate(package = factor(package_labels[package], levels = package_labels))
+
+p_item_slopes <- ggplot(item_slopes, aes(mean, question, colour = version)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.6), size = 0.2) +
+  facet_grid(package ~ ., scales = "free_y", space = "free_y", labeller = label_wrap_gen(15)) +
+  scale_colour_manual(values = version_colors) +
+  labs(x = "Item slope (log-odds per 1,000 years)", y = NULL, colour = NULL) +
+  theme(legend.position = "top", strip.text.y = element_text(angle = 0))
+save_plot(p_item_slopes, "item_slopes", 10, 10)
+```
+
+# Curves
+
+P(yes) over time for the package (black: average item, average entry, average world region; 95% interval)
+and for each item (coloured: item level and slope). Note that the curves are for an *average entry*
+($e_i = 0$), so they are not the share of entries answering "yes".
+
+```{r curves}
+grid <- tibble(time = seq(-3, 2, by = 0.05), weight = 1)
+
+curves <- fits |>
+  mutate(curve = map2(fit, package, function(fit, package) {
+    p <- posterior_epred(fit, newdata = grid, re_formula = NA, ndraws = 1000)
+    overall <- grid |> mutate(question = "package", mean = colMeans(p),
+                              lower = apply(p, 2, quantile, 0.025), upper = apply(p, 2, quantile, 0.975))
+    per_item <- map_dfr(packages[[package]], function(q) {
+      p <- posterior_epred(fit, newdata = mutate(grid, question_short = q), re_formula = ~ (1 + time | question_short), ndraws = 1000)
+      grid |> mutate(question = q, mean = colMeans(p))
+    })
+    bind_rows(overall, per_item)
+  })) |>
+  select(version, package, curve) |>
+  unnest(curve) |>
+  mutate(package = factor(package_labels[package], levels = package_labels))
+
+curve_plot <- function(version_name) {
+  d_curves <- filter(curves, version == version_name)
+  ggplot(filter(d_curves, question != "package"), aes(time * 1000, mean, group = question)) +
+    geom_line(aes(colour = question), alpha = 0.7, show.legend = FALSE) +
+    geom_ribbon(data = filter(d_curves, question == "package"), aes(ymin = lower, ymax = upper), fill = "grey30", alpha = 0.2) +
+    geom_line(data = filter(d_curves, question == "package"), colour = "black", linewidth = 1) +
+    facet_wrap(~ package, ncol = 3) +
+    coord_cartesian(ylim = c(0, 1)) +
+    labs(x = "Year (year_from)", y = "P(yes)", title = version_name)
+}
+```
+
+```{r curves_conditional, fig.width = 11, fig.height = 7}
+p_curves_cond <- curve_plot("conditional")
+save_plot(p_curves_cond, "curves_conditional", 11, 7)
+```
+
+```{r curves_unconditional, fig.width = 11, fig.height = 7}
+p_curves_uncond <- curve_plot("unconditional")
+save_plot(p_curves_uncond, "curves_unconditional", 11, 7)
+```
+
+# Posterior predictive check
+
+Observed share yes per period (all items of a package together; points) against the 95% posterior
+predictive interval (bars).
+
+```{r ppc}
+periods <- c(-Inf, -1000, 0, 500, 1000, 1500, Inf)
+period_labels <- c("< -1000", "-1000-0", "0-500", "500-1000", "1000-1500", "> 1500")
+
+ppc <- fits |>
+  mutate(check = map2(fit, map2(version, package, package_data), function(fit, data) {
+    data <- mutate(data, period = cut(year_from, periods, labels = period_labels))
+    yrep <- posterior_predict(fit, ndraws = 500)
+    map_dfr(period_labels, function(p) {
+      w <- data$weight * (data$period == p)
+      if (sum(w) == 0) return(NULL)
+      prop <- as.vector(yrep %*% w) / sum(w)
+      tibble(period = p, observed = sum(w * data$answer_value) / sum(w),
+             lower = quantile(prop, 0.025), upper = quantile(prop, 0.975))
+    })
+  })) |>
+  select(version, package, check) |>
+  unnest(check) |>
+  mutate(package = factor(package_labels[package], levels = package_labels), period = factor(period, levels = rev(period_labels)))
+```
+
+```{r ppc_plot, fig.width = 11, fig.height = 6}
+p_ppc <- ggplot(ppc, aes(y = period, colour = version)) +
+  geom_linerange(aes(xmin = lower, xmax = upper), linewidth = 2, alpha = 0.4, position = position_dodge(width = 0.6)) +
+  geom_point(aes(x = observed), size = 1.2, position = position_dodge(width = 0.6)) +
+  facet_wrap(~ package, ncol = 3) +
+  scale_colour_manual(values = version_colors) +
+  labs(x = "Share yes", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_ppc, "ppc_period", 11, 6)
+```

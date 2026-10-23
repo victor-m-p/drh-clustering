@@ -37,11 +37,51 @@ question_coding = {
     "3288": "indirect causal efficacy the world",
     "3296": "communicates with living",
     "3328": "is monarch manifestation",
-    #
 }
+
+# same tree in all three polls (related ids):
+# 2890 -> monitoring questions
+# 2893 -> 2919 -> shg questions
+parent_coding = {
+    "2890": "supernatural monitoring present",
+    "2893": "supernatural beings present",
+    "2919": "supreme high god present",
+}
+monitoring_questions = [2861, 2883, 2887, 2898, 2902, 2911, 2917, 2921, 2923, 2928, 2930, 2939, 2942, 2962, 2970, 2972, 2974, 2978, 2982, 2985]
+shg_questions = [2899, 2910, 2941, 2944, 2948, 2958, 2984, 3192, 3218, 3229, 3233, 3247, 3283, 3288, 3296, 3328]
+parent_question = {q: 2890 for q in monitoring_questions} | {q: 2919 for q in shg_questions} | {2919: 2893}
+# inferred "Yes" (not "No") when the parent is "No": no supreme high god -> permissible to worship other gods
+infer_yes = [3218]
 
 # Polls included
 polls = ["Religious Group (v6)", "Religious Group (v5)", "Religious Text (v1.0)"]
+
+# Covariate yes/no questions (related ids; see curate_covariates.py)
+# short names follow the group wording; several text questions ask something else (question_name is kept per poll)
+covariate_coding = {
+    # religion and politics
+    "2300": "official political support",  # text: is the production of the text funded by the polity
+    # children of 2300 (only asked when 2300 is "Yes"; "No" inferred when 2300 is "No", see covariate_infer_no)
+    "2339": "head of polity is head of religion",  # text: leaders of the polity and the religion the same figure
+    "2319": "political officials are religious officials",  # text: involved in the support of textual production
+    # supernatural punishment and reward (no child questions)
+    "3420": "supernatural punishment",
+    "3437": "supernatural reward",
+    # written language
+    "3166": "own written language",  # text: written in distinctly religious/sacred language
+}
+# covariate questions with "No" inferred when their parent (2300) is "No" (child: parent)
+covariate_infer_no = {"2339": "2300", "2319": "2300"}
+
+# Society type (related id 3492): answer -> level; answer_value has the same codes (1-5) for groups,
+# but is -1 for nearly all text answers, so we code from the answer text
+social_complexity_levels = {
+    "A band": 1, "A tribe": 2, "Una tribu": 2, "A chiefdom": 3, "Una sociedad de jefatura": 3,
+    "A state": 4, "Un estado": 4, "An empire": 5, "Un imperio": 5,
+}
+social_complexity_labels = {1: "band", 2: "tribe", 3: "chiefdom", 4: "state", 5: "empire"}
+# "A band" is translated as "a group" (French, Chinese), and chosen for e.g. Wu Zetian's State Buddhism: not coded
+social_complexity_mistranslated = ["Un groupe", "一个团体"]
 
 # Manually going through inconsistent answers (2024-04-09)
 correct_answers = [

@@ -1,8 +1,8 @@
 """
 Overview of all questions over time: one small panel per question,
 one figure for supernatural monitoring (20) and one for supreme high gods (16).
-Same calculation as plot_question_time.py (500-year rolling window, step 50,
-conflicting answers weighted 1/n). Stretches based on fewer than min_n
+Same calculation as plot_question_time.py (rolling window of bin_width years, moved
+in steps of step_size; conflicting answers weighted 1/n). Stretches based on fewer than min_n
 entries are drawn in light grey.
 Run from inside temporal/.
 """
@@ -16,7 +16,7 @@ from helper_functions import smooth_time_end
 # setup
 subset = "groups"  # all
 x_min = -2000
-bin_width = 500
+bin_width = 100  # years per rolling window (used in labels and file names)
 step_size = 50
 min_n = 10  # bins with fewer entries than this are drawn in light grey
 fig_dir = "fig/all_questions"
@@ -131,7 +131,7 @@ for superquestion, groups in question_groups.items():
     for ax in axes.flat[len(questions):]:
         ax.set_visible(False)
 
-    fig.supxlabel("Year (500-year rolling window)", size=14, color="#52514e")
+    fig.supxlabel(f"Year ({bin_width}-year rolling window)", size=14, color="#52514e")
     fig.supylabel("Fraction yes", size=14, color="#52514e")
     fig.suptitle(
         titles[superquestion],
@@ -141,7 +141,7 @@ for superquestion, groups in question_groups.items():
     )
     plt.tight_layout()
     plt.savefig(
-        f"{fig_dir}/questions_temporal_all_{superquestion}_{subset}.jpg",
+        f"{fig_dir}/{superquestion}_{subset}_{bin_width}.jpg",
         dpi=300,
         bbox_inches="tight",
     )

@@ -13,14 +13,38 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.venv/
+venv/
+.env
 
 # R
 .Rhistory
 .RData
+.Ruserdata
+.Renviron
+*.Rproj
 .Rproj.user/
+*.Rcheck/
+rsconnect/
+modeling/fits/
+
+# R Markdown (intermediate files, knitr cache, rendered html)
+*.knit.md
+*.utf8.md
+*_files/
+*_cache/
+modeling/*.html
 
 # OS and editors
 .DS_Store
+._*
+Thumbs.db
 .vscode/
 .idea/
 *.swp
+*.swo
+*~
+~$*
+
+# quick look-ups
+scratch/

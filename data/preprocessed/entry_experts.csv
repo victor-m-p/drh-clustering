@@ -1,0 +1,1188 @@
+entry_id,entry_name,poll_name,year_from,year_to,expert_id,expert_name,editor_name,expert,n_entries_expert
+23,Late Shang Religion,Religious Group (v5),-1250,-1045,19,David Keightley,Matthew Hamm,david keightley,1
+173,Johannine Christianity,Religious Group (v5),90,120,138,Rikard Roitto,Robyn Walsh,rikard roitto,1
+174,Matthew-James-Didache Movement,Religious Group (v5),50,160,139,Vojtech Kase,Robyn Walsh,vojtech kase,1
+176,Qumran Movement,Religious Group (v5),-150,68,145,Jutta Jokiranta,Jennifer Singletary,jutta jokiranta,1
+178,Ancestral Cult of the Han,Religious Group (v5),-206,220,69,Ken Brashier,Matthew Hamm,ken brashier,1
+180,Chinese Folk Religion,Religious Group (v5),-350,200,18,Mu-chou Poo,Matthew Hamm,mu-chou poo,1
+182,Pauline Christianity,Religious Group (v5),48,56,146,Anders Petersen,Megan Daniels,anders petersen,1
+184,Chinese Buddhism (Northern Wei),Religious Group (v5),386,534,20,Eric Greene,Matthew Hamm,eric greene,1
+185,Shinnyo-en,Religious Group (v5),1936,2013,51,Casey Collins,Matthew Hamm,casey collins,1
+186,Buddhism (Late Ming),Religious Group (v5),1590,1644,22,Beverley Foulks McGuire,Matthew Hamm,beverley foulks mcguire,1
+187,Chinese State Religion (Shang and Western Zhou),Religious Group (v5),-1750,-850,17,Lothar von Falkenhausen,Katrinka Reinhart,lothar von falkenhausen,1
+189,Israelite Religion,Religious Group (v5),-1200,-515,40,Shawn Flynn,Robyn Walsh,shawn flynn,1
+190,Sri Lankan Buddhism (1948-Present),Religious Group (v5),1948,2015,151,Dan Kent,Travis Chilcott,dan kent,1
+191,Early Khalsa Sikhs,Religious Group (v5),1699,1799,61,Julie Vig,Travis Chilcott,julie vig,1
+192,Fijian Religion (pre-conversion),Religious Group (v5),1835,1854,42,John Shaver,John Shaver,john shaver,2
+193,Fijian Religion (contemporary),Religious Group (v5),2000,2013,42,John Shaver,John Shaver,john shaver,2
+195,Shakta Religion,Religious Group (v5),500,1100,57,James Pierce,Travis Chilcott,james pierce,2
+196,Pauline Christianity (ca. 45-60 CE),Religious Group (v5),45,60,4,Fred Tappenden,Robyn Walsh,fred tappenden,1
+197,Gönlung Monastery (dgon lung byams pa gling),Religious Group (v5),1604,1958,5,Brenton Sullivan,Matthew Hamm,brenton sullivan,1
+198,Religion in Attica (600-300BCE),Religious Group (v5),-600,-300,60,Roger Beck,Megan Daniels,roger beck,2
+199,Mithraism,Religious Group (v5),100,400,60,Roger Beck,Megan Daniels,roger beck,2
+200,Nechung Cult,Religious Group (v5),1650,1850,113,Christopher Bell,Matthew Hamm,christopher bell,1
+201,Mediterranean,Religious Group (v5),-500,500,125,Andreas Bendlin,Megan Daniels,andreas bendlin,1
+202,Early Zhou Religion,Religious Group (v5),-1046,-771,79,Constance Cook,Katrinka Reinhart,constance cook,2
+203,Pre-imperial Chu Religion,Religious Group (v5),-790,-223,79,Constance Cook,Katrinka Reinhart,constance cook,2
+204,Han Confucianism,Religious Group (v5),-206,220,130,Mark Csikszentmihalyi,Matthew Hamm,mark csikszentmihalyi,1
+209,Ancient Egypt,Religious Group (v5),-2000,-30,123,Joseph Manning,Karen Sonik,joseph manning,1
+211,Amarna Religion,Religious Group (v5),-1350,-1320,707,Thomas Schneider,Courtney Fitzsimmons,thomas schneider,1
+212,Warring States (China) Religion,Religious Group (v5),-481,-206,31,Armin Selbitschka,Katrinka Reinhart,armin selbitschka,1
+216,Mesopotamia,Religious Group (v5),-3200,-612,164,Beate Pongratz-Leisten,Karen Sonik,beate pongratz-leisten,1
+217,Roman private religion,Religious Group (v5),-202,-44,157,Celia Schultz,Gino Canlas,celia schultz,2
+222,Late Classic Lowland Maya,Religious Group (v5),600,900,26,Chris Carleton,Chris Carleton,chris carleton,4
+224,Old Norse Fornsed,Religious Group (v5),600,1100,38,Neil Price,Ben Raffield,neil price,1
+227,Hindu Goddess Worship in Northwest India—Modern Period,Religious Group (v5),1980,2000,128,Kathleen Erndl,Travis Chilcott,kathleen erndl,1
+228,Late Chosŏn Korea,Religious Group (v5),1600,1900,168,Guy Shababo,Matthew Hamm,guy shababo,1
+230,Religion in Mesopotamia,Religious Group (v5),-3300,-539,112,Karen Sonik,Karen Sonik,karen sonik,1
+231,Roman private religion,Religious Group (v5),-600,-202,157,Celia Schultz,Gino Canlas,celia schultz,2
+232,Pre-Dynastic Lower Egypt,Religious Group (v5),-5050,-3050,26,Chris Carleton,Chris Carleton,chris carleton,4
+240,Late Medieval Chinese State Religion,Religious Group (v5),775,960,53,Michael Hoeckelmann,Matthew Hamm,michael hoeckelmann,1
+245,Warring States Confucian Thought,Religious Group (v5),-450,-221,8,Edward Slingerland,M. Willis Monroe,edward slingerland,1
+249,Tyva Republic (Animism-Totemism-Shamanism),Religious Group (v5),1990,2013,16,Benjamin Purzycki,Matthew Hamm,benjamin purzycki,2
+250,"Tiantai Buddhism (Song Dynasty, Liangzhe Circuit)",Religious Group (v5),960,1279,33,Zhongwei Wu,Matthew Hamm,zhongwei wu,1
+255,Talismanic Religion,Religious Group (v5),-200,500,36,Jue Guo,Matthew Hamm,jue guo,1
+256,Etruscan Religion,Religious Group (v5),-10,-1,191,Massimiliano Di Fazio,Gino Canlas,massimiliano di fazio,1
+257,Classic Zapotec,Religious Group (v5),250,850,205,Gary Feinman,Chris Carleton,gary feinman,1
+263,Irish Catholicism,Religious Group (v5),2000,2015,207,Conn Herriott,Conn Herriott,conn herriott,2
+284,Yolngu religion,Religious Group (v5),-3500,2015,262,Howard and Frances Morphy,M. Willis Monroe,howard and frances morphy,1
+287,Mithraism,Religious Group (v5),100,400,264,Julia Hurley,M. Willis Monroe,julia hurley,1
+294,Xuanxue 玄學,Religious Group (v5),200,600,230,Richard Lynn,Michael Naparstek,richard lynn,1
+299,Shang State Religion,Religious Group (v5),-1250,-1046,8,Robert Eno,M. Willis Monroe,robert eno,1
+300,Israelite Religion,Religious Group (v5),-1200,-515,207,Conn Herriott,Conn Herriott,conn herriott,2
+308,Neo-Assyrian Scholars,Religious Group (v5),-900,-501,297,Anne-Caroline Rendu Loisel,Karen Sonik,anne-caroline rendu loisel,1
+310,Aztec Imperial Core,Religious Group (v5),1325,1519,283,David  Carballo,Chris Carleton,david carballo,1
+325,Religion at Mawangdui,Religious Group (v5),-193,-168,309,Jesse Chapman,Katrinka Reinhart,jesse chapman,1
+337,Inca,Religious Group (v5),1300,1550,332,Charles Stanish,Chris Carleton,charles stanish,1
+338,Kwakwaka'wakw Indigenous Canadian Religion,Religious Group (v5),1800,1950,26,Chris Carleton,Chris Carleton,chris carleton,4
+342,Jesus Associations and the Synoptic Gospels,Religious Group (v5),50,150,335,Andrew Tobolowsky,Robyn Walsh,andrew tobolowsky,1
+354,Priests and Scholars of Hellenistic Uruk,Religious Group (v5),-330,-125,320,M. Willis Monroe,M. Willis Monroe,m. willis monroe,4
+355,Paul the Apostle,Religious Group (v5),50,60,279,Robyn Walsh,Gretel Rodríguez,robyn walsh,1
+358,16th-17th c. Gauḍīya Vaiṣṇava Tradition,Religious Group (v5),1500,1699,343,Travis Chilcott,Travis Chilcott,travis chilcott,1
+361,Classical Greek Religion,Religious Group (v5),-500,-300,334,Source: Osborne et al.,M. Willis Monroe,source: osborne et al.,1
+364,Chittagong Plain Buddhists,Religious Group (v5),1860,2010,356,Mitra Barua,Travis Chilcott,mitra barua,1
+374,Non-dual Śaiva Tantra,Religious Group (v5),800,1600,361,Patricia Sauthoff,Travis Chilcott,patricia sauthoff,1
+378,Bahinabai Chaudhari's Songs: A Performance Tradition in Maharashtra,Religious Group (v5),1880,1951,362,Rohini Shukla,Travis Chilcott,rohini shukla,2
+381,Sikhism: Guru Nanak to Guru Arjan,Religious Group (v5),1469,1606,346,Toby Braden Johnson,Travis Chilcott,toby braden johnson,2
+383,Varkaris,Religious Group (v5),1200,1700,354,Ravi Khangai,Travis Chilcott,ravi khangai,1
+386,Kapingamarangi,Religious Group (v5),1877,1877,281,Joseph Watts,John Shaver,joseph watts,1
+387,Ahmadi; Ahmadiyya Muslim Jama'at; Ahmadiya,Religious Group (v5),1889,2016,385,Afzal Upal,Travis Chilcott,afzal upal,1
+389,Iban traditional religion,Religious Group (v5),1840,1970,338,Oliver Sheehan,John Shaver,oliver sheehan,1
+390,Dasara,Religious Group (v5),1610,2016,373,Caleb Simmons,Travis Chilcott,caleb simmons,1
+392,Sikhism: Guru Hargobind to Guru Gobind Singh,Religious Group (v5),1606,1708,346,Toby Braden Johnson,Travis Chilcott,toby braden johnson,2
+395,International Society for Krishna Consciousness (ISKCON),Religious Group (v5),1966,2016,350,Aleksandar Uskokov,Travis Chilcott,aleksandar uskokov,1
+400,Singaporean Mega-Churches,Religious Group (v5),1980,2015,341,Justin Lane,M. Willis Monroe,justin lane,1
+406,Daoism,Religious Group (v5),142,2014,131,Terry Kleeman,Michael Naparstek,terry kleeman,1
+415,Shaiva World Renouncers,Religious Group (v5),1970,2015,423,Cora Gaebel,Travis Chilcott,cora gaebel,2
+416,Edinoverie,Religious Group (v5),1800,1918,416,James White,M. Willis Monroe,james white,1
+418,Tikopia Religion,Religious Group (v5),1900,1950,26,Chris Carleton,Chris Carleton,chris carleton,4
+419,The Worship of Jagannath in Puri (Odisha),Religious Group (v5),1970,2016,423,Cora Gaebel,Travis Chilcott,cora gaebel,2
+420,Swaminarayan Sampraday,Religious Group (v5),1800,2017,401,Bhakti Mamtora,Travis Chilcott,bhakti mamtora,1
+422,Demeter Cult,Religious Group (v5),-1500,396,364,Carson Bay,Robyn Walsh,carson bay,2
+423,Mediterranean,Religious Group (v5),-500,500,127,Stanley Stowers,Robyn Walsh,stanley stowers,1
+424,Achaemenid Religion,Religious Group (v5),-550,-330,386,Amirardalan Emami,Karen Sonik,amirardalan emami,1
+430,Yahgan,Religious Group (v5),1865,1933,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+432,Tehuelche,Religious Group (v5),1871,1914,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+435,Mongol Religion,Religious Group (v5),1206,1368,26,Timothy May,Chris Carleton,timothy may,1
+436,Mapuche,Religious Group (v5),500,2002,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+437,Abipon,Religious Group (v5),1500,1770,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+438,Aweikoma,Religious Group (v5),1850,1998,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+439,Śaiva Magic,Religious Group (v5),800,1500,464,Aaron Michael Ullrey,Courtney Fitzsimmons,aaron michael ullrey,10
+440,"Jain Digambara Tantra, Karnataka",Religious Group (v5),900,1200,464,Aaron Michael Ullrey,Courtney Fitzsimmons,aaron michael ullrey,10
+441,Worshipers of Śītalā,Religious Group (v5),1690,2017,462,Jeremy Hanes,Travis Chilcott,jeremy hanes,1
+442,Donatism,Religious Group (v5),311,427,468,Heather Barkman,Robyn Walsh,heather barkman,1
+443,Tyva (Buddhism),Religious Group (v5),1634,2017,16,Benjamin Purzycki,Matthew Hamm,benjamin purzycki,2
+444,Sursurunga,Religious Group (v5),1920,2017,320,M. Willis Monroe,M. Willis Monroe,m. willis monroe,4
+446,Tupinamba,Religious Group (v5),1500,1750,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+447,Trumai,Religious Group (v5),1820,1940,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+448,Nambicuara,Religious Group (v5),1718,1990,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+450,Sirionó,Religious Group (v5),1580,2006,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+451,Aymara,Religious Group (v5),1430,1987,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+453,Guangzhou (Buddhism),Religious Group (v5),1985,2017,320,M. Willis Monroe,M. Willis Monroe,m. willis monroe,4
+455,Lan Na Buddhism,Religious Group (v5),1292,1558,439,Daniel Veidlinger,Daniel Veidlinger,daniel veidlinger,1
+456,The Essenes,Religious Group (v5),-165,75,364,Carson Bay,Robyn Walsh,carson bay,2
+457,Kananga - Pentacostal,Religious Group (v5),2013,2017,320,M. Willis Monroe,M. Willis Monroe,m. willis monroe,4
+458,Tanna - Christian,Religious Group (v5),1869,2017,418,Quentin Atkinson,M. Willis Monroe,quentin atkinson,2
+459,Tanna - Kastom,Religious Group (v5),-1100,2017,418,Quentin Atkinson,M. Willis Monroe,quentin atkinson,2
+460,Jivaro,Religious Group (v5),1956,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+461,Cayapa,Religious Group (v5),1597,1998,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+462,Tukano,Religious Group (v5),1550,1989,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+463,Mundurucu,Religious Group (v5),1770,1980,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+464,Saramacca,Religious Group (v5),1762,1989,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+465,Mysore,Religious Group (v5),2014,2016,481,Caitlyn Placek,M. Willis Monroe,caitlyn placek,1
+468,Turkana,Religious Group (v5),1870,2017,491,Carla Handley,M. Willis Monroe,carla handley,1
+469,Won-Buddhism,Religious Group (v5),1916,2017,486,Seok Heo,Matthew Hamm,seok heo,1
+470,Archaic Spartan Cults,Religious Group (v5),-800,-500,329,Megan Daniels,Gino Canlas,megan daniels,1
+471,Urban Northern Ireland,Religious Group (v5),2015,2016,505,Jonathan Lanman,M. Willis Monroe,jonathan lanman,1
+472,Karma Kagyu or Kamtsang Kagyu,Religious Group (v5),1110,2017,490,Mriti Gyana,Stephen Christopher,mriti gyana,1
+476,Cham Bani,Religious Group (v5),1000,2015,520,William Noseworthy,William Noseworthy,william noseworthy,6
+477,Tractarian Movement,Religious Group (v5),1833,1845,524,Giulia Marotta,Andrew Keitt,giulia marotta,1
+478,Early Indian Buddhism,Religious Group (v5),-450,1,500,Nathan McGovern,Travis Chilcott,nathan mcgovern,1
+479,Mesopotamian city-state cults of the Early Dynastic periods,Religious Group (v5),-2900,-2300,522,Kathryn Kelley,Karen Sonik,kathryn kelley,1
+481,Huichol,Religious Group (v5),1780,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+482,Miskito,Religious Group (v5),1700,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+483,Northern Irish Roman Catholics,Religious Group (v5),2015,2016,507,Samuel Ward,M. Willis Monroe,samuel ward,2
+484,Northern Irish Protestants,Religious Group (v5),2015,2016,507,Samuel Ward,M. Willis Monroe,samuel ward,2
+485,Sámi pre-Christian religion,Religious Group (v5),500,1500,461,Marte Spangen,Ben Raffield,marte spangen,1
+486,Church of Jesus Christ of Latter-day Saints (early),Religious Group (v5),1830,1951,529,Kevin Pepper,Lauren Griffin,kevin pepper,2
+487,Bribri,Religious Group (v5),1502,2010,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+488,Yanomamo,Religious Group (v5),1750,2010,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+489,Callinago,Religious Group (v5),1750,2010,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+490,Guglielmites,Religious Group (v5),1260,1302,540,Janine Larmon Peterson,Janine Larmon Peterson,janine larmon peterson,1
+491,Anglican Church,Religious Group (v5),1530,2017,541,Remy Bethmont,Ben Raffield,remy bethmont,1
+492,Roman Divination,Religious Group (v5),-800,380,518,Paul Robertson,Hillary Lenfesty,paul robertson,1
+493,Krishna Worship in North India - Modern Period,Religious Group (v5),1858,2017,359,Amy Hirschtick,Travis Chilcott,amy hirschtick,1
+494,Cuna,Religious Group (v5),1800,1995,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+495,Goajiro,Religious Group (v5),1499,2012,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+496,Haitians,Religious Group (v5),1791,2006,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+497,Carib,Religious Group (v5),1890,1970,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+498,Papago,Religious Group (v5),1700,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+499,Huvasupai,Religious Group (v5),1700,2005,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+500,Zuni,Religious Group (v5),700,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+501,Chiricahua,Religious Group (v5),1800,2010,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+502,Comanche,Religious Group (v5),1700,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+503,Creek,Religious Group (v5),1700,2001,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+509,Omaha,Religious Group (v5),1700,1994,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+510,Northern Paiute,Religious Group (v5),1830,2010,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+511,Gros Ventre,Religious Group (v5),1700,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+512,Klamath,Religious Group (v5),1700,1990,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+513,Yokuts,Religious Group (v5),1750,1990,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+514,Pomo (Eastern),Religious Group (v5),1800,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+515,Yurok,Religious Group (v5),1775,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+516,Bellacoola,Religious Group (v5),1750,2010,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+517,Haida,Religious Group (v5),1750,2010,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+518,Kaska,Religious Group (v5),1800,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+519,Saulteaux,Religious Group (v5),1600,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+520,Cham Ahiér,Religious Group (v5),1600,2015,520,William Noseworthy,William Noseworthy,william noseworthy,6
+522,Mi'kmaq,Religious Group (v5),1500,2011,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+525,Church of Jesus Christ of Latter-day Saints (modern),Religious Group (v5),1951,2018,529,Kevin Pepper,Lauren Griffin,kevin pepper,2
+526,Hmong Christianity,Religious Group (v5),1900,2018,568,Seb Rumsby,William Noseworthy,seb rumsby,1
+529,Aleut,Religious Group (v5),1741,1995,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+530,Ingalik,Religious Group (v5),1830,2010,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+531,Chukchee,Religious Group (v5),1641,1989,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+532,Gilyak,Religious Group (v5),1650,1989,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+534,Roman Imperial Cult,Religious Group (v5),-42,518,453,Gretel Rodríguez,Gretel Rodríguez,gretel rodríguez,1
+535,Pāśupatas,Religious Group (v5),200,1200,566,Andrea Acri,Travis Chilcott,andrea acri,2
+537,Ifugao,Religious Group (v5),1550,1970,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+538,Yapese,Religious Group (v5),1526,2003,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+539,Trukese,Religious Group (v5),1880,1988,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+540,Tikopia,Religious Group (v5),1606,1980,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+541,Siuai,Religious Group (v5),1900,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+543,Manus,Religious Group (v5),1884,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+545,Kapauku,Religious Group (v5),1938,1990,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+546,Orokaiva,Religious Group (v5),1988,1989,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+547,Aranda,Religious Group (v5),1860,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+548,Tiwi,Religious Group (v5),1750,1986,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+549,Alorese,Religious Group (v5),1854,1980,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+550,Iban,Religious Group (v5),1841,1989,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+551,Tanala,Religious Group (v5),1810,1998,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+552,Vedda,Religious Group (v5),1000,1970,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+555,Semang,Religious Group (v5),1900,1986,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+556,Mongo,Religious Group (v5),1000,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+557,Burusho,Religious Group (v5),1878,2000,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+558,Uttar Pradesh,Religious Group (v5),1500,2010,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+559,Santal,Religious Group (v5),1854,1991,437,Michelle Hagman,M. Willis Monroe,michelle hagman,65
+562,Medieval Śrīvaiṣṇavism,Religious Group (v6),1017,1445,572,Suganya Anandakichenin,Travis Chilcott,suganya anandakichenin,1
+563,"Gaddi, a Hindu community of the Western Himalayas",Religious Group (v6),1845,2018,576,Stephen Christopher,Matthew Hamm,stephen christopher,6
+564,Tribal Christianity (and allied castes) in the Himalayas,Religious Group (v6),1950,2018,576,Stephen Christopher,Matthew Hamm,stephen christopher,6
+565,Fellahin,Religious Group (v5),1925,1960,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+567,Gay and Lesbian Vaishnava Association (GALVA-108),Religious Group (v5),2001,2024,576,Stephen Christopher,Matthew Hamm,stephen christopher,6
+569,Khalka Mongols,Religious Group (v5),1895,1930,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+570,Supreme Master Ching Hai World Society,Religious Group (v5),1986,2018,576,Stephen Christopher,Matthew Hamm,stephen christopher,6
+571,Abkhaz,Religious Group (v5),1855,1890,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+572,Trobrianders,Religious Group (v5),1890,1930,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+574,Konso,Religious Group (v5),1920,1967,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+576,Kuy traditional religions,Religious Group (v5),1000,2018,554,Sarah-Kim Holma,William Noseworthy,sarah-kim holma,1
+577,Ganda,Religious Group (v5),1860,1900,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+578,Gond,Religious Group (v5),1875,1910,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+580,Nāth Sampradāya,Religious Group (v5),1700,2018,580,Eloisa Stuparich,Travis Chilcott,eloisa stuparich,1
+581,Mentawai (Rereiket),Religious Group (v5),1970,2018,585,Manvir Singh,William Noseworthy,manvir singh,1
+582,Siamese (Central Thai),Religious Group (v5),1930,1960,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+586,Kelantanese Thai Religion,Religious Group (v5),1900,2017,579,Irving Johnson,Daniel Veidlinger,irving johnson,1
+588,Nyakyusa,Religious Group (v5),1905,1940,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+589,Warrau,Religious Group (v5),1915,1945,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+590,Huayan School (Early Tang),Religious Group (v5),670,712,582,Jinhua Chen,Matthew Hamm,jinhua chen,1
+591,Koreans,Religious Group (v5),1925,1950,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+592,Veerashaivas,Religious Group (v5),1200,2018,558,Sushumna Kannan,Travis Chilcott,sushumna kannan,1
+594,Wolof,Religious Group (v5),1925,1955,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+595,Western Samoans,Religious Group (v5),1804,1840,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+597,Confucianism - Eastern Zhou,Religious Group (v6),-600,-200,586,Paul Goldin,Matthew Hamm,paul goldin,1
+598,Masai,Religious Group (v6),1875,1915,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+599,Lepcha,Religious Group (v6),1920,1938,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+600,Riffians,Religious Group (v6),1900,1930,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+602,Amhara,Religious Group (v6),1930,1960,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+604,Bambara,Religious Group (v6),1890,1923,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+605,Burmese,Religious Group (v6),1940,1965,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+607,Mohism,Religious Group (v6),-400,-200,586,Maddalena Poli,Matthew Hamm,maddalena poli,7
+608,Kurd,Religious Group (v6),1926,1955,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+609,Tallensi,Religious Group (v6),1915,1940,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+610,Somali,Religious Group (v6),1900,1960,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+611,Javanese,Religious Group (v6),1930,1960,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+612,Marshallese,Religious Group (v6),1880,1915,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+613,Maori,Religious Group (v6),1800,1830,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+614,!Kung,Religious Group (v6),1925,1960,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+616,Balinese,Religious Group (v6),1933,1960,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+618,Nuxalk,Religious Group (v6),1860,1890,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+619,Gilyak,Religious Group (v6),1865,1900,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+620,Papago,Religious Group (v6),1900,1935,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+621,Haitians,Religious Group (v6),1910,1935,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+622,Miskito,Religious Group (v6),1896,1921,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+623,Diasporic American Hinduism,Religious Group (v6),1893,2020,610,Rita Biagioli,Stephen Christopher,rita biagioli,1
+624,The Roshaniyya,Religious Group (v6),1550,1640,611,William Sherman,Stephen Christopher,william sherman,1
+625,Copper Inuit,Religious Group (v6),1890,1915,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+626,Barama River Carib,Religious Group (v6),1907,1935,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+627,Tikopia,Religious Group (v6),1905,1935,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+629,Newar Buddhists,Religious Group (v6),1200,2018,620,Alexander O’Neill,Stephen Christopher,alexander o’neill,1
+630,Aranda,Religious Group (v6),1886,1913,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+631,Cayapa,Religious Group (v6),1879,1909,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+632,Local Religion at Selinous,Religious Group (v6),-650,-409,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+633,Mādhva,Religious Group (v6),1238,2018,615,Anusha Rao,Stephen Christopher,anusha rao,1
+634,Classical Daoism,Religious Group (v6),-350,-100,514,Adrien Stoloff,Michael Naparstek,adrien stoloff,1
+635,Ifugao,Religious Group (v6),1890,1920,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+636,Balinese Śaiva priests (pedanda siwa),Religious Group (v6),1500,2018,566,Andrea Acri,Travis Chilcott,andrea acri,2
+637,Yahgan,Religious Group (v6),1900,1924,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+638,Klamath,Religious Group (v6),1855,1900,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+639,Chinese Esoteric Buddhism (Tang Tantrism),Religious Group (v6),716,900,532,Xing Wang,Matthew Hamm,xing wang,1
+645,"Meo Muslim, Mev, Mewati Muslim",Religious Group (v6),1100,2020,627,Reena Kukreja,Stephen Christopher,reena kukreja,1
+646,Lakota Religious Traditions,Religious Group (v6),1889,2018,628,Ryan Goeckner,Lauren Griffin,ryan goeckner,1
+647,Havasupai,Religious Group (v6),1893,1921,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+648,Haida,Religious Group (v6),1870,1901,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+649,"Worshippers at the Chidambaram Nataraja Temple, Modern Period",Religious Group (v6),700,2019,614,Jodi Shaw,Stephen Christopher,jodi shaw,1
+650,Manus,Religious Group (v6),1918,1945,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+651,Kapauku,Religious Group (v6),1930,1955,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+652,Tiwi,Religious Group (v6),1904,1930,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+654,12th-13th c Cistercians,Religious Group (v6),1198,1250,622,Georgina Fitzgibbon,Janine Larmon Peterson,georgina fitzgibbon,1
+655,Siriono,Religious Group (v6),1917,1943,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+657,Trukese,Religious Group (v6),1912,1949,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+658,Mapuche,Religious Group (v6),1925,1951,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+660,Iban,Religious Group (v6),1941,1966,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+661,Congregation of Savigny,Religious Group (v6),1113,1147,631,Jacob Doss,Janine Larmon Peterson,jacob doss,1
+662,Goajiro,Religious Group (v6),1922,1947,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+666,Siuai,Religious Group (v6),1914,1939,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+667,Ainu,Religious Group (v6),1855,1880,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+669,Orokaiva,Religious Group (v6),1900,1925,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+671,Mbau Fijians,Religious Group (v6),1820,1840,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+673,Pawnee,Religious Group (v6),1842,1870,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+674,Aymara,Religious Group (v6),1915,1940,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+675,Chukchee,Religious Group (v6),1885,1910,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+676,"The Order of the Holy Trinity for the Redemption of Captives, 1198-1500",Religious Group (v6),1198,1500,624,Hazel J. Hunter Blair,Janine Larmon Peterson,hazel j. hunter blair,1
+677,Yapese,Religious Group (v6),1885,1910,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+679,Santal,Religious Group (v6),1915,1940,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+680,Gujarati Mata Worshipers,Religious Group (v6),1850,2019,651,Darry Dinnell,Stephen Christopher,darry dinnell,1
+681,Sargonic Empire,Religious Group (v6),-2350,-2150,652,Nicholas Kraus,Karen Sonik,nicholas kraus,1
+682,Lakher,Religious Group (v6),1905,1935,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+684,Huron,Religious Group (v6),1615,1640,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+685,Badjau,Religious Group (v6),1940,1966,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+686,Popoluca,Religious Group (v6),1915,1945,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+688,Darul Uloom Deoband,Religious Group (v6),1866,2019,650,Quinn Clark,Travis Chilcott,quinn clark,2
+689,Lengua,Religious Group (v6),1869,1895,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+690,Ahl-e-Sunnat wa Jamaat,Religious Group (v6),1880,2019,650,Quinn Clark,Travis Chilcott,quinn clark,2
+691,Fur,Religious Group (v6),1870,1895,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+694,Eyak,Religious Group (v6),1880,1910,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+710,Hidatsa,Religious Group (v6),1816,1840,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+711,Kwoma,Religious Group (v6),1912,1937,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+712,Huichol,Religious Group (v6),1880,1934,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+713,Northern Saulteaux,Religious Group (v6),1910,1940,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+714,Tamil Śaiva Bhakti,Religious Group (v6),550,850,355,Will Sweetman,Travis Chilcott,will sweetman,1
+717,Igbo,Religious Group (v6),1910,1940,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+719,Hinduism in Trinidad,Religious Group (v6),1845,2018,612,Prea Persaud,Stephen Christopher,prea persaud,1
+721,Semang,Religious Group (v6),1910,1940,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+722,Gros Ventre,Religious Group (v6),1835,1885,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+723,Trumai,Religious Group (v6),1910,1940,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+724,Aweikoma,Religious Group (v6),1909,1934,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+726,Early Śramaṇas,Religious Group (v6),-700,500,666,Chris Haskett,Travis Chilcott,chris haskett,1
+727,Raglai,Religious Group (v6),1160,2017,664,Isvan Quang,William Noseworthy,isvan quang,2
+728,Pentecost,Religious Group (v6),1928,1959,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+729,Kikuyu,Religious Group (v6),1895,1930,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+732,Marquesans,Religious Group (v6),1800,1875,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+733,Kaska,Religious Group (v6),1870,1915,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+736,Jivaro,Religious Group (v6),1895,1929,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+737,Nama Hottentot,Religious Group (v6),1855,1900,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+738,Ancient Egyptian,Religious Group (v6),-3000,300,665,Bethany Simpson,Caroline Arbuckle,bethany simpson,1
+739,Lakalai,Religious Group (v6),1885,1910,589,Thomas White,John Shaver,thomas white,8
+741,Śākta Hinduism,Religious Group (v6),-450,2019,592,James Pierce,M. Willis Monroe,james pierce,2
+742,Thai Bhikkhunis,Religious Group (v6),2003,2020,673,Brooke Schedneck,Daniel Veidlinger,brooke schedneck,3
+744,Rwala Bedouin,Religious Group (v6),1887,1915,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+745,Buka,Religious Group (v6),1860,1885,589,Thomas White,John Shaver,thomas white,8
+748,Lamet,Religious Group (v6),1915,1945,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+749,Korean shamanism,Religious Group (v6),1800,2020,684,Liora Sarfati,Matthew Hamm,liora sarfati,1
+750,Mekeo,Religious Group (v6),1850,1875,589,Thomas White,John Shaver,thomas white,8
+751,Buddhism in the Mekong Delta,Religious Group (v6),2000,2020,685,Trang Truong,William Noseworthy,trang truong,1
+752,Haroi,Religious Group (v6),1470,2019,664,Isvan Quang,William Noseworthy,isvan quang,2
+755,Uyghur Islam,Religious Group (v6),1850,2020,687,Michael Krautkraemer,Akshay Sarathi,michael krautkraemer,1
+757,Kiribati,Religious Group (v6),1795,1820,589,Thomas White,John Shaver,thomas white,8
+759,Comanche,Religious Group (v6),1855,1880,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+762,"Punjab/Delhi, India",Religious Group (v6),1600,2020,618,Rachel Spicer,M. Willis Monroe,rachel spicer,1
+763,Moriori,Religious Group (v6),1810,1835,589,Thomas White,John Shaver,thomas white,8
+764,Timbira (Canela),Religious Group (v6),1900,1936,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+765,The Oneida Community,Religious Group (v6),1848,1881,691,Alexandra Prince,Lauren Griffin,alexandra prince,2
+766,Garo,Religious Group (v6),1930,1960,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+768,Mundurucu,Religious Group (v6),1850,1900,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+769,Wogeo,Religious Group (v6),1910,1935,589,Thomas White,John Shaver,thomas white,8
+770,Thai Forest Tradition,Religious Group (v6),1920,2020,673,Brooke Schedneck,Daniel Veidlinger,brooke schedneck,3
+771,Muscular Christianity,Religious Group (v6),1762,2020,696,Adam Park,Lauren Griffin,adam park,1
+775,Jainism,Religious Group (v6),-600,2020,702,Steven Vose,Travis Chilcott,steven vose,1
+779,Syria,Religious Group (v6),-514,-60,700,Shane M. Thompson,Andrew Danielson,shane m. thompson,9
+781,Syria,Religious Group (v6),381,500,700,Shane M. Thompson,Andrew Danielson,shane m. thompson,9
+783,Upper Egypt: Archaic/Early Dynastic Period,Religious Group (v6),-3150,-2686,700,Shane M. Thompson,Andrew Danielson,shane m. thompson,9
+784,Upper Egypt: Old Kingdom,Religious Group (v6),-2686,-2181,700,Shane M. Thompson,Andrew Danielson,shane m. thompson,9
+785,Upper Egypt: First Intermediate Period,Religious Group (v6),-2181,-2055,700,Shane M. Thompson,Andrew Danielson,shane m. thompson,9
+786,Upper Egypt: Middle Kingdom,Religious Group (v6),-2055,-1650,700,Shane M. Thompson,Andrew Danielson,shane m. thompson,9
+787,Upper Egypt: Second Intermediate Period,Religious Group (v6),-1650,-1550,700,Shane M. Thompson,Andrew Danielson,shane m. thompson,9
+788,The Late Bronze Age City-State of Ugarit,Religious Group (v6),-1500,-1200,700,Shane M. Thompson,Andrew Danielson,shane m. thompson,9
+794,Omaha,Religious Group (v6),1840,1880,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+802,Chinese Nunnery in Myanmar,Religious Group (v6),1945,2020,719,Weiyi Cheng,William Noseworthy,weiyi cheng,1
+803,Italy: The Catholic Church,Religious Group (v6),1530,1760,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+804,Italy: The Catholic Church,Religious Group (v6),1760,1870,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+805,Italy: The Catholic Church,Religious Group (v6),1870,1920,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+806,Italy: The Catholic Church,Religious Group (v6),1929,2017,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+807,British Isles I: Pre-Roman Britain,Religious Group (v6),-500,-43,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+808,British Isles II: Pre-Theodosian Roman Britain,Religious Group (v6),-43,380,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+809,British Isles III: Pre-Theodosian Roman Britain Continued,Religious Group (v6),-43,380,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+810,British Isles IV: Pre-Theodosian Roman Britain Continued,Religious Group (v6),-43,380,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+811,British Isles V: Christian Roman Britain,Religious Group (v6),380,500,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+812,Temple of the Jedi Order,Religious Group (v6),2007,2020,717,Sydney Stropes,Robyn Walsh,sydney stropes,1
+814,British Isles VI: Christian Roman Britain,Religious Group (v6),380,500,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+815,British Isles VII: Christian Roman Britain,Religious Group (v6),380,500,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+816,British Paganism.,Religious Group (v6),-500,350,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+817,Early Medieval British Christianity,Religious Group (v6),350,650,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+821,"West Bengal, India",Religious Group (v6),1200,1800,845,Joel Bordeaux,Stephen Christopher,joel bordeaux,3
+822,"West Bengal, India",Religious Group (v6),1800,1950,845,Joel Bordeaux,Stephen Christopher,joel bordeaux,3
+823,"West Bengal, India",Religious Group (v6),1950,2020,845,Joel Bordeaux,Stephen Christopher,joel bordeaux,3
+825,"Central Macedonia, Greece: Eastern Orthodoxy",Religious Group (v6),1530,1912,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+826,"The Church of Christ, Scientist",Religious Group (v6),1866,2020,691,Alexandra Prince,Lauren Griffin,alexandra prince,2
+827,"Central Macedonia, Greece: Eastern Orthodoxy",Religious Group (v6),1913,2017,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+828,Italy: The Franciscan Order,Religious Group (v6),1209,1312,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+829,Italy: The Jesuit Order,Religious Group (v6),1540,2017,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+833,Dobu,Religious Group (v6),1870,1895,589,Thomas White,John Shaver,thomas white,8
+834,The Plum Village Sangha of Thich Nhat Hanh,Religious Group (v6),1982,2020,673,Brooke Schedneck,Daniel Veidlinger,brooke schedneck,3
+835,British Isles: Pre-Roman,Religious Group (v6),-500,43,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+836,British Isles: Romano-British,Religious Group (v6),43,500,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+839,19th century German Protestantism,Religious Group (v6),1788,1914,722,Ryan Fitzgerald,Robyn Walsh,ryan fitzgerald,2
+841,Sa skya,Religious Group (v6),1073,2020,726,Daniel Wojahn,Stephen Christopher,daniel wojahn,1
+842,American Evangelicalism,Religious Group (v6),1730,2020,728,Andrew Gardner,Stephen Christopher,andrew gardner,1
+843,Bnay Qyāmā and Bnāt Qyāmā,Religious Group (v6),300,900,724,Jonathan Warner,Stephen Christopher,jonathan warner,1
+846,Xuanzang's Yogācāra Tradition,Religious Group (v6),645,696,727,Guanxiong Qi,Matthew Hamm,guanxiong qi,3
+848,Sadducees,Religious Group (v6),-200,70,731,Joshua Matson,Stephen Christopher,joshua matson,1
+849,"""Gaiwiio Religion,"" ""Longhouse Religion,"" or ""The Way of Handsome Lake"" of the Seneca Tribe",Religious Group (v6),1750,1850,732,James Waters,Lauren Griffin,james waters,3
+850,Pre-Christian Religion / Paganism in Gaul,Religious Group (v6),-600,-51,739,Sharon Paice MacLeod,Andrew Danielson,sharon paice macleod,4
+851,Sikhism in the United States,Religious Group (v6),1899,2020,740,Tejpaul Singh Bainiwal,Stephen Christopher,tejpaul singh bainiwal,1
+852,Pre-Christian Religion / Paganism in Ireland,Religious Group (v6),-500,900,739,Sharon Paice MacLeod,Andrew Danielson,sharon paice macleod,4
+853,Pre-Christian Religion / Paganism in Northern Britain (Pictland / Scotland),Religious Group (v6),-500,900,739,Sharon Paice MacLeod,Andrew Danielson,sharon paice macleod,4
+854,pre-Christian Irish,Religious Group (v6),-400,900,742,Ronald Hicks,Ben Raffield,ronald hicks,1
+855,Middle-Class Migrant Muslims in the UAE,Religious Group (v6),1900,2020,743,Joud Alkorani,Stephen Christopher,joud alkorani,1
+857,Wesleyanism,Religious Group (v6),1738,2020,750,Tasi Perkins,Courtney Fitzsimmons,tasi perkins,3
+858,"The New Prophecy or ""Montanism""",Religious Group (v6),165,550,753,Camille Leon Angelo,Caroline Arbuckle,camille leon angelo,1
+859,Valentinians,Religious Group (v6),135,400,754,Chance Bonar,Stephen Christopher,chance bonar,3
+860,Kimpa Vita,Religious Group (v6),1704,2020,734,Sandry Matondo,Akshay Sarathi,sandry matondo,5
+862,Ilm-e-Khshnoom,Religious Group (v6),1907,2020,755,Mariano Errichiello,Rohini Shukla,mariano errichiello,2
+863,Orphism,Religious Group (v6),-550,450,733,Juan Dopico,Robyn Walsh,juan dopico,6
+867,Nyingma Treasure,Religious Group (v6),1200,1500,752,Jue Liang,Stephen Christopher,jue liang,1
+869,Sichuan Esoteric Buddhist Cult,Religious Group (v6),855,1279,730,Yi Liu,Matthew Hamm,yi liu,2
+870,Postsocialist Mongolian Buddhism,Religious Group (v6),1990,2020,751,Saskia Abrahms-Kavunenko,Stephen Christopher,saskia abrahms-kavunenko,3
+871,Spiritualism,Religious Group (v6),1848,2020,738,Joanna Smith,Lauren Griffin,joanna smith,3
+873,The Branch Davidians,Religious Group (v6),1962,1993,738,Joanna Smith,Lauren Griffin,joanna smith,3
+877,The International Network of Engaged Buddhists - INEB,Religious Group (v6),1989,2022,772,Manu Ato-Carrera,Daniel Veidlinger,manu ato-carrera,1
+879,Free Methodist Church,Religious Group (v6),1860,2020,773,Steven Lane,Stephen Christopher,steven lane,1
+880,Egyptian Salafism (inluding North Africa and West Asia),Religious Group (v6),1870,2015,774,Nareman Amin,Stephen Christopher,nareman amin,1
+882,Orphism,Religious Group (v6),-450,425,760,Marshall Buchanan,Stephen Christopher,marshall buchanan,1
+883,Catholics in the People's Republic of China (PRC),Religious Group (v6),1949,2020,777,John Lindblom,Matthew Hamm,john lindblom,1
+884,Sub Saharan Africa Pentecostalism,Religious Group (v6),1907,2022,744,Azizou Atte-oudeyi,Stephen Christopher,azizou atte-oudeyi,3
+885,Contemporary West African Vodun,Religious Group (v6),1960,2022,744,Azizou Atte-oudeyi,Stephen Christopher,azizou atte-oudeyi,3
+886,Pushtimarg (The Path of Grace) in the UK and Gujarat,Religious Group (v6),1990,2020,779,Anishka Gheewala Lohiya,Stephen Christopher,anishka gheewala lohiya,1
+887,Postsocialist Mongolian Shamanism,Religious Group (v6),1990,2020,751,Saskia Abrahms-Kavunenko,Stephen Christopher,saskia abrahms-kavunenko,3
+888,Céli Dé monks,Religious Group (v6),780,900,749,Exequiel Monge Allen,Stephen Christopher,exequiel monge allen,1
+891,Peruvian Mormons,Religious Group (v6),1956,2020,783,Jason Palmer,Stephen Christopher,jason palmer,1
+892,Charismatic Renewal Movement in Christianity - Second Wave Pentecostalism,Religious Group (v6),1960,2020,762,Nathan Womack,Lauren Griffin,nathan womack,4
+893,Sethian Gnostic,Religious Group (v6),100,400,778,Brian Alt,Stephen Christopher,brian alt,2
+894,Universal Fellowship of Metropolitan Community Churches,Religious Group (v6),1968,2020,785,William Stell,Stephen Christopher,william stell,1
+896,Sannō Shintō,Religious Group (v6),800,1571,787,Emanuela Sala,Stephen Christopher,emanuela sala,1
+897,Gaengjeongyudo,Religious Group (v6),1928,2020,781,Yeonju Lee,Stephen Christopher,yeonju lee,1
+899,Nahdlatul Ulama (NU),Religious Group (v6),1926,2020,735,Verena Meyer,William Noseworthy,verena meyer,1
+900,Pharisees,Religious Group (v6),-150,70,771,M. John-Patrick O’Connor,Stephen Christopher,m. john-patrick o’connor,2
+902,British Isles: Christian,Religious Group (v6),300,500,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+903,The Buddhist community on Mount Lu during early medieval China,Religious Group (v6),350,450,791,Sangyop Lee,Matthew Hamm,sangyop lee,1
+904,Euboea/Central Macedonia: Nicaean-Chalcedonian Christianity,Religious Group (v6),397,500,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+906,The Church of England,Religious Group (v6),1963,2020,793,Jamie Franklin,Stephen Christopher,jamie franklin,1
+908,Sino-Christian Theology,Religious Group (v6),1980,2020,794,Teng-Kuan Ng,Matthew Hamm,teng-kuan ng,1
+910,Christian Base Community movement,Religious Group (v6),1968,1998,798,Brendan Jordan,Stephen Christopher,brendan jordan,1
+911,Italy: Roman Catholic Christianity,Religious Group (v6),1260,1302,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+914,Tariqa Shadhiliyya,Religious Group (v6),1258,2020,800,John Thibdeau,Stephen Christopher,john thibdeau,1
+915,Protestantism welcoming People with Disabilities,Religious Group (v6),2000,2020,802,Kevin Vollrath,Stephen Christopher,kevin vollrath,2
+916,Italy: Roman Catholic Christianity II,Religious Group (v6),1530,2017,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+917,British Isles: Predominantly Celtic Polytheism,Religious Group (v6),-500,-50,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+918,Fangshi,Religious Group (v6),-475,220,761,Lana Ko,Matthew Hamm,lana ko,2
+919,Catholicism in contemporary Croatia,Religious Group (v6),1995,2020,801,Miguel Alcalde,Stephen Christopher,miguel alcalde,1
+921,Bhils,Religious Group (v6),1700,2020,775,Maharshi Vyas,Stephen Christopher,maharshi vyas,1
+922,British Isles: Mixed Roman and British Polytheism,Religious Group (v6),-50,400,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+923,British Isles: Introduction of Early Christianity through the End of Columban/Irish Christianity,Religious Group (v6),200,700,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+924,Muridiyya of Senegal,Religious Group (v6),1853,2022,744,Azizou Atte-oudeyi,Stephen Christopher,azizou atte-oudeyi,3
+925,Rabbinic Judaism (Babylonia),Religious Group (v6),220,650,805,Yoni Nadiv,Stephen Christopher,yoni nadiv,1
+926,Ladakhi Buddhism,Religious Group (v6),842,2020,780,Darcie Price-Wallace,Stephen Christopher,darcie price-wallace,1
+927,Zealots,Religious Group (v6),0,74,771,M. John-Patrick O’Connor,Stephen Christopher,m. john-patrick o’connor,2
+928,The Ghost Dance Movement and the Lakota Sioux,Religious Group (v6),1860,1910,732,James Waters,Lauren Griffin,james waters,3
+929,Drikung Kagyu,Religious Group (v6),1143,2020,741,Kati Fitzgerald,Stephen Christopher,kati fitzgerald,1
+931,The Society of Jesus (Jesuits) in Britain,Religious Group (v6),1580,2020,808,Katherine Ajibade,Stephen Christopher,katherine ajibade,1
+933,Marcionites,Religious Group (v6),144,1000,754,Chance Bonar,Stephen Christopher,chance bonar,3
+934,Mongolian Buddhism during the Revolutionary Period,Religious Group (v6),1911,1940,751,Saskia Abrahms-Kavunenko,Stephen Christopher,saskia abrahms-kavunenko,3
+935,Nigerian Pentecostalism,Religious Group (v6),1910,2020,810,Naomi Richman,Stephen Christopher,naomi richman,1
+937,Vestal Virgins,Religious Group (v6),-800,394,733,Juan Dopico,Robyn Walsh,juan dopico,6
+938,Ugarit,Religious Group (v6),-1600,-1185,792,Ransom Portis,Stephen Christopher,ransom portis,1
+939,Goodenough and Fergusson Islanders,Religious Group (v6),1875,1900,589,Thomas White,John Shaver,thomas white,8
+940,Julio-Claudian Imperial Cult,Religious Group (v6),-31,68,767,Treasa Bell,Stephen Christopher,treasa bell,1
+941,Chan Buddhists in early Qing period,Religious Group (v6),1600,1700,789,Nan Ouyang,Matthew Hamm,nan ouyang,1
+942,African Methodist Episcopal Church,Religious Group (v6),1816,2020,804,Mélena Laudig,Stephen Christopher,mélena laudig,1
+943,Moravian Missionaries in Nunatsiavut,Religious Group (v6),1752,2020,788,Emma Gilheany,Stephen Christopher,emma gilheany,1
+944,Mohyla's Ukrainian Church,Religious Group (v6),1620,1700,812,Ievgeniia Sakal,Stephen Christopher,ievgeniia sakal,1
+945,Vasco-Aquitanian Religion,Religious Group (v6),100,400,746,David Wallace-Hare,Stephen Christopher,david wallace-hare,1
+946,Nyingma (rnying ma),Religious Group (v6),700,1959,782,Justin Kelley,Stephen Christopher,justin kelley,1
+948,Christianity in Ephesus,Religious Group (v6),120,300,807,Travis Proctor,Stephen Christopher,travis proctor,1
+949,The Church of All Worlds,Religious Group (v6),1963,2020,806,Damian LanahanKalish,Stephen Christopher,damian lanahankalish,1
+950,The Religious Society of Friends,Religious Group (v6),1652,2020,803,Andrew Taylor,Stephen Christopher,andrew taylor,2
+952,Ethiopian Jews,Religious Group (v6),1980,2020,816,Amanda Furiasse,Stephen Christopher,amanda furiasse,1
+953,Sachchai,Religious Group (v6),1975,2020,790,Amar BK,Stephen Christopher,amar bk,1
+955,British Isles: Augustinian/Roman Christianity,Religious Group (v6),600,800,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+956,Iron Age Britain: Mid to Late Pre-Roman Iron Age,Religious Group (v6),-500,-55,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+957,Spartan Religion,Religious Group (v6),-800,-300,809,Sarah M. Norvell,Stephen Christopher,sarah m. norvell,1
+958,Society of Jesus,Religious Group (v6),1540,1773,799,Thomas Santa Maria,Stephen Christopher,thomas santa maria,2
+959,Iron Age Britain: Romano-Celtic Era,Religious Group (v6),-55,286,618,Ryan Johnson,M. Willis Monroe,ryan johnson,30
+960,Bön (Bon),Religious Group (v6),1000,2020,736,Anna Sehnalova,Stephen Christopher,anna sehnalova,2
+961,Romanian Orthodox Church,Religious Group (v6),1885,2020,814,Giuseppe Tateo,Ian Randall,giuseppe tateo,1
+962,Amdo Gelukpa,Religious Group (v6),1400,2000,819,Ling-Wei Kung,Stephen Christopher,ling-wei kung,1
+963,The Knights Templar,Religious Group (v6),1119,1312,811,Emma Zürcher,Stephen Christopher,emma zürcher,1
+964,Baul Fakirs of Bengal,Religious Group (v6),1800,2020,776,Keith Cantu,Stephen Christopher,keith cantu,1
+965,Pachomian Monasticism,Religious Group (v6),323,548,818,Tola Rodrick,Stephen Christopher,tola rodrick,2
+966,"Naqshbandī Order, Naqshbandī Tarīqa, Naqshbandīyyah, Khwājagān,",Religious Group (v6),1318,2020,757,Adam Tyson,Stephen Christopher,adam tyson,1
+967,Unitarian Universalism,Religious Group (v6),1825,2020,813,Courtney Applewhite,Stephen Christopher,courtney applewhite,1
+968,"Anabaptist Mennonites in North America, 1683-2021",Religious Group (v6),1683,2021,820,Sarah Bixler,Stephen Christopher,sarah bixler,1
+969,Adi Dravida/Valluva Sakya Buddhism,Religious Group (v6),1891,1940,822,Collin Sibley,Stephen Christopher,collin sibley,2
+970,Cult of Isis (Mysteries of Isis),Religious Group (v6),-323,500,733,Juan Dopico,Robyn Walsh,juan dopico,6
+971,Gāṇapatya,Religious Group (v6),500,2020,795,Aditya Bhattacharjee,Stephen Christopher,aditya bhattacharjee,1
+972,Nestorian Christianity,Religious Group (v6),431,1500,770,Srecko Koralija,Robyn Walsh,srecko koralija,3
+973,The Sarna religion of the Oraons of Jharkhand,Religious Group (v6),1845,2019,616,Meenakshi Munda,Stephen Christopher,meenakshi munda,1
+974,"Greek Chalcedonian Christians, Nicaea",Religious Group (v6),1204,1261,817,Nikolas Churik,Stephen Christopher,nikolas churik,1
+975,Neo-Charismatic Movement - Third Wave Charismatic Movement,Religious Group (v6),1980,2020,762,Nathan Womack,Lauren Griffin,nathan womack,4
+976,Mising Community,Religious Group (v6),1187,2019,823,Nimisha Thakur,Stephen Christopher,nimisha thakur,1
+977,Chishti Sufis,Religious Group (v6),1200,2020,815,Hallie Swanson,Stephen Christopher,hallie swanson,1
+978,Indonesian Catholicism,Religious Group (v6),1500,2020,825,Meghan Rose Donnelly,Stephen Christopher,meghan rose donnelly,1
+980,Pure Land Buddhist Schools in Early Medieval Japan,Religious Group (v6),1175,1333,826,Kentaro Ide,Stephen Christopher,kentaro ide,1
+981,Nation of Islam,Religious Group (v6),1930,2020,358,SherAfgan Tareen,Lauren Griffin,sherafgan tareen,2
+982,The Samaritans (Persian to early Roman periods),Religious Group (v6),-499,100,824,Sara Boston,Stephen Christopher,sara boston,1
+983,Tibetan and Himalayan Mundane and Landscape Cults,Religious Group (v6),600,2020,736,Anna Sehnalova,Stephen Christopher,anna sehnalova,2
+984,Calvinism (Early/Reformation),Religious Group (v6),1520,1565,828,Chelsea Williams,Stephen Christopher,chelsea williams,1
+985,The Victorines,Religious Group (v6),1108,1299,830,Jack Ford,Stephen Christopher,jack ford,1
+986,Theurgy,Religious Group (v6),150,529,778,Brian Alt,Stephen Christopher,brian alt,2
+987,"Parsis, Zoroastrians of India",Religious Group (v6),1600,2020,831,Kerman Daruwalla,Stephen Christopher,kerman daruwalla,1
+988,Churches of Christ- United States,Religious Group (v6),1832,2020,821,Mason Lee,Stephen Christopher,mason lee,1
+989,Opus Dei,Religious Group (v6),1928,2020,765,Margaret Freddoso,Ian Randall,margaret freddoso,1
+991,Beat Buddhism,Religious Group (v6),1944,1969,786,Steven Quach,Stephen Christopher,steven quach,1
+993,Pontifex Maximus and Pontifices (Pontifical College),Religious Group (v6),-712,380,733,Juan Dopico,Robyn Walsh,juan dopico,6
+994,"Monastic Communities of Lower Egypt: Nitria, Kellia, Scetis",Religious Group (v6),330,470,818,Tola Rodrick,Stephen Christopher,tola rodrick,2
+995,Tamil Neo-Saivism,Religious Group (v6),1841,2020,822,Collin Sibley,Stephen Christopher,collin sibley,2
+997,Ancient Egypt - Early Dynastic Period,Religious Group (v6),-2950,-2670,707,Caroline Arbuckle,Courtney Fitzsimmons,caroline arbuckle,4
+1004,Religion in Roman Ostia,Religious Group (v6),-200,300,836,Mark Locicero,Caroline Arbuckle,mark locicero,1
+1005,Religion in Elam,Religious Group (v6),-2600,-539,837,Elie Burlet,M. Willis Monroe,elie burlet,1
+1006,Ancient Egypt - Old Kingdom,Religious Group (v6),-2670,-2168,707,Caroline Arbuckle,Courtney Fitzsimmons,caroline arbuckle,4
+1008,Ancient Egypt - First Intermediate Period,Religious Group (v6),-2168,-2010,707,Caroline Arbuckle,Courtney Fitzsimmons,caroline arbuckle,4
+1010,Pythagoreanism,Religious Group (v6),-530,200,841,Avi Kapach,Gino Canlas,avi kapach,4
+1011,Kingdom of Edom,Religious Group (v6),-800,-550,842,Andrew Danielson,Andrew Danielson,andrew danielson,1
+1012,Inhabitants of Medieval Kurgus,Religious Group (v6),550,1500,843,Loretta Kilroe,Caroline Arbuckle,loretta kilroe,1
+1013,Estado da Índia Renegades in Deccan,Religious Group (v6),1510,1640,853,Eduardo Nogueira,Travis Chilcott,eduardo nogueira,3
+1015,Ancient Egypt - Predynastic Period - Early Naqada Culture,Religious Group (v6),-4000,-2950,707,Caroline Arbuckle,Courtney Fitzsimmons,caroline arbuckle,4
+1024,Universal Salvation Ritual,Religious Group (v6),1200,1920,873,Jingyu Liu,Michael Naparstek,jingyu liu,1
+1028,German Pietists (Hasidei Ashkenaz),Religious Group (v6),1100,1250,860,Caroline Gruenbaum,Janine Larmon Peterson,caroline gruenbaum,1
+1029,Zigao 子羔,Religious Text (v1.0),-325,-278,708,Sarah Allan,Matthew Hamm,sarah allan,4
+1030,The Way of Tang and Yu (Tang yu zhi dao 唐虞之道),Religious Text (v1.0),-325,-278,708,Sarah Allan,Matthew Hamm,sarah allan,4
+1031,Eastern Roman Manichaeism,Religious Group (v6),300,600,865,Rea Matsangou,Caroline Arbuckle,rea matsangou,1
+1034,Rongchengshi 容成氏,Religious Text (v1.0),-325,-278,708,Sarah Allan,Matthew Hamm,sarah allan,4
+1037,Third Intermediate Period in Ancient Egypt,Religious Group (v6),-1100,-650,884,John Taylor,Caroline Arbuckle,john taylor,1
+1038,Sino-Muslims in Qing China,Religious Group (v6),1644,1911,876,Shaodan Zhang,Matthew Hamm,shaodan zhang,1
+1039,(Archaeology of) Religion in New Kingdom Nubia,Religious Group (v6),-1550,-1070,861,Rennan Lemos,Caroline Arbuckle,rennan lemos,1
+1041,Korean Catholicism,Religious Group (v6),1600,2021,886,Franklin Rausch,Matthew Hamm,franklin rausch,1
+1042,Zichiji 資持記,Religious Text (v1.0),1078,1085,869,Xingyi Wang,Matthew Hamm,xingyi wang,1
+1043,Islam in Aceh,Religious Group (v6),1500,2020,890,Joshua Gedacht,William Noseworthy,joshua gedacht,1
+1044,Han Imperial Cult under Emperor Wu,Religious Group (v6),-141,-87,870,Rebecca Robinson,Matthew Hamm,rebecca robinson,1
+1050,All Things Flow Into Form (Fanwu liuxing 凡物流形),Religious Text (v1.0),-300,-278,708,Franklin Perkins,Matthew Hamm,franklin perkins,1
+1051,Religion at Tell el-Dab'a (ancient Avaris) in Ancient Egypt,Religious Group (v6),-1960,-1550,903,Uros Matic,Caroline Arbuckle,uros matic,1
+1052,The Dunhuang Platform Sūtra,Religious Text (v1.0),780,1000,900,Morten Schlütter,Matthew Hamm,morten schlütter,1
+1054,Wenzi 文子,Religious Text (v1.0),-202,2021,708,Paul van Els,Matthew Hamm,paul van els,1
+1055,Taijitu shuo 太極圖說,Religious Text (v1.0),1050,2021,902,Joseph Adler,Matthew Hamm,joseph adler,2
+1056,The ancient Egyptian Amduat - tomb of Thutmose III,Religious Text (v1.0),-1479,-1425,894,Jordan Miller,Caroline Arbuckle,jordan miller,2
+1057,Fuzi 傅子,Religious Text (v1.0),217,278,909,Xurong Kong,Matthew Hamm,xurong kong,1
+1058,Syŏnggyŏng chikhae kwang-ik,Religious Text (v1.0),1780,1920,887,Deberniere Torrey,Matthew Hamm,deberniere torrey,1
+1060,The Taizhou Movement,Religious Group (v6),1500,1600,908,Johanna Liden,Matthew Hamm,johanna liden,2
+1062,"Shangshu 尚書 (""Higher Writings""; also, ""Documents"")",Religious Text (v1.0),-500,1911,586,Maddalena Poli,Matthew Hamm,maddalena poli,7
+1063,"Lunyu 論語, The Analects",Religious Text (v1.0),-500,1911,586,Maddalena Poli,Matthew Hamm,maddalena poli,7
+1067,"*Xing zi ming chu 性自命出, Natural Dispositions Come from Endowment",Religious Text (v1.0),-400,-200,586,Maddalena Poli,Matthew Hamm,maddalena poli,7
+1069,Religion at Deir el-Medina,Religious Group (v6),-1504,-1069,912,Iria Souto,Caroline Arbuckle,iria souto,1
+1071,Digital Shinto Communities,Religious Group (v6),2001,2021,879,Kaitlyn Ugoretz,Matthew Hamm,kaitlyn ugoretz,1
+1074,Chuci zhangju,Religious Text (v1.0),-139,140,878,Heng Du,Matthew Hamm,heng du,1
+1075,Dazhidu lun 大智度論,Religious Text (v1.0),402,406,920,Matthew Orsborn,Matthew Hamm,matthew orsborn,1
+1076,Inquisitors of Goa's Santo Ofício,Religious Group (v6),1560,1773,853,Eduardo Nogueira,Travis Chilcott,eduardo nogueira,3
+1077,The Cherished Instruction (Baoxun 保訓),Religious Text (v1.0),-325,-278,708,Sarah Allan,Matthew Hamm,sarah allan,4
+1078,Hymns to the Aten,Religious Text (v1.0),-1352,-1336,922,Janne Arp-Neumann,Caroline Arbuckle,janne arp-neumann,1
+1079,Tongshu 通書,Religious Text (v1.0),1050,2021,902,Joseph Adler,Matthew Hamm,joseph adler,2
+1080,Cheng weishi lun 成唯識論,Religious Text (v1.0),659,660,923,Ernest Brewster,Matthew Hamm,ernest brewster,1
+1083,Drukpa Kagyü School (Bhutan),Religious Group (v6),1625,2021,657,Dagmar Schwerk,Stephen Christopher,dagmar schwerk,1
+1087,The Bogomils,Religious Group (v6),969,1400,913,Ian Randall,Ian Randall,ian randall,1
+1095,Punjabi (West),Religious Group (v6),1947,1958,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1098,Shuzi gua excavated material,Religious Text (v1.0),-1200,300,906,Flaminia Pischedda,Matthew Hamm,flaminia pischedda,1
+1100,Fanyin,Religious Text (v1.0),-200,-100,930,YK Lo,Matthew Hamm,yk lo,1
+1101,Natchez,Religious Group (v6),1710,1730,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1106,Old Kingdom Religion at Abydos,Religious Group (v6),-2750,-2150,921,Emily Smith-Sangster,Caroline Arbuckle,emily smith-sangster,1
+1108,Early Christianity and Monasticism in Egypt,Religious Group (v6),0,600,943,Tim Vivian,Caroline Arbuckle,tim vivian,1
+1109,Chan Buddhism in the Song,Religious Group (v6),960,1279,945,Xuejing Sun,Matthew Hamm,xuejing sun,1
+1110,Twana,Religious Group (v6),1845,1875,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1112,Xifang Helun 西方合論,Religious Text (v1.0),1599,1599,918,Charles Jones,Matthew Hamm,charles jones,1
+1117,Ancient Egyptian Book of the Earth – Tomb of Ramesses VI,Religious Text (v1.0),-1145,-1139,948,Joshua Roberson,Caroline Arbuckle,joshua roberson,1
+1120,Liji 禮記,Religious Text (v1.0),-551,1911,944,HinMingFrankie Chik,Matthew Hamm,hinmingfrankie chik,1
+1121,Sahyadri Khanda (Purana),Religious Text (v1.0),1400,1800,919,Durga Kale,Travis Chilcott,durga kale,1
+1124,The ancient Egyptian Book of Two Ways,Religious Text (v1.0),-2000,-1840,894,Jordan Miller,Caroline Arbuckle,jordan miller,2
+1125,Ancient Egypt - the Ramesside Period,Religious Group (v6),-1292,-1070,952,Ute Rummel,Caroline Arbuckle,ute rummel,1
+1127,Anglican Church of Korea,Religious Group (v6),1890,2021,954,Sean Kim,Matthew Hamm,sean kim,1
+1129,Ancient Thessalians,Religious Group (v6),-700,476,942,Gino Canlas,Gino Canlas,gino canlas,4
+1133,Religion in Greco-Roman Egypt,Religious Group (v6),-305,284,965,Khaled Ismail,Caroline Arbuckle,khaled ismail,1
+1134,Tiantai,Religious Group (v6),538,2022,962,Lang Chen,Matthew Hamm,lang chen,1
+1136,The Fellowship of Goodness 同善社 (Tongshanshe),Religious Group (v6),1910,1951,958,Yupeng Jiao,Matthew Hamm,yupeng jiao,1
+1140,Early Medieval Confucianism,Religious Group (v6),220,589,671,Keith Knapp,Matthew Hamm,keith knapp,2
+1141,The Master of the Golden Tower (Jinlouzi 金樓子),Religious Text (v1.0),502,557,968,Dominic Toscano,Matthew Hamm,dominic toscano,1
+1144,The Yijing 易經 (The Classic of Changes),Religious Text (v1.0),-1554,2021,708,Richard Smith,Matthew Hamm,richard smith,1
+1149,Christianity in Tang China,Religious Group (v6),618,906,977,Dingjian Xie,Matthew Hamm,dingjian xie,1
+1153,Russian Orthodox Mission in Alaska,Religious Group (v6),1784,1867,975,Eva Stolberg,M. Willis Monroe,eva stolberg,3
+1154,The Cult of the Fox,Religious Group (v6),1500,1950,708,Xiaofei Kang,Matthew Hamm,xiaofei kang,1
+1155,The Pyramid Texts: Pyramid of King Unas (Wnjs),Religious Text (v1.0),-2375,-2345,899,Brendan Hainline,Caroline Arbuckle,brendan hainline,1
+1156,Solovetski monastery,Religious Group (v6),1429,1939,975,Eva Stolberg,M. Willis Monroe,eva stolberg,3
+1158,Early Daoist text—Commands and Admonitions for the Families of the Great Dao (Dadaojia lingjie大道家令戒),Religious Text (v1.0),200,500,970,Wei Wu,Matthew Hamm,wei wu,1
+1160,Wuzhen pian 悟真篇,Religious Text (v1.0),1075,1078,936,Wanmeng Li,Michael Naparstek,wanmeng li,1
+1162,Lingbao dafa,Religious Group (v6),400,1400,969,Chaojan Chang,Michael Naparstek,chaojan chang,1
+1170,Chongyang Lijiao Shiwu Lun 重陽立教十五論,Religious Text (v1.0),1200,2021,976,Wanrong Zhang,Matthew Hamm,wanrong zhang,1
+1172,Twofold Mystery (Chongxuan 重玄),Religious Group (v6),500,700,708,Friederike Assandri,Matthew Hamm,friederike assandri,1
+1175,Religion in Northern Hejaz,Religious Group (v6),-1500,-300,997,Juan Manuel Tebes,Andrew Danielson,juan manuel tebes,1
+1176,Shijing 詩經 (Classic/Book of Odes/Songs),Religious Text (v1.0),-700,1911,1005,Pak-ka Parker Chan,Matthew Hamm,pak-ka parker chan,1
+1177,Orphic Tablets,Religious Text (v1.0),-500,391,942,Gino Canlas,Gino Canlas,gino canlas,4
+1178,Modern Mystery School (MMS),Religious Group (v6),1997,2021,576,Stephen Christopher,Matthew Hamm,stephen christopher,6
+1180,Batak Traditional Religions,Religious Group (v6),1600,2020,520,William Noseworthy,William Noseworthy,william noseworthy,6
+1182,Huainanzi 淮南子,Religious Text (v1.0),-140,220,1009,Corina Smith,Matthew Hamm,corina smith,1
+1183,Religion at Nippur in the Ur III period,Religious Group (v6),-2100,-2000,1012,Bernhard Schneider,Andrew Danielson,bernhard schneider,1
+1187,Sanctuary at Tell Damiyah,Religious Group (v6),-850,-700,996,Diederik Halbertsma,Andrew Danielson,diederik halbertsma,1
+1188,Marmarini Stele,Religious Text (v1.0),-199,-150,942,Gino Canlas,Gino Canlas,gino canlas,4
+1189,Yādiya/Sam'al,Religious Group (v6),-920,-713,1015,Timothy Hogue,Andrew Danielson,timothy hogue,1
+1190,Ancient state of Urartu,Religious Group (v6),-850,-580,1011,Dan Socaciu,Andrew Danielson,dan socaciu,2
+1191,Religion in Greco-Roman Alexandria,Religious Group (v6),-300,200,987,Joana Climaco,Caroline Arbuckle,joana climaco,1
+1192,Kaharingan,Religious Group (v6),1945,2021,520,William Noseworthy,William Noseworthy,william noseworthy,6
+1196,K’iche’ (Quiché),Religious Group (v6),1910,1940,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1197,Atheism in the Soviet Union,Religious Group (v6),1917,1991,975,Eva Stolberg,M. Willis Monroe,eva stolberg,3
+1199,Tiv,Religious Group (v6),1905,1934,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1203,Book(s) of Daniel,Religious Text (v1.0),-586,100,1024,Megan Remington,Andrew Danielson,megan remington,1
+1207,Female alchemy Tradition,Religious Text (v1.0),1550,2021,896,Elena Valussi,Michael Naparstek,elena valussi,1
+1210,Mende,Religious Group (v6),1920,1950,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1218,Yiguan Dao/I-Kuan Tao 一貫道,Religious Group (v6),1870,2021,989,Yong Chen,Matthew Hamm,yong chen,1
+1219,Chunqiu fanlu,Religious Text (v1.0),-2,7,1043,Ivana Buljan,Matthew Hamm,ivana buljan,1
+1220,The Cult of Chinggis Khan (a.k.a. Genghis Khan) in Mongolia,Religious Group (v6),1227,2023,960,Dotno Pount,Matthew Hamm,dotno pount,1
+1223,Toda,Religious Group (v6),1885,1910,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1224,Duren jing,Religious Text (v1.0),400,500,969,Shuwei Hsieh,Michael Naparstek,shuwei hsieh,1
+1227,Polytheistic Pre-Islamic South Arabia,Religious Group (v6),-800,360,1010,Jason Weimar,Andrew Danielson,jason weimar,2
+1228,Lesu,Religious Group (v6),1915,1940,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1229,Three Self Patriotic Movement (TSPM),Religious Group (v6),1950,2021,708,Mark McLeister,Matthew Hamm,mark mcleister,1
+1231,"Shenxiao 神霄 (""Divine Empyrean"") Daoism",Religious Group (v6),1100,2021,708,Matthew Hamm,Matthew Hamm,matthew hamm,2
+1232,Book of Nut,Religious Text (v1.0),-1300,200,1046,Silvia Zago,Caroline Arbuckle,silvia zago,1
+1234,Ashanti,Religious Group (v6),1880,1910,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1239,Book(s) of Esther,Religious Text (v1.0),-400,70,1052,Marilyn Love,Andrew Danielson,marilyn love,1
+1240,Azande,Religious Group (v6),1900,1935,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1241,Taiping 太平 Movement,Religious Group (v6),1837,1866,708,P. Richard Bohr,Matthew Hamm,p. richard bohr,1
+1243,Shengjing zhijie,Religious Text (v1.0),1636,1900,1061,Yanrong Chen,Matthew Hamm,yanrong chen,1
+1246,Shilluk,Religious Group (v6),1895,1925,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1247,Exovedate,Religious Group (v6),1885,1885,1066,Patrick Miller,Lauren Griffin,patrick miller,1
+1248,Religion in the Old Assyrian Period,Religious Group (v6),-1972,-1718,1070,Trey Nation,Andrew Danielson,trey nation,1
+1249,Cult of the Egyptian Gods at Demetrias,Religious Group (v6),-294,14,1007,Adam Wiznura,Gino Canlas,adam wiznura,1
+1250,Hanbalism,Religious Group (v6),850,1350,1030,Christopher Prejean,Ian Randall,christopher prejean,1
+1251,Tsonga,Religious Group (v6),1880,1910,577,Emily Pitek,M. Willis Monroe,emily pitek,100
+1252,Shedachenglun 攝大乘論,Religious Text (v1.0),525,650,991,Kai Sheng,Matthew Hamm,kai sheng,1
+1253,Damascus Document,Religious Text (v1.0),-200,50,1038,Bryan Elliff,Andrew Danielson,bryan elliff,1
+1255,Julian Romance,Religious Text (v1.0),361,599,1071,Glenn Maur,Ian Randall,glenn maur,2
+1257,Ammonite Religion,Religious Group (v6),-1000,-500,994,Craig Tyson,Andrew Danielson,craig tyson,1
+1258,Religion in Judah,Religious Group (v6),-1000,-586,1072,Kurtis Peters,Andrew Danielson,kurtis peters,1
+1259,"The LuWang School, the School of Lu Xiangshan and Wang Yangming",Religious Group (v6),1200,1900,908,Johanna Liden,Matthew Hamm,johanna liden,2
+1260,Qiṣṣat Dhī al-Qarnayn,Religious Text (v1.0),850,1250,1071,Glenn Maur,Ian Randall,glenn maur,2
+1263,Judean/Yehudite Colony at Elephantine (Persian period),Religious Group (v6),-500,-399,1025,Julianna Smith,Andrew Danielson,julianna smith,1
+1264,Judeans in Babylonia,Religious Group (v6),-598,-447,1064,Laurie Pearce,Andrew Danielson,laurie pearce,1
+1265,Mozi 墨子,Religious Text (v1.0),-400,200,586,Maddalena Poli,Matthew Hamm,maddalena poli,7
+1268,Monotheistic Pre-Islamic South Arabia,Religious Group (v6),360,570,1010,Jason Weimar,Andrew Danielson,jason weimar,2
+1269,Ji shenzhou sanbao gantong lu 集神州三寶感通錄,Religious Text (v1.0),266,664,1073,Nelson Landry,Matthew Hamm,nelson landry,1
+1270,The Zhuangzi,Religious Text (v1.0),-551,1911,1053,Anna-Alexandra Fodde-Reguer,Matthew Hamm,anna-alexandra fodde-reguer,1
+1271,Command to Fu Yue 傅說之命,Religious Text (v1.0),-400,-300,586,Maddalena Poli,Matthew Hamm,maddalena poli,7
+1272,"*The Heart is what is at the center, *Xin shi wei Zhong 心是謂中",Religious Text (v1.0),-400,-300,586,Maddalena Poli,Matthew Hamm,maddalena poli,7
+1279,Mandarese Muslims,Religious Group (v6),1593,2004,1084,Vivek Neelakantan,William Noseworthy,vivek neelakantan,3
+1281,Otoro Nuba,Religious Group (v6),1910,1945,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1283,Butonese Muslims,Religious Group (v6),1500,2002,1084,Vivek Neelakantan,William Noseworthy,vivek neelakantan,3
+1284,Religion of Phoenicia,Religious Group (v6),-1200,-330,1095,Giuseppe Garbati,Andrew Danielson,giuseppe garbati,1
+1288,Bailadeiras of Goa,Religious Group (v6),1510,1650,853,Eduardo Nogueira,Travis Chilcott,eduardo nogueira,3
+1289,Buginese Muslims,Religious Group (v6),1500,2004,1084,Vivek Neelakantan,William Noseworthy,vivek neelakantan,3
+1290,4QInstruction,Religious Text (v1.0),-100,50,1091,Anna Shirav Hamernik,Andrew Danielson,anna shirav hamernik,2
+1291,Mañjuśrī Devotionalism,Religious Group (v6),-400,2022,708,David Quinter,Matthew Hamm,david quinter,1
+1293,The Zapotec or Ben 'Zaa (The Cloud People),Religious Group (v6),-2000,2022,1026,Marijke Stoll,Diana Moreiras,marijke stoll,3
+1294,The Autobiography of Adad-guppi,Religious Text (v1.0),-649,-539,1104,Heidi Fessler,Andrew Danielson,heidi fessler,1
+1295,Donatism,Religious Group (v6),311,600,1074,Jesse Hoover,Ian Randall,jesse hoover,1
+1297,Chen-Wei Texts,Religious Text (v1.0),56,907,1103,Zongli Lu,Matthew Hamm,zongli lu,1
+1299,Russians (of Viriatino Village),Religious Group (v6),1940,1965,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1300,"Enlace de Agentes de Pastoral Indígena (EAPI, Network of Indigenous Ministry Agents)",Religious Group (v6),1990,2022,1107,Eben Levey,Lauren Griffin,eben levey,1
+1301,Moche (Mochica),Religious Group (v6),-200,1000,1026,Marijke Stoll,Diana Moreiras,marijke stoll,3
+1303,Emar: A Hittite Vassal in Late Bronze Age Syria,Religious Group (v6),-1400,-1200,700,Shane M. Thompson,Andrew Danielson,shane m. thompson,9
+1304,Peyote Religion (Peyotism) and the Native American Church,Religious Group (v6),1875,2022,732,James Waters,Lauren Griffin,james waters,3
+1306,Philistine Religion,Religious Group (v6),-1200,-600,995,Aren Maeir,Andrew Danielson,aren maeir,1
+1307,Southern Baptists,Religious Group (v6),1845,2022,1108,Nathaniel A. Moats,Lauren Griffin,nathaniel a. moats,1
+1308,Jews and Jewish-Sympathizers in South Arabia,Religious Group (v6),275,530,1109,Valentina A. Grasso,Andrew Danielson,valentina a. grasso,1
+1309,Circumcellions,Religious Group (v6),315,500,754,Chance Bonar,Stephen Christopher,chance bonar,3
+1311,Jehovah's Witnesses,Religious Group (v6),1870,2022,738,Joanna Smith,Lauren Griffin,joanna smith,3
+1312,Bishnoi,Religious Group (v6),1400,2022,703,Pankaj Jain,Travis Chilcott,pankaj jain,1
+1319,Reginistas,Religious Group (v6),1968,2022,1121,Yanitsa BuendiadeLlaca,Lauren Griffin,yanitsa buendiadellaca,1
+1321,Mourides (Muridiyya),Religious Group (v6),1853,2022,750,Tasi Perkins,Courtney Fitzsimmons,tasi perkins,3
+1322,Pagans under the Emperor Julian,Religious Group (v6),361,363,1055,Jeremy Swist,Ian Randall,jeremy swist,1
+1323,Luguru,Religious Group (v6),1910,1935,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1324,Taiping jing,Religious Text (v1.0),150,2022,1102,Barbara Hendrischke,Matthew Hamm,barbara hendrischke,1
+1326,Meher Kapısı inscription (Urartian text),Religious Text (v1.0),-820,-580,1011,Dan Socaciu,Andrew Danielson,dan socaciu,2
+1328,Táin Bó Cúailnge,Religious Text (v1.0),500,1300,242,Loleta Collins,Ben Raffield,loleta collins,1
+1330,Papyrus Amherst 63,Religious Text (v1.0),-399,-100,1099,Stephen Ward,Andrew Danielson,stephen ward,1
+1333,Cult of Thecla,Religious Group (v6),150,600,722,Ryan Fitzgerald,Robyn Walsh,ryan fitzgerald,2
+1334,No-debt Movement in US Evangelicalism,Religious Group (v6),1980,2022,762,Nathan Womack,Lauren Griffin,nathan womack,4
+1335,Congregation of the Oratory,Religious Group (v6),1575,1700,799,Thomas Santa Maria,Stephen Christopher,thomas santa maria,2
+1337,Tell Afis (Syria),Religious Group (v6),-1200,-600,1041,Giuseppe Minunno,Megan Daniels,giuseppe minunno,2
+1338,The Sayings of the Desert Fathers,Religious Text (v1.0),390,500,1128,Joshua Schachterle,Ian Randall,joshua schachterle,6
+1340,International Sivananda Yoga Vedanta Centers,Religious Group (v6),1957,2023,1116,Jens Uwe Augspurger,Stephen Christopher,jens uwe augspurger,1
+1341,Muslim Students Association of the United States and Canada,Religious Group (v6),1960,2022,358,SherAfgan Tareen,Lauren Griffin,sherafgan tareen,2
+1342,Pauline Epistles,Religious Text (v1.0),50,62,1134,Martin Sanfridson,Andrew Danielson,martin sanfridson,1
+1344,Tibetan Nonsectarianism (ris med),Religious Group (v6),1840,1920,803,Andrew Taylor,Stephen Christopher,andrew taylor,2
+1345,A Sogdian Zoroastrian Prayer,Religious Text (v1.0),400,900,1135,Jenny Rose,Matthew Hamm,jenny rose,2
+1347,"The Praise of the Bees, Exultet Hymn",Religious Text (v1.0),500,1500,1112,Sophia Germanidou,Ian Randall,sophia germanidou,3
+1348,Disability-focused Christianity for Palestinians,Religious Group (v6),2012,2022,802,Kevin Vollrath,Stephen Christopher,kevin vollrath,2
+1349,The Dingxiang Wang Cult,Religious Group (v6),1124,1991,1140,Eric Schluessel,Matthew Hamm,eric schluessel,1
+1352,Śākadvīpīya Brāhmaṇas,Religious Group (v6),2,21,1119,Martina Palladino,Travis Chilcott,martina palladino,2
+1356,The Lausiac History,Religious Text (v1.0),419,420,1128,Joshua Schachterle,Ian Randall,joshua schachterle,6
+1357,Encratites,Religious Group (v6),100,400,1136,Naiara Leão,Ian Randall,naiara leão,2
+1363,Moche,Religious Group (v6),200,900,1146,Aleksa Alaica,Diana Moreiras,aleksa alaica,1
+1367,Targums,Religious Text (v1.0),70,601,770,Srecko Koralija,Robyn Walsh,srecko koralija,3
+1369,Astronomers in Babylon,Religious Group (v6),-750,80,1123,Gil Breger,Andrew Danielson,gil breger,1
+1370,Teda,Religious Group (v6),1935,1960,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1371,Twelver Shi'ism in post-revolutionary Iran,Religious Group (v6),1979,2022,1117,Hasan Doagoo,Akshay Sarathi,hasan doagoo,1
+1374,The Reformed Church (Early Orthodoxy),Religious Group (v6),1560,1620,1122,Wesley Viner,Stephen Christopher,wesley viner,1
+1375,Epic of Gilgamesh,Religious Text (v1.0),-1900,-130,1129,Sophus Helle,Andrew Danielson,sophus helle,2
+1376,African Initiated Churches,Religious Group (v6),1900,2022,1153,Rozelle Bosch,Stephen Christopher,rozelle bosch,1
+1386,Liumen (Liu School),Religious Group (v6),1807,1950,1085,Volker Olles,Matthew Hamm,volker olles,1
+1387,Spring and Autumn annals of Master Lü,Religious Text (v1.0),-247,-239,1100,Ori Tavor,Matthew Hamm,ori tavor,1
+1389,Writ of the Three Sovereigns,Religious Text (v1.0),200,1200,1160,Dominic Steavu,Matthew Hamm,dominic steavu,1
+1390,Eastern Apache,Religious Group (v6),1855,1880,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1392,Messalians,Religious Group (v6),360,900,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1393,The Ladder of Divine Ascent,Religious Text (v1.0),579,650,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1396,Ptolemaic Egypt - Egyptian Religion,Religious Group (v6),-304,-30,1174,Stefan Pfeiffer,Caroline Arbuckle,stefan pfeiffer,1
+1397,The Classic Period Peripheral Coastal Lowlands Ritual Ballgame Cult,Religious Group (v6),400,1000,1026,Marijke Stoll,Diana Moreiras,marijke stoll,3
+1399,Religion in the Mittani Empire,Religious Group (v6),-1550,-1350,1171,Zenobia Homan,Andrew Danielson,zenobia homan,1
+1400,The Buddhist Nuns of 4th - 6th century China,Religious Group (v6),300,516,1187,Kathy Lin,Matthew Hamm,kathy lin,1
+1401,"The ""On the Divine Names"" of Pseudo Denys the Areopagite",Religious Text (v1.0),485,528,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1404,Religion in Nabataea,Religious Group (v6),-300,450,1188,Anna Accettola,Andrew Danielson,anna accettola,1
+1405,Asketikon,Religious Text (v1.0),358,364,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1406,Barlaam and Ioasaph,Religious Text (v1.0),750,1700,1178,Marina Toumpouri,Ian Randall,marina toumpouri,2
+1409,Formative Olmec,Religious Group (v6),-1500,-400,1106,Diana Moreiras,Diana Moreiras,diana moreiras,1
+1412,Tenrikyo,Religious Group (v6),1838,2022,1190,Timothy Smith,Kaitlyn Ugoretz,timothy smith,1
+1415,Anomeans,Religious Group (v6),350,398,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1417,Taiyi sheng shui 太一生水,Religious Text (v1.0),-400,-300,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+1418,Book of Jonah,Religious Text (v1.0),-800,-200,1145,Marian Kelsey,Andrew Danielson,marian kelsey,1
+1419,Ancient Egyptian Religion in the Early 18th Dynasty,Religious Group (v6),-1550,-1425,1193,Lisa Sartini,Caroline Arbuckle,lisa sartini,1
+1420,Creek,Religious Group (v6),1785,1810,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1421,Tian wen 天問,Religious Text (v1.0),-340,140,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+1422,Defense of Icon Veneration by John of Damascus,Religious Text (v1.0),726,730,1178,Marina Toumpouri,Ian Randall,marina toumpouri,2
+1424,Santian neijie jing 三天內解經,Religious Text (v1.0),420,430,1175,Livia Kohn,Matthew Hamm,livia kohn,1
+1425,Religion at Erlitou,Religious Group (v6),-1800,-1500,1172,Ruiliang Liu,Matthew Hamm,ruiliang liu,1
+1426,Early Missionary Christianity in China,Religious Group (v6),1580,1740,1197,Hui-Hung Chen,Matthew Hamm,hui-hung chen,1
+1427,The Chaldaean Oracles,Religious Text (v1.0),100,199,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1429,Enheduana's Exaltation of Inana,Religious Text (v1.0),-2300,-1700,1129,Sophus Helle,Andrew Danielson,sophus helle,2
+1431,Elements of Theology,Religious Text (v1.0),412,485,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1432,Preparation for the Gospel-Demonstration of the Gospel,Religious Text (v1.0),312,324,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1433,Novatians,Religious Group (v6),250,258,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1434,Kuna,Religious Group (v6),1912,1937,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1436,The Monastic School of Gaza,Religious Group (v6),320,536,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1441,Mexica (Aztec) Religion,Religious Group (v6),1325,1521,1201,Bertrand Lobjois,Diana Moreiras,bertrand lobjois,2
+1442,On the Body and Blood of the Lord (De corpore et sanguine Domini) - Paschasius Radbertus,Religious Text (v1.0),830,835,1154,Sarah Luginbill,Ian Randall,sarah luginbill,3
+1443,On the Body and Blood of the Lord (De corpore et sanguine Domini) - Lanfranc of Canterbury,Religious Text (v1.0),1062,1063,1154,Sarah Luginbill,Ian Randall,sarah luginbill,3
+1450,Tehuelche,Religious Group (v6),1855,1880,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1451,Religion in the Early Bronze Age / Canaan,Religious Group (v6),-3600,-2400,1184,Maura Sala,Andrew Danielson,maura sala,2
+1452,Soushen ji 搜神記,Religious Text (v1.0),100,350,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+1454,Hesychastic Controversy,Religious Group (v6),1337,1351,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1456,Religion in the Middle Bronze Age / Canaan,Religious Group (v6),-2000,-1550,1184,Maura Sala,Andrew Danielson,maura sala,2
+1458,Mbuti,Religious Group (v6),1935,1960,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1461,Saami,Religious Group (v6),1935,1960,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1466,Islamic modernists,Religious Group (v6),1800,1980,1209,Julian Weideman,M. Willis Monroe,julian weideman,2
+1468,Eastern Christianity From Nicaea to Chalcedon,Religious Group (v6),325,451,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1469,Huamachuco Religion,Religious Group (v6),300,1532,1198,Amedeo Sghinolfi,Diana Moreiras,amedeo sghinolfi,3
+1471,Book of Ezekiel,Religious Text (v1.0),-593,-100,1214,Rosanne Liebermann,Andrew Danielson,rosanne liebermann,2
+1473,Ishtar's Descent to the Underworld,Religious Text (v1.0),-1000,-600,1143,Louise Pryke,Andrew Danielson,louise pryke,1
+1474,Amahuaca,Religious Group (v6),1945,1970,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1484,Mesopotamian Exorcistic Texts,Religious Text (v1.0),-2500,50,1194,Adam Howe,Andrew Danielson,adam howe,1
+1486,Xunzi 荀子,Religious Text (v1.0),-310,-215,1203,Henry Jacobs,Matthew Hamm,henry jacobs,2
+1488,Botocudo,Religious Group (v6),1869,1894,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1492,Nambicuara,Religious Group (v6),1925,1950,1090,Anj Droe,M. Willis Monroe,anj droe,13
+1495,Secular Buddhists,Religious Group (v6),1997,2022,1220,Kin Cheung,Matthew Hamm,kin cheung,1
+1508,Zaytuna Magazine/ المجلة الزيتونية,Religious Text (v1.0),1936,1955,1209,Julian Weideman,M. Willis Monroe,julian weideman,2
+1511,Sokoto,Religious Group (v6),1804,1903,1228,Paul Naylor,Julian Weideman,paul naylor,1
+1513,Imrā’atu-nā fī l-šarīʻa wa-l-muŷtamaʻ / امرأتنا في الشريعة والمجتمع,Religious Text (v1.0),1927,1930,1229,Tatiana Hernández-Justo,Julian Weideman,tatiana hernández-justo,6
+1516,"""Syrian"" Priestesses (Emar, Mari, Ugarit)",Religious Group (v6),-1800,-1200,1199,Patrick MICHEL,Andrew Danielson,patrick michel,1
+1517,Tunisian Women's Associations,Religious Group (v6),1936,1962,1229,Tatiana Hernández-Justo,Julian Weideman,tatiana hernández-justo,6
+1520,Kitāb al-Khilāf fῑ al-Aḥkām by Al-Shaykh al-Ṭūsī,Religious Text (v1.0),995,1066,1239,Mehdi Ali,Julian Weideman,mehdi ali,1
+1521,Order of the Hermits of St Augustine (Augustinian friars),Religious Group (v6),1256,1400,1241,Krisztina Ilko,Janine Larmon Peterson,krisztina ilko,1
+1522,Tijaniyya Tariqa الطريقة التجانية,Religious Group (v6),1781,2022,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1523,Tafsīr al-taḥrīr wa al-tanwīr,Religious Text (v1.0),1936,2022,1229,Tatiana Hernández-Justo,Julian Weideman,tatiana hernández-justo,6
+1525,Changsha Zidanku Chu bo shu 長沙子彈庫楚帛書 1 (Chu Silk Manuscript),Religious Text (v1.0),-400,-300,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+1529,Byzantine Iconoclasts (726-787 CE),Religious Group (v6),720,743,1213,A.L. McMichael,Ian Randall,a.l. mcmichael,1
+1534,Shorter Sukhāvatīvyūha Sūtra,Religious Text (v1.0),100,2022,727,Guanxiong Qi,Matthew Hamm,guanxiong qi,3
+1535,الجمعية الخيرية الإسلامية بمدينة سوق الأربعاء The Islamic Benevolent Society in Souk-el-Arba,Religious Group (v6),1921,1956,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+1539,Maqāṣid al-šarī῾a al-islāmiyya,Religious Text (v1.0),1947,2022,1229,Tatiana Hernández-Justo,Julian Weideman,tatiana hernández-justo,6
+1540,The Sanskrit Yasna,Religious Text (v1.0),1100,1400,1119,Martina Palladino,Travis Chilcott,martina palladino,2
+1542,Umbanda,Religious Group (v6),1913,2022,1253,Felipe Ribeiro,Marijke Stoll,felipe ribeiro,1
+1544,Ukrainian Greek Catholic Church,Religious Group (v6),1596,2022,1110,Kathryn David,Stephen Christopher,kathryn david,1
+1546,4QPseudo Ezekiel,Religious Text (v1.0),-150,-25,1091,Anna Shirav Hamernik,Andrew Danielson,anna shirav hamernik,2
+1549,Slaying of Husayn Texts,Religious Text (v1.0),1150,1250,750,Tasi Perkins,Courtney Fitzsimmons,tasi perkins,3
+1551,Donation Texts from Ur during the Isin-Larsa Period,Religious Text (v1.0),-1970,-1850,1261,Michèle Maggio,Andrew Danielson,michèle maggio,1
+1552,The Key of Ilme Kṣnum to Understand the Zoroastrian Religion,Religious Text (v1.0),1911,2022,755,Mariano Errichiello,Rohini Shukla,mariano errichiello,2
+1554,"Mustafa Sabri, Mawqif al-ʿAql",Religious Text (v1.0),1942,1950,1264,Andrew Hammond,Julian Weideman,andrew hammond,1
+1555,Al-Ahbash الأحباش,Religious Group (v6),1970,2022,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1556,Sundexioi (Mithras-worshippers),Religious Group (v6),75,450,1262,Matthew McCarty,Gino Canlas,matthew mccarty,1
+1558,Acts of Paul and Thecla,Religious Text (v1.0),150,200,1136,Naiara Leão,Ian Randall,naiara leão,2
+1559,Al-manhaj al-farîd fî ma'rifat 'ilm al-tawhîd.,Religious Text (v1.0),1650,1850,1267,Dorrit van Dalen,Julian Weideman,dorrit van dalen,1
+1560,‘Ara’is al-Majalis fi Qasas al-Anbiya' عَرَائِسُ الْمَجَالِسِ فِي قَصَصِ الْأَنْبِيَاءِ,Religious Text (v1.0),1036,2022,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1563,Wumen Guan 無門關,Religious Text (v1.0),1228,2022,727,Guanxiong Qi,Matthew Hamm,guanxiong qi,3
+1564,Heng xian 恆先,Religious Text (v1.0),-400,-300,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+1570,Tamil Muslims,Religious Group (v6),1900,2024,1248,Harini Kumar,Akshay Sarathi,harini kumar,1
+1573,Al-Risala (The Message) الرسالة,Religious Text (v1.0),767,820,1227,Barhoumi Romdhane,Julian Weideman,barhoumi romdhane,5
+1574,Household religion at Ur,Religious Group (v6),-2000,-1800,1258,Frances Pinnock,Andrew Danielson,frances pinnock,1
+1575,L’esprit libéral du Coran,Religious Text (v1.0),1905,1956,1229,Tatiana Hernández-Justo,Julian Weideman,tatiana hernández-justo,6
+1576,Book of Amos,Religious Text (v1.0),-760,-100,1214,Rosanne Liebermann,Andrew Danielson,rosanne liebermann,2
+1579,Kālikā Purāṇa,Religious Text (v1.0),10,12,1259,Liwen Liu,Travis Chilcott,liwen liu,1
+1581,Book of Jeremiah,Religious Text (v1.0),-620,200,1280,Ryan Schroeder,Andrew Danielson,ryan schroeder,2
+1582,Cult of Bona Dea,Religious Group (v6),-300,500,733,Juan Dopico,Robyn Walsh,juan dopico,6
+1584,Tafattuq al-aḥkām,Religious Text (v1.0),1890,1956,1229,Tatiana Hernández-Justo,Julian Weideman,tatiana hernández-justo,6
+1585,Jingde chuandeng lu 景德傳燈錄,Religious Text (v1.0),1004,1004,730,Yi Liu,Matthew Hamm,yi liu,2
+1588,In the Shade of the Qur'an في ظلال القرآن,Religious Text (v1.0),1951,2023,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1589,Peshitta,Religious Text (v1.0),2,21,770,Srecko Koralija,Robyn Walsh,srecko koralija,3
+1595,The Five Yi Yin Texts,Religious Text (v1.0),-335,-275,1236,Boqun Zhou,Matthew Hamm,boqun zhou,1
+1602,A Record of Buddhist Monasteries in Luoyang,Religious Text (v1.0),493,547,1161,QZ Lau,Matthew Hamm,qz lau,1
+1605,Seven Readings of the Qur'an (Kitab al-Sab'ah fi al-Qira'at) by Ibn Mujahid,Religious Text (v1.0),900,936,1274,Ian VanderMeulen,Julian Weideman,ian vandermeulen,4
+1606,Kitab Sara'ir wa Asrar an-Nutaqa' كتاب سرائر وأسرار النّطقاء,Religious Text (v1.0),990,2022,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1607,Zaydism and the state in Yemen,Religious Group (v6),897,1700,1230,Ekaterina Pukhovaia,Julian Weideman,ekaterina pukhovaia,1
+1613,The Pagoda-Shaped Diamond Sutra Shroud,Religious Text (v1.0),1599,1599,1067,Xu Ma,Matthew Hamm,xu ma,1
+1614,Tabaqat as-Sufiyya de as-Sulami طبقات الصوفيّة للسّلمي,Religious Text (v1.0),1021,2022,1308,Ltaief Zorgui,Julian Weideman,ltaief zorgui,16
+1615,Teuchitlan Tradition,Religious Group (v6),-300,400,1309,Ericka Sofia Blanco Morales,Marijke Stoll,ericka sofia blanco morales,1
+1618,Diya'u al-Ta'aweel fee Ma'ani al-Tanzeel (The Bright interpretation of the meanings of the Qur'an),Religious Text (v1.0),1766,1828,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+1619,"Saint Nicholas ""Maroulenas"", Kastania, southern Greece, byzantine church",Religious Group (v6),1200,2023,1112,Sophia Germanidou,Ian Randall,sophia germanidou,3
+1621,"Saint Spyridon,Kardamyli, southern Greece, postbyzantine church",Religious Group (v6),1700,2023,1112,Sophia Germanidou,Ian Randall,sophia germanidou,3
+1624,Neo-Assyrian Healers (āšipu/mašmaššu-exorcists),Religious Group (v6),-900,-612,1132,Troels Pank Arbøll,Andrew Danielson,troels pank arbøll,1
+1625,Zhu Xi's Four Books 朱熹四書,Religious Text (v1.0),1177,1912,1219,Feiran Du,Matthew Hamm,feiran du,1
+1626,The Cult of Maritime Hera,Religious Group (v6),-800,-400,1131,Kaitlyn Skinner,Gino Canlas,kaitlyn skinner,1
+1627,Mount Putuo 普陀山,Religious Group (v6),1978,2023,978,Courtney Bruntz,Matthew Hamm,courtney bruntz,1
+1628,Bad' al-Khalq wa Qasas al-Anbiya' of Kisa'i كتاب بدء الخلق وقصص الأنبياء للكسائي,Religious Text (v1.0),1100,2023,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1631,Le livre de 'Ihya' 'ulum ad-Din de Ghazali كتاب إحياء علوم الدين للغزالي,Religious Text (v1.0),1058,1111,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+1635,The 'Parastaseis Syntomoi Chronikai',Religious Text (v1.0),700,900,1320,Ethan Schmidt,Ian Randall,ethan schmidt,10
+1636,The second phase of the Iconoclastic Controversy,Religious Group (v6),814,823,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1639,Hujjat Allāh al-Bāligha,Religious Text (v1.0),1703,1762,1310,Khan Asfandyar Shairani,Julian Weideman,khan asfandyar shairani,1
+1642,جامع المسندالصحيح المختصر من أمور رسول الله وسننه وأيامه= Al-Jami' al-Musnad al-Sahih al-Mukthasar Min Umur Rasul Allah...,Religious Text (v1.0),870,2023,1308,Ltaief Zorgui,Julian Weideman,ltaief zorgui,16
+1644,صحيح مسلم Sahih Muslim,Religious Text (v1.0),875,2023,1308,Ltaief Zorgui,Julian Weideman,ltaief zorgui,16
+1645,A Sogdian Zoroastrian Epitaph,Religious Text (v1.0),494,579,1135,Jenny Rose,Matthew Hamm,jenny rose,2
+1647,Gregory of Nyssa’s oration 40,Religious Text (v1.0),372,395,1337,Zoe Tsiami,Ian Randall,zoe tsiami,2
+1650,"كتاب"" المقدّمة ""لابن  خلدون livre  Mou qaddîma d'Abd Al Rahman Ibn Khaldoun",Religious Text (v1.0),1332,1406,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+1652,Le Livre de al-'Ibana 'an 'Usul al-Diyana de al-Ash'ari كتاب الإبانة عن أصول الديانة للأشعري,Religious Text (v1.0),874,936,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1653,Visigothic Homoian Christianity,Religious Group (v6),341,589,1339,Cédrik Michel,Ian Randall,cédrik michel,2
+1654,Le Parti du Mouvement de La Nahda حزب حركة النهضة,Religious Group (v6),1981,2023,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1657,The Institutes of John Cassian,Religious Text (v1.0),420,430,1128,Joshua Schachterle,Ian Randall,joshua schachterle,6
+1659,The Conferences of John Cassian,Religious Text (v1.0),420,430,1128,Joshua Schachterle,Ian Randall,joshua schachterle,6
+1661,Ludlul Bel Nemeqi,Religious Text (v1.0),-1300,-300,1352,Alan Lenzi,Jennifer Singletary,alan lenzi,2
+1662,The miracles of Eric IV Ploughpenny,Religious Text (v1.0),1258,1309,1345,Svend Clausen,Ben Raffield,svend clausen,11
+1664,The Didache,Religious Text (v1.0),50,110,1128,Joshua Schachterle,Ian Randall,joshua schachterle,6
+1666,Edict of Faith,Religious Text (v1.0),1478,1834,1349,Amanda Summers,Andrew Keitt,amanda summers,1
+1667,Medérsiens,Religious Group (v6),1850,1951,1363,Samuel Anderson,Julian Weideman,samuel anderson,1
+1669,The Inner Training (Neiye 內業),Religious Text (v1.0),-400,9,708,Matthew Hamm,Matthew Hamm,matthew hamm,2
+1674,New Hampshire Declaration of Faith,Religious Text (v1.0),1833,2023,1367,Jonathan McCormick,Lauren Griffin,jonathan mccormick,1
+1675,On the Divine Liturgy,Religious Text (v1.0),700,730,1360,Magdalena Garnczarska,Ian Randall,magdalena garnczarska,1
+1677,Royal Hittite Religion,Religious Group (v6),-1650,-1180,1019,Tayfun Bilgin,Andrew Danielson,tayfun bilgin,1
+1678,Translation of the holy Margrethe,Religious Text (v1.0),1176,1201,1345,Svend Clausen,Ben Raffield,svend clausen,11
+1683,Book of Leviticus,Religious Text (v1.0),-800,-400,1368,John Mellison,Andrew Danielson,john mellison,1
+1684,The Lives of the Philosophers and Sophists,Religious Text (v1.0),347,414,1320,Ethan Schmidt,Ian Randall,ethan schmidt,10
+1685,De Dea Syria,Religious Text (v1.0),150,250,1320,Ethan Schmidt,Ian Randall,ethan schmidt,10
+1686,L'islam et les origines de la gouvernance Ali Abdel Razek الإسلام وأصول الحكم علي عبد الرازق,Religious Text (v1.0),1924,2023,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1688,Arianism,Religious Group (v6),325,671,1339,Cédrik Michel,Ian Randall,cédrik michel,2
+1689,The Isma'ilis in the Ottoman Empire,Religious Group (v6),1516,1919,1373,Amaan Merali,Julian Weideman,amaan merali,1
+1690,Christianity in Byzantium: between the end of Iconoclasm and the Schism,Religious Group (v6),843,1054,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1692,The holy Niels of Århus (younger text),Religious Text (v1.0),1325,1345,1345,Svend Clausen,Ben Raffield,svend clausen,11
+1694,Christianity in Byzantium: Between the Schism and the Fourth Crusade,Religious Group (v6),1054,1204,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1695,"Xiaojing ""Classic of Filial Piety""",Religious Text (v1.0),-230,1911,671,Keith Knapp,Matthew Hamm,keith knapp,2
+1697,Stylite Monks,Religious Group (v6),450,1450,1400,Elizabeth Zanghi,Ian Randall,elizabeth zanghi,1
+1698,Biographies of Eminent Monks,Religious Text (v1.0),67,519,1408,Edward A S Ross,Matthew Hamm,edward a s ross,1
+1700,The Book of Hosea,Religious Text (v1.0),-800,-500,1380,Morganne Ottobre,Andrew Danielson,morganne ottobre,4
+1701,The Premonstratensian Order in the Middle Ages,Religious Group (v6),1120,2023,1418,Yvonne Seale,Janine Larmon Peterson,yvonne seale,1
+1703,Arsenites,Religious Group (v6),1265,1310,1383,Phoebe Georgiadi,Ian Randall,phoebe georgiadi,2
+1705,The Historia Compostellana,Religious Text (v1.0),1088,1148,1415,James Kawalek,Janine Larmon Peterson,james kawalek,1
+1708,الإباضية  Al-Ibadia,Religious Group (v6),708,2023,1308,Ltaief Zorgui,Julian Weideman,ltaief zorgui,16
+1709,Almohads (al-Muwaḥḥidūn),Religious Group (v6),1115,1269,1299,Daniel Watling,Julian Weideman,daniel watling,1
+1714,Syncretic Polytheism in Curious Pastimes LARP,Religious Group (v6),2019,2022,1401,Anna Milon,Stephen Christopher,anna milon,1
+1721,Tell Fekheriyeh Inscription,Religious Text (v1.0),-890,750,1380,Morganne Ottobre,Andrew Danielson,morganne ottobre,4
+1723,The holy Niels of Århus (older text),Religious Text (v1.0),1254,1255,1345,Svend Clausen,Ben Raffield,svend clausen,11
+1725,The holy Anders of Slagelse,Religious Text (v1.0),1205,1536,1345,Svend Clausen,Ben Raffield,svend clausen,11
+1734,Cupisnique Culture Religion,Religious Group (v6),-1600,-400,1198,Amedeo Sghinolfi,Diana Moreiras,amedeo sghinolfi,3
+1735,كتاب الملل والنحل لعبد الكريم ابو الفتح الشهرستاني,Religious Text (v1.0),1127,2023,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+1736,Ihya'u Sunnah wa Ikhmadul Bid'ah,Religious Text (v1.0),1754,1817,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+1737,الإمامية Al-Imamia,Religious Group (v6),661,2023,1308,Ltaief Zorgui,Julian Weideman,ltaief zorgui,16
+1741,Methodism in Zimbabwe or Methodist Church in Zimbabwe,Religious Group (v6),1891,2023,1436,Peter Masvotore,Adegbola Tolu Adefi,peter masvotore,2
+1750,The London-Leiden Magical Papyrus,Religious Text (v1.0),180,225,1392,Kirsten Dzwiza,Caroline Arbuckle,kirsten dzwiza,11
+1751,The holy Kjeld of Viborg (older text),Religious Text (v1.0),1188,1536,1345,Svend Clausen,Ben Raffield,svend clausen,11
+1758,Jiuge 九歌,Religious Text (v1.0),-340,140,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+1759,الطريقة الشاذلية = Attarika Achadoulia,Religious Group (v6),1195,2023,1308,Ltaief Zorgui,Julian Weideman,ltaief zorgui,16
+1763,Uḍḍīśatantra,Religious Text (v1.0),1400,2009,464,Aaron Michael Ullrey,Courtney Fitzsimmons,aaron michael ullrey,10
+1767,Bhairavapadmāvatīkalpa,Religious Text (v1.0),900,1100,464,Aaron Michael Ullrey,Courtney Fitzsimmons,aaron michael ullrey,10
+1770,Bhūtaḍāmaratantra (Buddhist),Religious Text (v1.0),700,900,464,Aaron Michael Ullrey,Courtney Fitzsimmons,aaron michael ullrey,10
+1771,إنفاق الميسور في تاريخ بلاد التكرار,Religious Text (v1.0),1781,1837,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+1774,إباضية جزيرة جربة Ibadis of Jerba,Religious Group (v6),1557,1864,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+1776,الطريقة القادرية في البلاد التونسية The Qadiriyya Order in Tunisia,Religious Group (v6),1881,1939,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+1777,الطريقة التّيجانية بالبلاد التونسية The Tijaniyya Order in Tunisia,Religious Group (v6),1881,1939,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+1778,Le Conflit d'Adam et Eve contre Satan ou The first and the Second hidden book of Adam and Eve صراع آدم وحوّاء ضدّ الشيطان,Religious Text (v1.0),300,990,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1779,المذهب المالكي بالبلاد التونسية The Maliki school in Tunisia,Religious Group (v6),1956,2023,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+1780,الطريقة الشاذلية في تونس The Shadhiliyya Order in Tunisia,Religious Group (v6),1881,1939,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+1781,المذهب الشيعي في تونس The Shiʿi madhhab in Tunisia,Religious Group (v6),1969,2023,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+1783,The holy Kjeld of Viborg (younger text),Religious Text (v1.0),1346,1524,1345,Svend Clausen,Ben Raffield,svend clausen,11
+1784,The Cannibal Nun,Religious Text (v1.0),1100,1200,1320,Ethan Schmidt,Ian Randall,ethan schmidt,10
+1785,Carmen de Incendio,Religious Text (v1.0),1197,1197,1320,Ethan Schmidt,Ian Randall,ethan schmidt,10
+1787,Ekphrasis of the Church of the Holy Apostles,Religious Text (v1.0),1190,1200,1320,Ethan Schmidt,Ian Randall,ethan schmidt,10
+1791,"الطريقة القادرية في بغداد: فترة التأسيس ق12 Attarika Al Qadiria à Bagdad: la période fondatrice, le XIIe siècle",Religious Group (v6),1100,1200,1308,Ltaief Zorgui,Julian Weideman,ltaief zorgui,16
+1793,Monothelitism,Religious Group (v6),456,681,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1794,A Mathematician,Religious Text (v1.0),1206,1207,1320,Ethan Schmidt,Ian Randall,ethan schmidt,10
+1795,‘Adhwā‘ Al-Bayān fi ‘Idhāḥ Al-Qur‘ān bi Al-Qur‘ān: أضواء البيان في إيضاح القرآن بالقرآن,Religious Text (v1.0),1965,2023,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1796,Annals of Quedlinburg,Religious Text (v1.0),1008,1030,1154,Sarah Luginbill,Ian Randall,sarah luginbill,3
+1803,مفتاح التفسير,Religious Text (v1.0),1766,1828,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+1805,Wahhabisme الوهّابيّة,Religious Group (v6),1744,1819,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1806,Sango Religious group in Oyo,Religious Group (v6),1800,1900,1460,olusegun oladosu,Adegbola Tolu Adefi,olusegun oladosu,3
+1808,'yan Taru (Women Cadre of the Nana Asma'u),Religious Group (v6),1793,1864,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+1809,(The Character Traits of the Chosen One) كتاب أخلاق المصطفى,Religious Text (v1.0),1766,1828,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+1810,Shang Oracle Bone Inscriptions,Religious Text (v1.0),-1200,-1046,1203,Henry Jacobs,Matthew Hamm,henry jacobs,2
+1811,كتاب قصيدة المرثية (Kitab Qasidat al-Marsiyyah).,Religious Text (v1.0),1793,1864,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+1812,The Prison Chronicle,Religious Text (v1.0),1297,1302,1345,Svend Clausen,Ben Raffield,svend clausen,11
+1816,The Zhen'gao,Religious Text (v1.0),365,2023,1464,Liying Xu,Matthew Hamm,liying xu,2
+1818,(Urjuzat al-Wildan) أرجوزة الولدان,Religious Text (v1.0),1403,1445,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+1820,"Cherubim and Seraphim Church Unification, Campus Fellowship",Religious Group (v6),1980,2019,1451,Oluwasegun Aluko,Adegbola Tolu Adefi,oluwasegun aluko,4
+1829,Cherubim and Seraphim Unification Church of Nigeria (C&SUCN),Religious Group (v6),1986,2019,1451,Oluwasegun Aluko,Adegbola Tolu Adefi,oluwasegun aluko,4
+1835,"The Cherubim and Seraphim Church of Zion, Ugbonla",Religious Group (v6),1948,2023,1445,Adegbola Tolu Adefi,Julian Weideman,adegbola tolu adefi,11
+1845,Benedictine Order in Denmark,Religious Group (v6),1018,1536,1345,Svend Clausen,Ben Raffield,svend clausen,11
+1846,Yogasūtra of Patañjali,Religious Text (v1.0),-100,300,464,Aaron Michael Ullrey,Courtney Fitzsimmons,aaron michael ullrey,10
+1847,Arthaśāstra,Religious Text (v1.0),-300,200,464,Aaron Michael Ullrey,Courtney Fitzsimmons,aaron michael ullrey,10
+1852,The Communion Letters by Whitley and Anne Strieber,Religious Text (v1.0),1987,1997,464,Aaron Michael Ullrey,Courtney Fitzsimmons,aaron michael ullrey,10
+1855,Atra-Hasīs,Religious Text (v1.0),-1700,-600,1470,Maria de Fátima Rosa,Andrew Danielson,maria de fátima rosa,1
+1858,Christianity in Alexandria: From Origen to Athanasius,Religious Group (v6),185,373,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1868,Yuan Dao bian,Religious Text (v1.0),1178,1179,1473,Jiangnan Li,Matthew Hamm,jiangnan li,1
+1869,IFA RELIGIOUS GROUP IN ILE- IFE,Religious Group (v6),1930,2015,1460,olusegun oladosu,Adegbola Tolu Adefi,olusegun oladosu,3
+1871,Inana's descent to the nether world,Religious Text (v1.0),-1900,-1600,1468,Isabel Gomes de Almeida,Andrew Danielson,isabel gomes de almeida,5
+1872,"The Holy Apostles Community, Ayetoro",Religious Group (v6),1947,2023,1445,Adegbola Tolu Adefi,Julian Weideman,adegbola tolu adefi,11
+1875,"Jalal al-Din al-Suyuti, Perfect Guide to Qur'anic Studies (al-Itqan fi 'Ulum al-Qur'an)",Religious Text (v1.0),1440,1505,1274,Ian VanderMeulen,Julian Weideman,ian vandermeulen,4
+1882,The Life of Severus,Religious Text (v1.0),512,518,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1883,"""Ammonius, On the Creation of the World"" by Zacharias Scholasticus",Religious Text (v1.0),490,520,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1888,Communion By Whitley Strieber,Religious Text (v1.0),1987,1987,464,Aaron Michael Ullrey,Courtney Fitzsimmons,aaron michael ullrey,10
+1896,Passport to Magonia by Jacques Vallee,Religious Text (v1.0),1969,1969,464,Aaron Michael Ullrey,Courtney Fitzsimmons,aaron michael ullrey,10
+1897,"The Episcopal Church of Cherubim and Seraphim, Zion Pepe",Religious Group (v6),1951,2023,1445,Adegbola Tolu Adefi,Julian Weideman,adegbola tolu adefi,11
+1898,Shurpu Incantation Series,Religious Text (v1.0),-1300,-610,1424,Ryan Replogle,Andrew Danielson,ryan replogle,1
+1903,The 'Abbāsids,Religious Group (v6),750,1258,1446,Sara Ann Knutson,Julian Weideman,sara ann knutson,1
+1904,الطريقة القادرية في تونس القرن  19 و20   =  L'ordre Qadiri en Tunisie aux XIXe et XXe siècles,Religious Group (v6),1800,2000,1308,Ltaief Zorgui,Julian Weideman,ltaief zorgui,16
+1905,(A brief introduction to the Islamic jurisprudence on the Maliki school of law)مختصر الأخضري في مذهب الإمام مالك,Religious Text (v1.0),1514,1575,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+1906,"(Acceptable means of praising the Prophet, may God bless him and grant him peace)الوسائل المتقبلة في مدح النبي صلى الله عليه و سلم",Religious Text (v1.0),1872,1895,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+1907,A treatise on the rulings of the people of Dhimma (رسالة في أحكام اهل الذمة),Religious Text (v1.0),1425,1505,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+1908,"Buddhist Traders in the Chinese Quarter in Hakata, Japan",Religious Group (v6),1100,1300,1479,Yiwen Li,Matthew Hamm,yiwen li,1
+1918,Contemporary Neo-Confucianism 當代新儒家,Religious Group (v6),1950,2023,1471,King Pong Chiu,Matthew Hamm,king pong chiu,4
+1921,Zhouxun 周訓,Religious Text (v1.0),-340,-240,1505,Andrej Fech,Matthew Hamm,andrej fech,1
+1924,The Deuteronomistic History,Religious Text (v1.0),-700,-300,1380,Morganne Ottobre,Andrew Danielson,morganne ottobre,4
+1928,(The gathering of the Messenger of God does not falter)وجمع رسول الله لا يتشعث,Religious Group (v6),1793,1864,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+1940,"The Holy Apostles Community, Ori-Oke Iwamimo",Religious Group (v6),1950,2023,1445,Adegbola Tolu Adefi,Julian Weideman,adegbola tolu adefi,11
+1941,Tang Junyi 唐君毅,Religious Text (v1.0),1930,2023,1471,King Pong Chiu,Matthew Hamm,king pong chiu,4
+1943,Cult of Gauchito Gil,Religious Group (v6),1990,2020,1512,Ana Inés Aldazabal,Lauren Griffin,ana inés aldazabal,1
+1944,Cakawi [sic] Cam 1969,Religious Text (v1.0),1968,1970,520,William Noseworthy,William Noseworthy,william noseworthy,6
+1952,Daodejing 道德經,Religious Text (v1.0),-300,2023,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+1958,The Apostolic Faith Mission in Zimbabwe,Religious Group (v6),1915,2018,1437,TERENCE MUPANGWA,Adegbola Tolu Adefi,terence mupangwa,2
+1959,Papyrus London 121 (PGM VII),Religious Text (v1.0),250,350,1392,Kirsten Dzwiza,Caroline Arbuckle,kirsten dzwiza,11
+1961,"Grace Covenant Centre, Ado-Ekiti",Religious Group (v6),1990,2023,1445,Adegbola Tolu Adefi,Julian Weideman,adegbola tolu adefi,11
+1962,Huayan School 華嚴宗,Religious Group (v6),670,845,1471,King Pong Chiu,Matthew Hamm,king pong chiu,4
+1966,Cherubim & Seraphim Movement Church (Worldwide) Ayo Ni O,Religious Group (v6),1972,2023,1509,Samuel Okanlawon,Adegbola Tolu Adefi,samuel okanlawon,1
+1971,The Homeric Hymn to Demeter,Religious Text (v1.0),-600,-550,841,Avi Kapach,Gino Canlas,avi kapach,4
+1972,Shepherding Movement,Religious Group (v6),1970,2000,762,Nathan Womack,Lauren Griffin,nathan womack,4
+1973,The Homeric Hymn to Apollo,Religious Text (v1.0),-655,-522,841,Avi Kapach,Gino Canlas,avi kapach,4
+1974,"Chapel of Grace, Ile-Ife",Religious Group (v6),1989,2023,1445,Adegbola Tolu Adefi,Julian Weideman,adegbola tolu adefi,11
+1976,Who is not assisted by the religious scholar(The Jurist) (Man La Yahdhuruhu al-Faqih) من لا يحضره الفقيه,Religious Text (v1.0),916,991,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+1978,"The Dharmalakshana Buddhist Institute 佛教法相學會, Hong Kong",Religious Group (v6),1965,2023,1471,King Pong Chiu,Matthew Hamm,king pong chiu,4
+1979,The Homeric Hymn to Hermes,Religious Text (v1.0),-550,-500,841,Avi Kapach,Gino Canlas,avi kapach,4
+1981,(Guiding the traveler to the most honorable path in the jurisprudence of Imam Malik.)إرشاد السالك إلى أشرف المسالك في فقه الإمام مالك,Religious Text (v1.0),1246,1332,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+1982,Guodian Laozi 郭店老子,Religious Text (v1.0),-350,-300,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+1983,Early Byzantine Asceticism,Religious Group (v6),400,600,1383,Phoebe Georgiadi,Ian Randall,phoebe georgiadi,2
+1985,Christianity in Antioch. From the Apostolic Era to the Islamic conquest,Religious Group (v6),34,638,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+1987,Grand Papyrus Magique (PGM IV),Religious Text (v1.0),4,4,1392,Kirsten Dzwiza,Caroline Arbuckle,kirsten dzwiza,11
+1989,Iron Age Celtic Spain and Portugal (Celtiberia),Religious Group (v6),-600,300,739,Sharon Paice MacLeod,Andrew Danielson,sharon paice macleod,4
+1991,(Laws of Sharia rulings and issues of the branches of jurisprudence.) قوانين الأحكام الشرعية ومسائل الفروع الفقهية,Religious Text (v1.0),1804,1903,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+1992,Kitab tesviyetü't-teveccüh ila'l hak: The Guide for One's Turning toward Truth,Religious Text (v1.0),1556,1557,1520,Sofia Kane,Ian Randall,sofia kane,3
+1993,Ancient Boeotians,Religious Group (v6),-600,400,1272,Thomas Alexander Husøy,Gino Canlas,thomas alexander husøy,2
+1994,Nigeria Fellowship of Evangelical Students (NIFES),Religious Group (v6),1968,2023,1445,Adegbola Tolu Adefi,Julian Weideman,adegbola tolu adefi,11
+1996,Delphic Hymns 1 and 2,Religious Text (v1.0),-138,-128,942,Gino Canlas,Gino Canlas,gino canlas,4
+1997,Hundred and eighty precepts of Lord Lao,Religious Text (v1.0),300,500,1497,Johan Rols,Matthew Hamm,johan rols,1
+1998,The Chinese Christian Scroll Pelliot chinois 3847,Religious Text (v1.0),635,1000,1524,Daniel Sheridan,Matthew Hamm,daniel sheridan,1
+2000,"The Community Church of Apostles Nigeria and Oversea (COCANO), Ajegunle",Religious Group (v6),1933,2023,1445,Adegbola Tolu Adefi,Julian Weideman,adegbola tolu adefi,11
+2001,The Book of Deuteronomy,Religious Text (v1.0),-700,-500,1380,Morganne Ottobre,Andrew Danielson,morganne ottobre,4
+2002,Mawangdui Laozi 馬王堆老子,Religious Text (v1.0),-221,-194,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+2003,Nigerian Baptist Convention,Religious Group (v6),1914,2023,1526,Oyeyemi Oyekan,Adegbola Tolu Adefi,oyeyemi oyekan,4
+2006,New Life for All Nations Ministries,Religious Group (v6),1972,2023,1445,Adegbola Tolu Adefi,Julian Weideman,adegbola tolu adefi,11
+2008,(The beginning of the diligent and the end of the frugal) بداية المجتهد ونهاية المقتصد,Religious Text (v1.0),1804,1903,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2009,Ancient Arcadians,Religious Group (v6),-800,300,1272,Thomas Alexander Husøy,Gino Canlas,thomas alexander husøy,2
+2010,Bektashi Tarika,Religious Group (v6),1240,2023,1520,Sofia Kane,Ian Randall,sofia kane,3
+2011,Scripture Union Nigeria,Religious Group (v6),1885,2023,1445,Adegbola Tolu Adefi,Julian Weideman,adegbola tolu adefi,11
+2012,The Five Theological Orations of Gregory of Nazianzus (The Theologian),Religious Text (v1.0),379,381,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+2016,الدولة الفاطمية Fatimid Dynasty,Religious Group (v6),909,1171,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+2021,The United Missionary Church of Africa,Religious Group (v6),1905,2023,1525,Olusegun Olawoyin,Adegbola Tolu Adefi,olusegun olawoyin,2
+2023,الدولة الزيرية Zirid Dynasty,Religious Group (v6),971,1152,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+2025,"The Satisfaction of Souls and Words of the Wise concerning the scholars and righteous ones buried in Fez, by Muhammad ibn Ja'far al-Kattani",Religious Text (v1.0),1000,1898,1274,Ian VanderMeulen,Julian Weideman,ian vandermeulen,4
+2026,Heshang Gong 河上公 commentary on the Daodejing 道德经,Religious Text (v1.0),200,2023,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+2027,Hizb-ut-Tahrir,Religious Group (v6),1953,2023,1516,Michele Benazzo,Julian Weideman,michele benazzo,1
+2028,Bulugh Al- Maram min Adillat Al- Ahkam,Religious Text (v1.0),1372,1449,1463,Muhammad  Jabir,Julian Weideman,muhammad jabir,1
+2029,كتاب تهافت الفلاسفة للغزالي,Religious Text (v1.0),1058,1111,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2031,الدولة الأغلبية The Aghlabid Dynasty,Religious Group (v6),800,909,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+2032,(The light of the rulers regarding what is best for them and on them) ضياء الحكام فيما لهم وعليهم من الأحكم,Religious Text (v1.0),1767,1828,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2034,"The ""Mithras-Liturgy""",Religious Text (v1.0),300,399,1392,Kirsten Dzwiza,Caroline Arbuckle,kirsten dzwiza,11
+2038,"Cathars, Catharism, Albigenses, Albigensians, Cathari, Catharistae, ""Pure Christians""",Religious Group (v6),1000,1300,1422,John Gallagher,Ian Randall,john gallagher,5
+2039,Psalm 109,Religious Text (v1.0),-1000,50,1532,Jennifer Singletary,Andrew Danielson,jennifer singletary,2
+2040,(Condolences to the Al-Azhar community) المقدمة العزية للجماعة الأزهرية,Religious Text (v1.0),1752,1804,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2041,PGM XXXVI (Greek ritual manual),Religious Text (v1.0),300,399,1392,Kirsten Dzwiza,Caroline Arbuckle,kirsten dzwiza,11
+2042,The Eighth Book Of Moses,Religious Text (v1.0),-300,399,1392,Kirsten Dzwiza,Caroline Arbuckle,kirsten dzwiza,11
+2044,P.Mich.inv. 593 (Coptic ritual manual),Religious Text (v1.0),300,699,1392,Kirsten Dzwiza,Caroline Arbuckle,kirsten dzwiza,11
+2045,PGM I (Greek ritual manual),Religious Text (v1.0),251,499,1392,Kirsten Dzwiza,Caroline Arbuckle,kirsten dzwiza,11
+2046,L'Interprétation du Coran Intitulé Tafsir al-Manar تفسير المنار,Religious Text (v1.0),1905,1935,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+2048,الدولة الرستمية Rustamid Dynasty,Religious Group (v6),777,909,1534,Elhadi Bououchma,Julian Weideman,elhadi bououchma,2
+2051,Tibeto-Vietnamese Đạo Mẫu,Religious Group (v6),2022,2024,576,Stephen Christopher,Matthew Hamm,stephen christopher,6
+2052,Christ Way Ministries International,Religious Group (v6),1992,2023,1533,Enoch Gbadegesin,Adegbola Tolu Adefi,enoch gbadegesin,2
+2053,(Alert the unwary)تنبيه الغافلين,Religious Text (v1.0),1804,1903,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2054,Christ Apostolic Church,Religious Group (v6),1918,2023,1537,Michael Akande,Adegbola Tolu Adefi,michael akande,1
+2055,An Akkadian Tamitu-Query,Religious Text (v1.0),-1800,-600,1352,Alan Lenzi,Jennifer Singletary,alan lenzi,2
+2057,Paskuwatti’s Ritual to Cure Sexual Dysfunction,Religious Text (v1.0),-1400,-1200,1539,Billie Collins,Jennifer Singletary,billie collins,1
+2059,(The Garden of Knowers)بستان العارفين,Religious Text (v1.0),1804,1903,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2061,OYA RELIGIOUS GROUP IN OYO,Religious Group (v6),1800,1900,1460,olusegun oladosu,Adegbola Tolu Adefi,olusegun oladosu,3
+2064,Sha'rawi interpretation of the Coran تفسير محمّد متولّي الشعراوي,Religious Text (v1.0),1911,1998,1227,Barhoumi Romdhane,Julian Weideman,barhoumi romdhane,5
+2069,L'ordre Soufi Qasimite Hadfite الطريقة الصوفية القاسميّة الهادفية,Religious Group (v6),1969,2022,1227,Barhoumi Romdhane,Julian Weideman,barhoumi romdhane,5
+2070,Overcomers Evangelical Mission International (Ori-Oke Asegun),Religious Group (v6),2003,2018,1451,Oluwasegun Aluko,Adegbola Tolu Adefi,oluwasegun aluko,4
+2071,"Songs of the Sage (4Q510, 4Q511)",Religious Text (v1.0),-30,30,1539,Joseph Angel,Jennifer Singletary,joseph angel,1
+2072,Unguja Ukuu Amulet Seal,Religious Text (v1.0),700,900,1375,Akshay Sarathi,Julian Weideman,akshay sarathi,2
+2074,"Revolutionary Mahdism and Resistance to Colonial Rule in the Sokoto Caliphate, 1905-1906",Religious Group (v6),1905,1906,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+2075,Tafsir  Al-Jami' li Ahkam Al Coran par Al-Qurtubi تفسير الجامع لأحكام القرآن للقرطبي,Religious Text (v1.0),1214,1273,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2076,Kizimkazi Dimbani Mosque Inscription,Religious Text (v1.0),1107,2023,1375,Akshay Sarathi,Julian Weideman,akshay sarathi,2
+2077,ضياء السياسات والفتاوى والنوازل مما هو في فروع الدين من المسائل,Religious Text (v1.0),1812,1828,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+2078,"L'Interprétation du Coran ""Clés de l'Invisible"" تفسير ""مفاتيح الغيب""",Religious Text (v1.0),1149,1208,1227,Barhoumi Romdhane,Julian Weideman,barhoumi romdhane,5
+2079,(Jewels of meanings and fulfillment of wishes)جواهر المعاني و بلوغ الأماني,Religious Text (v1.0),1804,1903,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2080,Daily Communal Petitions (Tefillah/Amidah),Religious Text (v1.0),50,1000,1539,Ruth Langer,Jennifer Singletary,ruth langer,1
+2081,Ben Sira 36:1–22,Religious Text (v1.0),-200,100,1539,Benjamin Wright,Jennifer Singletary,benjamin wright,1
+2082,(The spears of the Merciful Party on the Throat of the Servants of the Merciful.) رماح حزب الرحيم على نحور حزب الرحيم,Religious Text (v1.0),1804,1903,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2083,(The spirit of Morality)روح الأدب,Religious Text (v1.0),1900,1975,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2084,MAITATSINE: NIGERIA'S BLOODY RELIGIOUS TERRORIST MOVEMENT,Religious Group (v6),1980,1985,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+2085,الحصن الرصين في علم التصريف,Religious Text (v1.0),1766,1828,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+2086,Mathnawi ma'nawi,Religious Text (v1.0),1462,2023,1540,Sabaheta Gačanin,Julian Weideman,sabaheta gačanin,1
+2087,"Al-Tabari’s interpretation of the Qur’an تفسير الطبري""جامع البيان في تأويل آي القرآن """,Religious Text (v1.0),839,923,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2088,مصباح الراوي في علم الحديث,Religious Text (v1.0),1766,1828,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+2089,L'ordre Soufit karkariya en Tunisie الطريقة الكركرية في تونس,Religious Group (v6),1974,2023,1227,Barhoumi Romdhane,Julian Weideman,barhoumi romdhane,5
+2090,أسهل المدارك شرح إرشاد السالك في فقه إمام الأئمة مالك,Religious Text (v1.0),1892,1976,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+2092,Interpretation of Imam Ibn Arafaتفسير الامام ابن عرفة الورغمّي,Religious Text (v1.0),1316,1401,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2093,Papyrus PGM XII / pdm xii (Bilingual Greek-Demotic Ritual Manual),Religious Text (v1.0),300,350,1392,Kirsten Dzwiza,Caroline Arbuckle,kirsten dzwiza,11
+2094,Feathered Serpent's cult,Religious Group (v6),100,1521,1201,Bertrand Lobjois,Diana Moreiras,bertrand lobjois,2
+2097,منظو مة مصباح الراوي في علم الحديث-عبد الله بن فودي,Religious Text (v1.0),1766,1829,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+2100,الدولة الزيانية Zayyanid Dynasty,Religious Group (v6),1235,1554,1534,Elhadi Bououchma,Julian Weideman,elhadi bououchma,2
+2101,"Le livre Fasl al-Maqal d'Ibn Rushd concernant le lien entre la sagesse et la charia""فصل المقال فيما بين الحكمة والشريعة من اتّصال",Religious Text (v1.0),1126,1198,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2102,"The Stele of Ieou (PGM V, 96-172)",Religious Text (v1.0),300,399,1392,Kirsten Dzwiza,Caroline Arbuckle,kirsten dzwiza,11
+2103,"(Revising the strong statement, an explanation of the chapter on hadith) تنقيح القول الحثيث شرح لباب الحديث",Religious Text (v1.0),1804,1903,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2104,الطريقة التجانية في تونس ق18-ق19 ATARIKA TJENIA FI TOUNES  XVIII-XIXème siècle,Religious Group (v6),1700,1900,1550,ltaief zorgui,Julian Weideman,ltaief zorgui,16
+2111,Tsinburbura Traditional Religion,Religious Group (v6),700,1463,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2112,Mengzi,Religious Text (v1.0),-323,-314,1548,Lok Chui Choo,Matthew Hamm,lok chui choo,1
+2114,Tijaniyyah Sufi Movement in North-Western Nigeria,Religious Group (v6),1837,1990,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2116,Qadiriyyah Movement in the Sokoto Caliphate.,Religious Group (v6),1804,1923,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2118,Samaritan Hymn by Amram Dare,Religious Text (v1.0),200,1800,1539,Laura Lieber,Jennifer Singletary,laura lieber,1
+2120,تفسير رد الأذهان إلى معاني القرآن للشيخ أبوبكر غومي,Religious Text (v1.0),1924,1992,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+2121,Believers in the Sanctity of Canute III Magnussøn,Religious Group (v6),1157,1200,1345,Svend Clausen,Ben Raffield,svend clausen,11
+2122,Jama'at Izalat al-Bid'ah wa Iqamat al-Sunnah (JIBWIS),Religious Group (v6),1978,2008,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2124,إراءة عرائس شموس فلك الحقائق العرفانية بأصابع حق ماهية التربية بالطريقة التجانية,Religious Text (v1.0),1934,2024,1550,ltaief zorgui,Julian Weideman,ltaief zorgui,16
+2125,الإسلام في نيجيريا والشيخ عثمان بن فوديو الفلاتي-أدم عبد الله الالوري,Religious Text (v1.0),1917,1992,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+2126,Nasrul-lahi-li Fathi Society of Nigeria (NASFAT),Religious Group (v6),1984,2023,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2128,Paulicians,Religious Group (v6),650,1700,1320,Ethan Schmidt,Ian Randall,ethan schmidt,10
+2129,Saint Thecla (acts of Paul and Thecla) and baptism,Religious Text (v1.0),1,2,1337,Zoe Tsiami,Ian Randall,zoe tsiami,2
+2130,The Danish Dominican Chronicle,Religious Text (v1.0),1220,1261,1345,Svend Clausen,Ben Raffield,svend clausen,11
+2131,Chimú Empire Religion,Religious Group (v6),900,1470,1198,Amedeo Sghinolfi,Diana Moreiras,amedeo sghinolfi,3
+2133,ANSAR-UD-DEEN SOCIETY OF NIGERIA,Religious Group (v6),1923,2000,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2134,"The Paredros of Pnouthis, the Sacred Scribe (PGM I, 42-195)",Religious Text (v1.0),250,425,1392,Kirsten Dzwiza,Caroline Arbuckle,kirsten dzwiza,11
+2138,الجماعة الأحمدية الإسلامية في نيجيريا,Religious Group (v6),1916,2024,1304,Jabir  Musa,Julian Weideman,jabir musa,16
+2139,Shi'a Group in Nigeria,Religious Group (v6),1980,2020,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2140,"St. John Chrysostom, Homilies On the Incomprehensible Nature of God",Religious Text (v1.0),347,407,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+2141,(Ahl al-Sunnah Group for Preaching and Jihad)جماعة أهل السنة للدعوة والجهاد,Religious Group (v6),2002,2022,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2143,City of God,Religious Text (v1.0),410,426,1128,Joshua Schachterle,Ian Randall,joshua schachterle,6
+2146,Maruyamakyō,Religious Group (v6),1870,2024,1557,Avery Morrow,Stephen Christopher,avery morrow,1
+2147,الدولة الحفصية Hafsid Dynasty,Religious Group (v6),1229,1574,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+2148,الدولة الحسينية The Husaynid Dynasty,Religious Group (v6),1705,1957,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+2149,Judaism in Byzantium,Religious Group (v6),330,1453,1320,Ethan Schmidt,Ian Randall,ethan schmidt,10
+2152,Wang Bi's 王弼 commentary to the Daodejing 道德經: the Laozi Daodejing zhu 老子道德經注,Religious Text (v1.0),200,2023,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+2153,Guishen zhi ming 鬼神之明,Religious Text (v1.0),-400,-300,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+2155,Lingbao Canon: Perfect Script in Five Tablets 五篇真文 and Jade Instruction Written in Red 赤書玉訣,Religious Text (v1.0),500,1000,1464,Liying Xu,Matthew Hamm,liying xu,2
+2157,Blue Light Evangelicals in the Late Eighteenth-Century Royal Navy,Religious Group (v6),1775,1815,1560,Bethany Henderson,M. Willis Monroe,bethany henderson,5
+2160,Manichaeans,Religious Group (v6),250,843,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+2166,Judaism in Byzantium,Religious Group (v6),395,1453,1520,Sofia Kane,Ian Randall,sofia kane,3
+2168,"Dzibilchaltún, arquitectura, poder y cambio religioso en el norte de Yucatán",Religious Group (v6),-600,1100,1559,Orlando Casares Contreras,Diana Moreiras,orlando casares contreras,1
+2170,Liber Pontificalis,Religious Text (v1.0),450,1500,1320,Ethan Schmidt,Ian Randall,ethan schmidt,10
+2173,"Irenaeus of Lyons, ""Against Heresies""",Religious Text (v1.0),130,202,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+2177,The Covenant Ceremony in the Community Rule (1QS),Religious Text (v1.0),-100,0,1539,Jennifer Singletary,Jennifer Singletary,jennifer singletary,2
+2178,Aladura Christianity in Nigeria,Religious Group (v6),1918,2023,1451,Oluwasegun Aluko,Adegbola Tolu Adefi,oluwasegun aluko,4
+2180,Cao Đài,Religious Group (v6),1921,2024,520,William Noseworthy,William Noseworthy,william noseworthy,6
+2181,Communal Petitions for Days of the Week: Prayer for Friday (4Q504),Religious Text (v1.0),-150,70,1567,Daniel Falk,Jennifer Singletary,daniel falk,1
+2183,"Gregory of Nyssa ""On the Soul and the Resurrection""",Religious Text (v1.0),335,394,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+2187,1 Samuel 2:1-10,Religious Text (v1.0),-900,-500,1564,Taylor Gray,Jennifer Singletary,taylor gray,1
+2189,"Epiphanius of Salamis (Cyprus), ""Panarion""",Religious Text (v1.0),374,377,1170,Lampros Alexopoulos,Ian Randall,lampros alexopoulos,26
+2190,Ezra 9,Religious Text (v1.0),-400,350,1561,Rodney Werline,Jennifer Singletary,rodney werline,1
+2191,Two Aramaic Mortuary Stelae from Nerab,Religious Text (v1.0),-700,-700,1564,Samuel Boyd,Jennifer Singletary,samuel boyd,1
+2194,The Redeemed Christian Church of God,Religious Group (v6),1952,2023,1525,Olusegun Olawoyin,Adegbola Tolu Adefi,olusegun olawoyin,2
+2196,Balaam Inscription from Tell Deir ‘Allā,Religious Text (v1.0),-850,-750,1379,Matthew Saunders,Andrew Danielson,matthew saunders,4
+2198,Katumuwa Stele from Sam'al,Religious Text (v1.0),-900,-700,1379,Matthew Saunders,Andrew Danielson,matthew saunders,4
+2199,"Prayer for Vengeance against Mariam, Kallinikos, and Others",Religious Text (v1.0),401,500,1577,Korshi Dosoo,Jennifer Singletary,korshi dosoo,1
+2200,The Roman Catholic Mission in Nigeria,Religious Group (v6),1480,2024,1568,Joseph Ajayi,Adegbola Tolu Adefi,joseph ajayi,1
+2203,Huang-Lao Daoism,Religious Group (v6),-476,220,1574,Thomas Michael,Matthew Hamm,thomas michael,2
+2208,The Book of Judith,Religious Text (v1.0),-160,80,1247,Joseph Scales,Andrew Danielson,joseph scales,1
+2209,The Church of Nigeria Anglican Communion,Religious Group (v6),1842,2024,1584,Peter Adelaja Oyebanjo,Adegbola Tolu Adefi,peter adelaja oyebanjo,1
+2210,Living Faith Church Worldwide,Religious Group (v6),1981,2024,1533,Enoch Gbadegesin,Adegbola Tolu Adefi,enoch gbadegesin,2
+2214,Tiwanaku Religion,Religious Group (v6),600,1000,1585,Erik Marsh,Diana Moreiras,erik marsh,2
+2219,Heart Sūtra,Religious Text (v1.0),350,2024,1581,Weiyu Lin,Matthew Hamm,weiyu lin,2
+2220,Ansar-ud-deen Society of Nigeria,Religious Group (v6),1923,2023,1569,Abdul mumin Alawiye,Julian Weideman,abdul mumin alawiye,2
+2221,A Votive Inscription to Hathor/Baʿalat,Religious Text (v1.0),-1850,-1500,1565,Aren Wilson-Wright,Jennifer Singletary,aren wilson-wright,1
+2224,Graffiti and Inscriptions from Roman Palestine,Religious Text (v1.0),160,500,1591,Karen Stern,Jennifer Singletary,karen stern,1
+2225,"Culdees, Céli Dé, Céili Dé, Céle Dé,  ""Clients of God"", ""Servants of God"", ""Spouses of God"", ""Companions of God"", Kelidei, Kaledei; Céile Dé",Religious Group (v6),700,1100,1422,John Gallagher,Ian Randall,john gallagher,5
+2228,Church of God Mission,Religious Group (v6),1972,2024,1526,Oyeyemi Oyekan,Adegbola Tolu Adefi,oyeyemi oyekan,4
+2231,جواهر المعاني وبلوغ الأماني,Religious Text (v1.0),1798,2024,1550,ltaief zorgui,Julian Weideman,ltaief zorgui,16
+2232,"Lollards, Lollard, the Lollard movement, Lollardism,  Lollardy, Wycliffites",Religious Group (v6),1350,1500,1422,John Gallagher,Ian Randall,john gallagher,5
+2233,The Way of Former Heaven (Xiantiandao 先天道),Religious Group (v6),1734,2024,1595,Nikolas Broy,Matthew Hamm,nikolas broy,3
+2236,الرّسالة المفصّلة لأحوال المتعلّمين وأحكام المعلّمين والمتعلّمين لأبي الحسن  علي القابسي,Religious Text (v1.0),935,1012,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2237,"Order of Preachers, Dominicans, Friars Preachers, Black Friars, Jacobins",Religious Group (v6),1217,2024,1422,John Gallagher,Ian Randall,john gallagher,5
+2238,XX ــــــــ    ـق  XVIII   الطريقة التجانية في الجزائر :ق,Religious Group (v6),1700,2000,1550,ltaief zorgui,Julian Weideman,ltaief zorgui,16
+2239,Chaco Culture,Religious Group (v6),800,1200,1541,Robert Weiner,Diana Moreiras,robert weiner,1
+2240,"Inka and non-Inka groups in Cusco, Peru",Religious Group (v6),900,1532,1597,Julia Earle,Diana Moreiras,julia earle,1
+2241,The Cult of Cybele and Attis,Religious Group (v6),-750,400,733,Juan Dopico,Robyn Walsh,juan dopico,6
+2243,Hui People,Religious Group (v6),700,2024,1527,Jonathan Ouellet,Julian Weideman,jonathan ouellet,3
+2244,"Catholicism in the Latin Empire, Catholicism in the Eastern Roman Empire (Byzantium), the Latin Patriarchate of Constantinople",Religious Group (v6),1204,1261,1422,John Gallagher,Ian Randall,john gallagher,5
+2245,صقلية الإسلامية Islamic Sicily,Religious Group (v6),652,1240,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+2246,المذهب الحنفي بالبلاد التونسية The Hanafi school in Tunisia,Religious Group (v6),819,1957,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+2247,الفتح العربي الإسلامي لشمال إفريقيا The Arab-Islamic Conquest of North Africa,Religious Group (v6),647,712,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+2248,الدولة المرادية في تونس The Muradid Dynasty in Tunisia,Religious Group (v6),1631,1702,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+2255,Dongxiang,Religious Group (v6),1340,2024,1527,Jonathan Ouellet,Julian Weideman,jonathan ouellet,3
+2256,الطريقة الرحمانية في الجزائر  ق18-ق20,Religious Group (v6),1700,2000,1550,ltaief zorgui,Julian Weideman,ltaief zorgui,16
+2258,"Livre  des Règle  de conduite des maîtres كتاب "" آداب المعلّمين  "" محمد ابن سحنون""",Religious Text (v1.0),817,870,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2262,Le Commencement et la Fin البداية والنهاية de Ibn Kathir لابن كثير,Religious Text (v1.0),1301,1373,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+2263,"lettre au disciple Ayyuha-l-walad par Al Ghazâlî رسالة ""ايّها الولد لأبي حامد الغزالي",Religious Text (v1.0),1058,1111,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2264,Puritans,Religious Group (v6),1560,1720,1560,Bethany Henderson,M. Willis Monroe,bethany henderson,5
+2265,القرآن الكريم Le Noble Coran,Religious Text (v1.0),610,2024,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+2266,Yangsheng Daoism from Laozi to Ge Hong,Religious Group (v6),-571,343,1574,Thomas Michael,Matthew Hamm,thomas michael,2
+2271,The Gideons International in Ngeria,Religious Group (v6),1964,2024,1601,Abimbola Adesoji,Adegbola Tolu Adefi,abimbola adesoji,1
+2272,Abou Hamid Al-Ghazali:   Le livre d'Al-Jam Al-Awam sur la science de la théologie الجام العوام عن علم الكلام,Religious Text (v1.0),1058,1111,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2273,Yuan divination schools,Religious Group (v6),1291,1368,1603,Qiao Yang,Matthew Hamm,qiao yang,1
+2274,Ìjọ Àdìmúlà (An Institutionalised Indigenous Religious Movement in Yorubaland,Religious Group (v6),1920,2023,1602,Ebenezer Elesemoyo,Adegbola Tolu Adefi,ebenezer elesemoyo,2
+2276,Western Zhou (1045 BCE - 771 BCE),Religious Group (v6),-1045,-771,917,Dong Wang,Matthew Hamm,dong wang,1
+2277,Western Zhou Bronze Inscriptions (Xi Zhou jinwen 西周金文),Religious Text (v1.0),-1046,-771,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+2278,الطريقة القادرية البودشيشية في المغرب الأقصى,Religious Group (v6),1700,2024,1550,ltaief zorgui,Julian Weideman,ltaief zorgui,16
+2279,The Ndau people of Chimanimani area in Zimbabwe,Religious Group (v6),1890,2024,1437,TERENCE MUPANGWA,Adegbola Tolu Adefi,terence mupangwa,2
+2280,Enki and Ninmaḫ,Religious Text (v1.0),-1900,-1600,1468,Isabel Gomes de Almeida,Andrew Danielson,isabel gomes de almeida,5
+2282,Heart Sutra 波若波羅蜜多心經,Religious Text (v1.0),649,2024,1555,Justin Winslett,Matthew Hamm,justin winslett,2
+2283,Ge Hong 葛洪 and Outer Alchemy 外丹,Religious Group (v6),283,364,1555,Justin Winslett,Matthew Hamm,justin winslett,2
+2284,Tarascan Religion,Religious Group (v6),1300,1522,1217,José Luis Punzo Díaz,Diana Moreiras,josé luis punzo díaz,1
+2285,Enki and Ninḫursaĝa,Religious Text (v1.0),-1900,-1600,1468,Isabel Gomes de Almeida,Andrew Danielson,isabel gomes de almeida,5
+2286,Religious Practices of the Valdivians during Ecuador's Early Formative Period,Religious Group (v6),-3500,-1300,1608,Florencio Delgado-Espinoza,Diana Moreiras,florencio delgado-espinoza,1
+2287,Cara,Religious Group (v6),950,1532,1587,Ryan Hechler,Lauren Griffin,ryan hechler,1
+2290,الطريقة القادرية في مصر ق13م-ق21م,Religious Group (v6),1200,2024,1550,ltaief zorgui,Julian Weideman,ltaief zorgui,16
+2294,Baopuzi neipian 抱朴子內篇,Religious Text (v1.0),220,330,761,Lana Ko,Matthew Hamm,lana ko,2
+2295,Nergal and Ereškigal,Religious Text (v1.0),-1600,-500,1468,Isabel Gomes de Almeida,Andrew Danielson,isabel gomes de almeida,5
+2296,Taiyi jiangxing tu 太一將行圖,Religious Text (v1.0),-221,-194,1195,Francesca Puglia,Matthew Hamm,francesca puglia,14
+2297,Waldensians (Waldenses),Religious Group (v6),1173,1699,1560,Bethany Henderson,M. Willis Monroe,bethany henderson,5
+2298,The Baal Cycle,Religious Text (v1.0),-1400,-1350,1280,Ryan Schroeder,Andrew Danielson,ryan schroeder,2
+2299,الحشاشين  ق11-ق13   =   Assassins   XI-XIII,Religious Group (v6),1100,1300,1550,ltaief zorgui,Julian Weideman,ltaief zorgui,16
+2301,Kaloutsiani Mosque,Religious Group (v6),1600,2024,1578,Theodoros Tzanatos,Megan Daniels,theodoros tzanatos,4
+2302,Casma-Sechín Culture Religion,Religious Group (v6),-3400,-1800,1586,Yuriko Garcia Ortiz,Diana Moreiras,yuriko garcia ortiz,4
+2308,الفتح العربي الإسلامي للأندلس The Arab-Islamic Conquest of the Iberian Peninsula,Religious Group (v6),711,726,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+2309,الدولة الأموية بالأندلس The Umayyad Dynasty in the Iberian Peninsula,Religious Group (v6),756,1031,1244,Helmi Ghazouani,Julian Weideman,helmi ghazouani,18
+2312,The philosophical system of 'Ubuntu' in Southern Africa,Religious Group (v6),-1800,2024,1436,Peter Masvotore,Adegbola Tolu Adefi,peter masvotore,2
+2313,Dungan people,Religious Group (v6),600,2024,1527,Jonathan Ouellet,Julian Weideman,jonathan ouellet,3
+2320,Sanjiejiao (三階教),Religious Group (v6),500,800,1614,Ngoc Tho Nguyen,Matthew Hamm,ngoc tho nguyen,3
+2321,Falungong 法輪功 (Falun Gong) / Falun Dafa 法輪大法,Religious Group (v6),1992,2024,1595,Nikolas Broy,Matthew Hamm,nikolas broy,3
+2322,الدّولة الأمويّة في المشرق  بين662 م و750م (The Umayyad State in the Mashriq from 662 to 750),Religious Group (v6),661,750,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2324,"Justice and Development Party (PJD), Morocco",Religious Group (v6),1970,2024,1274,Ian VanderMeulen,Julian Weideman,ian vandermeulen,4
+2325,"Outer alchemy (外丹, waidan)",Religious Group (v6),-200,900,1614,Ngoc Tho Nguyen,Matthew Hamm,ngoc tho nguyen,3
+2327,ỌBÀTÁLA RELIGIOUS GROUP AMONG THE YORUBA OF ILÉ-IFẸ̀,Religious Group (v6),1900,2024,1602,Ebenezer Elesemoyo,Adegbola Tolu Adefi,ebenezer elesemoyo,2
+2328,Church of Almighty God (Quannengshen jiaohui 全能神教會) / Eastern Lightning (Dongfang shandian 東方閃電),Religious Group (v6),1991,2024,1595,Nikolas Broy,Matthew Hamm,nikolas broy,3
+2329,Hòa Hảo,Religious Group (v6),1937,2024,1616,Nhung Lu Rots,William Noseworthy,nhung lu rots,1
+2330,Evangelical Church Winning All,Religious Group (v6),1893,2024,1526,Oyeyemi Oyekan,Adegbola Tolu Adefi,oyeyemi oyekan,4
+2331,الدولة العباسيبّة في المشرق  من 750 م الى 1517 م (The Abbasid State in the Mashriq from 750 to 1517),Religious Group (v6),750,1517,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2332,Religion in the Minaean kingdom,Religious Group (v6),-800,50,1609,Irene Rossi,Andrew Danielson,irene rossi,1
+2333,Sōka Gakkai (創価学会),Religious Group (v6),1930,2024,1612,Ralph H. Craig III,Kaitlyn Ugoretz,ralph h. craig iii,1
+2335,The Seventh-day Adventist Church in Nigeria,Religious Group (v6),1914,2024,1618,Olabode Omotosho,Adegbola Tolu Adefi,olabode omotosho,1
+2337,Inca,Religious Group (v6),1350,1533,1619,Darryl Wilkinson,Diana Moreiras,darryl wilkinson,1
+2338,Enūma eliš,Religious Text (v1.0),-1200,550,1468,Isabel Gomes de Almeida,Andrew Danielson,isabel gomes de almeida,5
+2339,Yorùbá Traditional Religion,Religious Group (v6),1100,2024,1526,Oyeyemi Oyekan,Adegbola Tolu Adefi,oyeyemi oyekan,4
+2341,The Totonacapan Culture-Religion,Religious Group (v6),600,1521,1221,Israel Elizalde Mendez,Diana Moreiras,israel elizalde mendez,1
+2342,Ugaritic Ba'lu Cycle,Religious Text (v1.0),-1350,-1200,1379,Matthew Saunders,Andrew Danielson,matthew saunders,4
+2344,Sican Culture religion,Religious Group (v6),900,1200,1586,Yuriko Garcia Ortiz,Diana Moreiras,yuriko garcia ortiz,4
+2345,Contemporary Shingon,Religious Group (v6),1950,2024,1622,Nathan Jishin Michon,Kaitlyn Ugoretz,nathan jishin michon,1
+2346,Igbo Traditional Religion,Religious Group (v6),1800,2024,1621,Eze Ekenedirichukwu,Adegbola Tolu Adefi,eze ekenedirichukwu,1
+2347,Nichiren Buddhism,Religious Group (v6),1222,2023,1623,Benjamin Dorman,Kaitlyn Ugoretz,benjamin dorman,1
+2348,Ancient Israelite Religion (Iron Age),Religious Group (v6),-1200,-500,1379,Matthew Saunders,Andrew Danielson,matthew saunders,4
+2349,Methodism (Wesleyanism),Religious Group (v6),1738,2024,1560,Bethany Henderson,M. Willis Monroe,bethany henderson,5
+2350,L'ordre de L'Islam de Taqi al-Din al-Nabhani نظام الإسلام لتقي الدين النبهاني,Religious Text (v1.0),1958,2024,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+2353,Sannō Ichijitsu Shintō,Religious Group (v6),1617,1868,1624,Ian Cipperly,Kaitlyn Ugoretz,ian cipperly,1
+2356,"Popol Vuh, El libro de la estera, El libro del consejo",Religious Text (v1.0),1500,1600,1626,Nelda Issa Marengo Camacho,Diana Moreiras,nelda issa marengo camacho,1
+2360,Toltecas,Religious Group (v6),600,1200,1598,Blanca Paredes Gudiño,Diana Moreiras,blanca paredes gudiño,1
+2361,Mississippian Religion,Religious Group (v6),1000,1700,1542,David Dye,Diana Moreiras,david dye,1
+2362,الدّولة السلجوقيّة(1037 م - 1194م),Religious Group (v6),1037,1194,1268,Bou Ali Malika,Julian Weideman,bou ali malika,15
+2363,"L'ordre Soufi Tunisien ""al-Hasaniyya"" الطريقة الحسنية التونسية",Religious Group (v6),1940,2024,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+2365,Moriscos,Religious Group (v6),1502,1614,1560,Bethany Henderson,M. Willis Monroe,bethany henderson,5
+2366,Islam in Hausaland,Religious Group (v6),1500,2024,1569,Abdul mumin Alawiye,Julian Weideman,abdul mumin alawiye,2
+2368,'Uyun akhbar al-Ridha de Shaykh as-Saduq عيون أخبار الرضا للشيخ الصدوق,Religious Text (v1.0),992,2024,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+2369,Le Mouvement Sanussiyya الحركة السنوسيّة,Religious Group (v6),1787,1977,1225,Ali Makhlabi,Julian Weideman,ali makhlabi,20
+2371,Tewa Pueblo Religion,Religious Group (v6),1950,2020,1256,Scott Ortman,Diana Moreiras,scott ortman,1
+2372,Codex Borbonicus,Religious Text (v1.0),1500,1550,1287,Elena Mazzetto,Diana Moreiras,elena mazzetto,1
+2373,"The London Missionary Society in British Guiana, 1800-1824",Religious Group (v6),1800,1824,1628,Janet Mills,M. Willis Monroe,janet mills,3
+2375,"Quakers in Barbados, 1655-1780",Religious Group (v6),1655,1780,1628,Janet Mills,M. Willis Monroe,janet mills,3
+2376,"Baptists in Jamaica, 1780-1832",Religious Group (v6),1780,1832,1628,Janet Mills,M. Willis Monroe,janet mills,3
+2418,Nasca Culture Religion,Religious Group (v6),100,800,1586,Yuriko Garcia Ortiz,Diana Moreiras,yuriko garcia ortiz,4
+2419,Ecumenical Patriarchate,Religious Group (v6),330,2024,1578,Theodoros Tzanatos,Megan Daniels,theodoros tzanatos,4
+2420,Evangelistria of Kipseli Arta,Religious Group (v6),1690,2024,1578,Theodoros Tzanatos,Megan Daniels,theodoros tzanatos,4
+2426,Chavin Culture Religion,Religious Group (v6),-1300,-500,1586,Yuriko Garcia Ortiz,Diana Moreiras,yuriko garcia ortiz,4
+2428,Navayana Buddhism,Religious Group (v6),1956,2024,362,Rohini Shukla,Travis Chilcott,rohini shukla,2
+2429,Vyliza Monastery,Religious Group (v6),1676,2024,1578,Theodoros Tzanatos,Megan Daniels,theodoros tzanatos,4
+2433,Hellenistic Religion in the Seleucid Empire,Religious Group (v6),-312,-64,1371,Eduardo García-Molina,Gino Canlas,eduardo garcía-molina,1
+2436,السراج في علم الفلك والأبراج  (A Lamp in the knowledge of Astronomy and Constellations),Religious Text (v1.0),-1804,1875,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2445,Priesthoods in Ptolemaic Thebes (Luxor),Religious Group (v6),-400,-30,1620,Lauren Dogaer,Caroline Arbuckle,lauren dogaer,2
+2450,Cherokee Nation,Religious Group (v6),1794,1907,1648,Ashley Farwell,M. Willis Monroe,ashley farwell,5
+2451,Ethiopian Orthodox Tewahedo Church,Religious Group (v6),328,2024,1445,Adegbola Tolu Adefi,Julian Weideman,adegbola tolu adefi,11
+2453,The Otomi,Religious Group (v6),-5000,1519,1660,Edmundo Maza Aceves,Diana Moreiras,edmundo maza aceves,4
+2455,New Orleans Voodoo,Religious Group (v6),1800,1900,1648,Ashley Farwell,M. Willis Monroe,ashley farwell,5
+2456,African American Enslaved,Religious Group (v6),1800,1900,1648,Ashley Farwell,M. Willis Monroe,ashley farwell,5
+2457,Navajo also known as Dine,Religious Group (v6),1800,1900,1648,Ashley Farwell,M. Willis Monroe,ashley farwell,5
+2458,Lakota,Religious Group (v6),1800,1900,1648,Ashley Farwell,M. Willis Monroe,ashley farwell,5
+2464,Philippine Catholicism,Religious Group (v6),1898,1946,1651,Dezarie Aragon,William Noseworthy,dezarie aragon,1
+2482,Kala-Kato (Qur'anists),Religious Group (v6),1980,2000,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28
+2483,Malanda Ma Croix Koma,Religious Group (v6),1964,1971,734,Sandry Matondo,Akshay Sarathi,sandry matondo,5
+2484,Simon Kimbangu,Religious Group (v6),1921,1951,734,Sandry Matondo,Akshay Sarathi,sandry matondo,5
+2485,Matswanism,Religious Group (v6),1899,1942,734,Sandry Matondo,Akshay Sarathi,sandry matondo,5
+2486,Ngunzanism,Religious Group (v6),1706,2024,734,Sandry Matondo,Akshay Sarathi,sandry matondo,5
+2487,Ismailis in Pakistan,Religious Group (v6),1947,2024,1675,Hinna Hussain,Julian Weideman,hinna hussain,2
+2488,Zhuangzi 莊子,Religious Text (v1.0),-350,-221,1679,Davide Andrea Zappulli,Matthew Hamm,davide andrea zappulli,1
+2490,Wu Zetian's State Buddhism,Religious Group (v6),660,705,1581,Weiyu Lin,Matthew Hamm,weiyu lin,2
+2491,P. Survey 61: Rules of a Priestly Association,Religious Text (v1.0),-109,-106,1620,Lauren Dogaer,Caroline Arbuckle,lauren dogaer,2
+2492,Tendai Buddhism,Religious Group (v6),800,2025,1662,Tanya Brittain,Kaitlyn Ugoretz,tanya brittain,1
+2496,Vietnamese popular religion,Religious Group (v6),0,2025,1614,Ngoc Tho Nguyen,Matthew Hamm,ngoc tho nguyen,3
+2503,Cuthean Legend of Narām-Sîn,Religious Text (v1.0),-1900,-600,1690,Jinyan Wang,M. Willis Monroe,jinyan wang,2
+2508,Wari Religion,Religious Group (v6),600,1100,1585,Erik Marsh,Diana Moreiras,erik marsh,2
+2509,The Rarámuri,Religious Group (v6),700,1580,1660,Edmundo Maza Aceves,Diana Moreiras,edmundo maza aceves,4
+2518,Mauritius,Religious Group (v6),2019,2025,1706,Nachita Rosun,Hillary Lenfesty,nachita rosun,1
+2525,The Purépecha,Religious Group (v6),1300,1530,1660,Edmundo Maza Aceves,Diana Moreiras,edmundo maza aceves,4
+2526,The Chontal Maya (Yoko t’anob),Religious Group (v6),250,1521,1660,Edmundo Maza Aceves,Diana Moreiras,edmundo maza aceves,4
+2528,Phoenician Punic Religion,Religious Group (v6),-1150,200,1041,Giuseppe Minunno,Megan Daniels,giuseppe minunno,2
+2548,Turkana religious practices,Religious Group (v6),1800,2025,1722,Mary Ngikadelio Longor,Hillary Lenfesty,mary ngikadelio longor,1
+2564,Shugendō 修験道 - The Way of Ascetic Practice,Religious Group (v6),7,21,1689,Josko Kozic,Kaitlyn Ugoretz,josko kozic,1
+2567,Zahiriyyah [in the Iberian Peninsula],Religious Group (v6),900,1400,1728,Saqib H. Khateeb,Julian Weideman,saqib h. khateeb,1
+2569,Focus Humanitarian Assistance (FOCUS),Religious Group (v6),1995,2025,1675,Hinna Hussain,Julian Weideman,hinna hussain,2
+2578,The Epic of Anzû,Religious Text (v1.0),-1900,-90,1690,Jinyan Wang,M. Willis Monroe,jinyan wang,2
+2585,Book of Caverns,Religious Text (v1.0),-1295,-1069,934,Dawn Power,Caroline Arbuckle,dawn power,1
+2590,Quirigua Ceremonial Center,Religious Group (v6),426,810,1732,Erlend Johnson,Marijke Stoll,erlend johnson,1
+2614,فيضة (An Overflow of Spiritual Grace),Religious Group (v6),1960,2025,1472,Bilyaminu Muhammad,Courtney Fitzsimmons,bilyaminu muhammad,28

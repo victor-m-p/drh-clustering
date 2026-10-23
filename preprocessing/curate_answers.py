@@ -177,6 +177,100 @@ answers_filled_groups.to_csv(
     "../data/preprocessed/answers_subset_groups.csv", index=False
 )
 
+"""
+### NEW (2026-10-19): unconditional answers ###
+
+Child questions are only asked when the parent is "Yes":
+- 2890 (supernatural monitoring present) -> monitoring questions
+- 2893 (supernatural beings present) -> 2919 (supreme high god present) -> shg questions
+Here we infer "No" for a child when its parent is "No" (inferred = True),
+except for 3218 (permissible to worship other gods), where we infer "Yes".
+Not inferred when the parent is answered both "Yes" and "No".
+The (conditional) files above are unchanged.
+"""
+
+import numpy as np
+from constants import parent_coding, parent_question, infer_yes
+
+assert set(parent_question) - {2919} == set(answers_filled["question_id"])
+
+# parent answers (same selection as for the child questions above)
+parent_names = pd.DataFrame(list(parent_coding.items()), columns=["question_id", "question_short"])
+parent_names["question_id"] = parent_names["question_id"].astype(int)
+parents = answers.merge(parent_names, on="question_id", how="inner").drop(columns=["question_name"])
+parents = parents[parents["poll_name"].isin(polls) & parents["answer_value"].isin([0, 1])]
+parents["inferred"] = False
+
+# 2893 "No" -> 2919 "No" (2919 is not asked then)
+beings = parents[parents["question_id"] == 2893].groupby(["entry_id", "poll_name"])["answer_value"].mean().reset_index()
+beings_no = beings[beings["answer_value"] == 0]
+assert not beings_no["entry_id"].isin(parents.loc[parents["question_id"] == 2919, "entry_id"]).any()
+shg_inferred = beings_no.assign(question_id=2919, question_short=parent_coding["2919"], inferred=True)
+parents = pd.concat([parents, shg_inferred], ignore_index=True)
+parents = assign_weight(parents, "entry_id", "question_id")
+
+# parent answer per entry: 0 = "No", 1 = "Yes", in between = both
+parent_answers = (
+    parents.groupby(["entry_id", "question_id"])["answer_value"].mean()
+    .reset_index()
+    .rename(columns={"question_id": "parent_question_id", "answer_value": "parent_answer"})
+)
+
+# add entries that only answered parent questions (all child answers missing)
+new_entries = parents.loc[~parents["entry_id"].isin(answers_filled["entry_id"]), ["entry_id", "poll_name"]].drop_duplicates()
+new_rows = new_entries.merge(question_mapping, how="cross")
+new_rows["weight"] = 1.0
+unconditional = pd.concat([answers_filled, new_rows], ignore_index=True)
+
+# infer "No" (or "Yes" for infer_yes) for missing child answers when the parent is "No"
+unconditional["parent_question_id"] = unconditional["question_id"].map(parent_question)
+unconditional = unconditional.merge(parent_answers, on=["entry_id", "parent_question_id"], how="left")
+assert not (unconditional["answer_value"].notna() & (unconditional["parent_answer"] == 0)).any()
+unconditional["inferred"] = unconditional["answer_value"].isna() & (unconditional["parent_answer"] == 0)
+unconditional.loc[unconditional["inferred"], "answer_value"] = (
+    unconditional.loc[unconditional["inferred"], "question_id"].isin(infer_yes).astype(int)
+)
+unconditional = unconditional.drop(columns=["parent_question_id", "parent_answer"])
+
+# keep entries with at least one answer (new entries without any inferred answer drop out)
+unconditional = unconditional[unconditional.groupby("entry_id")["answer_value"].transform("count") > 0]
+
+# sanity checks: undoing the inference gives the conditional data; weights as above
+check = unconditional[unconditional["entry_id"].isin(answers_filled["entry_id"])].copy()
+check.loc[check["inferred"], "answer_value"] = np.nan
+assert check[answers_filled.columns].reset_index(drop=True).equals(answers_filled)
+assert round(unconditional["weight"].sum()) == unconditional["entry_id"].nunique() * unconditional["question_id"].nunique()
+
+# save (entries are in one poll each, so weights hold for the groups subset)
+unconditional.to_csv("../data/preprocessed/answers_subset_all_unconditional.csv", index=False)
+unconditional[unconditional["poll_name"].str.contains("Group")].to_csv(
+    "../data/preprocessed/answers_subset_groups_unconditional.csv", index=False
+)
+parents.to_csv("../data/preprocessed/answers_parents_all.csv", index=False)
+parents[parents["poll_name"].str.contains("Group")].to_csv(
+    "../data/preprocessed/answers_parents_groups.csv", index=False
+)
+check_data(unconditional)
+
+### END NEW ###
+
+"""
+### NEW (2026-10-19): expert per entry ###
+
+For looking into expert effects (not used in the analyses).
+expert_id is not a person id in SCCSR.v3 (one id can have several names, e.g. 708),
+so "expert" is the expert name in lower case (this merges e.g. "Ltaief Zorgui" and "ltaief zorgui").
+"""
+
+entry_experts = pd.read_csv("../data/sccsrv3/entry_data.csv")
+entry_experts = entry_experts[entry_experts["entry_id"].isin(unconditional["entry_id"]) | entry_experts["entry_id"].isin(parents["entry_id"])]
+entry_experts = entry_experts[["entry_id", "entry_name", "poll_name", "year_from", "year_to", "expert_id", "expert_name", "editor_name"]]
+entry_experts["expert"] = entry_experts["expert_name"].str.lower().str.split().str.join(" ")
+entry_experts["n_entries_expert"] = entry_experts.groupby("expert")["entry_id"].transform("count")
+entry_experts.to_csv("../data/preprocessed/entry_experts.csv", index=False)
+
+### END NEW ###
+
 """ 
 n rows = 30978
 n entries = 860
@@ -217,7 +311,6 @@ groups_expanded = expand_data(answers_filled_groups, "question_id", "entry_id")
 groups_expanded["entry_id"].nunique()  # n = 618
 
 # how many complete answer sets
-import numpy as np
 np.sum(groups_expanded.isna().sum(axis=1) == 0)  # n = 193 rows of non-na
 groups_unique = groups_expanded.drop_duplicates(subset="entry_id", keep="first")
 np.sum(groups_unique.isna().sum(axis=1) == 0)  # n = 177 complete entries
@@ -238,3 +331,5 @@ groups_threshold.to_csv("../data/preprocessed/groups_expanded.csv", index=False)
 
 # shg_expanded.to_csv("../data/preprocessed/shg_expanded.csv", index=False)
 # monitoring_expanded.to_csv("../data/preprocessed/monitoring_expanded.csv", index=False)
+
+unconditional

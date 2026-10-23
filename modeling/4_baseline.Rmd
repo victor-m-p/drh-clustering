@@ -1,0 +1,561 @@
+---
+title: "Baseline Models"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Overview
+
+The child questions (20 on supernatural monitoring, 16 on the supreme high god) are only asked when their
+parent question is answered "Yes". We therefore model two parts:
+
+1. **Parent models** (2): is supernatural monitoring present; is a supreme high god present.
+   "Supreme high god present" includes "No" inferred when supernatural beings are absent
+   (supernatural beings are present in > 90% of entries, so we do not model them separately).
+2. **Conditional models** (36): each child question, among entries where the parent is "Yes".
+
+The unconditional probability (share of *all* religions with the feature) follows from the two parts:
+
+$$
+P(\text{child} = \text{yes}) = P(\text{parent} = \text{yes}) \times P(\text{child} = \text{yes} \mid \text{parent} = \text{yes})
+$$
+
+The likelihood of the unconditional data factorises in the same way, so fitting the two parts separately is
+equivalent to a joint model in which they share no parameters. We compute the unconditional curves by
+multiplying posterior draws of the two parts. Question 3218 (permissible to worship other gods) is
+conditional only: its answer is inferred "Yes" (not "No") when there is no supreme high god, so its
+unconditional probability is not this product.
+
+**Model** (each parent and child question separately; groups and texts together):
+
+$$
+\text{logit}(p) = \alpha + \beta_\text{time} \cdot \text{time} + \beta_\text{text} \cdot \text{text}
++ \beta_\text{time:text} \cdot \text{time} \cdot \text{text} + u_\text{world region},
+\quad u \sim \text{Normal}(0, \sigma)
+$$
+
+- time: `year_from` / 1000 (0 = 0 CE); $\beta_\text{time}$ is the slope for groups (log-odds per 1,000 years)
+- text: 1 for religious texts, 0 for groups; $\beta_\text{text}$ is the text-group difference at 0 CE,
+  $\beta_\text{time:text}$ the difference in slope (so the slope for texts is $\beta_\text{time} + \beta_\text{time:text}$)
+- conflicting answers kept, weighted 1/n (`weights(weight)`); all entries kept
+- **robustness**: the same models on groups only (without the text terms)
+
+Run from inside `modeling/` after `3_prepare_data.py`. Fits are saved in `fits/` (delete them to refit),
+figures in `fig/baseline/`.
+
+```{r setup, message = FALSE}
+library(tidyverse)
+library(brms)
+library(posterior)
+
+options(mc.cores = 4, brms.backend = "cmdstanr")
+dir.create("fits", showWarnings = FALSE)
+theme_set(theme_bw(base_size = 11))
+
+# figures: shown in the session and saved as fig/baseline/<name>.jpg
+fig_dir <- "fig/baseline"
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+save_plot <- function(p, name, width, height) {
+  ggsave(file.path(fig_dir, paste0(name, ".jpg")), p, width = width, height = height, dpi = 300)
+  p
+}
+
+# lines in the figures: groups and texts (main model), groups only (robustness)
+colors <- c(groups = "#2a78d6", texts = "#1baf7a", "groups only" = "#898781")
+```
+
+# Data
+
+```{r data, message = FALSE}
+d <- read_csv("data/model_data.csv") |>
+  mutate(
+    time = year_from / 1000,
+    text = as.integer(poll == "text")
+  )
+
+# parent question of each family of child questions
+parent_of <- c(monitoring = "supernatural monitoring present", shg = "supreme high god present")
+
+# child questions in topic order (as in temporal/)
+topic_order <- c(
+  "murder coreligionists", "murder other religions", "murder other polities", "non-lethal fighting",
+  "prosocial norm adherence", "lying", "honouring oaths", "property crimes", "economic fairness",
+  "gossiping", "laziness", "shirking risk", "disrespecting elders", "sex",
+  "ritual observance", "performance of rituals", "taboos", "personal hygiene", "sorcery",
+  "conversion non-religionists",
+  "knowledge this world", "causal efficacy the world", "indirect causal efficacy the world", "communicates with living",
+  "is unquestionably good", "positive emotion", "negative emotion",
+  "is anthropomorphic", "possesses hunger", "is sky deity", "is chthonic",
+  "permissible to worship other god?",
+  "is monarch fused", "is monarch manifestation", "is kin to elites", "other elite loyalty"
+)
+all_questions <- c(unname(parent_of), topic_order)
+
+questions <- d |>
+  distinct(family, question_short) |>
+  filter(question_short %in% all_questions) |>
+  mutate(family = factor(family, levels = c("parent", "monitoring", "shg")))
+stopifnot(setequal(topic_order, filter(questions, family != "parent")$question_short))
+
+# samples
+d_parent <- d |> filter(question_short %in% parent_of)         # parent questions (incl. inferred "No" for SHG)
+d_cond <- d |> filter(family != "parent", !inferred)            # child questions, conditional
+d_uncond <- d |> filter(family != "parent")                     # child questions, unconditional (only for observed shares)
+```
+
+Entries per sample:
+
+```{r data_overview}
+bind_rows(
+  d_parent |> mutate(sample = "parent questions"),
+  d_cond |> mutate(sample = "child questions, conditional"),
+  d_uncond |> mutate(sample = "child questions, unconditional")
+) |>
+  group_by(sample, poll) |>
+  summarise(entries = n_distinct(entry_id), .groups = "drop") |>
+  pivot_wider(names_from = poll, values_from = entries)
+```
+
+Entries per world region (groups and texts):
+
+```{r data_regions}
+bind_rows(d_parent, d_cond) |>
+  distinct(entry_id, poll, world_region) |>
+  count(world_region, poll) |>
+  pivot_wider(names_from = poll, values_from = n, values_fill = 0) |>
+  arrange(desc(group + text))
+```
+
+# Model and priors
+
+- intercept (log-odds at 0 CE, groups): normal(0, 1.5)
+- all slopes (time, text, time:text): normal(0, 1)
+- SD of world-region intercepts: exponential(1)
+
+```{r model}
+formulas <- list(
+  main = bf(answer_value | weights(weight) ~ 0 + Intercept + time * text + (1 | world_region)),
+  groups = bf(answer_value | weights(weight) ~ 0 + Intercept + time + (1 | world_region))
+)
+
+priors <- c(
+  prior(normal(0, 1), class = "b"),
+  prior(normal(0, 1.5), class = "b", coef = "Intercept"),
+  prior(exponential(1), class = "sd")
+)
+
+# data per model set (each question is then fitted separately)
+sets <- list(
+  main = bind_rows(d_parent, d_cond),
+  groups = bind_rows(d_parent, d_cond) |> filter(poll == "group")
+)
+```
+
+`0 + Intercept` is the brms way of not centering the predictors, so the intercept prior is at 0 CE.
+
+## Prior predictive check
+
+Prior-only fit of the main model (data: is unquestionably good).
+
+```{r prior_check, fig.width = 6, fig.height = 3.5}
+fit_prior <- brm(
+  formulas$main,
+  data = filter(sets$main, question_short == "is unquestionably good"),
+  family = bernoulli(),
+  prior = priors,
+  sample_prior = "only",
+  chains = 4, iter = 1000, seed = 2026, refresh = 0,
+  file = "fits/baseline_prior", file_refit = "on_change"
+)
+
+# prior curves for groups in a new (random) world region
+prior_curves <- tibble(time = seq(-3.5, 2, by = 0.1), text = 0, weight = 1, world_region = "new region") |>
+  tidybayes::add_epred_draws(fit_prior, ndraws = 200, allow_new_levels = TRUE, sample_new_levels = "gaussian")
+
+p_prior_curves <- ggplot(prior_curves, aes(time * 1000, .epred, group = .draw)) +
+  geom_line(alpha = 0.15) +
+  labs(x = "Year", y = "P(yes)")
+save_plot(p_prior_curves, "prior_curves", 6, 3.5)
+
+# share of yes implied by the priors, against the observed share
+p_prior_share <- pp_check(fit_prior, type = "stat", stat = "mean")
+save_plot(p_prior_share, "prior_share_yes", 6, 3.5)
+```
+
+# Fit
+
+Each model is compiled once (`chains = 0`) and then refit for each question with `update()`.
+
+```{r fit, message = FALSE, results = "hide"}
+templates <- map2(formulas, sets, function(formula, data) {
+  suppressWarnings(brm(formula, data = data, family = bernoulli(), prior = priors, chains = 0, refresh = 0, silent = 2))
+})
+
+fit_question <- function(set, question) {
+  path <- sprintf("fits/baseline_%s_%s.rds", set, question)
+  if (file.exists(path)) return(readRDS(path))
+  fit <- update(
+    templates[[set]],
+    newdata = filter(sets[[set]], question_short == question),
+    chains = 4, iter = 2000, seed = 2026, refresh = 0,
+    control = list(adapt_delta = 0.99)
+  )
+  saveRDS(fit, path)
+  fit
+}
+
+fits <- crossing(set = names(sets), question = all_questions) |>
+  mutate(fit = map2(set, question, fit_question))
+```
+
+# Diagnostics
+
+```{r diagnostics}
+diagnostics <- fits |>
+  mutate(diag = map(fit, function(fit) {
+    s <- summarise_draws(as_draws_df(fit, variable = "^b_|^sd_", regex = TRUE))
+    tibble(
+      max_rhat = max(s$rhat),
+      min_ess_bulk = min(s$ess_bulk),
+      min_ess_tail = min(s$ess_tail),
+      divergences = sum(subset(nuts_params(fit), Parameter == "divergent__")$Value)
+    )
+  })) |>
+  select(-fit) |>
+  unnest(diag)
+
+# worst values per model set
+diagnostics |>
+  group_by(set) |>
+  summarise(max_rhat = max(max_rhat), min_ess_bulk = min(min_ess_bulk), min_ess_tail = min(min_ess_tail), divergences = sum(divergences))
+
+# fits with any problem
+diagnostics |> filter(max_rhat > 1.01 | min_ess_bulk < 400 | min_ess_tail < 400 | divergences > 0)
+```
+
+# Coefficients
+
+```{r estimates}
+# posterior summaries per fit (main model: also level and slope for texts)
+estimates <- fits |>
+  mutate(est = map2(fit, set, function(fit, set) {
+    draws <- as_draws_df(fit, variable = "^b_|^sd_", regex = TRUE)
+    if (set == "main") {
+      draws <- mutate_variables(draws, b_Intercept_text = b_Intercept + b_text, b_time_text = b_time + `b_time:text`)
+    }
+    summarise_draws(draws, mean, ~ quantile(.x, c(0.025, 0.975))) |>
+      rename(lower = `2.5%`, upper = `97.5%`)
+  })) |>
+  select(-fit) |>
+  unnest(est) |>
+  left_join(questions, by = c("question" = "question_short")) |>
+  mutate(question = factor(question, levels = rev(all_questions)))
+
+# coefficient plot, one point per line (groups, texts, groups only)
+coef_plot <- function(est, xlab) {
+  ggplot(est, aes(mean, question, colour = line)) +
+    geom_vline(xintercept = 0, colour = "grey60") +
+    geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.6), size = 0.2) +
+    facet_grid(family ~ ., scales = "free_y", space = "free_y") +
+    scale_colour_manual(values = colors) +
+    labs(x = xlab, y = NULL, colour = NULL) +
+    theme(legend.position = "top")
+}
+```
+
+## Time slopes
+
+Change in log-odds per 1,000 years (95% interval): groups and texts (main model), groups only (robustness).
+
+```{r slopes, fig.width = 9, fig.height = 11}
+p_slopes <- estimates |>
+  filter((set == "main" & variable %in% c("b_time", "b_time_text")) | (set == "groups" & variable == "b_time")) |>
+  mutate(line = case_when(set == "groups" ~ "groups only", variable == "b_time" ~ "groups", TRUE ~ "texts")) |>
+  coef_plot("Time slope (log-odds per 1,000 years)")
+save_plot(p_slopes, "slopes", 9, 11)
+```
+
+## Level at 0 CE
+
+Log-odds of "yes" at 0 CE in an average world region (95% interval): groups ($\alpha$) and texts
+($\alpha + \beta_\text{text}$) from the main model, groups only (robustness).
+
+```{r intercepts, fig.width = 9, fig.height = 11}
+p_intercepts <- estimates |>
+  filter((set == "main" & variable %in% c("b_Intercept", "b_Intercept_text")) | (set == "groups" & variable == "b_Intercept")) |>
+  mutate(line = case_when(set == "groups" ~ "groups only", variable == "b_Intercept" ~ "groups", TRUE ~ "texts")) |>
+  coef_plot("Log-odds at 0 CE")
+save_plot(p_intercepts, "intercepts", 9, 11)
+```
+
+## World regions
+
+Spread of the world-region intercepts ($\sigma$):
+
+```{r region_sd, fig.width = 9, fig.height = 11}
+p_region_sd <- estimates |>
+  filter(variable == "sd_world_region__Intercept") |>
+  mutate(line = if_else(set == "main", "groups", "groups only")) |>
+  coef_plot("SD of world-region intercepts (log-odds)")
+save_plot(p_region_sd, "region_sd", 9, 11)
+```
+
+World-region intercepts (posterior mean, log-odds relative to the average region), groups-only model
+(in the main model, groups and texts share the region intercepts, and texts are concentrated in a few regions).
+Numbers in the tiles: group entries in that world region for that question; on the axis: group entries
+in the world region for any question.
+
+```{r region_effects, fig.width = 9, fig.height = 10}
+# entries per question and world region in the groups-only data, and per world region overall
+region_n <- sets$groups |> group_by(question = question_short, world_region) |> summarise(n = n_distinct(entry_id), .groups = "drop")
+region_total <- sets$groups |> group_by(world_region) |> summarise(n = n_distinct(entry_id))
+region_labels <- setNames(paste0(region_total$world_region, " (", region_total$n, ")"), region_total$world_region)
+
+region_effects <- fits |>
+  filter(set == "groups") |>
+  mutate(re = map(fit, function(fit) {
+    r <- ranef(fit)$world_region[, , "Intercept"]
+    tibble(world_region = rownames(r), estimate = r[, "Estimate"])
+  })) |>
+  select(-fit) |>
+  unnest(re) |>
+  left_join(region_n, by = c("question", "world_region")) |>
+  mutate(question = factor(question, levels = rev(all_questions)))
+
+p_region_effects <- ggplot(region_effects, aes(world_region, question, fill = estimate)) +
+  geom_tile() +
+  geom_text(aes(label = n), size = 2.3, colour = "grey20") +
+  scale_x_discrete(labels = region_labels) +
+  scale_fill_gradient2(low = "#2a78d6", mid = "white", high = "#eb6834", midpoint = 0) +
+  labs(x = NULL, y = NULL, fill = "log-odds") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+save_plot(p_region_effects, "region_effects", 9, 10)
+```
+
+# Curves over time
+
+Population-level curves (average world region; mean and 95% interval) for groups and texts (main model) and
+groups only (robustness), with the observed share yes per era (points; weighted; size = number of entries).
+
+```{r predictions}
+eras <- c(-Inf, -1000, 0, 500, 1000, 1500, Inf)
+era_labels <- c("< -1000", "-1000-0", "0-500", "500-1000", "1000-1500", "> 1500")
+era_mid <- c(-1500, -500, 250, 750, 1250, 1750)  # where the points are drawn
+
+# predicted P(yes) per posterior draw (1,000 draws) on a time grid, for groups and texts
+grid <- crossing(text = c(0, 1), time = seq(-3.5, 2, by = 0.05)) |> mutate(weight = 1)
+predict_grid <- function(fit, set) {
+  newdata <- if (set == "main") grid else filter(grid, text == 0)
+  list(newdata = newdata, p = posterior_epred(fit, newdata = newdata, re_formula = NA, ndraws = 1000))
+}
+summarise_pred <- function(pred, set) {
+  pred$newdata |>
+    mutate(
+      mean = colMeans(pred$p),
+      lower = apply(pred$p, 2, quantile, 0.025),
+      upper = apply(pred$p, 2, quantile, 0.975),
+      line = case_when(set == "groups" ~ "groups only", text == 0 ~ "groups", TRUE ~ "texts")
+    )
+}
+
+preds <- fits |> mutate(pred = map2(fit, set, predict_grid))
+curves <- preds |>
+  mutate(curve = map2(pred, set, summarise_pred)) |>
+  select(set, question, curve) |>
+  unnest(curve)
+
+# observed share yes per era, for groups and texts
+observed_shares <- function(data) {
+  data |>
+    mutate(era = cut(year_from, eras, labels = era_mid), line = if_else(poll == "text", "texts", "groups")) |>
+    group_by(question = question_short, line, era) |>
+    summarise(yes = weighted.mean(answer_value, weight), n = n_distinct(entry_id), .groups = "drop") |>
+    mutate(year = as.numeric(as.character(era)))
+}
+
+curve_plot <- function(curves, observed, ncol) {
+  ggplot(curves, aes(time * 1000)) +
+    geom_ribbon(aes(ymin = lower, ymax = upper, fill = line), alpha = 0.15) +
+    geom_line(aes(y = mean, colour = line)) +
+    geom_point(data = observed, aes(year, yes, colour = line, size = n), alpha = 0.7) +
+    facet_wrap(~ factor(question, levels = all_questions), ncol = ncol) +
+    scale_colour_manual(values = colors) +
+    scale_fill_manual(values = colors) +
+    scale_size_area(max_size = 3) +
+    coord_cartesian(ylim = c(0, 1)) +
+    labs(x = "Year (year_from)", y = "P(yes)", colour = NULL, fill = NULL) +
+    theme(legend.position = "top")
+}
+```
+
+## Parent questions
+
+```{r curves_parent, fig.width = 9, fig.height = 4}
+p_curves_parent <- curve_plot(
+  filter(curves, question %in% parent_of),
+  observed_shares(d_parent),
+  ncol = 2
+)
+save_plot(p_curves_parent, "curves_parent", 9, 4)
+```
+
+## Child questions, conditional
+
+```{r curves_conditional, fig.width = 12, fig.height = 18}
+p_curves_cond <- curve_plot(
+  filter(curves, question %in% topic_order),
+  observed_shares(d_cond),
+  ncol = 4
+)
+save_plot(p_curves_cond, "curves_conditional", 12, 18)
+```
+
+## Child questions, unconditional (derived)
+
+P(parent = yes) x P(child = yes | parent = yes), multiplied per posterior draw (main model).
+Conditional (solid lines, filled points) and unconditional (dashed lines, open points) for groups and texts;
+points: observed share per era (unconditional: inferred answers included).
+3218 (permissible to worship other god?) has no unconditional version.
+
+```{r unconditional}
+pred_of <- function(set, question) preds$pred[[which(preds$set == set & preds$question == question)]]
+
+unconditional <- preds |>
+  filter(question %in% topic_order, question != "permissible to worship other god?") |>
+  left_join(questions, by = c("question" = "question_short")) |>
+  mutate(pred = pmap(list(set, family, pred), function(set, family, pred) {
+    parent <- pred_of(set, parent_of[[as.character(family)]])
+    list(newdata = pred$newdata, p = pred$p * parent$p)
+  }))
+
+curves_uncond <- unconditional |>
+  mutate(curve = map2(pred, set, summarise_pred)) |>
+  select(set, question, curve) |>
+  unnest(curve)
+```
+
+```{r curves_unconditional, fig.width = 12, fig.height = 18}
+# conditional and unconditional curves (main model) and observed shares, for groups and texts
+curves_both <- bind_rows(
+  curves |> filter(set == "main", question %in% topic_order) |> mutate(type = "conditional"),
+  curves_uncond |> filter(set == "main") |> mutate(type = "unconditional")
+)
+observed_both <- bind_rows(
+  observed_shares(d_cond) |> mutate(type = "conditional"),
+  observed_shares(filter(d_uncond, question_short != "permissible to worship other god?")) |> mutate(type = "unconditional")
+)
+
+p_curves_uncond <- ggplot(curves_both, aes(time * 1000)) +
+  geom_ribbon(aes(ymin = lower, ymax = upper, fill = line, group = interaction(line, type)), alpha = 0.1) +
+  geom_line(aes(y = mean, colour = line, linetype = type)) +
+  geom_point(data = observed_both, aes(year, yes, colour = line, shape = type, size = n), alpha = 0.7) +
+  facet_wrap(~ factor(question, levels = topic_order), ncol = 4) +
+  scale_colour_manual(values = colors[c("groups", "texts")]) +
+  scale_fill_manual(values = colors[c("groups", "texts")]) +
+  scale_linetype_manual(values = c(conditional = "solid", unconditional = "dashed")) +
+  scale_shape_manual(values = c(conditional = 16, unconditional = 1)) +
+  scale_size_area(max_size = 3) +
+  coord_cartesian(ylim = c(0, 1)) +
+  labs(x = "Year (year_from)", y = "P(yes)", colour = NULL, fill = NULL, linetype = NULL, shape = NULL) +
+  theme(legend.position = "top")
+save_plot(p_curves_uncond, "curves_unconditional", 12, 18)
+```
+
+## Decomposition of the change over time
+
+Change in P(yes) from 0 CE to 1500 CE for groups (main model; mean and 95% interval): parent question,
+child question given the parent (conditional), and both together (unconditional).
+
+```{r decomposition, fig.width = 9, fig.height = 10}
+# change in P(yes) between two times, for groups (text = 0), per posterior draw
+change_p <- function(pred, from = 0, to = 1.5) {
+  i <- which(pred$newdata$text == 0 & abs(pred$newdata$time - from) < 1e-8)
+  j <- which(pred$newdata$text == 0 & abs(pred$newdata$time - to) < 1e-8)
+  diff <- pred$p[, j] - pred$p[, i]
+  tibble(mean = mean(diff), lower = quantile(diff, 0.025), upper = quantile(diff, 0.975))
+}
+
+decomposition <- unconditional |>
+  filter(set == "main") |>
+  mutate(
+    parent = map2(set, family, ~ change_p(pred_of(.x, parent_of[[as.character(.y)]]))),
+    conditional = map2(set, question, ~ change_p(pred_of(.x, .y))),
+    unconditional = map(pred, change_p)
+  ) |>
+  select(question, family, parent, conditional, unconditional) |>
+  pivot_longer(c(parent, conditional, unconditional), names_to = "part", values_to = "change") |>
+  unnest(change) |>
+  mutate(
+    question = factor(question, levels = rev(topic_order)),
+    part = factor(part, levels = c("parent", "conditional", "unconditional"))
+  )
+
+p_decomposition <- ggplot(decomposition, aes(mean, question, colour = part)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.6), size = 0.2) +
+  facet_grid(family ~ ., scales = "free_y", space = "free_y") +
+  scale_colour_manual(values = c(parent = "#898781", conditional = "#2a78d6", unconditional = "#eb6834")) +
+  labs(x = "Change in P(yes), 0 CE to 1500 CE (groups)", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_decomposition, "decomposition", 9, 10)
+```
+
+# Posterior predictive checks
+
+Observed share yes (points) against the 95% posterior predictive interval (bars), per era, for groups and
+texts (main model) and groups only (robustness). Each model on its own data.
+
+```{r ppc}
+# observed and predicted (weighted) share yes per era and poll, for one fit
+ppc_era <- function(fit, data) {
+  yrep <- posterior_predict(fit, ndraws = 1000)
+  keys <- distinct(data, poll, era)
+  pmap_dfr(keys, function(poll, era) {
+    w <- data$weight * (data$poll == poll & data$era == era)
+    prop <- as.vector(yrep %*% w) / sum(w)
+    tibble(poll = poll, era = era, observed = sum(w * data$answer_value) / sum(w),
+           lower = quantile(prop, 0.025), upper = quantile(prop, 0.975))
+  })
+}
+
+ppc <- fits |>
+  mutate(data = map2(set, question, ~ filter(sets[[.x]], question_short == .y) |>
+    mutate(era = cut(year_from, eras, labels = era_labels)))) |>
+  mutate(check = map2(fit, data, ppc_era)) |>
+  select(set, question, check) |>
+  unnest(check) |>
+  mutate(line = case_when(set == "groups" ~ "groups only", poll == "group" ~ "groups", TRUE ~ "texts"))
+
+ppc_plot <- function(ppc_long, ncol) {
+  ppc_long |>
+    mutate(era = factor(era, levels = rev(era_labels))) |>
+    ggplot(aes(y = era, colour = line)) +
+    geom_linerange(aes(xmin = lower, xmax = upper), linewidth = 2, alpha = 0.4, position = position_dodge(width = 0.7)) +
+    geom_point(aes(x = observed), size = 1.2, position = position_dodge(width = 0.7)) +
+    facet_wrap(~ factor(question, levels = all_questions), ncol = ncol) +
+    scale_colour_manual(values = colors) +
+    labs(x = "Share yes", y = NULL, colour = NULL) +
+    theme(legend.position = "top")
+}
+```
+
+```{r ppc_parent, fig.width = 9, fig.height = 4}
+p_ppc_parent <- ppc_plot(filter(ppc, question %in% parent_of), ncol = 2)
+save_plot(p_ppc_parent, "ppc_parent", 9, 4)
+```
+
+```{r ppc_conditional, fig.width = 12, fig.height = 22}
+p_ppc_cond <- ppc_plot(filter(ppc, question %in% topic_order), ncol = 4)
+save_plot(p_ppc_cond, "ppc_conditional", 12, 22)
+```
+
+Share of observed values outside the 95% interval:
+
+```{r ppc_summary}
+ppc |>
+  mutate(outside = observed < lower | observed > upper) |>
+  group_by(line) |>
+  summarise(groups = n(), share_outside = round(mean(outside), 2), outside = sum(outside), .groups = "drop")
+```

@@ -1,0 +1,547 @@
+---
+title: "Traditions (Entry Tags)"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Overview
+
+Do religious traditions differ, and is the change over time **within** traditions or **replacement**
+(traditions with high values becoming more common)? Groups only, conditional answers (child questions as
+answered), plus the two parent questions.
+
+Traditions come from the entry tags (`1_code_entrytags.py`): six flags (christian, islamic, jewish, buddhist,
+hindu, chinese), "other" if none. 5% of group entries have more than one flag (mostly Chinese Buddhism and
+Christianity in China; "chinese" is the broad Chinese-sphere flag). We use **multiple membership**
+(`mm()` in brms): an entry with *k* traditions gets the average of their effects (weights 1/*k*). For
+comparison, one model uses a single **priority** label (Islamic > Buddhist > Christian > Jewish > Hindu > Chinese > Other).
+
+Models (each question separately; time = (`year_from` - 1000) / 1000, so **0 = 1000 CE**):
+
+| model | formula |
+|---|---|
+| M0 | `time + (1 | world_region)` |
+| M1-priority | `time + (1 | tradition) + (1 | world_region)` |
+| M1-mm | `time + (1 | mm(traditions)) + (1 | world_region)` |
+| M2-mm | `time + (1 + time | mm(traditions)) + (1 | world_region)` |
+| M1b-mm | `time + (1 | mm(traditions))` (no world region) |
+
+- `b_time` in M0 vs. M1-mm: if the slope stays, the change is within traditions; if it shrinks, replacement.
+- M1-priority vs. M1-mm: how much the priority label matters.
+- M2-mm: tradition-specific slopes.
+- M1b-mm vs. M1-mm: how much traditions and world regions overlap.
+
+Priors as in `4_baseline.Rmd` (intercept normal(0, 1.5), slopes normal(0, 1), SDs exponential(1); brms
+default lkj(1) for the intercept-slope correlation in M2-mm). Conflicting answers weighted 1/n.
+
+Run from inside `modeling/` after `3_prepare_data.py`. Fits are saved in `fits/` (delete them to refit),
+figures in `fig/entrytags/`.
+
+```{r setup, message = FALSE}
+library(tidyverse)
+library(brms)
+library(posterior)
+
+options(mc.cores = 4, brms.backend = "cmdstanr")
+dir.create("fits", showWarnings = FALSE)
+theme_set(theme_bw(base_size = 11))
+
+# figures: shown in the session and saved as fig/entrytags/<name>.jpg
+fig_dir <- "fig/entrytags"
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+save_plot <- function(p, name, width, height) {
+  ggsave(file.path(fig_dir, paste0(name, ".jpg")), p, width = width, height = height, dpi = 300)
+  p
+}
+
+# traditions (colors as in temporal/plot_traditions_time.py)
+traditions <- c("christian", "islamic", "jewish", "buddhist", "hindu", "chinese", "other")
+tradition_colors <- c(
+  christian = "#2a78d6", islamic = "#eb6834", jewish = "#e87ba4", buddhist = "#1baf7a",
+  hindu = "#008300", chinese = "#eda100", other = "#898781"
+)
+```
+
+# Data
+
+```{r data, message = FALSE}
+d <- read_csv("data/model_data.csv") |>
+  mutate(time = (year_from - 1000) / 1000)
+
+parent_questions <- c("supernatural monitoring present", "supreme high god present")
+topic_order <- c(
+  "murder coreligionists", "murder other religions", "murder other polities", "non-lethal fighting",
+  "prosocial norm adherence", "lying", "honouring oaths", "property crimes", "economic fairness",
+  "gossiping", "laziness", "shirking risk", "disrespecting elders", "sex",
+  "ritual observance", "performance of rituals", "taboos", "personal hygiene", "sorcery",
+  "conversion non-religionists",
+  "knowledge this world", "causal efficacy the world", "indirect causal efficacy the world", "communicates with living",
+  "is unquestionably good", "positive emotion", "negative emotion",
+  "is anthropomorphic", "possesses hunger", "is sky deity", "is chthonic",
+  "permissible to worship other god?",
+  "is monarch fused", "is monarch manifestation", "is kin to elites", "other elite loyalty"
+)
+all_questions <- c(parent_questions, topic_order)
+
+questions <- d |>
+  distinct(family, question_short) |>
+  filter(question_short %in% all_questions) |>
+  mutate(family = factor(family, levels = c("parent", "monitoring", "shg")))
+
+# groups only: parent questions and child questions (conditional)
+d_model <- d |>
+  filter(poll == "group") |>
+  filter(question_short %in% parent_questions | (family != "parent" & !inferred))
+```
+
+Entries per tradition (priority label, and any membership):
+
+```{r data_traditions}
+entries <- d_model |> distinct(entry_id, tradition, trad1, trad2, trad3)
+tibble(
+  tradition = traditions,
+  priority = map_int(traditions, ~ sum(entries$tradition == .x)),
+  membership = map_int(traditions, ~ sum(entries$trad1 == .x | entries$trad2 == .x | entries$trad3 == .x))
+)
+```
+
+Time range per tradition (any membership; `year_from`):
+
+```{r data_time}
+map_dfr(traditions, function(t) {
+  entries_t <- d_model |> filter(trad1 == t | trad2 == t | trad3 == t) |> distinct(entry_id, year_from)
+  tibble(tradition = t, entries = nrow(entries_t), min = min(entries_t$year_from),
+         median = median(entries_t$year_from), max = max(entries_t$year_from))
+})
+```
+
+# Models
+
+```{r models}
+mm_term <- "mm(trad1, trad2, trad3, weights = cbind(w1, w2, w3), scale = FALSE)"
+formulas <- list(
+  m0 = bf(answer_value | weights(weight) ~ 0 + Intercept + time + (1 | world_region)),
+  m1_priority = bf(answer_value | weights(weight) ~ 0 + Intercept + time + (1 | tradition) + (1 | world_region)),
+  m1_mm = bf(as.formula(paste("answer_value | weights(weight) ~ 0 + Intercept + time + (1 |", mm_term, ") + (1 | world_region)"))),
+  m2_mm = bf(as.formula(paste("answer_value | weights(weight) ~ 0 + Intercept + time + (1 + time |", mm_term, ") + (1 | world_region)"))),
+  m1b_mm = bf(as.formula(paste("answer_value | weights(weight) ~ 0 + Intercept + time + (1 |", mm_term, ")")))
+)
+model_labels <- c(m0 = "M0", m1_priority = "M1-priority", m1_mm = "M1-mm", m2_mm = "M2-mm", m1b_mm = "M1b-mm (no region)")
+model_colors <- c(m0 = "#898781", m1_priority = "#eda100", m1_mm = "#2a78d6", m2_mm = "#1baf7a", m1b_mm = "#e87ba4")
+
+priors <- c(
+  prior(normal(0, 1), class = "b"),
+  prior(normal(0, 1.5), class = "b", coef = "Intercept"),
+  prior(exponential(1), class = "sd")
+)
+```
+
+# Fit
+
+Each model is compiled once (`chains = 0`) and then refit for each question with `update()`.
+
+```{r fit, message = FALSE, results = "hide"}
+templates <- map(formulas, function(formula) {
+  suppressWarnings(brm(formula, data = d_model, family = bernoulli(), prior = priors, chains = 0, refresh = 0, silent = 2))
+})
+
+fit_question <- function(model, question) {
+  path <- sprintf("fits/entrytags_%s_%s.rds", model, question)
+  if (file.exists(path)) return(readRDS(path))
+  fit <- update(
+    templates[[model]],
+    newdata = filter(d_model, question_short == question),
+    chains = 4, iter = 2000, seed = 2026, refresh = 0,
+    control = list(adapt_delta = 0.99)
+  )
+  saveRDS(fit, path)
+  fit
+}
+
+fits <- crossing(model = names(formulas), question = all_questions) |>
+  mutate(fit = map2(model, question, fit_question), model = factor(model, levels = names(formulas)))
+```
+
+# Diagnostics
+
+```{r diagnostics}
+diagnostics <- fits |>
+  mutate(diag = map(fit, function(fit) {
+    s <- summarise_draws(as_draws_df(fit, variable = "^b_|^sd_|^cor_", regex = TRUE))
+    tibble(
+      max_rhat = max(s$rhat),
+      min_ess_bulk = min(s$ess_bulk),
+      min_ess_tail = min(s$ess_tail),
+      divergences = sum(subset(nuts_params(fit), Parameter == "divergent__")$Value)
+    )
+  })) |>
+  select(-fit) |>
+  unnest(diag)
+
+# worst values per model
+diagnostics |>
+  group_by(model) |>
+  summarise(max_rhat = max(max_rhat), min_ess_bulk = min(min_ess_bulk), min_ess_tail = min(min_ess_tail), divergences = sum(divergences))
+
+# fits with any problem
+diagnostics |> filter(max_rhat > 1.01 | min_ess_bulk < 400 | min_ess_tail < 400 | divergences > 0)
+```
+
+# Within traditions or replacement?
+
+```{r estimates}
+# posterior summaries of population-level effects, SDs and correlations, per fit
+estimates <- fits |>
+  mutate(est = map(fit, function(fit) {
+    as_draws_df(fit, variable = "^b_|^sd_|^cor_", regex = TRUE) |>
+      summarise_draws(mean, ~ quantile(.x, c(0.025, 0.975))) |>
+      rename(lower = `2.5%`, upper = `97.5%`)
+  })) |>
+  select(-fit) |>
+  unnest(est) |>
+  left_join(questions, by = c("question" = "question_short")) |>
+  mutate(question = factor(question, levels = rev(all_questions)))
+
+coef_plot <- function(est, xlab) {
+  ggplot(est, aes(mean, question, colour = model)) +
+    geom_vline(xintercept = 0, colour = "grey60") +
+    geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.7), size = 0.2) +
+    facet_grid(family ~ ., scales = "free_y", space = "free_y") +
+    scale_colour_manual(values = model_colors, labels = model_labels) +
+    labs(x = xlab, y = NULL, colour = NULL) +
+    theme(legend.position = "top")
+}
+```
+
+## Time slopes
+
+Change in log-odds per 1,000 years (95% interval). In M2-mm this is the average slope across traditions.
+
+```{r slopes, fig.width = 9, fig.height = 12}
+p_slopes <- estimates |> filter(variable == "b_time") |> coef_plot("Time slope (log-odds per 1,000 years)")
+save_plot(p_slopes, "slopes", 9, 12)
+```
+
+## Spread of traditions and world regions
+
+SDs of the tradition intercepts (priority and multiple membership), of the world-region intercepts, and of the
+tradition slopes (M2-mm).
+
+```{r sds, fig.width = 12, fig.height = 12}
+p_sds <- estimates |>
+  filter(str_starts(variable, "sd_")) |>
+  mutate(term = case_when(
+    str_detect(variable, "world_region") ~ "world region (intercept)",
+    str_detect(variable, "__time") ~ "tradition (slope)",
+    TRUE ~ "tradition (intercept)"
+  )) |>
+  coef_plot("SD (log-odds)") +
+  facet_grid(family ~ term, scales = "free_y", space = "free_y")
+save_plot(p_sds, "sds", 12, 12)
+```
+
+# Traditions
+
+## Levels
+
+Tradition intercepts (M1-mm; posterior mean, log-odds at 1000 CE relative to the average tradition).
+Numbers in the tiles: entries with that tradition (any membership) for that question.
+
+```{r levels, fig.width = 8, fig.height = 11}
+tradition_n <- map_dfr(traditions, function(t) {
+  d_model |>
+    filter(trad1 == t | trad2 == t | trad3 == t) |>
+    group_by(question = question_short) |>
+    summarise(n = n_distinct(entry_id)) |>
+    mutate(tradition = t)
+})
+
+tradition_effects <- function(model, group, coef = "Intercept") {
+  fits |>
+    filter(model == !!model) |>
+    mutate(re = map(fit, function(fit) {
+      r <- ranef(fit)[[group]][, , coef]
+      tibble(tradition = rownames(r), estimate = r[, "Estimate"], lower = r[, "Q2.5"], upper = r[, "Q97.5"])
+    })) |>
+    select(question, re) |>
+    unnest(re)
+}
+
+levels_mm <- tradition_effects("m1_mm", "mmtrad1trad2trad3") |>
+  left_join(tradition_n, by = c("question", "tradition")) |>
+  mutate(question = factor(question, levels = rev(all_questions)), tradition = factor(tradition, levels = traditions))
+
+p_levels <- ggplot(levels_mm, aes(tradition, question, fill = estimate)) +
+  geom_tile() +
+  geom_text(aes(label = n), size = 2.3, colour = "grey20") +
+  scale_fill_gradient2(low = "#2a78d6", mid = "white", high = "#eb6834", midpoint = 0) +
+  labs(x = NULL, y = NULL, fill = "log-odds") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+save_plot(p_levels, "levels", 8, 11)
+```
+
+Priority label vs. multiple membership: tradition intercepts of M1-priority against M1-mm (one point per
+question and tradition; line: equal).
+
+```{r priority_vs_mm, fig.width = 6, fig.height = 5}
+levels_priority <- tradition_effects("m1_priority", "tradition")
+p_priority <- levels_priority |>
+  inner_join(levels_mm |> mutate(question = as.character(question), tradition = as.character(tradition)),
+             by = c("question", "tradition"), suffix = c("_priority", "_mm")) |>
+  ggplot(aes(estimate_mm, estimate_priority, colour = tradition)) +
+  geom_abline(colour = "grey60") +
+  geom_point(alpha = 0.7) +
+  scale_colour_manual(values = tradition_colors) +
+  labs(x = "M1-mm (log-odds)", y = "M1-priority (log-odds)", colour = NULL)
+save_plot(p_priority, "priority_vs_mm", 6, 5)
+```
+
+## Slopes per tradition
+
+Time slope per tradition (M2-mm: average slope + tradition deviation; posterior mean, log-odds per 1,000 years;
+\* = 95% interval excludes 0).
+
+```{r tradition_slopes, fig.width = 8, fig.height = 11}
+slopes_mm <- fits |>
+  filter(model == "m2_mm") |>
+  mutate(co = map(fit, function(fit) {
+    s <- coef(fit)$mmtrad1trad2trad3[, , "time"]
+    tibble(tradition = rownames(s), estimate = s[, "Estimate"], lower = s[, "Q2.5"], upper = s[, "Q97.5"])
+  })) |>
+  select(question, co) |>
+  unnest(co) |>
+  left_join(tradition_n, by = c("question", "tradition")) |>
+  mutate(
+    question = factor(question, levels = rev(all_questions)),
+    tradition = factor(tradition, levels = traditions),
+    label = if_else(lower > 0 | upper < 0, "*", "")
+  )
+
+p_tradition_slopes <- ggplot(slopes_mm, aes(tradition, question, fill = estimate)) +
+  geom_tile() +
+  geom_text(aes(label = label), size = 4, colour = "grey20", vjust = 0.75) +
+  scale_fill_gradient2(low = "#2a78d6", mid = "white", high = "#eb6834", midpoint = 0) +
+  labs(x = NULL, y = NULL, fill = "slope") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+save_plot(p_tradition_slopes, "tradition_slopes", 8, 11)
+```
+
+## Curves per tradition
+
+P(yes) over time per tradition (average world region; mean), drawn only within the time range of that
+tradition's entries for that question. M1-mm: one common slope, traditions differ in level (curves are
+parallel on the log-odds scale). M2-mm: each tradition has its own slope.
+Black dashed line: the population-level curve ($\alpha + \beta \cdot$ time, tradition effect 0), over the
+time range of all entries for that question: an average tradition in M1-mm, a typical tradition in M2-mm.
+
+```{r curves_function}
+# P(yes) per tradition on a grid within its observed time range, for one model (tradition term only),
+# plus the population-level curve ("overall", no group-level effects) over the range of all entries
+tradition_curves <- function(model, re_formula) {
+  fits |>
+    filter(model == !!model) |>
+    mutate(curve = map2(fit, question, function(fit, question) {
+      per_tradition <- map_dfr(traditions, function(t) {
+        years <- d_model |> filter(question_short == question, trad1 == t | trad2 == t | trad3 == t) |> pull(year_from)
+        if (length(years) < 2) return(NULL)
+        newdata <- tibble(year = seq(min(years), max(years), length.out = 50)) |>
+          mutate(time = (year - 1000) / 1000, trad1 = t, trad2 = t, trad3 = t, w1 = 1, w2 = 0, w3 = 0, weight = 1)
+        p <- posterior_epred(fit, newdata = newdata, re_formula = re_formula, ndraws = 1000)
+        newdata |> mutate(tradition = t, mean = colMeans(p))
+      })
+      years <- d_model |> filter(question_short == question) |> pull(year_from)
+      newdata <- tibble(year = seq(min(years), max(years), length.out = 100), time = (year - 1000) / 1000, weight = 1)
+      p <- posterior_epred(fit, newdata = newdata, re_formula = NA, ndraws = 1000)
+      bind_rows(per_tradition, newdata |> mutate(tradition = "overall", mean = colMeans(p)))
+    })) |>
+    select(question, curve) |>
+    unnest(curve)
+}
+
+curve_plot <- function(curves) {
+  curves <- curves |> mutate(tradition = factor(tradition, levels = c(traditions, "overall")))
+  ggplot(curves, aes(year, mean, colour = tradition, linetype = tradition == "overall")) +
+    geom_line() +
+    facet_wrap(~ factor(question, levels = all_questions), ncol = 4) +
+    scale_colour_manual(values = c(tradition_colors, overall = "black")) +
+    scale_linetype_manual(values = c("FALSE" = "solid", "TRUE" = "dashed"), guide = "none") +
+    coord_cartesian(ylim = c(0, 1), xlim = c(-2000, 2025)) +
+    labs(x = "Year (year_from)", y = "P(yes)", colour = NULL) +
+    theme(legend.position = "top")
+}
+```
+
+M1-mm (common slope):
+
+```{r curves_m1, fig.width = 12, fig.height = 20}
+curves_m1 <- tradition_curves("m1_mm", as.formula(paste("~ (1 |", mm_term, ")")))
+p_curves_m1 <- curve_plot(curves_m1)
+save_plot(p_curves_m1, "curves_m1", 12, 20)
+```
+
+M2-mm (slopes per tradition):
+
+```{r curves, fig.width = 12, fig.height = 20}
+curves <- tradition_curves("m2_mm", as.formula(paste("~ (1 + time |", mm_term, ")")))
+p_curves <- curve_plot(curves)
+save_plot(p_curves, "curves", 12, 20)
+```
+
+# Model comparison (LOO)
+
+Difference in expected log predictive density (elpd; positive = first model predicts better; 95% interval
+as ±1.96 SE). LOO results are saved in `fits/` as well.
+
+```{r loo}
+loo_question <- function(model, question, fit) {
+  path <- sprintf("fits/entrytags_loo_%s_%s.rds", model, question)
+  if (file.exists(path)) return(readRDS(path))
+  l <- loo(fit)
+  saveRDS(l, path)
+  l
+}
+loos <- fits |> mutate(loo = pmap(list(as.character(model), question, fit), loo_question))
+
+# Pareto k > 0.7 (unreliable LOO estimate) per model
+loos |>
+  mutate(high_k = map_int(loo, ~ sum(.x$diagnostics$pareto_k > 0.7))) |>
+  group_by(model) |>
+  summarise(fits_with_high_k = sum(high_k > 0), observations_high_k = sum(high_k))
+
+elpd_diff <- function(a, b) {
+  diff <- a$pointwise[, "elpd_loo"] - b$pointwise[, "elpd_loo"]
+  tibble(mean = sum(diff), se = sqrt(length(diff)) * sd(diff))
+}
+loo_of <- function(model, question) loos$loo[[which(loos$model == model & loos$question == question)]]
+
+comparisons <- tribble(
+  ~first, ~second, ~comparison,
+  "m1_mm", "m0", "M1-mm vs. M0 (traditions)",
+  "m1_priority", "m0", "M1-priority vs. M0 (traditions, priority)",
+  "m1_mm", "m1_priority", "M1-mm vs. M1-priority",
+  "m2_mm", "m1_mm", "M2-mm vs. M1-mm (tradition slopes)",
+  "m1_mm", "m1b_mm", "M1-mm vs. M1b-mm (world regions)"
+)
+loo_diffs <- crossing(comparisons, question = all_questions) |>
+  mutate(diff = pmap(list(first, second, question), ~ elpd_diff(loo_of(..1, ..3), loo_of(..2, ..3)))) |>
+  unnest(diff) |>
+  left_join(questions, by = c("question" = "question_short")) |>
+  mutate(question = factor(question, levels = rev(all_questions)), comparison = factor(comparison, levels = comparisons$comparison))
+```
+
+```{r loo_plot, fig.width = 14, fig.height = 11}
+p_loo <- ggplot(loo_diffs, aes(mean, question)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = mean - 1.96 * se, xmax = mean + 1.96 * se), size = 0.2) +
+  facet_grid(family ~ comparison, scales = "free", space = "free_y", labeller = label_wrap_gen(20)) +
+  labs(x = "elpd difference", y = NULL)
+save_plot(p_loo, "loo", 14, 11)
+```
+
+## All models together
+
+Per question, elpd of each model relative to the best model for that question (best = 0; 95% interval of the
+difference as ±1.96 SE). Models within about 4 elpd of the best predict practically equally well.
+
+```{r loo_relative, fig.width = 9, fig.height = 12}
+loo_relative <- loos |>
+  group_by(question) |>
+  group_modify(function(x, key) {
+    best <- x$loo[[which.max(map_dbl(x$loo, ~ .x$estimates["elpd_loo", "Estimate"]))]]
+    tibble(model = x$model, diff = map(x$loo, ~ elpd_diff(.x, best))) |> unnest(diff)
+  }) |>
+  ungroup() |>
+  left_join(questions, by = c("question" = "question_short")) |>
+  mutate(question = factor(question, levels = rev(all_questions)))
+
+p_loo_relative <- ggplot(loo_relative, aes(mean, question, colour = model)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_vline(xintercept = -4, colour = "grey60", linetype = "dashed") +
+  geom_pointrange(aes(xmin = mean - 1.96 * se, xmax = mean + 1.96 * se), position = position_dodge(width = 0.7), size = 0.2) +
+  facet_grid(family ~ ., scales = "free_y", space = "free_y") +
+  scale_colour_manual(values = model_colors, labels = model_labels) +
+  coord_cartesian(xlim = c(-40, 0)) +
+  labs(x = "elpd relative to the best model (axis cut at -40)", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_loo_relative, "loo_relative", 9, 12)
+```
+
+Stacking weights per question (how much each model contributes to the best weighted combination of the
+five; weights sum to 1 per question):
+
+```{r loo_weights, fig.width = 8, fig.height = 11}
+stacking <- loos |>
+  group_by(question) |>
+  group_modify(function(x, key) {
+    w <- loo_model_weights(setNames(x$loo, as.character(x$model)), method = "stacking")
+    tibble(model = names(w), weight = as.numeric(w))
+  }) |>
+  ungroup() |>
+  mutate(question = factor(question, levels = rev(all_questions)), model = factor(model, levels = names(formulas)))
+
+p_loo_weights <- ggplot(stacking, aes(model, question, fill = weight)) +
+  geom_tile() +
+  geom_text(aes(label = if_else(weight >= 0.05, sprintf("%.2f", weight), "")), size = 2.3) +
+  scale_x_discrete(labels = model_labels) +
+  scale_fill_gradient(low = "white", high = "#2a78d6", limits = c(0, 1)) +
+  labs(x = NULL, y = NULL, fill = "weight") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+save_plot(p_loo_weights, "loo_weights", 8, 11)
+```
+
+Summary over the 38 questions: how often each model is best, within 4 elpd of the best, and its average
+stacking weight; NB. m2_mm might be better as m2_priority actually, so maybe this is actually what is "best" by IC. 
+
+```{r loo_summary}
+loo_relative |>
+  group_by(model) |>
+  summarise(best = sum(mean == 0), within_4 = sum(mean > -4)) |>
+  left_join(stacking |> group_by(model) |> summarise(mean_weight = round(mean(weight), 2)), by = "model")
+```
+
+# Posterior predictive checks
+
+Observed share yes (points) against the 95% posterior predictive interval (bars) per tradition (priority
+label), for M0 (no traditions) and M2-mm.
+
+```{r ppc}
+ppc_tradition <- function(fit, data) {
+  yrep <- posterior_predict(fit, ndraws = 1000)
+  map_dfr(intersect(traditions, unique(data$tradition)), function(t) {
+    w <- data$weight * (data$tradition == t)
+    prop <- as.vector(yrep %*% w) / sum(w)
+    tibble(tradition = t, observed = sum(w * data$answer_value) / sum(w),
+           lower = quantile(prop, 0.025), upper = quantile(prop, 0.975))
+  })
+}
+
+ppc <- fits |>
+  filter(model %in% c("m0", "m2_mm")) |>
+  mutate(check = map2(fit, question, ~ ppc_tradition(.x, filter(d_model, question_short == .y)))) |>
+  select(model, question, check) |>
+  unnest(check)
+```
+
+```{r ppc_plot, fig.width = 12, fig.height = 22}
+p_ppc <- ppc |>
+  mutate(tradition = factor(tradition, levels = rev(traditions))) |>
+  ggplot(aes(y = tradition, colour = model)) +
+  geom_linerange(aes(xmin = lower, xmax = upper), linewidth = 2, alpha = 0.4, position = position_dodge(width = 0.6)) +
+  geom_point(aes(x = observed), size = 1.2, position = position_dodge(width = 0.6)) +
+  facet_wrap(~ factor(question, levels = all_questions), ncol = 4) +
+  scale_colour_manual(values = model_colors, labels = model_labels) +
+  labs(x = "Share yes", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_ppc, "ppc_tradition", 12, 22)
+```
+
+Share of observed values outside the 95% interval:
+
+```{r ppc_summary}
+ppc |>
+  mutate(outside = observed < lower | observed > upper) |>
+  group_by(model) |>
+  summarise(groups = n(), share_outside = round(mean(outside), 2), outside = sum(outside), .groups = "drop")
+```
