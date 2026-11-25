@@ -187,6 +187,12 @@ Here we infer "No" for a child when its parent is "No" (inferred = True),
 except for 3218 (permissible to worship other gods), where we infer "Yes".
 Not inferred when the parent is answered both "Yes" and "No".
 The (conditional) files above are unchanged.
+
+2919 (supreme high god present) is used as answered: no "No" is inferred from 2893 "No" (dropped 2026-11-23).
+Many entries with 2893 "No" are Abrahamic (4 of 7 groups, 38 of 50 texts in the 3000 BCE-1500 CE window of
+modeling/13_main.Rmd), so their coders probably read "supernatural beings" as beings other than God, and an
+inferred "no supreme high god" would be wrong. As a consequence, the shg questions are not inferred for these
+entries either (2919 is missing for them).
 """
 
 import numpy as np
@@ -199,14 +205,7 @@ parent_names = pd.DataFrame(list(parent_coding.items()), columns=["question_id",
 parent_names["question_id"] = parent_names["question_id"].astype(int)
 parents = answers.merge(parent_names, on="question_id", how="inner").drop(columns=["question_name"])
 parents = parents[parents["poll_name"].isin(polls) & parents["answer_value"].isin([0, 1])]
-parents["inferred"] = False
-
-# 2893 "No" -> 2919 "No" (2919 is not asked then)
-beings = parents[parents["question_id"] == 2893].groupby(["entry_id", "poll_name"])["answer_value"].mean().reset_index()
-beings_no = beings[beings["answer_value"] == 0]
-assert not beings_no["entry_id"].isin(parents.loc[parents["question_id"] == 2919, "entry_id"]).any()
-shg_inferred = beings_no.assign(question_id=2919, question_short=parent_coding["2919"], inferred=True)
-parents = pd.concat([parents, shg_inferred], ignore_index=True)
+parents["inferred"] = False  # parents are used as answered (no 2893 "No" -> 2919 "No"; see above)
 parents = assign_weight(parents, "entry_id", "question_id")
 
 # parent answer per entry: 0 = "No", 1 = "Yes", in between = both

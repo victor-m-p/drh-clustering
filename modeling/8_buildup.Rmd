@@ -1,0 +1,462 @@
+---
+title: "Build-up: Region Slopes and Entry Tags"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Overview
+
+Step by step from the models in `5_entrytags.Rmd`, one change at a time, on six questions first:
+
+| model | formula | compared with |
+|---|---|---|
+| M0 (reference) | `time + (1 | world_region)` | |
+| M1-priority (reference) | `time + (1 | tradition) + (1 | world_region)` | |
+| R | `time + (1 + time | world_region)` | M0: do regions differ in their trends? |
+| T | `time + (1 | mm(tags)) + (1 | world_region)` | M1-priority: the tagging tree instead of our six coded traditions |
+| RT | `time + (1 | mm(tags)) + (1 + time | world_region)` | R and T: do tags and regional trends overlap? |
+
+**Data** as in `5_entrytags.Rmd` (so differences come from the models, not the data): groups only, child
+questions as answered (conditional), conflicting answers weighted 1/n, time = (`year_from` - 1000) / 1000
+(**0 = 1000 CE**). The reference fits (M0, M1-priority) and their LOO results are read from `fits/`.
+
+Questions: murder other religions, gossiping, performance of rituals, conversion non-religionists,
+is unquestionably good, possesses hunger.
+
+**Tags** (see `preprocessing/inspect_entrytags.py`): religious tags only (the "Religious Group" tree, not
+language), each entry's own tags. Tags with the same name are treated as one tag (the tree has 59 names with
+several tag ids, e.g. Protestantism three times). Tags carried by at least 10 group entries are kept (69 tags);
+an entry gets the **average** of its tags' effects (multiple membership, weights 1/*k* for *k* tags, as for our
+coded traditions). Group entries with none of these tags (57) share one level, "untagged". Not hierarchical: a
+sub-tag is a level of its own (experts usually tag an entry with both the parent and the sub-tag, so such
+entries get half of each). Caveats: some kept tags are synonyms of each other (Christian Traditions,
+Christianity, Christian) and some are descriptors rather than traditions (regions, periods, types).
+
+**Priors** as before: intercept normal(0, 1.5), slope normal(0, 1), SDs exponential(1); lkj(2) for the
+intercept-slope correlation of the region slopes (R, RT).
+
+**What we look for**
+
+1. The average time slope (`b_time`) across M0, R, M1-priority, T and RT.
+2. Region slopes (R): SD, each region's slope, region curves.
+3. Tags (T): SD compared with the tradition SD of M1-priority; the largest tag effects; whether the main
+   tradition tags agree with our coded traditions.
+4. RT: does the region slope SD shrink when tags are in the model?
+5. LOO: R vs. M0, T vs. M1-priority, T vs. M0, RT vs. R and vs. T.
+
+Run from inside `modeling/` after `3_prepare_data.py` and `5_entrytags.Rmd` (reference fits). Fits are saved in
+`fits/` as `buildup_<model>_<question>.rds` (delete them to refit), figures in `fig/buildup/`.
+
+```{r setup, message = FALSE}
+library(tidyverse)
+library(brms)
+library(posterior)
+
+options(mc.cores = 4, brms.backend = "cmdstanr")
+dir.create("fits", showWarnings = FALSE)
+theme_set(theme_bw(base_size = 11))
+
+# figures: shown in the session and saved as fig/buildup/<name>.jpg
+fig_dir <- "fig/buildup"
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+save_plot <- function(p, name, width, height) {
+  ggsave(file.path(fig_dir, paste0(name, ".jpg")), p, width = width, height = height, dpi = 300)
+  p
+}
+
+questions <- c(
+  "murder other religions", "gossiping", "performance of rituals",
+  "conversion non-religionists", "is unquestionably good", "possesses hunger"
+)
+```
+
+# Data
+
+```{r data, message = FALSE}
+d <- read_csv("data/model_data.csv") |>
+  mutate(time = (year_from - 1000) / 1000)
+
+# groups only, child questions as answered (as in 5_entrytags.Rmd)
+d_groups <- d |> filter(poll == "group")
+d_model <- d_groups |> filter(question_short %in% questions, !inferred)
+
+d_model |> group_by(question_short) |> summarise(entries = n_distinct(entry_id), rows = n())
+```
+
+## Tags
+
+```{r tags, message = FALSE}
+entity_tags <- read_csv("../data/sccsrv3/entity_tags.csv")
+group_entries <- d_groups |> distinct(entry_id)
+
+# each group entry's own religious tags; tags with the same name are one tag
+own <- entity_tags |>
+  filter(str_starts(entrytag_path, fixed("Religious Group[")), entrytag_name != "Religious Group") |>
+  semi_join(group_entries, by = "entry_id") |>
+  distinct(entry_id, tag = entrytag_name)
+
+# tags carried by at least 10 group entries
+n_min <- 10
+common <- own |> count(tag, name = "entries") |> filter(entries >= n_min) |> arrange(desc(entries))
+
+# per entry: its common tags (weights 1/k), or "untagged"
+entry_tags <- group_entries |>
+  left_join(own |> semi_join(common, by = "tag"), by = "entry_id") |>
+  mutate(tag = coalesce(tag, "untagged")) |>
+  group_by(entry_id) |>
+  mutate(k = n(), slot = row_number(), w = 1 / k) |>
+  ungroup()
+K <- max(entry_tags$slot)
+
+# wide: tag1..tagK, tw1..twK (tw: model_data.csv already has w1..w3 for the coded traditions);
+# empty slots get the entry's first tag with weight 0
+tags_wide <- entry_tags |>
+  select(entry_id, slot, tag, tw = w) |>
+  complete(entry_id, slot = 1:K) |>
+  arrange(entry_id, slot) |>
+  group_by(entry_id) |>
+  mutate(tag = coalesce(tag, first(tag)), tw = coalesce(tw, 0)) |>
+  ungroup() |>
+  pivot_wider(names_from = slot, values_from = c(tag, tw), names_sep = "")
+
+d_model <- d_model |> left_join(tags_wide, by = "entry_id")
+stopifnot(!anyNA(d_model$tag1))
+
+cat(nrow(common), "tags with >=", n_min, "group entries;",
+    sum(entry_tags$tag != "untagged" & entry_tags$slot == 1), "of", nrow(group_entries), "group entries have one,",
+    sum(entry_tags$tag == "untagged"), "untagged; up to", K, "tags per entry\n")
+entry_tags |> filter(slot == 1, tag != "untagged") |> count(tags_per_entry = k)
+common |> print(n = 20)
+```
+
+# Models
+
+```{r models}
+mm_term <- paste0(
+  "mm(", paste0("tag", 1:K, collapse = ", "),
+  ", weights = cbind(", paste0("tw", 1:K, collapse = ", "), "), scale = FALSE)"
+)
+mm_group <- paste0("mm", paste0("tag", 1:K, collapse = ""))  # name of the tag term in ranef() / coef()
+
+formulas <- list(
+  r = bf(answer_value | weights(weight) ~ 0 + Intercept + time + (1 + time | world_region)),
+  t = bf(as.formula(paste("answer_value | weights(weight) ~ 0 + Intercept + time + (1 |", mm_term, ") + (1 | world_region)"))),
+  rt = bf(as.formula(paste("answer_value | weights(weight) ~ 0 + Intercept + time + (1 |", mm_term, ") + (1 + time | world_region)")))
+)
+
+priors <- c(
+  prior(normal(0, 1), class = "b"),
+  prior(normal(0, 1.5), class = "b", coef = "Intercept"),
+  prior(exponential(1), class = "sd")
+)
+priors_cor <- c(priors, prior(lkj(2), class = "cor"))
+model_priors <- list(r = priors_cor, t = priors, rt = priors_cor)
+
+model_labels <- c(m0 = "M0", m1_priority = "M1-priority", r = "R (region slopes)", t = "T (tags)", rt = "RT (both)")
+model_colors <- c(m0 = "#898781", m1_priority = "#eda100", r = "#2a78d6", t = "#1baf7a", rt = "#e87ba4")
+```
+
+# Fit
+
+Each model is compiled once (`chains = 0`) and then refit for each question with `update()`. The reference
+models are read from the fits of `5_entrytags.Rmd`.
+
+```{r fit, message = FALSE, results = "hide"}
+templates <- imap(formulas, function(formula, model) {
+  suppressWarnings(brm(formula, data = d_model, family = bernoulli(), prior = model_priors[[model]],
+                       chains = 0, refresh = 0, silent = 2))
+})
+
+fit_question <- function(model, question) {
+  path <- sprintf("fits/buildup_%s_%s.rds", model, question)
+  if (file.exists(path)) return(readRDS(path))
+  fit <- update(
+    templates[[model]],
+    newdata = filter(d_model, question_short == question),
+    chains = 4, iter = 2000, seed = 2026, refresh = 0,
+    control = list(adapt_delta = 0.99)
+  )
+  saveRDS(fit, path)
+  fit
+}
+
+read_reference <- function(model, question) {
+  path <- sprintf("fits/entrytags_%s_%s.rds", model, question)
+  if (!file.exists(path)) stop("missing reference fit (run 5_entrytags.Rmd): ", path)
+  readRDS(path)
+}
+
+fits <- bind_rows(
+  crossing(model = c("m0", "m1_priority"), question = questions) |>
+    mutate(fit = map2(model, question, read_reference)),
+  crossing(model = names(formulas), question = questions) |>
+    mutate(fit = map2(model, question, fit_question))
+) |>
+  mutate(model = factor(model, levels = names(model_labels)))
+```
+
+# Diagnostics
+
+```{r diagnostics}
+diagnostics <- fits |>
+  filter(model %in% names(formulas)) |>
+  mutate(diag = map(fit, function(fit) {
+    s <- summarise_draws(as_draws_df(fit, variable = "^b_|^sd_|^cor_", regex = TRUE))
+    tibble(
+      max_rhat = max(s$rhat),
+      min_ess_bulk = min(s$ess_bulk),
+      min_ess_tail = min(s$ess_tail),
+      divergences = sum(subset(nuts_params(fit), Parameter == "divergent__")$Value)
+    )
+  })) |>
+  select(-fit) |>
+  unnest(diag)
+
+diagnostics
+diagnostics |> filter(max_rhat > 1.01 | min_ess_bulk < 400 | min_ess_tail < 400 | divergences > 0)
+```
+
+# Average time slope
+
+Change in log-odds per 1,000 years (95% interval). M0 and R: across regions; M1-priority: within traditions;
+T and RT: within tags.
+
+```{r estimates}
+estimates <- fits |>
+  mutate(est = map(fit, function(fit) {
+    as_draws_df(fit, variable = "^b_|^sd_|^cor_", regex = TRUE) |>
+      summarise_draws(mean, ~ quantile(.x, c(0.025, 0.975))) |>
+      rename(lower = `2.5%`, upper = `97.5%`)
+  })) |>
+  select(-fit) |>
+  unnest(est) |>
+  mutate(question = factor(question, levels = rev(questions)))
+
+coef_plot <- function(est, xlab) {
+  ggplot(est, aes(mean, question, colour = model)) +
+    geom_vline(xintercept = 0, colour = "grey60") +
+    geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.7), size = 0.2) +
+    scale_colour_manual(values = model_colors, labels = model_labels) +
+    labs(x = xlab, y = NULL, colour = NULL) +
+    theme(legend.position = "top")
+}
+```
+
+```{r slopes, fig.width = 8, fig.height = 5}
+p_slopes <- estimates |> filter(variable == "b_time") |> coef_plot("Time slope (log-odds per 1,000 years)")
+save_plot(p_slopes, "slopes", 8, 5)
+```
+
+# Spread: regions and tags
+
+SDs of the region intercepts and slopes, of the tradition intercepts (M1-priority) and of the tag intercepts
+(T, RT). If the region slope SD shrinks from R to RT, regional trends are partly differences between tags.
+
+```{r sds, fig.width = 12, fig.height = 5}
+p_sds <- estimates |>
+  filter(str_starts(variable, "sd_")) |>
+  mutate(term = case_when(
+    str_detect(variable, "world_region__time") ~ "region (slope)",
+    str_detect(variable, "world_region") ~ "region (intercept)",
+    TRUE ~ "tradition / tags (intercept)"
+  )) |>
+  coef_plot("SD (log-odds)") +
+  facet_wrap(~ term, nrow = 1)
+save_plot(p_sds, "sds", 12, 5)
+```
+
+Correlation between region intercepts and slopes (R, RT):
+
+```{r cor}
+estimates |> filter(str_starts(variable, "cor_")) |> select(model, question, mean, lower, upper)
+```
+
+# Regions (R)
+
+## Slopes per region
+
+Region slope (average slope + region deviation; mean and 95% interval), with the number of entries per region
+and question.
+
+```{r region_slopes, fig.width = 10, fig.height = 6}
+region_n <- d_model |> group_by(question = question_short, region = world_region) |> summarise(n = n_distinct(entry_id), .groups = "drop")
+
+region_slopes <- fits |>
+  filter(model %in% c("r", "rt")) |>
+  mutate(co = map(fit, function(fit) {
+    s <- coef(fit)$world_region[, , "time"]
+    tibble(region = rownames(s), estimate = s[, "Estimate"], lower = s[, "Q2.5"], upper = s[, "Q97.5"])
+  })) |>
+  select(model, question, co) |>
+  unnest(co) |>
+  left_join(region_n, by = c("question", "region"))
+
+p_region_slopes <- ggplot(region_slopes, aes(estimate, region, colour = model)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.6), size = 0.2) +
+  geom_text(data = filter(region_slopes, model == "r"), aes(x = Inf, label = n), hjust = 1.2, size = 2.5, colour = "grey30") +
+  facet_wrap(~ factor(question, levels = questions), ncol = 3) +
+  scale_colour_manual(values = model_colors, labels = model_labels) +
+  labs(x = "Time slope (log-odds per 1,000 years)", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_region_slopes, "region_slopes", 10, 6)
+```
+
+## Curves per region
+
+P(yes) over time per region (R; mean), drawn within the time range of that region's entries for that question;
+black dashed: the population-level curve.
+
+```{r region_curves, fig.width = 12, fig.height = 7}
+region_curves <- fits |>
+  filter(model == "r") |>
+  mutate(curve = map2(fit, question, function(fit, question) {
+    dq <- filter(d_model, question_short == question)
+    per_region <- map_dfr(unique(dq$world_region), function(reg) {
+      years <- dq |> filter(world_region == reg) |> pull(year_from)
+      if (length(years) < 2) return(NULL)
+      newdata <- tibble(year = seq(min(years), max(years), length.out = 50), time = (year - 1000) / 1000,
+                        world_region = reg, weight = 1)
+      p <- posterior_epred(fit, newdata = newdata, ndraws = 1000)
+      newdata |> mutate(mean = colMeans(p))
+    })
+    newdata <- tibble(year = seq(min(dq$year_from), max(dq$year_from), length.out = 100), time = (year - 1000) / 1000, weight = 1)
+    p <- posterior_epred(fit, newdata = newdata, re_formula = NA, ndraws = 1000)
+    bind_rows(per_region, newdata |> mutate(world_region = "overall", mean = colMeans(p)))
+  })) |>
+  select(question, curve) |>
+  unnest(curve)
+
+p_region_curves <- ggplot(region_curves, aes(year, mean, colour = world_region, linetype = world_region == "overall")) +
+  geom_line() +
+  facet_wrap(~ factor(question, levels = questions), ncol = 3) +
+  scale_colour_manual(values = c(setNames(scales::hue_pal()(10), sort(unique(d_model$world_region))), overall = "black")) +
+  scale_linetype_manual(values = c("FALSE" = "solid", "TRUE" = "dashed"), guide = "none") +
+  coord_cartesian(ylim = c(0, 1), xlim = c(-2000, 2025)) +
+  labs(x = "Year (year_from)", y = "P(yes)", colour = NULL) +
+  theme(legend.position = "right")
+save_plot(p_region_curves, "region_curves", 12, 7)
+```
+
+# Tags (T)
+
+## Largest tag effects
+
+Tag intercepts (T; log-odds relative to the average tag; mean and 95% interval): the 8 highest and 8 lowest
+per question, with the number of entries carrying the tag for that question.
+
+```{r tag_effects, fig.width = 12, fig.height = 12}
+tag_n <- entry_tags |>
+  inner_join(d_model |> distinct(question = question_short, entry_id), by = "entry_id", relationship = "many-to-many") |>
+  count(question, tag, name = "n")
+
+tag_effects <- fits |>
+  filter(model == "t") |>
+  mutate(re = map(fit, function(fit) {
+    r <- ranef(fit)[[mm_group]][, , "Intercept"]
+    tibble(tag = rownames(r), estimate = r[, "Estimate"], lower = r[, "Q2.5"], upper = r[, "Q97.5"])
+  })) |>
+  select(question, re) |>
+  unnest(re) |>
+  left_join(tag_n, by = c("question", "tag"))
+
+p_tag_effects <- tag_effects |>
+  group_by(question) |>
+  filter(rank(-estimate) <= 8 | rank(estimate) <= 8) |>
+  ungroup() |>
+  # order tags by estimate within each question (label made unique per question, suffix removed for display)
+  mutate(label = sprintf("%s (%s)___%s", tag, n, question), label = fct_reorder(label, estimate)) |>
+  ggplot(aes(estimate, label)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), size = 0.2) +
+  scale_y_discrete(labels = function(x) sub("___.*$", "", x)) +
+  facet_wrap(~ factor(question, levels = questions), ncol = 2, scales = "free_y") +
+  labs(x = "Tag intercept (log-odds)", y = NULL)
+save_plot(p_tag_effects, "tag_effects", 12, 12)
+```
+
+## Tags vs. our coded traditions
+
+Main tradition tags (T) against our coded traditions (M1-priority), one point per question; line: equal. Both
+are relative to the average group of their own model, so only roughly comparable.
+
+```{r tags_vs_traditions, fig.width = 6, fig.height = 5}
+tradition_tag <- c(
+  christian = "Christian Traditions", islamic = "Islamic Traditions", buddhist = "Buddhist Traditions",
+  hindu = "Hinduism", chinese = "Chinese Religion", jewish = "Jewish Traditions"
+)
+coded <- fits |>
+  filter(model == "m1_priority") |>
+  mutate(re = map(fit, function(fit) {
+    r <- ranef(fit)$tradition[, , "Intercept"]
+    tibble(tradition = rownames(r), coded = r[, "Estimate"])
+  })) |>
+  select(question, re) |>
+  unnest(re) |>
+  mutate(tag = tradition_tag[tradition]) |>
+  filter(!is.na(tag))
+
+p_tags_vs_traditions <- coded |>
+  inner_join(tag_effects |> select(question, tag, estimate), by = c("question", "tag")) |>
+  ggplot(aes(estimate, coded, colour = tradition)) +
+  geom_abline(colour = "grey60") +
+  geom_point() +
+  labs(x = "Tag intercept, T (log-odds)", y = "Tradition intercept, M1-priority (log-odds)", colour = NULL)
+save_plot(p_tags_vs_traditions, "tags_vs_traditions", 6, 5)
+```
+
+# Model comparison (LOO)
+
+Difference in expected log predictive density (elpd; positive = first model predicts better; 95% interval as
+±1.96 SE). Reference LOO results are read from `fits/entrytags_loo_*`.
+
+```{r loo}
+loo_question <- function(model, question, fit) {
+  path <- if (model %in% c("m0", "m1_priority")) {
+    sprintf("fits/entrytags_loo_%s_%s.rds", model, question)
+  } else {
+    sprintf("fits/buildup_loo_%s_%s.rds", model, question)
+  }
+  if (file.exists(path)) return(readRDS(path))
+  l <- loo(fit)
+  saveRDS(l, path)
+  l
+}
+loos <- fits |> mutate(loo = pmap(list(as.character(model), question, fit), loo_question))
+
+# Pareto k > 0.7 (unreliable LOO estimate) per model
+loos |>
+  mutate(high_k = map_int(loo, ~ sum(.x$diagnostics$pareto_k > 0.7))) |>
+  group_by(model) |>
+  summarise(fits_with_high_k = sum(high_k > 0), observations_high_k = sum(high_k))
+
+elpd_diff <- function(a, b) {
+  diff <- a$pointwise[, "elpd_loo"] - b$pointwise[, "elpd_loo"]
+  tibble(mean = sum(diff), se = sqrt(length(diff)) * sd(diff))
+}
+loo_of <- function(model, question) loos$loo[[which(loos$model == model & loos$question == question)]]
+
+comparisons <- tribble(
+  ~first, ~second, ~comparison,
+  "r", "m0", "R vs. M0 (region slopes)",
+  "t", "m1_priority", "T vs. M1-priority (tags vs. coded traditions)",
+  "t", "m0", "T vs. M0 (tags)",
+  "rt", "r", "RT vs. R (tags, given region slopes)",
+  "rt", "t", "RT vs. T (region slopes, given tags)"
+)
+loo_diffs <- crossing(comparisons, question = questions) |>
+  mutate(diff = pmap(list(first, second, question), ~ elpd_diff(loo_of(..1, ..3), loo_of(..2, ..3)))) |>
+  unnest(diff) |>
+  mutate(question = factor(question, levels = rev(questions)), comparison = factor(comparison, levels = comparisons$comparison))
+```
+
+```{r loo_plot, fig.width = 14, fig.height = 4}
+p_loo <- ggplot(loo_diffs, aes(mean, question)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = mean - 1.96 * se, xmax = mean + 1.96 * se), size = 0.2) +
+  facet_wrap(~ comparison, nrow = 1, labeller = label_wrap_gen(25)) +
+  labs(x = "elpd difference", y = NULL)
+save_plot(p_loo, "loo", 14, 4)
+```

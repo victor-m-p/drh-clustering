@@ -1,0 +1,452 @@
+---
+title: "Region x time with texts"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+Do the trends change when religious texts are added to the religious groups? Same window, questions and main model
+as `13_main.Rmd`, fitted to groups and texts together, with one added term for texts:
+
+```
+answer_value ~ 0 + region + region:time + text + (1 | expert)
+```
+
+- **`text`** (1 for texts, 0 for groups) is a level difference in log-odds, at the same region, time and expert.
+  Texts answer "Yes" much less often than groups for many questions (probably "No" where a text is silent), so they
+  need their own level. Prior normal(0, 2), wide as for the Abrahamic term; other priors as in `13_main.Rmd`.
+- **Region slopes** are shared by groups and texts; the model assumes they differ in level only (checked visually at
+  the end).
+- **The expert intercept spans both polls.** Some experts code groups and texts, often of the same tradition.
+- **A text's time is its start year** (`year_from`), presumably when it was written; a text may describe an earlier
+  period.
+- **Comparison with `13_main.Rmd`:** the region slopes, side by side. A leave-one-out comparison is not possible: the
+  two models are fitted to different observations.
+- **No Abrahamic term** (working plan, 2026-11-17): each layer changes one thing relative to the main model.
+
+Run from inside `modeling/` after `3_prepare_data.py` and `13_main.Rmd` (its region x time fits are the comparison).
+Fits are saved in `fits/` (`texts_*`; delete them to refit), figures in `fig/texts/`.
+
+```{r setup, message = FALSE}
+library(tidyverse)
+library(brms)
+library(posterior)
+library(loo)
+
+options(mc.cores = 4, brms.backend = "cmdstanr")
+dir.create("fits", showWarnings = FALSE)
+theme_set(theme_bw(base_size = 11))
+
+# figures: shown in the session and saved as fig/texts/<name>.jpg
+fig_dir <- "fig/texts"
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+save_plot <- function(p, name, width, height) {
+  ggsave(file.path(fig_dir, paste0(name, ".jpg")), p, width = width, height = height, dpi = 300)
+  p
+}
+
+regions <- c("Southwest Asia", "Europe", "Africa", "East Asia")
+model_colors <- c("main (13_main, groups)" = "#a3a29b", "groups and texts" = "#2a78d6")
+poll_colors <- c("groups" = "#52514e", "texts" = "#2a78d6")
+year_min <- -3000
+year_max <- 1500
+
+# child questions combined into one ("Yes" if any answered question in the set is "Yes"), as in 13_main.Rmd
+groups <- list(
+  "murder out-group" = c("murder other religions", "murder other polities"),
+  "elite ties" = c("is monarch fused", "is monarch manifestation", "is kin to elites", "other elite loyalty")
+)
+```
+
+# Data
+
+Same as `13_main.Rmd`, with texts.
+
+```{r data, message = FALSE}
+source_of <- read_csv("../data/sccsrv3/entry_data.csv", col_select = c(entry_id, data_source)) |>
+  distinct(entry_id, .keep_all = TRUE)
+
+d_window <- read_csv("data/model_data.csv") |>
+  left_join(source_of, by = "entry_id") |>
+  filter(
+    poll %in% c("group", "text"),
+    world_region %in% regions,
+    is.na(data_source) | (data_source != "eHRAF" & !str_starts(data_source, "Pulotu")),
+    year_from >= year_min, year_from < year_max
+  ) |>
+  mutate(region = factor(world_region, levels = regions), time = year_from / 1000, text = as.integer(poll == "text"))
+
+# conflicting answers (Yes and No for the same entry and question; weight < 1) are left out
+d <- d_window |> filter(weight == 1)
+
+# parent question of each family of child questions
+parent_of <- c(monitoring = "supernatural monitoring present", shg = "supreme high god present")
+
+# child questions in topic order (as in 4_baseline.Rmd), before grouping
+topic_items <- c(
+  "murder coreligionists", "murder other religions", "murder other polities", "non-lethal fighting",
+  "prosocial norm adherence", "lying", "honouring oaths", "property crimes", "economic fairness",
+  "gossiping", "laziness", "shirking risk", "disrespecting elders", "sex",
+  "ritual observance", "performance of rituals", "taboos", "personal hygiene", "sorcery",
+  "conversion non-religionists",
+  "knowledge this world", "causal efficacy the world", "indirect causal efficacy the world", "communicates with living",
+  "is unquestionably good", "positive emotion", "negative emotion",
+  "is anthropomorphic", "possesses hunger", "is sky deity", "is chthonic",
+  "permissible to worship other god?",
+  "is monarch fused", "is monarch manifestation", "is kin to elites", "other elite loyalty"
+)
+stopifnot(setequal(topic_items, d |> filter(family != "parent") |> distinct(question_short) |> pull()))
+
+# child questions after grouping: each set takes the place of its first question
+items <- enframe(groups, name = "group", value = "question_short") |> unnest(question_short)
+group_of <- setNames(items$group, items$question_short)  # question -> its set
+topic_order <- unique(coalesce(unname(group_of[topic_items]), topic_items))
+all_questions <- c(unname(parent_of), topic_order)
+
+# child questions as answered; grouped sets collapsed to one answer per entry
+children <- d |> filter(question_short %in% topic_items, !inferred)
+grouped <- children |>
+  filter(question_short %in% names(group_of)) |>
+  mutate(group = unname(group_of[question_short])) |>
+  group_by(question_short = group, family, entry_id, entry_name, expert, region, year_from, time, poll, text) |>
+  summarise(answer_value = as.integer(any(answer_value == 1)), .groups = "drop")
+
+# samples (one model per question in each)
+sets <- list(
+  parent = d |> filter(question_short %in% parent_of), # as answered (no "No" inferred for the supreme high god since 2026-11-23)
+  conditional = bind_rows(children |> filter(!question_short %in% names(group_of)), grouped)
+)
+runs <- bind_rows(
+  tibble(set = "parent", question = unname(parent_of)),
+  tibble(set = "conditional", question = topic_order)
+)
+
+questions <- bind_rows(sets) |> distinct(family, question_short)
+stopifnot(setequal(topic_order, filter(questions, family != "parent")$question_short))
+```
+
+Entries per region, groups and texts (any question):
+
+```{r data_regions}
+d_window |>
+  distinct(entry_id, poll, region) |>
+  count(region, poll) |>
+  pivot_wider(names_from = poll, values_from = n, values_fill = 0)
+```
+
+Experts by the polls they code (entries in the window):
+
+```{r data_experts}
+d_window |>
+  distinct(entry_id, poll, expert) |>
+  group_by(expert) |>
+  summarise(polls = paste(sort(unique(poll)), collapse = " + "), entries = n(), texts = sum(poll == "text")) |>
+  group_by(polls) |>
+  summarise(experts = n(), entries = sum(entries), texts = sum(texts), experts_2plus = sum(entries >= 2))
+```
+
+Entries per question and share "Yes", groups and texts:
+
+```{r data_questions}
+bind_rows(sets) |>
+  group_by(question = question_short, poll) |>
+  summarise(n = n(), yes = round(mean(answer_value), 2), .groups = "drop") |>
+  pivot_wider(names_from = poll, values_from = c(n, yes)) |>
+  arrange(match(question, all_questions)) |>
+  print(n = Inf)
+```
+
+# Model and fit
+
+The model is compiled once (`chains = 0`) and then refit for each question with `update()`.
+
+```{r fit, message = FALSE, results = "hide"}
+model <- bf(answer_value ~ 0 + region + region:time + text + (1 | expert))
+
+# brms names the region coefficients without spaces (regionSouthwestAsia, regionSouthwestAsia:time, ...)
+region_key <- setNames(regions, str_remove_all(regions, " "))
+priors <- c(
+  prior(normal(0, 1), class = "b"),  # region slopes
+  reduce(map(paste0("region", names(region_key)), ~ set_prior("normal(0, 1.5)", class = "b", coef = .x)), c),
+  prior(normal(0, 2), class = "b", coef = "text"),
+  prior(normal(0, 1), class = "sd")  # half-normal on the expert SD
+)
+
+template <- suppressWarnings(brm(model, data = sets$parent, family = bernoulli(), prior = priors,
+                                 chains = 0, refresh = 0, silent = 2))
+
+fit_question <- function(set, question) {
+  path <- sprintf("fits/texts_%s_%s.rds", set, question)
+  if (file.exists(path)) return(readRDS(path))
+  fit <- update(
+    template,
+    newdata = filter(sets[[set]], question_short == question),
+    chains = 4, iter = 4000, warmup = 2000, seed = 125123, refresh = 0,
+    control = list(adapt_delta = 0.99)
+  )
+  saveRDS(fit, path)
+  fit
+}
+
+# region x time fits of 13_main.Rmd (groups only, without the text term)
+read_main <- function(set, question) {
+  path <- sprintf("fits/main_region_time_%s_%s.rds", set, question)
+  if (!file.exists(path)) stop("missing ", path, ": run 13_main.Rmd first")
+  readRDS(path)
+}
+
+fits <- runs |>
+  mutate(
+    fit = map2(set, question, fit_question),
+    fit_main = map2(set, question, read_main)
+  )
+```
+
+# Diagnostics
+
+```{r diagnostics}
+diagnostics <- fits |>
+  mutate(diag = map(fit, function(fit) {
+    s <- summarise_draws(as_draws_df(fit, variable = "^(b|sd)_", regex = TRUE))
+    tibble(
+      max_rhat = max(s$rhat),
+      min_ess_bulk = min(s$ess_bulk),
+      min_ess_tail = min(s$ess_tail),
+      divergences = sum(subset(nuts_params(fit), Parameter == "divergent__")$Value)
+    )
+  })) |>
+  select(set, question, diag) |>
+  unnest(diag)
+
+diagnostics |>
+  summarise(max_rhat = max(max_rhat), min_ess_bulk = min(min_ess_bulk), min_ess_tail = min(min_ess_tail),
+            divergences = sum(divergences))
+
+# fits with any problem
+diagnostics |> filter(max_rhat > 1.01 | min_ess_bulk < 400 | min_ess_tail < 400 | divergences > 0)
+```
+
+Observations with Pareto k > 0.7 (PSIS-LOO), as a check that the expert intercept is not fitted to single points
+too often:
+
+```{r pareto_k, warning = FALSE}
+# one core: forking for each of the small fits can exhaust processes ("unable to fork"), and gains nothing
+fits |>
+  transmute(question = factor(question, levels = all_questions),
+            n = map_int(fit, ~ nrow(.x$data)),
+            high_k = map_int(fit, ~ sum(pareto_k_values(loo(.x, cores = 1)) > 0.7))) |>
+  arrange(question) |>
+  print(n = Inf)
+```
+
+# Estimates
+
+```{r estimates}
+summarise_draws_ <- function(value) {
+  tibble(mean = mean(value), lower = quantile(value, 0.025), upper = quantile(value, 0.975), p_positive = mean(value > 0))
+}
+
+# region slopes per draw, plus their average
+region_slopes <- function(fit) {
+  draws <- as_draws_df(fit, variable = "^b_region.*:time$", regex = TRUE) |>
+    as_tibble() |>
+    select(.draw, starts_with("b_")) |>
+    pivot_longer(-.draw, values_to = "value") |>
+    mutate(region = unname(region_key[str_remove(str_remove(name, "^b_region"), ":time$")])) |>
+    select(.draw, region, value)
+  average <- draws |> group_by(.draw) |> summarise(value = mean(value)) |> mutate(region = "average")
+  bind_rows(draws, average)
+}
+
+add_panels <- function(est) {
+  est |>
+    left_join(questions, by = c("question" = "question_short")) |>
+    mutate(
+      panel = case_when(set == "parent" ~ "parent", family == "monitoring" ~ "monitoring", TRUE ~ "supreme\nhigh god"),
+      panel = factor(panel, levels = c("parent", "monitoring", "supreme\nhigh god")),
+      question = factor(question, levels = rev(all_questions))
+    )
+}
+
+# slopes, main and with texts
+slopes <- fits |>
+  pivot_longer(c(fit_main, fit), names_to = "model", values_to = "fit") |>
+  mutate(
+    model = factor(if_else(model == "fit", "groups and texts", "main (13_main, groups)"), levels = names(model_colors)),
+    est = map(fit, ~ region_slopes(.x) |> group_by(region) |> reframe(summarise_draws_(value)))
+  ) |>
+  select(model, set, question, est) |>
+  unnest(est) |>
+  add_panels() |>
+  mutate(region = factor(region, levels = c("average", regions)))
+
+# text coefficient, and the expert SD in both models
+text_effect <- fits |>
+  mutate(
+    est = map(fit, ~ summarise_draws_(as_draws_df(.x, variable = "b_text")$b_text)),
+    sd_main = map_dbl(fit_main, ~ mean(as_draws_df(.x, variable = "sd_expert__Intercept")$sd_expert__Intercept)),
+    sd_texts = map_dbl(fit, ~ mean(as_draws_df(.x, variable = "sd_expert__Intercept")$sd_expert__Intercept))
+  ) |>
+  select(set, question, est, sd_main, sd_texts) |>
+  unnest(est) |>
+  add_panels()
+```
+
+## Text coefficient
+
+Difference in log-odds between texts and groups at the same region, time and expert (mean and 95% interval).
+Dashed: ±2, one prior SD.
+
+```{r text_effect, fig.width = 7, fig.height = 10}
+p_effect <- ggplot(text_effect, aes(mean, question)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_vline(xintercept = c(-2, 2), colour = "grey80", linetype = "22") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), size = 0.15, colour = poll_colors[["texts"]]) +
+  facet_grid(panel ~ ., scales = "free_y", space = "free_y") +
+  labs(x = "Texts vs. groups (log-odds)", y = NULL) +
+  theme(strip.text.y = element_text(angle = 0))
+save_plot(p_effect, "text_effect", 7, 10)
+```
+
+## Average of the region slopes: main and with texts
+
+```{r slopes_average, fig.width = 8, fig.height = 11}
+slope_plot <- function(est) {
+  ggplot(est, aes(mean, question, colour = model, group = fct_rev(model))) +
+    geom_vline(xintercept = 0, colour = "grey60") +
+    geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.6), size = 0.15) +
+    scale_colour_manual(values = model_colors) +
+    labs(x = "Time slope (log-odds per 1,000 years)", y = NULL, colour = NULL) +
+    theme(legend.position = "top", strip.text.y = element_text(angle = 0))
+}
+p_average <- slope_plot(filter(slopes, region == "average")) +
+  facet_grid(panel ~ ., scales = "free_y", space = "free_y")
+save_plot(p_average, "slopes_average", 8, 11)
+```
+
+Per question: average slope in both models, as mean [95% interval] and the probability of a positive slope; the text
+coefficient; and the expert SD (posterior mean) in both models.
+
+```{r slopes_table}
+fmt <- function(mean, lower, upper) sprintf("%.2f [%.2f, %.2f]", mean, lower, upper)
+average <- slopes |>
+  filter(region == "average") |>
+  mutate(model = if_else(model == "groups and texts", "texts", "main"), value = fmt(mean, lower, upper),
+         p = round(p_positive, 3)) |>
+  select(question, model, value, p, mean) |>
+  pivot_wider(names_from = model, values_from = c(value, p, mean))
+average |>
+  left_join(text_effect |> transmute(question, text_effect = fmt(mean, lower, upper),
+                                     sd_main = round(sd_main, 2), sd_texts = round(sd_texts, 2)),
+            by = "question") |>
+  transmute(
+    question = factor(question, levels = all_questions),
+    slope_main = value_main, p_pos_main = p_main,
+    slope_texts = value_texts, p_pos_texts = p_texts,
+    change = round(mean_texts - mean_main, 2),
+    text_effect, sd_main, sd_texts
+  ) |>
+  arrange(question) |>
+  print(n = Inf, width = Inf)
+```
+
+## Slopes per region: main and with texts
+
+Texts add most in Southwest Asia and East Asia, least in Europe.
+
+```{r slopes_region, fig.width = 16, fig.height = 12}
+p_region <- slope_plot(filter(slopes, region != "average")) +
+  facet_grid(panel ~ region, scales = "free_y", space = "free_y")
+save_plot(p_region, "slopes_region", 16, 12)
+```
+
+# Curves over time: groups and texts
+
+Check of the model's assumption that groups and texts share the trend and differ in level only.
+
+- **Lines:** the typical region (average region intercept and slope), averaged over experts as in `13_main.Rmd`, for
+  groups (grey) and texts (blue); bands: 95% intervals. Each line is drawn over the years where its entries have
+  data for the question (first to last start year).
+- **Points:** observed share "Yes" of groups and texts, in 500-year bins of start year, all four regions pooled;
+  size = number of entries. The two are shifted slightly around the bin midpoint.
+
+If the points of one poll clearly run against its line, the assumption does not hold for that question.
+
+```{r curves}
+years <- seq(year_min, year_max, by = 50)
+answers <- bind_rows(sets, .id = "set") |>
+  transmute(set, question = question_short, entry_id, year_from, answer_value,
+            kind = factor(if_else(text == 1, "texts", "groups"), levels = names(poll_colors)))
+
+# P(yes) averaged over experts: per draw (row of eta), mean of logit^-1(eta + sigma * z) over standard-normal quantiles z
+z <- qnorm(ppoints(25))
+expert_average <- function(eta, sigma) Reduce(`+`, lapply(z, function(zk) plogis(eta + sigma * zk))) / length(z)
+eta_grid <- function(a, b) outer(a, rep(1, length(years))) + outer(b, years / 1000)  # draws x years
+
+curves <- fits |>
+  mutate(curve = map(fit, function(fit) {
+    draws <- as_draws_df(fit) |> as_tibble()
+    a <- rowMeans(as.matrix(draws[paste0("b_region", names(region_key))]))
+    b <- rowMeans(as.matrix(draws[paste0("b_region", names(region_key), ":time")]))
+    map_dfr(c(0, 1), function(k) {
+      p <- expert_average(eta_grid(a + k * draws$b_text, b), draws$sd_expert__Intercept)
+      tibble(kind = names(poll_colors)[k + 1], year = years, mean = colMeans(p),
+             lo95 = apply(p, 2, quantile, 0.025), hi95 = apply(p, 2, quantile, 0.975))
+    })
+  })) |>
+  select(set, question, curve) |>
+  unnest(curve) |>
+  mutate(kind = factor(kind, levels = names(poll_colors)))
+
+# each line over the years where its entries have data
+data_range <- answers |>
+  group_by(set, question, kind) |>
+  summarise(from = floor(min(year_from) / 50) * 50, to = ceiling(max(year_from) / 50) * 50, .groups = "drop")
+curves <- curves |>
+  inner_join(data_range, by = c("set", "question", "kind")) |>
+  filter(year >= from, year <= to)
+
+# observed share per poll in 500-year bins of start year
+bin_edges <- seq(year_min, year_max, by = 500)
+offsets <- setNames(c(-40, 40), names(poll_colors))
+binned <- answers |>
+  mutate(bin = findInterval(year_from, bin_edges)) |>
+  group_by(set, question, kind, bin) |>
+  summarise(share = mean(answer_value), n = n(), .groups = "drop") |>
+  mutate(year = bin_edges[bin] + 250 + offsets[as.character(kind)])
+
+kind_plot <- function(questions_, ncol = 6) {
+  keep <- function(x) filter(x, question %in% questions_) |> mutate(question = factor(question, levels = questions_))
+  lines <- keep(curves)
+  ggplot(mapping = aes(year)) +
+    geom_hline(yintercept = c(0, 1), colour = "grey85", linewidth = 0.3) +
+    geom_ribbon(data = lines, aes(ymin = lo95, ymax = hi95, fill = kind), alpha = 0.18, show.legend = FALSE) +
+    geom_point(data = keep(binned), aes(y = share, colour = kind, size = n), alpha = 0.7) +
+    geom_line(data = lines, aes(y = mean, colour = kind), linewidth = 1) +
+    facet_wrap(~ question, ncol = ncol) +
+    scale_colour_manual(values = poll_colors) +
+    scale_fill_manual(values = poll_colors) +
+    scale_size_area(max_size = 4.5, breaks = c(1, 5, 10, 20, 40)) +
+    scale_x_continuous(breaks = seq(year_min, year_max, by = 1000)) +
+    scale_y_continuous(breaks = c(0, 0.5, 1)) +
+    coord_cartesian(ylim = c(0, 1), xlim = c(year_min, year_max)) +
+    labs(x = "Year (start year)", y = "P(yes)", colour = NULL, size = "entries") +
+    theme(legend.position = "top", panel.grid.minor = element_blank(), axis.text.x = element_text(size = 7))
+}
+
+monitoring_questions <- c(parent_of[["monitoring"]], intersect(topic_order, filter(questions, family == "monitoring")$question_short))
+shg_questions <- c(parent_of[["shg"]], intersect(topic_order, filter(questions, family == "shg")$question_short))
+```
+
+## Supernatural monitoring
+
+```{r curves_monitoring, fig.width = 16, fig.height = 12}
+save_plot(kind_plot(monitoring_questions), "curves_monitoring", 16, 12)
+```
+
+## Supreme high god
+
+```{r curves_shg, fig.width = 16, fig.height = 9.5}
+save_plot(kind_plot(shg_questions), "curves_shg", 16, 9.5)
+```

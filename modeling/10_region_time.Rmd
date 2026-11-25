@@ -1,0 +1,421 @@
+---
+title: "Region x Time"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+Religious groups in Southwest Asia, Europe, Africa and East Asia, without eHRAF and Pulotu, start
+year from 3000 BCE to 1500 CE (`-3000 <= year_from < 1500`), any time span. Conflicting answers (both "Yes" and
+"No" for the same question and entry) are left out.
+
+Run from inside `modeling/` after `3_prepare_data.py`. Fits are saved in `fits/` (`region_time_<model>_*`; delete
+them to refit), figures in `fig/region_time/`.
+
+```{r setup, message = FALSE}
+library(tidyverse)
+library(brms)
+library(posterior)
+library(loo)
+
+options(mc.cores = 4, brms.backend = "cmdstanr")
+dir.create("fits", showWarnings = FALSE)
+theme_set(theme_bw(base_size = 11))
+
+# figures: shown in the session and saved as fig/region_time/<name>.jpg
+fig_dir <- "fig/region_time"
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+save_plot <- function(p, name, width, height) {
+  ggsave(file.path(fig_dir, paste0(name, ".jpg")), p, width = width, height = height, dpi = 300)
+  p
+}
+
+regions <- c("Southwest Asia", "Europe", "Africa", "East Asia")
+region_colors <- c("Southwest Asia" = "#2a78d6", "Europe" = "#eb6834", "Africa" = "#1baf7a", "East Asia" = "#eda100",
+                   "average" = "#52514e")
+pooled_labels <- c(average = "average of region slopes", common = "common slope", no_region = "no region")
+pooled_colors <- c("average of region slopes" = "#1a1a1a", "common slope" = "#8a63d2", "no region" = "#a3a29b")
+year_min <- -3000
+year_max <- 1500
+```
+
+# Data
+
+```{r data, message = FALSE}
+source_of <- read_csv("../data/sccsrv3/entry_data.csv", col_select = c(entry_id, data_source)) |>
+  distinct(entry_id, .keep_all = TRUE)
+
+d_window <- read_csv("data/model_data.csv") |>
+  left_join(source_of, by = "entry_id") |>
+  filter(
+    poll == "group",
+    world_region %in% regions,
+    is.na(data_source) | (data_source != "eHRAF" & !str_starts(data_source, "Pulotu")),
+    year_from >= year_min, year_from < year_max
+  ) |>
+  mutate(region = factor(world_region, levels = regions), time = year_from / 1000)
+
+# conflicting answers (Yes and No for the same entry and question; weight < 1) are left out
+conflicting <- d_window |> filter(weight < 1) |> distinct(entry_id, entry_name, region, question_short)
+d <- d_window |> filter(weight == 1)
+
+# parent question of each family of child questions
+parent_of <- c(monitoring = "supernatural monitoring present", shg = "supreme high god present")
+
+# child questions in topic order (as in 4_baseline.Rmd)
+topic_order <- c(
+  "murder coreligionists", "murder other religions", "murder other polities", "non-lethal fighting",
+  "prosocial norm adherence", "lying", "honouring oaths", "property crimes", "economic fairness",
+  "gossiping", "laziness", "shirking risk", "disrespecting elders", "sex",
+  "ritual observance", "performance of rituals", "taboos", "personal hygiene", "sorcery",
+  "conversion non-religionists",
+  "knowledge this world", "causal efficacy the world", "indirect causal efficacy the world", "communicates with living",
+  "is unquestionably good", "positive emotion", "negative emotion",
+  "is anthropomorphic", "possesses hunger", "is sky deity", "is chthonic",
+  "permissible to worship other god?",
+  "is monarch fused", "is monarch manifestation", "is kin to elites", "other elite loyalty"
+)
+all_questions <- c(unname(parent_of), topic_order)
+
+questions <- d |>
+  distinct(family, question_short) |>
+  filter(question_short %in% all_questions)
+stopifnot(setequal(topic_order, filter(questions, family != "parent")$question_short))
+
+# samples (one model per question in each)
+sets <- list(
+  parent = d |> filter(question_short %in% parent_of), # incl. inferred "No" for the supreme high god
+  conditional = d |> filter(question_short %in% topic_order, !inferred)  # child questions as answered
+)
+runs <- bind_rows(
+  tibble(set = "parent", question = unname(parent_of)),
+  tibble(set = "conditional", question = topic_order)
+)
+```
+
+Groups per region in the window (any question):
+
+```{r data_regions}
+d_window |> distinct(entry_id, region) |> count(region, name = "in_window")
+```
+
+Left out (conflicting answers, entry and question):
+
+```{r data_conflicting}
+conflicting
+```
+
+Entries per question and region (parent questions and child questions as answered):
+
+```{r data_questions}
+bind_rows(sets) |>
+  group_by(question = question_short, region) |>
+  summarise(n = n_distinct(entry_id), .groups = "drop") |>
+  pivot_wider(names_from = region, values_from = n, values_fill = 0) |>
+  arrange(match(question, all_questions)) |>
+  print(n = Inf)
+```
+
+# Models and priors
+
+```{r model}
+models <- list(
+  region_time = bf(answer_value ~ 0 + region + region:time),
+  common = bf(answer_value ~ 0 + region + time),
+  no_region = bf(answer_value ~ 0 + Intercept + time)
+)
+
+# brms names the region coefficients without spaces (regionSouthwestAsia, regionSouthwestAsia:time, ...)
+region_key <- setNames(regions, str_remove_all(regions, " "))
+region_priors <- reduce(
+  map(paste0("region", names(region_key)), ~ set_prior("normal(0, 1.5)", class = "b", coef = .x)),
+  c,
+  .init = prior(normal(0, 1), class = "b")
+)
+priors <- list(
+  region_time = region_priors,
+  common = region_priors,
+  no_region = c(prior(normal(0, 1), class = "b"), prior(normal(0, 1.5), class = "b", coef = "Intercept"))
+)
+```
+
+`0 + Intercept` is the brms way of not centering the predictors, so the intercept prior of the no-region model
+is at 0 CE, as for the region intercepts.
+
+# Fit
+
+Each model is compiled once (`chains = 0`) and then refit for each question with `update()`.
+
+```{r fit, message = FALSE, results = "hide"}
+templates <- imap(models, function(formula, model) {
+  suppressWarnings(brm(formula, data = sets$parent, family = bernoulli(), prior = priors[[model]],
+                       chains = 0, refresh = 0, silent = 2))
+})
+
+fit_question <- function(model, set, question) {
+  path <- sprintf("fits/region_time_%s_%s_%s.rds", model, set, question)
+  if (file.exists(path)) return(readRDS(path))
+  fit <- update(
+    templates[[model]],
+    newdata = filter(sets[[set]], question_short == question),
+    chains = 4, iter = 4000, warmup = 2000, seed = 125123, refresh = 0,
+    control = list(adapt_delta = 0.99)
+  )
+  saveRDS(fit, path)
+  fit
+}
+
+fits <- crossing(model = names(models), runs) |>
+  mutate(fit = pmap(list(model, set, question), fit_question))
+fits_rt <- filter(fits, model == "region_time")
+```
+
+# Diagnostics
+
+```{r diagnostics}
+diagnostics <- fits |>
+  mutate(diag = map(fit, function(fit) {
+    s <- summarise_draws(as_draws_df(fit, variable = "^b_", regex = TRUE))
+    tibble(
+      max_rhat = max(s$rhat),
+      min_ess_bulk = min(s$ess_bulk),
+      min_ess_tail = min(s$ess_tail),
+      divergences = sum(subset(nuts_params(fit), Parameter == "divergent__")$Value)
+    )
+  })) |>
+  select(-fit) |>
+  unnest(diag)
+
+# worst values per model and set
+diagnostics |>
+  group_by(model, set) |>
+  summarise(max_rhat = max(max_rhat), min_ess_bulk = min(min_ess_bulk), min_ess_tail = min(min_ess_tail),
+            divergences = sum(divergences), .groups = "drop")
+
+# fits with any problem
+diagnostics |> filter(max_rhat > 1.01 | min_ess_bulk < 400 | min_ess_tail < 400 | divergences > 0)
+```
+
+# Estimates
+
+```{r estimates}
+summarise_slope <- function(value) {
+  tibble(mean = mean(value), lower = quantile(value, 0.025), upper = quantile(value, 0.975), p_positive = mean(value > 0))
+}
+
+# region x time model: region slopes per draw, plus their average
+region_slopes <- function(fit) {
+  draws <- as_draws_df(fit, variable = "^b_region.*:time$", regex = TRUE) |>
+    as_tibble() |>
+    select(.draw, starts_with("b_")) |>
+    pivot_longer(-.draw, values_to = "value") |>
+    mutate(region = unname(region_key[str_remove(str_remove(name, "^b_region"), ":time$")])) |>
+    select(.draw, region, value)
+  average <- draws |> group_by(.draw) |> summarise(value = mean(value)) |> mutate(region = "average")
+  bind_rows(draws, average)
+}
+
+add_panels <- function(est) {
+  est |>
+    left_join(questions, by = c("question" = "question_short")) |>
+    mutate(
+      panel = case_when(set == "parent" ~ "parent", family == "monitoring" ~ "monitoring", TRUE ~ "supreme\nhigh god"),
+      panel = factor(panel, levels = c("parent", "monitoring", "supreme\nhigh god")),
+      question = factor(question, levels = rev(all_questions))
+    )
+}
+
+# (b) slopes per region (and their average)
+estimates <- fits_rt |>
+  mutate(est = map(fit, function(fit) {
+    region_slopes(fit) |> group_by(region) |> reframe(summarise_slope(value))
+  })) |>
+  select(set, question, est) |>
+  unnest(est) |>
+  add_panels() |>
+  mutate(region = factor(region, levels = c(regions, "average")))
+
+# (a) pooled slopes: average of the region slopes, common slope, no region
+pooled <- fits |>
+  mutate(est = map2(fit, model, function(fit, model) {
+    value <- if (model == "region_time") {
+      filter(region_slopes(fit), region == "average")$value
+    } else {
+      as_draws_df(fit, variable = "b_time")$b_time
+    }
+    summarise_slope(value)
+  })) |>
+  select(model, set, question, est) |>
+  unnest(est) |>
+  mutate(estimate = factor(pooled_labels[if_else(model == "region_time", "average", model)], levels = pooled_labels)) |>
+  add_panels()
+```
+
+## Pooled slopes (a)
+
+Pooled change in log-odds per 1,000 years (mean and 95% interval): average of the four region slopes (main
+estimate), common slope (region intercepts, one shared slope), and no region (one slope, regions ignored).
+
+```{r pooled, fig.width = 8, fig.height = 12}
+p_pooled <- ggplot(pooled, aes(mean, question, colour = estimate, group = fct_rev(estimate))) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.7), size = 0.15) +
+  facet_grid(panel ~ ., scales = "free_y", space = "free_y") +
+  scale_colour_manual(values = pooled_colors) +
+  labs(x = "Pooled time slope (log-odds per 1,000 years)", y = NULL, colour = NULL) +
+  theme(legend.position = "top", strip.text.y = element_text(angle = 0))
+save_plot(p_pooled, "slopes_pooled", 8, 12)
+```
+
+## Slopes per region (b)
+
+Change in log-odds per 1,000 years within each region (mean and 95% interval), and the average of the four
+region slopes (grey). Panels: parent questions, monitoring children and supreme high god children (as answered).
+The three pooled estimates are compared in "Pooled slopes (a)" above.
+
+```{r slopes, fig.width = 9, fig.height = 13}
+p_slopes <- ggplot(estimates, aes(mean, question, colour = region, group = fct_rev(region))) +  # top to bottom in legend order
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.75), size = 0.15) +
+  facet_grid(panel ~ ., scales = "free_y", space = "free_y") +
+  scale_colour_manual(values = region_colors, breaks = c(regions, "average")) +
+  labs(x = "Time slope within region (log-odds per 1,000 years)", y = NULL, colour = NULL) +
+  theme(legend.position = "top", strip.text.y = element_text(angle = 0))
+save_plot(p_slopes, "slopes", 9, 13)
+```
+
+## Do the regions need their own slopes?
+
+Leave-one-out comparison (expected log predictive density, elpd) of the common-slope and no-region models
+against the region x time model, per question. Negative: worse than region x time; a difference of less than
+about 2 standard errors is not a clear difference.
+
+Regions differ clearly in level for about a third of the questions, and somewhat for many more. Regions rarely differ in slope.
+
+```{r loo, warning = FALSE}
+# elpd of model a minus elpd of the region x time model b, as "diff (se)"
+elpd_vs <- function(a, b) {
+  x <- loo_compare(list(a = a, b = b))
+  sprintf("%.1f (%.1f)", if (rownames(x)[1] == "a") -x[2, "elpd_diff"] else x[2, "elpd_diff"], x[2, "se_diff"])
+}
+
+# one core: forking for each of the 114 small fits can exhaust processes ("unable to fork"), and gains nothing
+fits |>
+  mutate(loo = map(fit, ~ loo(.x, cores = 1))) |>
+  select(model, set, question, loo) |>
+  pivot_wider(names_from = model, values_from = loo) |>
+  transmute(
+    question = factor(question, levels = all_questions),
+    common_vs_region_time = map2_chr(common, region_time, elpd_vs),
+    no_region_vs_region_time = map2_chr(no_region, region_time, elpd_vs)
+  ) |>
+  arrange(question) |>
+  print(n = Inf)
+```
+
+# Curves over time
+
+One panel per question (parent question first), all four regions together.
+
+- **Overall** (black line, grey band: 95% interval): the "typical region", logit⁻¹(ᾱ + β̄·time) with ᾱ and β̄ the
+  averages of the four region intercepts and slopes (per draw); its slope is the pooled slope reported above.
+- **Regions** (coloured lines): posterior mean of the region x time model, drawn over the region's data range for
+  that question (first to last start year); dashed where the 500-year rolling window has fewer than 10 entries.
+- **Data** (points): share yes per region in 500-year bins of start year (3000-2500 BCE, ..., 1000-1500 CE; lower
+  edge included), size = number of entries; the four regions are shifted slightly around the bin midpoint so they
+  do not overlap. Black-outlined points at the midpoint: all four regions pooled (share of all entries in the bin,
+  so regions with more entries count more, unlike the overall curve).
+
+```{r curves}
+years <- seq(year_min, year_max, by = 50)
+answers <- bind_rows(sets, .id = "set") |> select(set, question = question_short, region, entry_id, year_from, answer_value)
+
+# overall curve: average region intercept and slope per draw
+overall_curves <- fits_rt |>
+  mutate(curve = map(fit, function(fit) {
+    draws <- as_draws_df(fit, variable = "^b_region", regex = TRUE) |> as_tibble()
+    a <- rowMeans(select(draws, starts_with("b_region") & !ends_with(":time")))
+    b <- rowMeans(select(draws, starts_with("b_region") & ends_with(":time")))
+    p <- plogis(outer(a, rep(1, length(years))) + outer(b, years / 1000))
+    tibble(year = years, mean = colMeans(p), lo95 = apply(p, 2, quantile, 0.025), hi95 = apply(p, 2, quantile, 0.975))
+  })) |>
+  select(set, question, curve) |>
+  unnest(curve)
+
+# entries per region in 500-year rolling windows of start year (centred every 50 years)
+rolling <- map_dfr(years, function(centre) {
+  answers |>
+    filter(year_from >= centre - 250, year_from < centre + 250) |>
+    group_by(set, question, region) |>
+    summarise(n = n_distinct(entry_id), .groups = "drop") |>
+    mutate(year = centre)
+})
+
+# region curves (posterior mean) within each region's data range, solid where the rolling window has at least 10 entries
+grid <- crossing(region = factor(regions, levels = regions), year = years) |> mutate(time = year / 1000)
+data_range <- answers |>
+  group_by(set, question, region) |>
+  summarise(from = floor(min(year_from) / 50) * 50, to = ceiling(max(year_from) / 50) * 50, .groups = "drop")
+region_lines <- fits_rt |>
+  mutate(curve = map(fit, ~ mutate(grid, mean = colMeans(posterior_epred(.x, newdata = grid))))) |>
+  select(set, question, curve) |>
+  unnest(curve) |>
+  inner_join(data_range, by = c("set", "question", "region")) |>
+  filter(year >= from, year <= to) |>
+  left_join(rolling, by = c("set", "question", "region", "year")) |>
+  mutate(solid = if_else(replace_na(n, 0) >= 10, mean, NA_real_))
+
+# observed share per region in 500-year bins of start year
+bin_edges <- seq(year_min, year_max, by = 500)
+offsets <- setNames(c(-75, -25, 25, 75), regions)
+binned <- answers |>
+  mutate(bin = findInterval(year_from, bin_edges)) |>
+  group_by(set, question, region, bin) |>
+  summarise(share = mean(answer_value), n = n(), .groups = "drop") |>
+  mutate(year = bin_edges[bin] + 250 + offsets[as.character(region)])
+binned_pooled <- answers |>
+  mutate(bin = findInterval(year_from, bin_edges)) |>
+  group_by(set, question, bin) |>
+  summarise(share = mean(answer_value), n = n(), .groups = "drop") |>
+  mutate(year = bin_edges[bin] + 250)
+
+together_colors <- c(region_colors[regions], overall = "black")
+together_plot <- function(questions_, ncol = 6) {
+  keep <- function(x) filter(x, question %in% questions_) |> mutate(question = factor(question, levels = questions_))
+  lines <- keep(region_lines)
+  overall <- keep(overall_curves)
+  ggplot(mapping = aes(year)) +
+    geom_hline(yintercept = c(0, 1), colour = "grey85", linewidth = 0.3) +
+    geom_ribbon(data = overall, aes(ymin = lo95, ymax = hi95), fill = "grey60", alpha = 0.3) +
+    geom_point(data = keep(binned), aes(y = share, colour = region, size = n), alpha = 0.65) +
+    geom_line(data = lines, aes(y = mean, colour = region, group = region), linewidth = 0.5, linetype = "22") +
+    geom_line(data = lines, aes(y = solid, colour = region, group = region), linewidth = 0.8, na.rm = TRUE) +
+    geom_line(data = overall, aes(y = mean, colour = "overall"), linewidth = 1.2) +
+    geom_point(data = keep(binned_pooled), aes(y = share, size = n), shape = 21, fill = "white", colour = "black", stroke = 0.9) +
+    facet_wrap(~ question, ncol = ncol) +
+    scale_colour_manual(values = together_colors, breaks = names(together_colors), labels = c(regions, "overall (typical region)")) +
+    scale_size_area(max_size = 4.5, breaks = c(1, 5, 10, 20, 40)) +
+    scale_x_continuous(breaks = seq(year_min, year_max, by = 1000)) +
+    scale_y_continuous(breaks = c(0, 0.5, 1)) +
+    coord_cartesian(ylim = c(0, 1), xlim = c(year_min, year_max)) +
+    labs(x = "Year (start year)", y = "P(yes)", colour = NULL, size = "entries") +
+    theme(legend.position = "top", panel.grid.minor = element_blank(), axis.text.x = element_text(size = 7))
+}
+
+monitoring_questions <- c(parent_of[["monitoring"]], intersect(topic_order, filter(questions, family == "monitoring")$question_short))
+shg_questions <- c(parent_of[["shg"]], intersect(topic_order, filter(questions, family == "shg")$question_short))
+```
+
+## Supernatural monitoring
+
+```{r curves_together_monitoring, fig.width = 16, fig.height = 12}
+save_plot(together_plot(monitoring_questions), "curves_together_monitoring", 16, 12)
+```
+
+## Supreme high god
+
+```{r curves_together_shg, fig.width = 16, fig.height = 9.5}
+save_plot(together_plot(shg_questions), "curves_together_shg", 16, 9.5)
+```
+

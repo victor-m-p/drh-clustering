@@ -10,7 +10,7 @@ output:
 
 Exploratory: instead of one model per question, one model per **package** of related questions (items),
 using all entries that answered at least one item of the package. Groups only, conditional and unconditional
-answers (6 packages x 2 = 12 models). No traditions (for now).
+answers, without (M0) and with traditions (M1-mm) (6 packages x 2 x 2 = 24 models).
 
 Packages (partly data-driven, partly theoretical; see `eda/item_correlations.py`):
 
@@ -33,6 +33,11 @@ $$
 - $a_j, b_j$ (`1 + time | question`): item-specific level ("difficulty") and slope; $\beta$ is the package
   slope (the average item slope), and the SD of $b_j$ shows how coherent the items' trends are
 - time: `year_from` / 1000 (0 = 0 CE); conflicting answers weighted 1/n; priors as before
+
+**M1-mm** adds tradition intercepts (`1 | mm(traditions)`, as in `5_entrytags.Rmd`): an entry with *k* of the
+coded traditions (christian, islamic, jewish, buddhist, hindu, chinese, other) gets the average of their effects.
+$\beta$ is then the change *within* traditions; if it shrinks compared to M0, part of the change is replacement
+(traditions with more "yes" become more common).
 
 **Caveats**: the moralizing package crosses the two families (monitoring and supreme high god). In the
 **unconditional** data, entries whose parent is "No" have all items inferred "No" (3218 is inferred "Yes", so "No" once
@@ -120,7 +125,14 @@ crossing(version = names(versions), package = names(packages)) |>
 - SDs (entry, item level and slope, world region): exponential(1); item level-slope correlation: lkj(2)
 
 ```{r model}
-formula <- bf(answer_value | weights(weight) ~ 0 + Intercept + time + (1 + time | question_short) + (1 | entry_id) + (1 | world_region))
+mm_term <- "(1 | mm(trad1, trad2, trad3, weights = cbind(w1, w2, w3), scale = FALSE))"
+base <- "answer_value | weights(weight) ~ 0 + Intercept + time + (1 + time | question_short) + (1 | entry_id) + (1 | world_region)"
+formulas <- list(
+  m0 = bf(as.formula(base)),
+  m1_mm = bf(as.formula(paste(base, "+", mm_term)))
+)
+model_labels <- c(m0 = "M0", m1_mm = "M1-mm")
+model_colors <- c(m0 = "#898781", m1_mm = "#2a78d6")
 priors <- c(
   prior(normal(0, 1), class = "b"),
   prior(normal(0, 1.5), class = "b", coef = "Intercept"),
@@ -131,17 +143,22 @@ priors <- c(
 
 # Fit
 
-The model is compiled once (`chains = 0`) and then refit for each package and version with `update()`.
+Each model is compiled once (`chains = 0`) and then refit for each package and version with `update()`.
+M0 fits keep their original file names (`fits/packages_<version>_<package>.rds`).
 
 ```{r fit, message = FALSE, results = "hide"}
-template <- suppressWarnings(brm(formula, data = package_data("conditional", "ritual"), family = bernoulli(),
-                                 prior = priors, chains = 0, refresh = 0, silent = 2))
+templates <- map(formulas, ~ suppressWarnings(brm(.x, data = package_data("conditional", "ritual"), family = bernoulli(),
+                                                  prior = priors, chains = 0, refresh = 0, silent = 2)))
 
-fit_package <- function(version, package) {
-  path <- sprintf("fits/packages_%s_%s.rds", version, package)
+fit_package <- function(model, version, package) {
+  path <- if (model == "m0") {
+    sprintf("fits/packages_%s_%s.rds", version, package)
+  } else {
+    sprintf("fits/packages_%s_%s_%s.rds", model, version, package)
+  }
   if (file.exists(path)) return(readRDS(path))
   fit <- update(
-    template,
+    templates[[model]],
     newdata = package_data(version, package),
     chains = 4, iter = 2000, seed = 2026, refresh = 0,
     control = list(adapt_delta = 0.95)
@@ -150,14 +167,17 @@ fit_package <- function(version, package) {
   fit
 }
 
-fits <- crossing(version = names(versions), package = names(packages)) |>
-  mutate(fit = map2(version, package, fit_package))
+fits_all <- crossing(model = names(formulas), version = names(versions), package = names(packages)) |>
+  mutate(fit = pmap(list(model, version, package), fit_package))
+
+# item slopes, curves and predictive checks below: M0
+fits <- filter(fits_all, model == "m0") |> select(-model)
 ```
 
 # Diagnostics
 
 ```{r diagnostics}
-diagnostics <- fits |>
+diagnostics <- fits_all |>
   mutate(diag = map(fit, function(fit) {
     s <- summarise_draws(as_draws_df(fit, variable = "^b_|^sd_|^cor_", regex = TRUE))
     tibble(
@@ -217,6 +237,7 @@ p_sds <- estimates |>
   theme(legend.position = "top")
 save_plot(p_sds, "sds", 11, 4)
 ```
+
 
 Item slopes ($\beta + b_j$; 95% interval), per package:
 
@@ -321,4 +342,161 @@ p_ppc <- ggplot(ppc, aes(y = period, colour = version)) +
   labs(x = "Share yes", y = NULL, colour = NULL) +
   theme(legend.position = "top")
 save_plot(p_ppc, "ppc_period", 11, 6)
+```
+
+# With traditions (M1-mm)
+
+Everything above is M0 (no traditions). Here M0 and M1-mm side by side: does the package (and item) change hold
+up *within* traditions? Credible: the 95% interval excludes 0 (+ or -).
+
+```{r m1mm_estimates}
+traditions <- c("christian", "islamic", "jewish", "buddhist", "hindu", "chinese", "other")
+
+# package slopes and SDs, both models
+estimates_all <- fits_all |>
+  mutate(est = map(fit, function(fit) {
+    as_draws_df(fit, variable = "^b_time|^sd_", regex = TRUE) |>
+      summarise_draws(mean, ~ quantile(.x, c(0.025, 0.975))) |>
+      rename(lower = `2.5%`, upper = `97.5%`)
+  })) |>
+  select(-fit) |>
+  unnest(est) |>
+  mutate(package = factor(package_labels[package], levels = rev(package_labels)))
+
+# item slopes (beta + b_j), both models
+item_slopes_all <- fits_all |>
+  mutate(co = map(fit, function(fit) {
+    s <- coef(fit)$question_short[, , "time"]
+    tibble(question = rownames(s), mean = s[, "Estimate"], lower = s[, "Q2.5"], upper = s[, "Q97.5"])
+  })) |>
+  select(model, version, package, co) |>
+  unnest(co) |>
+  mutate(package = factor(package_labels[package], levels = package_labels))
+```
+
+Package slope ($\beta$; log-odds per 1,000 years; 95% interval), M0 and M1-mm:
+
+```{r m1mm_slopes, fig.width = 9, fig.height = 4}
+p_slopes_mm <- estimates_all |>
+  filter(variable == "b_time") |>
+  ggplot(aes(mean, package, colour = model)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.5), size = 0.3) +
+  facet_wrap(~ version) +
+  scale_colour_manual(values = model_colors, labels = model_labels) +
+  labs(x = "Package slope (log-odds per 1,000 years)", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_slopes_mm, "slopes_m1mm", 9, 4)
+```
+
+Two package slopes: $\beta$ is the mean of the *population* of items (its uncertainty includes how much item
+slopes vary, poorly known with 2-4 items); the item average $\frac{1}{J}\sum_j (\beta + b_j)$ treats the items we
+have as fixed (computed per draw).
+
+```{r m1mm_item_average, fig.width = 9, fig.height = 7}
+item_average <- fits_all |>
+  mutate(est = map(fit, function(fit) {
+    x <- rowMeans(coef(fit, summary = FALSE)$question_short[, , "time"])
+    tibble(mean = mean(x), lower = quantile(x, 0.025), upper = quantile(x, 0.975))
+  })) |>
+  select(-fit) |>
+  unnest(est) |>
+  mutate(package = factor(package_labels[package], levels = rev(package_labels)))
+
+p_item_average <- bind_rows(
+  estimates_all |> filter(variable == "b_time") |> mutate(quantity = "population of items (beta)"),
+  item_average |> mutate(quantity = "these items (average)")
+) |>
+  ggplot(aes(mean, package, colour = model)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.5), size = 0.3) +
+  facet_grid(quantity ~ version) +
+  scale_colour_manual(values = model_colors, labels = model_labels) +
+  labs(x = "Package slope (log-odds per 1,000 years)", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_item_average, "slopes_m1mm_item_average", 9, 7)
+```
+
+SDs, now also of the tradition intercepts:
+
+```{r m1mm_sds, fig.width = 13, fig.height = 6}
+p_sds_mm <- estimates_all |>
+  filter(str_starts(variable, "sd_")) |>
+  mutate(term = recode(variable,
+    sd_entry_id__Intercept = "entry", sd_question_short__Intercept = "item level",
+    sd_question_short__time = "item slope", sd_world_region__Intercept = "world region",
+    sd_mmtrad1trad2trad3__Intercept = "tradition"
+  )) |>
+  ggplot(aes(mean, package, colour = model)) +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.5), size = 0.3) +
+  facet_grid(version ~ term, scales = "free_x") +
+  scale_colour_manual(values = model_colors, labels = model_labels) +
+  labs(x = "SD (log-odds)", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_sds_mm, "sds_m1mm", 13, 6)
+```
+
+Item slopes ($\beta + b_j$; 95% interval), M0 and M1-mm:
+
+```{r m1mm_item_slopes}
+item_plot <- function(version_name) {
+  ggplot(filter(item_slopes_all, version == version_name), aes(mean, question, colour = model)) +
+    geom_vline(xintercept = 0, colour = "grey60") +
+    geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.6), size = 0.2) +
+    facet_grid(package ~ ., scales = "free_y", space = "free_y", labeller = label_wrap_gen(15)) +
+    scale_colour_manual(values = model_colors, labels = model_labels) +
+    labs(x = "Item slope (log-odds per 1,000 years)", y = NULL, colour = NULL, title = version_name) +
+    theme(legend.position = "top", strip.text.y = element_text(angle = 0))
+}
+```
+
+```{r m1mm_item_slopes_conditional, fig.width = 10, fig.height = 10}
+save_plot(item_plot("conditional"), "item_slopes_m1mm_conditional", 10, 10)
+```
+
+```{r m1mm_item_slopes_unconditional, fig.width = 10, fig.height = 10}
+save_plot(item_plot("unconditional"), "item_slopes_m1mm_unconditional", 10, 10)
+```
+
+Credible slopes, package and items (95% interval; + / - when it excludes 0):
+
+```{r credible}
+credible <- bind_rows(
+  estimates_all |> filter(variable == "b_time") |> mutate(question = "(package)"),
+  item_slopes_all
+) |>
+  mutate(
+    package = factor(as.character(package), levels = package_labels),
+    slope = sprintf("%.2f [%.2f, %.2f]", mean, lower, upper),
+    credible = case_when(lower > 0 ~ "+", upper < 0 ~ "-", TRUE ~ "")
+  ) |>
+  select(version, package, question, model, slope, credible) |>
+  pivot_wider(names_from = model, values_from = c(slope, credible)) |>
+  arrange(version, package, question != "(package)", question)
+knitr::kable(credible)
+```
+
+Tradition intercepts (M1-mm; posterior mean, log-odds relative to the average tradition):
+
+```{r tradition_levels, fig.width = 10, fig.height = 4}
+tradition_levels <- fits_all |>
+  filter(model == "m1_mm") |>
+  mutate(re = map(fit, function(fit) {
+    r <- ranef(fit)$mmtrad1trad2trad3[, , "Intercept"]
+    tibble(tradition = rownames(r), mean = r[, "Estimate"])
+  })) |>
+  select(version, package, re) |>
+  unnest(re) |>
+  mutate(
+    package = factor(package_labels[package], levels = rev(package_labels)),
+    tradition = factor(tradition, levels = traditions)
+  )
+
+p_tradition_levels <- ggplot(tradition_levels, aes(tradition, package, fill = mean)) +
+  geom_tile() +
+  geom_text(aes(label = sprintf("%.1f", mean)), size = 3) +
+  facet_wrap(~ version) +
+  scale_fill_gradient2(low = "#2a78d6", mid = "white", high = "#eb6834", midpoint = 0) +
+  labs(x = NULL, y = NULL, fill = "log-odds")
+save_plot(p_tradition_levels, "tradition_levels_m1mm", 10, 4)
 ```

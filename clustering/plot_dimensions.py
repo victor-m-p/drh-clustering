@@ -3,12 +3,16 @@ Plots of the cluster dimensions (theta: P(Yes) per question and cluster)
 for the best solution at each c:
 - heatmap (EM_dimensions_{subset}_c{c}.jpg)
 Questions are in a fixed order grouped by topic (same across c), and clusters
-are ordered by the median start year of the entries assigned to them and
+are ordered by the median start year of the entries assigned to them (earliest and latest start
+year also shown) and
 labelled {c}A, {c}B, ... in that order (same labels as plot_cluster_tree.py).
+Subset as the first argument (default "group"; "group_parents" adds the two parent questions at the top;
+"group_parents_collapsed" also shows murder out-group and elite ties as one row each).
 Run from inside clustering/ after run_clustering.py.
 """
 
 import os
+import sys
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -16,7 +20,7 @@ import matplotlib.pyplot as plt
 
 # setup
 c_plot = [2, 3, 4, 5, 6, 7]
-subset = "group"
+subset = sys.argv[1] if len(sys.argv) > 1 else "group"
 fig_dir = "fig/dimensions"
 os.makedirs(fig_dir, exist_ok=True)
 
@@ -66,9 +70,15 @@ question_groups = {
         "other elite loyalty",
     ],
 }
+if subset.startswith("group_parents"):  # parent questions first
+    question_groups = {"parents": ["supernatural monitoring present", "supreme high god present"]} | question_groups
+if subset == "group_parents_collapsed":  # collapsed sets take the place of their questions
+    question_groups["monitoring: harm"] = ["murder coreligionists", "murder out-group", "non-lethal fighting"]
+    question_groups["shg: elites"] = ["elite ties"]
 question_order = [q for group in question_groups.values() for q in group]
-group_ends = np.cumsum([len(group) for group in question_groups.values()])[:-1]
-monitoring_end = sum(len(g) for k, g in question_groups.items() if k.startswith("monitoring"))
+group_ends = np.cumsum([len(group) for group in question_groups.values()])
+monitoring_end = group_ends[list(question_groups).index("monitoring: conversion")]  # thick line after monitoring
+group_ends = group_ends[:-1]
 
 
 def format_year(year):
@@ -91,9 +101,12 @@ for c in c_plot:
     df_entry = df_q.groupby(["entry_id", "year_from"], as_index=False)[dims].sum()
     df_entry["top"] = df_entry[dims].idxmax(axis=1)
     median_year = df_entry.groupby("top")["year_from"].median().reindex(dims)
+    min_year = df_entry.groupby("top")["year_from"].min().reindex(dims)  # earliest start year
+    max_year = df_entry.groupby("top")["year_from"].max().reindex(dims)  # latest start year
     dims_ordered = median_year.sort_values(na_position="last").index.tolist()
     labels = [
-        f"{c}{chr(65 + i)} ({pi[d]:.0%})\nmedian {format_year(median_year[d])}\n[{d}]"
+        f"{c}{chr(65 + i)} ({pi[d]:.0%})\nmedian {format_year(median_year[d])}\n"
+        f"{format_year(min_year[d])} to\n{format_year(max_year[d])}\n[{d}]"
         for i, d in enumerate(dims_ordered)
     ]
 

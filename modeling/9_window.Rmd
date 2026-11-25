@@ -1,0 +1,250 @@
+---
+title: "Time window and social complexity"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Overview
+
+Which results are robust and which depend on the sample? M0 and M1-mm for each question separately (as in
+`5_entrytags.Rmd`), in a time window and in the same window restricted to states and empires (groups only, conditional
+answers, plus the two parent questions):
+
+| sample | entries |
+|---|---|
+| window | `year_from` in the window (default 1500 BCE to 1500 CE) |
+| window, states and empires | window, and society type state or empire (`social_complexity_large`); entries without a codable society type left out |
+
+Social complexity enters as a subset, not as a covariate: in the window (1500 BCE to 1500 CE), 231 of 340 group entries
+are states or empires and 73 are bands, tribes or chiefdoms (36 not codable), so a covariate would rest on few entries.
+The variable is also ambiguous (society vs. religious group; see the Social Complexity tab).
+
+| model | formula |
+|---|---|
+| M0 | `time + (1 | world_region)` |
+| M1-mm | `time + (1 | mm(traditions)) + (1 | world_region)` |
+
+Time = `year_from` / 1000 (0 = 0 CE, the middle of the default window). Slopes (log-odds per 1,000 years) are
+comparable to the full-sample fits in `5_entrytags.Rmd` (centred at 1000 CE; centring only changes the intercept).
+Same priors as before.
+
+The figure and table compare with the full sample (M0 and M1-mm from `5_entrytags.Rmd`, read, not refit).
+
+Run from inside `modeling/` after `3_prepare_data.py` and `5_entrytags.Rmd`. To change the window, edit `window` in `setup` (fits are saved
+with the window in the file name). Fits in `fits/`, figures in `fig/window/<window>/`.
+
+```{r setup, message = FALSE}
+library(tidyverse)
+library(brms)
+library(posterior)
+
+options(mc.cores = 4, brms.backend = "cmdstanr")
+dir.create("fits", showWarnings = FALSE)
+theme_set(theme_bw(base_size = 11))
+
+window <- c(-1500, 1500)
+window_tag <- str_replace_all(paste(window, collapse = "_"), "-", "m")
+
+# figures: shown in the session and saved as fig/window/<window>/<name>.jpg
+fig_dir <- file.path("fig/window", window_tag)
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+save_plot <- function(p, name, width, height) {
+  ggsave(file.path(fig_dir, paste0(name, ".jpg")), p, width = width, height = height, dpi = 300)
+  p
+}
+
+sample_labels <- c(window = "window", window_large = "window, states and empires")
+model_labels <- c(m0 = "M0", m1_mm = "M1-mm")
+# shown in figure and table (M0, states and empires is fitted but not shown)
+variant_labels <- c(
+  m0_full = "M0, full", m0_window = "M0, window",
+  m1_mm_full = "M1-mm, full", m1_mm_window = "M1-mm, window", m1_mm_window_large = "M1-mm, window, states and empires"
+)
+variant_colors <- c(
+  m0_full = "#b4b2ad", m0_window = "#5f5e5a",
+  m1_mm_full = "#8fbbe8", m1_mm_window = "#2a78d6", m1_mm_window_large = "#1baf7a"
+)
+```
+
+# Data
+
+```{r data, message = FALSE}
+covariates <- read_csv("../data/preprocessed/entry_covariates.csv") |>
+  select(entry_id, social_complexity, social_complexity_large)
+
+d <- read_csv("data/model_data.csv") |>
+  filter(poll == "group") |>
+  left_join(covariates, by = "entry_id") |>
+  mutate(time = year_from / 1000)
+
+parent_questions <- c("supernatural monitoring present", "supreme high god present")
+topic_order <- c(
+  "murder coreligionists", "murder other religions", "murder other polities", "non-lethal fighting",
+  "prosocial norm adherence", "lying", "honouring oaths", "property crimes", "economic fairness",
+  "gossiping", "laziness", "shirking risk", "disrespecting elders", "sex",
+  "ritual observance", "performance of rituals", "taboos", "personal hygiene", "sorcery",
+  "conversion non-religionists",
+  "knowledge this world", "causal efficacy the world", "indirect causal efficacy the world", "communicates with living",
+  "is unquestionably good", "positive emotion", "negative emotion",
+  "is anthropomorphic", "possesses hunger", "is sky deity", "is chthonic",
+  "permissible to worship other god?",
+  "is monarch fused", "is monarch manifestation", "is kin to elites", "other elite loyalty"
+)
+all_questions <- c(parent_questions, topic_order)
+
+questions <- d |>
+  distinct(family, question_short) |>
+  filter(question_short %in% all_questions) |>
+  mutate(family = factor(family, levels = c("parent", "monitoring", "shg")))
+
+# parent questions and child questions (conditional), as in 5_entrytags.Rmd
+d_cond <- d |> filter(question_short %in% parent_questions | (family != "parent" & !inferred))
+
+samples <- list(
+  window = filter(d_cond, between(year_from, window[1], window[2])),
+  window_large = filter(d_cond, between(year_from, window[1], window[2]), social_complexity_large == 1)
+)
+```
+
+Entries per sample (full sample for comparison), by world region, tradition (priority label) and society type:
+
+```{r data_overview}
+all_samples <- bind_rows(c(list(full = d_cond), samples), .id = "sample") |>
+  mutate(sample = factor(sample, levels = c("full", names(samples))))
+
+count_by <- function(var) {
+  all_samples |>
+    distinct(sample, entry_id, {{ var }}) |>
+    count(sample, {{ var }}) |>
+    pivot_wider(names_from = sample, values_from = n, values_fill = 0)
+}
+count_by(world_region)
+count_by(tradition)
+count_by(social_complexity)
+```
+
+Entries per question (median and minimum over the child questions):
+
+```{r data_questions}
+all_samples |>
+  filter(!question_short %in% parent_questions) |>
+  group_by(sample, question_short) |>
+  summarise(entries = n_distinct(entry_id), .groups = "drop_last") |>
+  summarise(median = median(entries), min = min(entries))
+```
+
+# Models
+
+```{r models}
+mm_term <- "(1 | mm(trad1, trad2, trad3, weights = cbind(w1, w2, w3), scale = FALSE))"
+base <- "answer_value | weights(weight) ~ 0 + Intercept + time + (1 | world_region)"
+formulas <- list(
+  m0 = bf(as.formula(base)),
+  m1_mm = bf(as.formula(paste(base, "+", mm_term)))
+)
+
+priors <- c(
+  prior(normal(0, 1), class = "b"),
+  prior(normal(0, 1.5), class = "b", coef = "Intercept"),
+  prior(exponential(1), class = "sd")
+)
+```
+
+# Fit
+
+Each model is compiled once (`chains = 0`) and then refit for each sample and question with `update()`.
+
+```{r fit, message = FALSE, results = "hide"}
+templates <- map(formulas, function(formula) {
+  suppressWarnings(brm(formula, data = samples$window, family = bernoulli(), prior = priors,
+                       chains = 0, refresh = 0, silent = 2))
+})
+
+fit_question <- function(sample, model, question) {
+  path <- sprintf("fits/window_%s_%s_%s_%s.rds", window_tag, sample, model, question)
+  if (file.exists(path)) return(readRDS(path))
+  fit <- update(
+    templates[[model]],
+    newdata = filter(samples[[sample]], question_short == question),
+    chains = 4, iter = 2000, seed = 2026, refresh = 0,
+    control = list(adapt_delta = 0.99)
+  )
+  saveRDS(fit, path)
+  fit
+}
+
+fits <- crossing(sample = names(samples), model = names(formulas), question = all_questions) |>
+  mutate(fit = pmap(list(sample, model, question), fit_question))
+
+# full sample: existing fits from 5_entrytags.Rmd (not refit here)
+full_fits <- crossing(sample = "full", model = names(formulas), question = all_questions) |>
+  mutate(fit = map2(model, question, ~ readRDS(sprintf("fits/entrytags_%s_%s.rds", .x, .y))))
+```
+
+# Diagnostics
+
+```{r diagnostics}
+diagnostics <- fits |>
+  mutate(diag = map(fit, function(fit) {
+    s <- summarise_draws(as_draws_df(fit, variable = "^b_|^sd_", regex = TRUE))
+    tibble(
+      max_rhat = max(s$rhat),
+      min_ess_bulk = min(s$ess_bulk),
+      min_ess_tail = min(s$ess_tail),
+      divergences = sum(subset(nuts_params(fit), Parameter == "divergent__")$Value)
+    )
+  })) |>
+  select(-fit) |>
+  unnest(diag)
+
+# fits with any problem
+diagnostics |> filter(max_rhat > 1.01 | min_ess_bulk < 400 | min_ess_tail < 400 | divergences > 0)
+```
+
+# Time slopes
+
+```{r estimates}
+slopes <- bind_rows(full_fits, fits) |>
+  filter(paste(model, sample, sep = "_") %in% names(variant_labels)) |>
+  mutate(est = map(fit, function(fit) {
+    x <- as_draws_df(fit, variable = "b_time")$b_time
+    tibble(mean = mean(x), lower = quantile(x, 0.025), upper = quantile(x, 0.975))
+  })) |>
+  select(-fit) |>
+  unnest(est) |>
+  left_join(questions, by = c("question" = "question_short")) |>
+  mutate(
+    question = factor(question, levels = rev(all_questions)),
+    variant = factor(paste(model, sample, sep = "_"), levels = names(variant_labels))
+  )
+```
+
+Change in log-odds per 1,000 years (95% interval):
+
+```{r slopes, fig.width = 9, fig.height = 12}
+p_slopes <- ggplot(slopes, aes(mean, question, colour = variant)) +
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.7), size = 0.2) +
+  facet_grid(family ~ ., scales = "free_y", space = "free_y") +
+  scale_colour_manual(values = variant_colors, labels = variant_labels) +
+  labs(x = "Time slope (log-odds per 1,000 years)", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_slopes, "slopes", 9, 12)
+```
+
+Slopes and credibility (+ / -: 95% interval excludes 0):
+
+```{r credible}
+slopes |>
+  arrange(variant) |>
+  mutate(
+    cell = sprintf("%.2f%s", mean, case_when(lower > 0 ~ " +", upper < 0 ~ " -", TRUE ~ "")),
+    column = variant_labels[as.character(variant)]
+  ) |>
+  select(family, question, column, cell) |>
+  pivot_wider(names_from = column, values_from = cell) |>
+  arrange(family, desc(question)) |>
+  knitr::kable()
+```

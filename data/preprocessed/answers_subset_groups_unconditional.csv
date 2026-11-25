@@ -23814,21 +23814,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 378,2930,Religious Group (v5),performance of rituals,0.0,1.0,True
 378,2974,Religious Group (v5),disrespecting elders,0.0,1.0,True
 378,2982,Religious Group (v5),conversion non-religionists,0.0,1.0,True
-378,2899,Religious Group (v5),other elite loyalty,0.0,1.0,True
-378,2910,Religious Group (v5),is kin to elites,0.0,1.0,True
-378,2941,Religious Group (v5),is anthropomorphic,0.0,1.0,True
-378,2944,Religious Group (v5),is chthonic,0.0,1.0,True
-378,2948,Religious Group (v5),is sky deity,0.0,1.0,True
-378,2958,Religious Group (v5),is monarch fused,0.0,1.0,True
-378,2984,Religious Group (v5),is unquestionably good,0.0,1.0,True
-378,3192,Religious Group (v5),positive emotion,0.0,1.0,True
-378,3229,Religious Group (v5),negative emotion,0.0,1.0,True
-378,3233,Religious Group (v5),knowledge this world,0.0,1.0,True
-378,3247,Religious Group (v5),causal efficacy the world,0.0,1.0,True
-378,3283,Religious Group (v5),possesses hunger,0.0,1.0,True
-378,3288,Religious Group (v5),indirect causal efficacy the world,0.0,1.0,True
-378,3296,Religious Group (v5),communicates with living,0.0,1.0,True
-378,3328,Religious Group (v5),is monarch manifestation,0.0,1.0,True
+378,2899,Religious Group (v5),other elite loyalty,,1.0,False
+378,2910,Religious Group (v5),is kin to elites,,1.0,False
+378,2941,Religious Group (v5),is anthropomorphic,,1.0,False
+378,2944,Religious Group (v5),is chthonic,,1.0,False
+378,2948,Religious Group (v5),is sky deity,,1.0,False
+378,2958,Religious Group (v5),is monarch fused,,1.0,False
+378,2984,Religious Group (v5),is unquestionably good,,1.0,False
+378,3192,Religious Group (v5),positive emotion,,1.0,False
+378,3229,Religious Group (v5),negative emotion,,1.0,False
+378,3233,Religious Group (v5),knowledge this world,,1.0,False
+378,3247,Religious Group (v5),causal efficacy the world,,1.0,False
+378,3283,Religious Group (v5),possesses hunger,,1.0,False
+378,3288,Religious Group (v5),indirect causal efficacy the world,,1.0,False
+378,3296,Religious Group (v5),communicates with living,,1.0,False
+378,3328,Religious Group (v5),is monarch manifestation,,1.0,False
 378,2861,Religious Group (v5),murder other religions,0.0,1.0,True
 378,2902,Religious Group (v5),non-lethal fighting,0.0,1.0,True
 378,2911,Religious Group (v5),lying,0.0,1.0,True
@@ -23843,7 +23843,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 378,2972,Religious Group (v5),murder other polities,0.0,1.0,True
 378,2978,Religious Group (v5),sex,0.0,1.0,True
 378,2985,Religious Group (v5),economic fairness,0.0,1.0,True
-378,3218,Religious Group (v5),permissible to worship other god?,1.0,1.0,True
+378,3218,Religious Group (v5),permissible to worship other god?,,1.0,False
 418,2883,Religious Group (v5),murder coreligionists,0.0,1.0,True
 418,2887,Religious Group (v5),honouring oaths,0.0,1.0,True
 418,2898,Religious Group (v5),ritual observance,0.0,1.0,True
@@ -23994,21 +23994,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 437,2930,Religious Group (v5),performance of rituals,0.0,1.0,True
 437,2974,Religious Group (v5),disrespecting elders,0.0,1.0,True
 437,2982,Religious Group (v5),conversion non-religionists,0.0,1.0,True
-437,2899,Religious Group (v5),other elite loyalty,0.0,1.0,True
-437,2910,Religious Group (v5),is kin to elites,0.0,1.0,True
-437,2941,Religious Group (v5),is anthropomorphic,0.0,1.0,True
-437,2944,Religious Group (v5),is chthonic,0.0,1.0,True
-437,2948,Religious Group (v5),is sky deity,0.0,1.0,True
-437,2958,Religious Group (v5),is monarch fused,0.0,1.0,True
-437,2984,Religious Group (v5),is unquestionably good,0.0,1.0,True
-437,3192,Religious Group (v5),positive emotion,0.0,1.0,True
-437,3229,Religious Group (v5),negative emotion,0.0,1.0,True
-437,3233,Religious Group (v5),knowledge this world,0.0,1.0,True
-437,3247,Religious Group (v5),causal efficacy the world,0.0,1.0,True
-437,3283,Religious Group (v5),possesses hunger,0.0,1.0,True
-437,3288,Religious Group (v5),indirect causal efficacy the world,0.0,1.0,True
-437,3296,Religious Group (v5),communicates with living,0.0,1.0,True
-437,3328,Religious Group (v5),is monarch manifestation,0.0,1.0,True
+437,2899,Religious Group (v5),other elite loyalty,,1.0,False
+437,2910,Religious Group (v5),is kin to elites,,1.0,False
+437,2941,Religious Group (v5),is anthropomorphic,,1.0,False
+437,2944,Religious Group (v5),is chthonic,,1.0,False
+437,2948,Religious Group (v5),is sky deity,,1.0,False
+437,2958,Religious Group (v5),is monarch fused,,1.0,False
+437,2984,Religious Group (v5),is unquestionably good,,1.0,False
+437,3192,Religious Group (v5),positive emotion,,1.0,False
+437,3229,Religious Group (v5),negative emotion,,1.0,False
+437,3233,Religious Group (v5),knowledge this world,,1.0,False
+437,3247,Religious Group (v5),causal efficacy the world,,1.0,False
+437,3283,Religious Group (v5),possesses hunger,,1.0,False
+437,3288,Religious Group (v5),indirect causal efficacy the world,,1.0,False
+437,3296,Religious Group (v5),communicates with living,,1.0,False
+437,3328,Religious Group (v5),is monarch manifestation,,1.0,False
 437,2861,Religious Group (v5),murder other religions,0.0,1.0,True
 437,2902,Religious Group (v5),non-lethal fighting,0.0,1.0,True
 437,2911,Religious Group (v5),lying,0.0,1.0,True
@@ -24023,28 +24023,28 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 437,2972,Religious Group (v5),murder other polities,0.0,1.0,True
 437,2978,Religious Group (v5),sex,0.0,1.0,True
 437,2985,Religious Group (v5),economic fairness,0.0,1.0,True
-437,3218,Religious Group (v5),permissible to worship other god?,1.0,1.0,True
+437,3218,Religious Group (v5),permissible to worship other god?,,1.0,False
 438,2883,Religious Group (v5),murder coreligionists,0.0,1.0,True
 438,2887,Religious Group (v5),honouring oaths,0.0,1.0,True
 438,2898,Religious Group (v5),ritual observance,0.0,1.0,True
 438,2930,Religious Group (v5),performance of rituals,0.0,1.0,True
 438,2974,Religious Group (v5),disrespecting elders,0.0,1.0,True
 438,2982,Religious Group (v5),conversion non-religionists,0.0,1.0,True
-438,2899,Religious Group (v5),other elite loyalty,0.0,1.0,True
-438,2910,Religious Group (v5),is kin to elites,0.0,1.0,True
-438,2941,Religious Group (v5),is anthropomorphic,0.0,1.0,True
-438,2944,Religious Group (v5),is chthonic,0.0,1.0,True
-438,2948,Religious Group (v5),is sky deity,0.0,1.0,True
-438,2958,Religious Group (v5),is monarch fused,0.0,1.0,True
-438,2984,Religious Group (v5),is unquestionably good,0.0,1.0,True
-438,3192,Religious Group (v5),positive emotion,0.0,1.0,True
-438,3229,Religious Group (v5),negative emotion,0.0,1.0,True
-438,3233,Religious Group (v5),knowledge this world,0.0,1.0,True
-438,3247,Religious Group (v5),causal efficacy the world,0.0,1.0,True
-438,3283,Religious Group (v5),possesses hunger,0.0,1.0,True
-438,3288,Religious Group (v5),indirect causal efficacy the world,0.0,1.0,True
-438,3296,Religious Group (v5),communicates with living,0.0,1.0,True
-438,3328,Religious Group (v5),is monarch manifestation,0.0,1.0,True
+438,2899,Religious Group (v5),other elite loyalty,,1.0,False
+438,2910,Religious Group (v5),is kin to elites,,1.0,False
+438,2941,Religious Group (v5),is anthropomorphic,,1.0,False
+438,2944,Religious Group (v5),is chthonic,,1.0,False
+438,2948,Religious Group (v5),is sky deity,,1.0,False
+438,2958,Religious Group (v5),is monarch fused,,1.0,False
+438,2984,Religious Group (v5),is unquestionably good,,1.0,False
+438,3192,Religious Group (v5),positive emotion,,1.0,False
+438,3229,Religious Group (v5),negative emotion,,1.0,False
+438,3233,Religious Group (v5),knowledge this world,,1.0,False
+438,3247,Religious Group (v5),causal efficacy the world,,1.0,False
+438,3283,Religious Group (v5),possesses hunger,,1.0,False
+438,3288,Religious Group (v5),indirect causal efficacy the world,,1.0,False
+438,3296,Religious Group (v5),communicates with living,,1.0,False
+438,3328,Religious Group (v5),is monarch manifestation,,1.0,False
 438,2861,Religious Group (v5),murder other religions,0.0,1.0,True
 438,2902,Religious Group (v5),non-lethal fighting,0.0,1.0,True
 438,2911,Religious Group (v5),lying,0.0,1.0,True
@@ -24059,115 +24059,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 438,2972,Religious Group (v5),murder other polities,0.0,1.0,True
 438,2978,Religious Group (v5),sex,0.0,1.0,True
 438,2985,Religious Group (v5),economic fairness,0.0,1.0,True
-438,3218,Religious Group (v5),permissible to worship other god?,1.0,1.0,True
-447,2883,Religious Group (v5),murder coreligionists,,1.0,False
-447,2887,Religious Group (v5),honouring oaths,,1.0,False
-447,2898,Religious Group (v5),ritual observance,,1.0,False
-447,2930,Religious Group (v5),performance of rituals,,1.0,False
-447,2974,Religious Group (v5),disrespecting elders,,1.0,False
-447,2982,Religious Group (v5),conversion non-religionists,,1.0,False
-447,2899,Religious Group (v5),other elite loyalty,0.0,1.0,True
-447,2910,Religious Group (v5),is kin to elites,0.0,1.0,True
-447,2941,Religious Group (v5),is anthropomorphic,0.0,1.0,True
-447,2944,Religious Group (v5),is chthonic,0.0,1.0,True
-447,2948,Religious Group (v5),is sky deity,0.0,1.0,True
-447,2958,Religious Group (v5),is monarch fused,0.0,1.0,True
-447,2984,Religious Group (v5),is unquestionably good,0.0,1.0,True
-447,3192,Religious Group (v5),positive emotion,0.0,1.0,True
-447,3229,Religious Group (v5),negative emotion,0.0,1.0,True
-447,3233,Religious Group (v5),knowledge this world,0.0,1.0,True
-447,3247,Religious Group (v5),causal efficacy the world,0.0,1.0,True
-447,3283,Religious Group (v5),possesses hunger,0.0,1.0,True
-447,3288,Religious Group (v5),indirect causal efficacy the world,0.0,1.0,True
-447,3296,Religious Group (v5),communicates with living,0.0,1.0,True
-447,3328,Religious Group (v5),is monarch manifestation,0.0,1.0,True
-447,2861,Religious Group (v5),murder other religions,,1.0,False
-447,2902,Religious Group (v5),non-lethal fighting,,1.0,False
-447,2911,Religious Group (v5),lying,,1.0,False
-447,2917,Religious Group (v5),laziness,,1.0,False
-447,2921,Religious Group (v5),property crimes,,1.0,False
-447,2923,Religious Group (v5),shirking risk,,1.0,False
-447,2928,Religious Group (v5),prosocial norm adherence,,1.0,False
-447,2939,Religious Group (v5),personal hygiene,,1.0,False
-447,2942,Religious Group (v5),gossiping,,1.0,False
-447,2962,Religious Group (v5),sorcery,,1.0,False
-447,2970,Religious Group (v5),taboos,,1.0,False
-447,2972,Religious Group (v5),murder other polities,,1.0,False
-447,2978,Religious Group (v5),sex,,1.0,False
-447,2985,Religious Group (v5),economic fairness,,1.0,False
-447,3218,Religious Group (v5),permissible to worship other god?,1.0,1.0,True
-448,2883,Religious Group (v5),murder coreligionists,,1.0,False
-448,2887,Religious Group (v5),honouring oaths,,1.0,False
-448,2898,Religious Group (v5),ritual observance,,1.0,False
-448,2930,Religious Group (v5),performance of rituals,,1.0,False
-448,2974,Religious Group (v5),disrespecting elders,,1.0,False
-448,2982,Religious Group (v5),conversion non-religionists,,1.0,False
-448,2899,Religious Group (v5),other elite loyalty,0.0,1.0,True
-448,2910,Religious Group (v5),is kin to elites,0.0,1.0,True
-448,2941,Religious Group (v5),is anthropomorphic,0.0,1.0,True
-448,2944,Religious Group (v5),is chthonic,0.0,1.0,True
-448,2948,Religious Group (v5),is sky deity,0.0,1.0,True
-448,2958,Religious Group (v5),is monarch fused,0.0,1.0,True
-448,2984,Religious Group (v5),is unquestionably good,0.0,1.0,True
-448,3192,Religious Group (v5),positive emotion,0.0,1.0,True
-448,3229,Religious Group (v5),negative emotion,0.0,1.0,True
-448,3233,Religious Group (v5),knowledge this world,0.0,1.0,True
-448,3247,Religious Group (v5),causal efficacy the world,0.0,1.0,True
-448,3283,Religious Group (v5),possesses hunger,0.0,1.0,True
-448,3288,Religious Group (v5),indirect causal efficacy the world,0.0,1.0,True
-448,3296,Religious Group (v5),communicates with living,0.0,1.0,True
-448,3328,Religious Group (v5),is monarch manifestation,0.0,1.0,True
-448,2861,Religious Group (v5),murder other religions,,1.0,False
-448,2902,Religious Group (v5),non-lethal fighting,,1.0,False
-448,2911,Religious Group (v5),lying,,1.0,False
-448,2917,Religious Group (v5),laziness,,1.0,False
-448,2921,Religious Group (v5),property crimes,,1.0,False
-448,2923,Religious Group (v5),shirking risk,,1.0,False
-448,2928,Religious Group (v5),prosocial norm adherence,,1.0,False
-448,2939,Religious Group (v5),personal hygiene,,1.0,False
-448,2942,Religious Group (v5),gossiping,,1.0,False
-448,2962,Religious Group (v5),sorcery,,1.0,False
-448,2970,Religious Group (v5),taboos,,1.0,False
-448,2972,Religious Group (v5),murder other polities,,1.0,False
-448,2978,Religious Group (v5),sex,,1.0,False
-448,2985,Religious Group (v5),economic fairness,,1.0,False
-448,3218,Religious Group (v5),permissible to worship other god?,1.0,1.0,True
-460,2883,Religious Group (v5),murder coreligionists,,1.0,False
-460,2887,Religious Group (v5),honouring oaths,,1.0,False
-460,2898,Religious Group (v5),ritual observance,,1.0,False
-460,2930,Religious Group (v5),performance of rituals,,1.0,False
-460,2974,Religious Group (v5),disrespecting elders,,1.0,False
-460,2982,Religious Group (v5),conversion non-religionists,,1.0,False
-460,2899,Religious Group (v5),other elite loyalty,0.0,1.0,True
-460,2910,Religious Group (v5),is kin to elites,0.0,1.0,True
-460,2941,Religious Group (v5),is anthropomorphic,0.0,1.0,True
-460,2944,Religious Group (v5),is chthonic,0.0,1.0,True
-460,2948,Religious Group (v5),is sky deity,0.0,1.0,True
-460,2958,Religious Group (v5),is monarch fused,0.0,1.0,True
-460,2984,Religious Group (v5),is unquestionably good,0.0,1.0,True
-460,3192,Religious Group (v5),positive emotion,0.0,1.0,True
-460,3229,Religious Group (v5),negative emotion,0.0,1.0,True
-460,3233,Religious Group (v5),knowledge this world,0.0,1.0,True
-460,3247,Religious Group (v5),causal efficacy the world,0.0,1.0,True
-460,3283,Religious Group (v5),possesses hunger,0.0,1.0,True
-460,3288,Religious Group (v5),indirect causal efficacy the world,0.0,1.0,True
-460,3296,Religious Group (v5),communicates with living,0.0,1.0,True
-460,3328,Religious Group (v5),is monarch manifestation,0.0,1.0,True
-460,2861,Religious Group (v5),murder other religions,,1.0,False
-460,2902,Religious Group (v5),non-lethal fighting,,1.0,False
-460,2911,Religious Group (v5),lying,,1.0,False
-460,2917,Religious Group (v5),laziness,,1.0,False
-460,2921,Religious Group (v5),property crimes,,1.0,False
-460,2923,Religious Group (v5),shirking risk,,1.0,False
-460,2928,Religious Group (v5),prosocial norm adherence,,1.0,False
-460,2939,Religious Group (v5),personal hygiene,,1.0,False
-460,2942,Religious Group (v5),gossiping,,1.0,False
-460,2962,Religious Group (v5),sorcery,,1.0,False
-460,2970,Religious Group (v5),taboos,,1.0,False
-460,2972,Religious Group (v5),murder other polities,,1.0,False
-460,2978,Religious Group (v5),sex,,1.0,False
-460,2985,Religious Group (v5),economic fairness,,1.0,False
-460,3218,Religious Group (v5),permissible to worship other god?,1.0,1.0,True
+438,3218,Religious Group (v5),permissible to worship other god?,,1.0,False
 463,2883,Religious Group (v5),murder coreligionists,0.0,1.0,True
 463,2887,Religious Group (v5),honouring oaths,0.0,1.0,True
 463,2898,Religious Group (v5),ritual observance,0.0,1.0,True
@@ -24246,21 +24138,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 469,2930,Religious Group (v5),performance of rituals,0.0,1.0,True
 469,2974,Religious Group (v5),disrespecting elders,0.0,1.0,True
 469,2982,Religious Group (v5),conversion non-religionists,0.0,1.0,True
-469,2899,Religious Group (v5),other elite loyalty,0.0,1.0,True
-469,2910,Religious Group (v5),is kin to elites,0.0,1.0,True
-469,2941,Religious Group (v5),is anthropomorphic,0.0,1.0,True
-469,2944,Religious Group (v5),is chthonic,0.0,1.0,True
-469,2948,Religious Group (v5),is sky deity,0.0,1.0,True
-469,2958,Religious Group (v5),is monarch fused,0.0,1.0,True
-469,2984,Religious Group (v5),is unquestionably good,0.0,1.0,True
-469,3192,Religious Group (v5),positive emotion,0.0,1.0,True
-469,3229,Religious Group (v5),negative emotion,0.0,1.0,True
-469,3233,Religious Group (v5),knowledge this world,0.0,1.0,True
-469,3247,Religious Group (v5),causal efficacy the world,0.0,1.0,True
-469,3283,Religious Group (v5),possesses hunger,0.0,1.0,True
-469,3288,Religious Group (v5),indirect causal efficacy the world,0.0,1.0,True
-469,3296,Religious Group (v5),communicates with living,0.0,1.0,True
-469,3328,Religious Group (v5),is monarch manifestation,0.0,1.0,True
+469,2899,Religious Group (v5),other elite loyalty,,1.0,False
+469,2910,Religious Group (v5),is kin to elites,,1.0,False
+469,2941,Religious Group (v5),is anthropomorphic,,1.0,False
+469,2944,Religious Group (v5),is chthonic,,1.0,False
+469,2948,Religious Group (v5),is sky deity,,1.0,False
+469,2958,Religious Group (v5),is monarch fused,,1.0,False
+469,2984,Religious Group (v5),is unquestionably good,,1.0,False
+469,3192,Religious Group (v5),positive emotion,,1.0,False
+469,3229,Religious Group (v5),negative emotion,,1.0,False
+469,3233,Religious Group (v5),knowledge this world,,1.0,False
+469,3247,Religious Group (v5),causal efficacy the world,,1.0,False
+469,3283,Religious Group (v5),possesses hunger,,1.0,False
+469,3288,Religious Group (v5),indirect causal efficacy the world,,1.0,False
+469,3296,Religious Group (v5),communicates with living,,1.0,False
+469,3328,Religious Group (v5),is monarch manifestation,,1.0,False
 469,2861,Religious Group (v5),murder other religions,0.0,1.0,True
 469,2902,Religious Group (v5),non-lethal fighting,0.0,1.0,True
 469,2911,Religious Group (v5),lying,0.0,1.0,True
@@ -24275,7 +24167,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 469,2972,Religious Group (v5),murder other polities,0.0,1.0,True
 469,2978,Religious Group (v5),sex,0.0,1.0,True
 469,2985,Religious Group (v5),economic fairness,0.0,1.0,True
-469,3218,Religious Group (v5),permissible to worship other god?,1.0,1.0,True
+469,3218,Religious Group (v5),permissible to worship other god?,,1.0,False
 491,2883,Religious Group (v5),murder coreligionists,0.0,1.0,True
 491,2887,Religious Group (v5),honouring oaths,0.0,1.0,True
 491,2898,Religious Group (v5),ritual observance,0.0,1.0,True
@@ -25578,21 +25470,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 742,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 742,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 742,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-742,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-742,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-742,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-742,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-742,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-742,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-742,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-742,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-742,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-742,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-742,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-742,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-742,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-742,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-742,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+742,2899,Religious Group (v6),other elite loyalty,,1.0,False
+742,2910,Religious Group (v6),is kin to elites,,1.0,False
+742,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+742,2944,Religious Group (v6),is chthonic,,1.0,False
+742,2948,Religious Group (v6),is sky deity,,1.0,False
+742,2958,Religious Group (v6),is monarch fused,,1.0,False
+742,2984,Religious Group (v6),is unquestionably good,,1.0,False
+742,3192,Religious Group (v6),positive emotion,,1.0,False
+742,3229,Religious Group (v6),negative emotion,,1.0,False
+742,3233,Religious Group (v6),knowledge this world,,1.0,False
+742,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+742,3283,Religious Group (v6),possesses hunger,,1.0,False
+742,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+742,3296,Religious Group (v6),communicates with living,,1.0,False
+742,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 742,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 742,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 742,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -25607,7 +25499,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 742,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 742,2978,Religious Group (v6),sex,0.0,1.0,True
 742,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-742,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+742,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 748,2883,Religious Group (v6),murder coreligionists,,1.0,False
 748,2887,Religious Group (v6),honouring oaths,,1.0,False
 748,2898,Religious Group (v6),ritual observance,,1.0,False
@@ -25722,21 +25614,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 765,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 765,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 765,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-765,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-765,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-765,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-765,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-765,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-765,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-765,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-765,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-765,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-765,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-765,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-765,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-765,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-765,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-765,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+765,2899,Religious Group (v6),other elite loyalty,,1.0,False
+765,2910,Religious Group (v6),is kin to elites,,1.0,False
+765,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+765,2944,Religious Group (v6),is chthonic,,1.0,False
+765,2948,Religious Group (v6),is sky deity,,1.0,False
+765,2958,Religious Group (v6),is monarch fused,,1.0,False
+765,2984,Religious Group (v6),is unquestionably good,,1.0,False
+765,3192,Religious Group (v6),positive emotion,,1.0,False
+765,3229,Religious Group (v6),negative emotion,,1.0,False
+765,3233,Religious Group (v6),knowledge this world,,1.0,False
+765,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+765,3283,Religious Group (v6),possesses hunger,,1.0,False
+765,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+765,3296,Religious Group (v6),communicates with living,,1.0,False
+765,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 765,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 765,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 765,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -25751,7 +25643,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 765,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 765,2978,Religious Group (v6),sex,0.0,1.0,True
 765,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-765,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+765,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 766,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 766,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 766,2898,Religious Group (v6),ritual observance,0.0,1.0,True
@@ -25938,21 +25830,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 826,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 826,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 826,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-826,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-826,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-826,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-826,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-826,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-826,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-826,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-826,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-826,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-826,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-826,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-826,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-826,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-826,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-826,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+826,2899,Religious Group (v6),other elite loyalty,,1.0,False
+826,2910,Religious Group (v6),is kin to elites,,1.0,False
+826,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+826,2944,Religious Group (v6),is chthonic,,1.0,False
+826,2948,Religious Group (v6),is sky deity,,1.0,False
+826,2958,Religious Group (v6),is monarch fused,,1.0,False
+826,2984,Religious Group (v6),is unquestionably good,,1.0,False
+826,3192,Religious Group (v6),positive emotion,,1.0,False
+826,3229,Religious Group (v6),negative emotion,,1.0,False
+826,3233,Religious Group (v6),knowledge this world,,1.0,False
+826,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+826,3283,Religious Group (v6),possesses hunger,,1.0,False
+826,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+826,3296,Religious Group (v6),communicates with living,,1.0,False
+826,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 826,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 826,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 826,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -25967,28 +25859,28 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 826,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 826,2978,Religious Group (v6),sex,0.0,1.0,True
 826,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-826,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+826,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 834,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 834,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 834,2898,Religious Group (v6),ritual observance,0.0,1.0,True
 834,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 834,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 834,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-834,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-834,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-834,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-834,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-834,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-834,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-834,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-834,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-834,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-834,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-834,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-834,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-834,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-834,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-834,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+834,2899,Religious Group (v6),other elite loyalty,,1.0,False
+834,2910,Religious Group (v6),is kin to elites,,1.0,False
+834,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+834,2944,Religious Group (v6),is chthonic,,1.0,False
+834,2948,Religious Group (v6),is sky deity,,1.0,False
+834,2958,Religious Group (v6),is monarch fused,,1.0,False
+834,2984,Religious Group (v6),is unquestionably good,,1.0,False
+834,3192,Religious Group (v6),positive emotion,,1.0,False
+834,3229,Religious Group (v6),negative emotion,,1.0,False
+834,3233,Religious Group (v6),knowledge this world,,1.0,False
+834,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+834,3283,Religious Group (v6),possesses hunger,,1.0,False
+834,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+834,3296,Religious Group (v6),communicates with living,,1.0,False
+834,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 834,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 834,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 834,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -26003,7 +25895,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 834,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 834,2978,Religious Group (v6),sex,0.0,1.0,True
 834,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-834,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+834,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 850,2883,Religious Group (v6),murder coreligionists,,1.0,False
 850,2887,Religious Group (v6),honouring oaths,,1.0,False
 850,2898,Religious Group (v6),ritual observance,,1.0,False
@@ -26118,21 +26010,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 924,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 924,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 924,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-924,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-924,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-924,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-924,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-924,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-924,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-924,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-924,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-924,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-924,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-924,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-924,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-924,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-924,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-924,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+924,2899,Religious Group (v6),other elite loyalty,,1.0,False
+924,2910,Religious Group (v6),is kin to elites,,1.0,False
+924,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+924,2944,Religious Group (v6),is chthonic,,1.0,False
+924,2948,Religious Group (v6),is sky deity,,1.0,False
+924,2958,Religious Group (v6),is monarch fused,,1.0,False
+924,2984,Religious Group (v6),is unquestionably good,,1.0,False
+924,3192,Religious Group (v6),positive emotion,,1.0,False
+924,3229,Religious Group (v6),negative emotion,,1.0,False
+924,3233,Religious Group (v6),knowledge this world,,1.0,False
+924,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+924,3283,Religious Group (v6),possesses hunger,,1.0,False
+924,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+924,3296,Religious Group (v6),communicates with living,,1.0,False
+924,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 924,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 924,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 924,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -26147,7 +26039,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 924,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 924,2978,Religious Group (v6),sex,0.0,1.0,True
 924,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-924,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+924,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 939,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 939,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 939,2898,Religious Group (v6),ritual observance,0.0,1.0,True
@@ -26262,21 +26154,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 967,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 967,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 967,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-967,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-967,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-967,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-967,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-967,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-967,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-967,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-967,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-967,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-967,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-967,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-967,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-967,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-967,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-967,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+967,2899,Religious Group (v6),other elite loyalty,,1.0,False
+967,2910,Religious Group (v6),is kin to elites,,1.0,False
+967,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+967,2944,Religious Group (v6),is chthonic,,1.0,False
+967,2948,Religious Group (v6),is sky deity,,1.0,False
+967,2958,Religious Group (v6),is monarch fused,,1.0,False
+967,2984,Religious Group (v6),is unquestionably good,,1.0,False
+967,3192,Religious Group (v6),positive emotion,,1.0,False
+967,3229,Religious Group (v6),negative emotion,,1.0,False
+967,3233,Religious Group (v6),knowledge this world,,1.0,False
+967,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+967,3283,Religious Group (v6),possesses hunger,,1.0,False
+967,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+967,3296,Religious Group (v6),communicates with living,,1.0,False
+967,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 967,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 967,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 967,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -26291,28 +26183,28 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 967,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 967,2978,Religious Group (v6),sex,0.0,1.0,True
 967,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-967,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+967,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 969,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 969,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 969,2898,Religious Group (v6),ritual observance,0.0,1.0,True
 969,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 969,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 969,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-969,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-969,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-969,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-969,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-969,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-969,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-969,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-969,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-969,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-969,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-969,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-969,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-969,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-969,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-969,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+969,2899,Religious Group (v6),other elite loyalty,,1.0,False
+969,2910,Religious Group (v6),is kin to elites,,1.0,False
+969,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+969,2944,Religious Group (v6),is chthonic,,1.0,False
+969,2948,Religious Group (v6),is sky deity,,1.0,False
+969,2958,Religious Group (v6),is monarch fused,,1.0,False
+969,2984,Religious Group (v6),is unquestionably good,,1.0,False
+969,3192,Religious Group (v6),positive emotion,,1.0,False
+969,3229,Religious Group (v6),negative emotion,,1.0,False
+969,3233,Religious Group (v6),knowledge this world,,1.0,False
+969,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+969,3283,Religious Group (v6),possesses hunger,,1.0,False
+969,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+969,3296,Religious Group (v6),communicates with living,,1.0,False
+969,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 969,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 969,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 969,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -26327,28 +26219,28 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 969,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 969,2978,Religious Group (v6),sex,0.0,1.0,True
 969,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-969,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+969,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 991,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 991,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 991,2898,Religious Group (v6),ritual observance,0.0,1.0,True
 991,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 991,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 991,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-991,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-991,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-991,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-991,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-991,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-991,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-991,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-991,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-991,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-991,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-991,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-991,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-991,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-991,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-991,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+991,2899,Religious Group (v6),other elite loyalty,,1.0,False
+991,2910,Religious Group (v6),is kin to elites,,1.0,False
+991,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+991,2944,Religious Group (v6),is chthonic,,1.0,False
+991,2948,Religious Group (v6),is sky deity,,1.0,False
+991,2958,Religious Group (v6),is monarch fused,,1.0,False
+991,2984,Religious Group (v6),is unquestionably good,,1.0,False
+991,3192,Religious Group (v6),positive emotion,,1.0,False
+991,3229,Religious Group (v6),negative emotion,,1.0,False
+991,3233,Religious Group (v6),knowledge this world,,1.0,False
+991,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+991,3283,Religious Group (v6),possesses hunger,,1.0,False
+991,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+991,3296,Religious Group (v6),communicates with living,,1.0,False
+991,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 991,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 991,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 991,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -26363,7 +26255,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 991,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 991,2978,Religious Group (v6),sex,0.0,1.0,True
 991,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-991,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+991,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 1005,2883,Religious Group (v6),murder coreligionists,,1.0,False
 1005,2887,Religious Group (v6),honouring oaths,,1.0,False
 1005,2898,Religious Group (v6),ritual observance,,1.0,False
@@ -26586,21 +26478,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1153,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 1153,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 1153,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-1153,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-1153,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-1153,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-1153,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-1153,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-1153,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-1153,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-1153,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-1153,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-1153,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-1153,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-1153,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-1153,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-1153,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-1153,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+1153,2899,Religious Group (v6),other elite loyalty,,1.0,False
+1153,2910,Religious Group (v6),is kin to elites,,1.0,False
+1153,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+1153,2944,Religious Group (v6),is chthonic,,1.0,False
+1153,2948,Religious Group (v6),is sky deity,,1.0,False
+1153,2958,Religious Group (v6),is monarch fused,,1.0,False
+1153,2984,Religious Group (v6),is unquestionably good,,1.0,False
+1153,3192,Religious Group (v6),positive emotion,,1.0,False
+1153,3229,Religious Group (v6),negative emotion,,1.0,False
+1153,3233,Religious Group (v6),knowledge this world,,1.0,False
+1153,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+1153,3283,Religious Group (v6),possesses hunger,,1.0,False
+1153,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+1153,3296,Religious Group (v6),communicates with living,,1.0,False
+1153,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 1153,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 1153,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 1153,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -26615,7 +26507,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1153,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 1153,2978,Religious Group (v6),sex,0.0,1.0,True
 1153,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-1153,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+1153,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 1154,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 1154,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 1154,2898,Religious Group (v6),ritual observance,0.0,1.0,True
@@ -26658,21 +26550,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1156,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 1156,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 1156,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-1156,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-1156,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-1156,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-1156,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-1156,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-1156,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-1156,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-1156,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-1156,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-1156,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-1156,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-1156,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-1156,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-1156,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-1156,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+1156,2899,Religious Group (v6),other elite loyalty,,1.0,False
+1156,2910,Religious Group (v6),is kin to elites,,1.0,False
+1156,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+1156,2944,Religious Group (v6),is chthonic,,1.0,False
+1156,2948,Religious Group (v6),is sky deity,,1.0,False
+1156,2958,Religious Group (v6),is monarch fused,,1.0,False
+1156,2984,Religious Group (v6),is unquestionably good,,1.0,False
+1156,3192,Religious Group (v6),positive emotion,,1.0,False
+1156,3229,Religious Group (v6),negative emotion,,1.0,False
+1156,3233,Religious Group (v6),knowledge this world,,1.0,False
+1156,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+1156,3283,Religious Group (v6),possesses hunger,,1.0,False
+1156,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+1156,3296,Religious Group (v6),communicates with living,,1.0,False
+1156,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 1156,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 1156,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 1156,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -26687,28 +26579,28 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1156,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 1156,2978,Religious Group (v6),sex,0.0,1.0,True
 1156,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-1156,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+1156,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 1197,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 1197,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 1197,2898,Religious Group (v6),ritual observance,0.0,1.0,True
 1197,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 1197,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 1197,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-1197,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-1197,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-1197,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-1197,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-1197,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-1197,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-1197,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-1197,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-1197,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-1197,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-1197,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-1197,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-1197,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-1197,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-1197,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+1197,2899,Religious Group (v6),other elite loyalty,,1.0,False
+1197,2910,Religious Group (v6),is kin to elites,,1.0,False
+1197,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+1197,2944,Religious Group (v6),is chthonic,,1.0,False
+1197,2948,Religious Group (v6),is sky deity,,1.0,False
+1197,2958,Religious Group (v6),is monarch fused,,1.0,False
+1197,2984,Religious Group (v6),is unquestionably good,,1.0,False
+1197,3192,Religious Group (v6),positive emotion,,1.0,False
+1197,3229,Religious Group (v6),negative emotion,,1.0,False
+1197,3233,Religious Group (v6),knowledge this world,,1.0,False
+1197,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+1197,3283,Religious Group (v6),possesses hunger,,1.0,False
+1197,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+1197,3296,Religious Group (v6),communicates with living,,1.0,False
+1197,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 1197,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 1197,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 1197,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -26723,7 +26615,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1197,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 1197,2978,Religious Group (v6),sex,0.0,1.0,True
 1197,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-1197,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+1197,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 1199,2883,Religious Group (v6),murder coreligionists,,1.0,False
 1199,2887,Religious Group (v6),honouring oaths,,1.0,False
 1199,2898,Religious Group (v6),ritual observance,,1.0,False
@@ -27018,21 +26910,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1433,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 1433,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 1433,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-1433,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-1433,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-1433,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-1433,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-1433,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-1433,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-1433,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-1433,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-1433,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-1433,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-1433,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-1433,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-1433,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-1433,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-1433,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+1433,2899,Religious Group (v6),other elite loyalty,,1.0,False
+1433,2910,Religious Group (v6),is kin to elites,,1.0,False
+1433,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+1433,2944,Religious Group (v6),is chthonic,,1.0,False
+1433,2948,Religious Group (v6),is sky deity,,1.0,False
+1433,2958,Religious Group (v6),is monarch fused,,1.0,False
+1433,2984,Religious Group (v6),is unquestionably good,,1.0,False
+1433,3192,Religious Group (v6),positive emotion,,1.0,False
+1433,3229,Religious Group (v6),negative emotion,,1.0,False
+1433,3233,Religious Group (v6),knowledge this world,,1.0,False
+1433,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+1433,3283,Religious Group (v6),possesses hunger,,1.0,False
+1433,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+1433,3296,Religious Group (v6),communicates with living,,1.0,False
+1433,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 1433,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 1433,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 1433,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -27047,7 +26939,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1433,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 1433,2978,Religious Group (v6),sex,0.0,1.0,True
 1433,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-1433,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+1433,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 1436,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 1436,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 1436,2898,Religious Group (v6),ritual observance,0.0,1.0,True
@@ -27198,21 +27090,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1495,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 1495,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 1495,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-1495,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-1495,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-1495,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-1495,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-1495,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-1495,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-1495,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-1495,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-1495,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-1495,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-1495,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-1495,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-1495,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-1495,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-1495,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+1495,2899,Religious Group (v6),other elite loyalty,,1.0,False
+1495,2910,Religious Group (v6),is kin to elites,,1.0,False
+1495,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+1495,2944,Religious Group (v6),is chthonic,,1.0,False
+1495,2948,Religious Group (v6),is sky deity,,1.0,False
+1495,2958,Religious Group (v6),is monarch fused,,1.0,False
+1495,2984,Religious Group (v6),is unquestionably good,,1.0,False
+1495,3192,Religious Group (v6),positive emotion,,1.0,False
+1495,3229,Religious Group (v6),negative emotion,,1.0,False
+1495,3233,Religious Group (v6),knowledge this world,,1.0,False
+1495,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+1495,3283,Religious Group (v6),possesses hunger,,1.0,False
+1495,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+1495,3296,Religious Group (v6),communicates with living,,1.0,False
+1495,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 1495,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 1495,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 1495,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -27227,28 +27119,28 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1495,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 1495,2978,Religious Group (v6),sex,0.0,1.0,True
 1495,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-1495,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+1495,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 1516,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 1516,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 1516,2898,Religious Group (v6),ritual observance,0.0,1.0,True
 1516,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 1516,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 1516,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-1516,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-1516,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-1516,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-1516,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-1516,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-1516,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-1516,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-1516,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-1516,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-1516,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-1516,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-1516,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-1516,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-1516,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-1516,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+1516,2899,Religious Group (v6),other elite loyalty,,1.0,False
+1516,2910,Religious Group (v6),is kin to elites,,1.0,False
+1516,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+1516,2944,Religious Group (v6),is chthonic,,1.0,False
+1516,2948,Religious Group (v6),is sky deity,,1.0,False
+1516,2958,Religious Group (v6),is monarch fused,,1.0,False
+1516,2984,Religious Group (v6),is unquestionably good,,1.0,False
+1516,3192,Religious Group (v6),positive emotion,,1.0,False
+1516,3229,Religious Group (v6),negative emotion,,1.0,False
+1516,3233,Religious Group (v6),knowledge this world,,1.0,False
+1516,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+1516,3283,Religious Group (v6),possesses hunger,,1.0,False
+1516,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+1516,3296,Religious Group (v6),communicates with living,,1.0,False
+1516,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 1516,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 1516,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 1516,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -27263,7 +27155,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1516,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 1516,2978,Religious Group (v6),sex,0.0,1.0,True
 1516,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-1516,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+1516,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 1556,2883,Religious Group (v6),murder coreligionists,,1.0,False
 1556,2887,Religious Group (v6),honouring oaths,,1.0,False
 1556,2898,Religious Group (v6),ritual observance,,1.0,False
@@ -27306,21 +27198,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1619,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 1619,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 1619,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-1619,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-1619,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-1619,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-1619,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-1619,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-1619,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-1619,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-1619,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-1619,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-1619,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-1619,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-1619,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-1619,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-1619,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-1619,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+1619,2899,Religious Group (v6),other elite loyalty,,1.0,False
+1619,2910,Religious Group (v6),is kin to elites,,1.0,False
+1619,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+1619,2944,Religious Group (v6),is chthonic,,1.0,False
+1619,2948,Religious Group (v6),is sky deity,,1.0,False
+1619,2958,Religious Group (v6),is monarch fused,,1.0,False
+1619,2984,Religious Group (v6),is unquestionably good,,1.0,False
+1619,3192,Religious Group (v6),positive emotion,,1.0,False
+1619,3229,Religious Group (v6),negative emotion,,1.0,False
+1619,3233,Religious Group (v6),knowledge this world,,1.0,False
+1619,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+1619,3283,Religious Group (v6),possesses hunger,,1.0,False
+1619,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+1619,3296,Religious Group (v6),communicates with living,,1.0,False
+1619,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 1619,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 1619,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 1619,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -27335,28 +27227,28 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1619,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 1619,2978,Religious Group (v6),sex,0.0,1.0,True
 1619,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-1619,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+1619,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 1621,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 1621,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 1621,2898,Religious Group (v6),ritual observance,0.0,1.0,True
 1621,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 1621,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 1621,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-1621,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-1621,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-1621,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-1621,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-1621,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-1621,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-1621,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-1621,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-1621,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-1621,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-1621,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-1621,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-1621,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-1621,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-1621,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+1621,2899,Religious Group (v6),other elite loyalty,,1.0,False
+1621,2910,Religious Group (v6),is kin to elites,,1.0,False
+1621,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+1621,2944,Religious Group (v6),is chthonic,,1.0,False
+1621,2948,Religious Group (v6),is sky deity,,1.0,False
+1621,2958,Religious Group (v6),is monarch fused,,1.0,False
+1621,2984,Religious Group (v6),is unquestionably good,,1.0,False
+1621,3192,Religious Group (v6),positive emotion,,1.0,False
+1621,3229,Religious Group (v6),negative emotion,,1.0,False
+1621,3233,Religious Group (v6),knowledge this world,,1.0,False
+1621,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+1621,3283,Religious Group (v6),possesses hunger,,1.0,False
+1621,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+1621,3296,Religious Group (v6),communicates with living,,1.0,False
+1621,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 1621,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 1621,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 1621,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -27371,7 +27263,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1621,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 1621,2978,Religious Group (v6),sex,0.0,1.0,True
 1621,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-1621,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+1621,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 1627,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 1627,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 1627,2898,Religious Group (v6),ritual observance,0.0,1.0,True
@@ -27414,21 +27306,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1636,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 1636,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 1636,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-1636,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-1636,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-1636,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-1636,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-1636,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-1636,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-1636,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-1636,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-1636,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-1636,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-1636,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-1636,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-1636,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-1636,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-1636,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+1636,2899,Religious Group (v6),other elite loyalty,,1.0,False
+1636,2910,Religious Group (v6),is kin to elites,,1.0,False
+1636,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+1636,2944,Religious Group (v6),is chthonic,,1.0,False
+1636,2948,Religious Group (v6),is sky deity,,1.0,False
+1636,2958,Religious Group (v6),is monarch fused,,1.0,False
+1636,2984,Religious Group (v6),is unquestionably good,,1.0,False
+1636,3192,Religious Group (v6),positive emotion,,1.0,False
+1636,3229,Religious Group (v6),negative emotion,,1.0,False
+1636,3233,Religious Group (v6),knowledge this world,,1.0,False
+1636,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+1636,3283,Religious Group (v6),possesses hunger,,1.0,False
+1636,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+1636,3296,Religious Group (v6),communicates with living,,1.0,False
+1636,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 1636,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 1636,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 1636,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -27443,7 +27335,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 1636,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 1636,2978,Religious Group (v6),sex,0.0,1.0,True
 1636,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-1636,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+1636,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 1793,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 1793,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 1793,2898,Religious Group (v6),ritual observance,0.0,1.0,True
@@ -27594,21 +27486,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 2121,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 2121,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 2121,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-2121,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-2121,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-2121,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-2121,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-2121,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-2121,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-2121,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-2121,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-2121,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-2121,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-2121,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-2121,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-2121,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-2121,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-2121,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+2121,2899,Religious Group (v6),other elite loyalty,,1.0,False
+2121,2910,Religious Group (v6),is kin to elites,,1.0,False
+2121,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+2121,2944,Religious Group (v6),is chthonic,,1.0,False
+2121,2948,Religious Group (v6),is sky deity,,1.0,False
+2121,2958,Religious Group (v6),is monarch fused,,1.0,False
+2121,2984,Religious Group (v6),is unquestionably good,,1.0,False
+2121,3192,Religious Group (v6),positive emotion,,1.0,False
+2121,3229,Religious Group (v6),negative emotion,,1.0,False
+2121,3233,Religious Group (v6),knowledge this world,,1.0,False
+2121,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+2121,3283,Religious Group (v6),possesses hunger,,1.0,False
+2121,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+2121,3296,Religious Group (v6),communicates with living,,1.0,False
+2121,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 2121,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 2121,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 2121,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -27623,28 +27515,28 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 2121,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 2121,2978,Religious Group (v6),sex,0.0,1.0,True
 2121,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-2121,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+2121,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 2203,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 2203,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 2203,2898,Religious Group (v6),ritual observance,0.0,1.0,True
 2203,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 2203,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 2203,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-2203,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-2203,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-2203,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-2203,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-2203,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-2203,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-2203,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-2203,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-2203,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-2203,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-2203,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-2203,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-2203,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-2203,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-2203,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+2203,2899,Religious Group (v6),other elite loyalty,,1.0,False
+2203,2910,Religious Group (v6),is kin to elites,,1.0,False
+2203,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+2203,2944,Religious Group (v6),is chthonic,,1.0,False
+2203,2948,Religious Group (v6),is sky deity,,1.0,False
+2203,2958,Religious Group (v6),is monarch fused,,1.0,False
+2203,2984,Religious Group (v6),is unquestionably good,,1.0,False
+2203,3192,Religious Group (v6),positive emotion,,1.0,False
+2203,3229,Religious Group (v6),negative emotion,,1.0,False
+2203,3233,Religious Group (v6),knowledge this world,,1.0,False
+2203,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+2203,3283,Religious Group (v6),possesses hunger,,1.0,False
+2203,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+2203,3296,Religious Group (v6),communicates with living,,1.0,False
+2203,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 2203,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 2203,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 2203,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -27659,28 +27551,28 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 2203,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 2203,2978,Religious Group (v6),sex,0.0,1.0,True
 2203,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-2203,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+2203,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 2266,2883,Religious Group (v6),murder coreligionists,0.0,1.0,True
 2266,2887,Religious Group (v6),honouring oaths,0.0,1.0,True
 2266,2898,Religious Group (v6),ritual observance,0.0,1.0,True
 2266,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 2266,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 2266,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-2266,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-2266,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-2266,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-2266,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-2266,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-2266,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-2266,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-2266,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-2266,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-2266,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-2266,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-2266,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-2266,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-2266,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-2266,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+2266,2899,Religious Group (v6),other elite loyalty,,1.0,False
+2266,2910,Religious Group (v6),is kin to elites,,1.0,False
+2266,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+2266,2944,Religious Group (v6),is chthonic,,1.0,False
+2266,2948,Religious Group (v6),is sky deity,,1.0,False
+2266,2958,Religious Group (v6),is monarch fused,,1.0,False
+2266,2984,Religious Group (v6),is unquestionably good,,1.0,False
+2266,3192,Religious Group (v6),positive emotion,,1.0,False
+2266,3229,Religious Group (v6),negative emotion,,1.0,False
+2266,3233,Religious Group (v6),knowledge this world,,1.0,False
+2266,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+2266,3283,Religious Group (v6),possesses hunger,,1.0,False
+2266,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+2266,3296,Religious Group (v6),communicates with living,,1.0,False
+2266,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 2266,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 2266,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 2266,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -27695,7 +27587,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 2266,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 2266,2978,Religious Group (v6),sex,0.0,1.0,True
 2266,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-2266,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+2266,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 2276,2883,Religious Group (v6),murder coreligionists,,1.0,False
 2276,2887,Religious Group (v6),honouring oaths,,1.0,False
 2276,2898,Religious Group (v6),ritual observance,,1.0,False
@@ -27954,21 +27846,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 2428,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 2428,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 2428,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-2428,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-2428,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-2428,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-2428,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-2428,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-2428,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-2428,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-2428,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-2428,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-2428,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-2428,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-2428,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-2428,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-2428,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-2428,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+2428,2899,Religious Group (v6),other elite loyalty,,1.0,False
+2428,2910,Religious Group (v6),is kin to elites,,1.0,False
+2428,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+2428,2944,Religious Group (v6),is chthonic,,1.0,False
+2428,2948,Religious Group (v6),is sky deity,,1.0,False
+2428,2958,Religious Group (v6),is monarch fused,,1.0,False
+2428,2984,Religious Group (v6),is unquestionably good,,1.0,False
+2428,3192,Religious Group (v6),positive emotion,,1.0,False
+2428,3229,Religious Group (v6),negative emotion,,1.0,False
+2428,3233,Religious Group (v6),knowledge this world,,1.0,False
+2428,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+2428,3283,Religious Group (v6),possesses hunger,,1.0,False
+2428,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+2428,3296,Religious Group (v6),communicates with living,,1.0,False
+2428,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 2428,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 2428,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 2428,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -27983,7 +27875,7 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 2428,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 2428,2978,Religious Group (v6),sex,0.0,1.0,True
 2428,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-2428,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+2428,3218,Religious Group (v6),permissible to worship other god?,,1.0,False
 2455,2883,Religious Group (v6),murder coreligionists,,1.0,False
 2455,2887,Religious Group (v6),honouring oaths,,1.0,False
 2455,2898,Religious Group (v6),ritual observance,,1.0,False
@@ -28026,21 +27918,21 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 2569,2930,Religious Group (v6),performance of rituals,0.0,1.0,True
 2569,2974,Religious Group (v6),disrespecting elders,0.0,1.0,True
 2569,2982,Religious Group (v6),conversion non-religionists,0.0,1.0,True
-2569,2899,Religious Group (v6),other elite loyalty,0.0,1.0,True
-2569,2910,Religious Group (v6),is kin to elites,0.0,1.0,True
-2569,2941,Religious Group (v6),is anthropomorphic,0.0,1.0,True
-2569,2944,Religious Group (v6),is chthonic,0.0,1.0,True
-2569,2948,Religious Group (v6),is sky deity,0.0,1.0,True
-2569,2958,Religious Group (v6),is monarch fused,0.0,1.0,True
-2569,2984,Religious Group (v6),is unquestionably good,0.0,1.0,True
-2569,3192,Religious Group (v6),positive emotion,0.0,1.0,True
-2569,3229,Religious Group (v6),negative emotion,0.0,1.0,True
-2569,3233,Religious Group (v6),knowledge this world,0.0,1.0,True
-2569,3247,Religious Group (v6),causal efficacy the world,0.0,1.0,True
-2569,3283,Religious Group (v6),possesses hunger,0.0,1.0,True
-2569,3288,Religious Group (v6),indirect causal efficacy the world,0.0,1.0,True
-2569,3296,Religious Group (v6),communicates with living,0.0,1.0,True
-2569,3328,Religious Group (v6),is monarch manifestation,0.0,1.0,True
+2569,2899,Religious Group (v6),other elite loyalty,,1.0,False
+2569,2910,Religious Group (v6),is kin to elites,,1.0,False
+2569,2941,Religious Group (v6),is anthropomorphic,,1.0,False
+2569,2944,Religious Group (v6),is chthonic,,1.0,False
+2569,2948,Religious Group (v6),is sky deity,,1.0,False
+2569,2958,Religious Group (v6),is monarch fused,,1.0,False
+2569,2984,Religious Group (v6),is unquestionably good,,1.0,False
+2569,3192,Religious Group (v6),positive emotion,,1.0,False
+2569,3229,Religious Group (v6),negative emotion,,1.0,False
+2569,3233,Religious Group (v6),knowledge this world,,1.0,False
+2569,3247,Religious Group (v6),causal efficacy the world,,1.0,False
+2569,3283,Religious Group (v6),possesses hunger,,1.0,False
+2569,3288,Religious Group (v6),indirect causal efficacy the world,,1.0,False
+2569,3296,Religious Group (v6),communicates with living,,1.0,False
+2569,3328,Religious Group (v6),is monarch manifestation,,1.0,False
 2569,2861,Religious Group (v6),murder other religions,0.0,1.0,True
 2569,2902,Religious Group (v6),non-lethal fighting,0.0,1.0,True
 2569,2911,Religious Group (v6),lying,0.0,1.0,True
@@ -28055,4 +27947,4 @@ entry_id,question_id,poll_name,question_short,answer_value,weight,inferred
 2569,2972,Religious Group (v6),murder other polities,0.0,1.0,True
 2569,2978,Religious Group (v6),sex,0.0,1.0,True
 2569,2985,Religious Group (v6),economic fairness,0.0,1.0,True
-2569,3218,Religious Group (v6),permissible to worship other god?,1.0,1.0,True
+2569,3218,Religious Group (v6),permissible to worship other god?,,1.0,False

@@ -305,7 +305,8 @@ save_plot(p_region_sd, "region_sd", 9, 11)
 World-region intercepts (posterior mean, log-odds relative to the average region), groups-only model
 (in the main model, groups and texts share the region intercepts, and texts are concentrated in a few regions).
 Numbers in the tiles: group entries in that world region for that question; on the axis: group entries
-in the world region for any question.
+in the world region for any question. Black border and bold number: credible (95% interval excludes 0, i.e.
+the region differs from the average region).
 
 ```{r region_effects, fig.width = 9, fig.height = 10}
 # entries per question and world region in the groups-only data, and per world region overall
@@ -317,16 +318,17 @@ region_effects <- fits |>
   filter(set == "groups") |>
   mutate(re = map(fit, function(fit) {
     r <- ranef(fit)$world_region[, , "Intercept"]
-    tibble(world_region = rownames(r), estimate = r[, "Estimate"])
+    tibble(world_region = rownames(r), estimate = r[, "Estimate"], lower = r[, "Q2.5"], upper = r[, "Q97.5"])
   })) |>
   select(-fit) |>
   unnest(re) |>
   left_join(region_n, by = c("question", "world_region")) |>
-  mutate(question = factor(question, levels = rev(all_questions)))
+  mutate(question = factor(question, levels = rev(all_questions)), credible = lower > 0 | upper < 0)
 
 p_region_effects <- ggplot(region_effects, aes(world_region, question, fill = estimate)) +
   geom_tile() +
-  geom_text(aes(label = n), size = 2.3, colour = "grey20") +
+  geom_tile(data = filter(region_effects, credible), fill = NA, colour = "black", linewidth = 0.6) +
+  geom_text(aes(label = n, fontface = if_else(credible, "bold", "plain")), size = 2.3, colour = "grey20") +
   scale_x_discrete(labels = region_labels) +
   scale_fill_gradient2(low = "#2a78d6", mid = "white", high = "#eb6834", midpoint = 0) +
   labs(x = NULL, y = NULL, fill = "log-odds") +

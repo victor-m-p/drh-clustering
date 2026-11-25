@@ -1,0 +1,239 @@
+---
+title: "Region x Time: grouped questions"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+Same sample and region x time model as `10_region_time.Rmd` (religious groups in Southwest Asia, Europe, Africa and
+East Asia, without eHRAF and Pulotu, start year from 3000 BCE to 1500 CE, any time span; child questions as answered;
+conflicting answers left out), for two grouped child questions:
+
+- **elite ties** (supreme high god): is monarch fused, is monarch manifestation, is kin to elites, other elite loyalty
+- **murder out-group** (monitoring): murder other religions, murder other polities
+
+Rule: "Yes" if any answered question in the group is "Yes", otherwise "No". Entries that answer only some questions
+of a group are kept (a "No" from a partial answer may be a "Yes" had the rest been answered; see the table below).
+
+Run from inside `modeling/` after `3_prepare_data.py`. Fits are saved in `fits/` (`region_time_grouped_*`; delete
+them to refit), figures in `fig/region_time_grouped/`.
+
+```{r setup, message = FALSE}
+library(tidyverse)
+library(brms)
+library(posterior)
+
+options(mc.cores = 4, brms.backend = "cmdstanr")
+dir.create("fits", showWarnings = FALSE)
+theme_set(theme_bw(base_size = 11))
+
+# figures: shown in the session and saved as fig/region_time_grouped/<name>.jpg
+fig_dir <- "fig/region_time_grouped"
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+save_plot <- function(p, name, width, height) {
+  ggsave(file.path(fig_dir, paste0(name, ".jpg")), p, width = width, height = height, dpi = 300)
+  p
+}
+
+regions <- c("Southwest Asia", "Europe", "Africa", "East Asia")
+region_colors <- c("Southwest Asia" = "#2a78d6", "Europe" = "#eb6834", "Africa" = "#1baf7a", "East Asia" = "#eda100",
+                   "average" = "#52514e")
+year_min <- -3000
+year_max <- 1500
+
+groups <- list(
+  "elite ties" = c("is monarch fused", "is monarch manifestation", "is kin to elites", "other elite loyalty"),
+  "murder out-group" = c("murder other religions", "murder other polities")
+)
+```
+
+# Data
+
+```{r data, message = FALSE}
+source_of <- read_csv("../data/sccsrv3/entry_data.csv", col_select = c(entry_id, data_source)) |>
+  distinct(entry_id, .keep_all = TRUE)
+
+items <- enframe(groups, name = "group", value = "question_short") |> unnest(question_short)
+d <- read_csv("data/model_data.csv") |>
+  left_join(source_of, by = "entry_id") |>
+  filter(
+    poll == "group",
+    world_region %in% regions,
+    is.na(data_source) | (data_source != "eHRAF" & !str_starts(data_source, "Pulotu")),
+    year_from >= year_min, year_from < year_max,
+    weight == 1, !inferred
+  ) |>
+  inner_join(items, by = "question_short") |>
+  mutate(region = factor(world_region, levels = regions), time = year_from / 1000)
+stopifnot(setequal(unique(d$question_short), items$question_short))
+
+# one row per entry and group
+grouped <- d |>
+  group_by(group, entry_id, region, year_from, time) |>
+  summarise(answer_value = as.integer(any(answer_value == 1)), n_items = n(), .groups = "drop") |>
+  mutate(complete = n_items == lengths(groups)[group])
+```
+
+Entries per group: share "Yes", and entries that answered only some of the group's questions (partial), of which
+all answered questions are "No" (coded "No", but uncertain):
+
+```{r data_groups}
+grouped |>
+  group_by(group) |>
+  summarise(entries = n(), share_yes = mean(answer_value), partial = sum(!complete),
+            partial_no = sum(!complete & answer_value == 0))
+grouped |> count(group, region) |> pivot_wider(names_from = region, values_from = n)
+```
+
+# Fit
+
+```{r fit, message = FALSE, results = "hide"}
+# brms names the region coefficients without spaces (regionSouthwestAsia, regionSouthwestAsia:time, ...)
+region_key <- setNames(regions, str_remove_all(regions, " "))
+priors <- reduce(
+  map(paste0("region", names(region_key)), ~ set_prior("normal(0, 1.5)", class = "b", coef = .x)),
+  c,
+  .init = prior(normal(0, 1), class = "b")
+)
+
+fits <- tibble(question = names(groups)) |>
+  mutate(fit = map(question, function(q) {
+    brm(answer_value ~ 0 + region + region:time, data = filter(grouped, group == q), family = bernoulli(),
+        prior = priors, chains = 4, iter = 4000, warmup = 2000, seed = 125123, refresh = 0,
+        control = list(adapt_delta = 0.99), file = sprintf("fits/region_time_grouped_%s", q))
+  }))
+```
+
+# Diagnostics
+
+```{r diagnostics}
+fits |>
+  mutate(diag = map(fit, function(fit) {
+    s <- summarise_draws(as_draws_df(fit, variable = "^b_", regex = TRUE))
+    tibble(max_rhat = max(s$rhat), min_ess_bulk = min(s$ess_bulk), min_ess_tail = min(s$ess_tail),
+           divergences = sum(subset(nuts_params(fit), Parameter == "divergent__")$Value))
+  })) |>
+  select(-fit) |>
+  unnest(diag)
+```
+
+# Slopes per region
+
+Change in log-odds per 1,000 years within each region (mean and 95% interval), and the average of the four
+region slopes (grey).
+
+```{r slopes, fig.width = 8, fig.height = 3}
+# region slopes per draw, plus their average
+region_slopes <- function(fit) {
+  draws <- as_draws_df(fit, variable = "^b_region.*:time$", regex = TRUE) |>
+    as_tibble() |>
+    select(.draw, starts_with("b_")) |>
+    pivot_longer(-.draw, values_to = "value") |>
+    mutate(region = unname(region_key[str_remove(str_remove(name, "^b_region"), ":time$")])) |>
+    select(.draw, region, value)
+  average <- draws |> group_by(.draw) |> summarise(value = mean(value)) |> mutate(region = "average")
+  bind_rows(draws, average)
+}
+
+estimates <- fits |>
+  mutate(est = map(fit, function(fit) {
+    region_slopes(fit) |>
+      group_by(region) |>
+      summarise(mean = mean(value), lower = quantile(value, 0.025), upper = quantile(value, 0.975),
+                p_positive = mean(value > 0))
+  })) |>
+  select(question, est) |>
+  unnest(est) |>
+  mutate(region = factor(region, levels = c(regions, "average")), question = factor(question, levels = rev(names(groups))))
+estimates
+
+p_slopes <- ggplot(estimates, aes(mean, question, colour = region, group = fct_rev(region))) +  # top to bottom in legend order
+  geom_vline(xintercept = 0, colour = "grey60") +
+  geom_pointrange(aes(xmin = lower, xmax = upper), position = position_dodge(width = 0.75), size = 0.15) +
+  scale_colour_manual(values = region_colors, breaks = c(regions, "average")) +
+  labs(x = "Time slope within region (log-odds per 1,000 years)", y = NULL, colour = NULL) +
+  theme(legend.position = "top")
+save_plot(p_slopes, "slopes", 8, 3)
+```
+
+# Curves over time
+
+- **Overall** (black line, grey band: 95% interval): the "typical region", logit⁻¹(ᾱ + β̄·time) with ᾱ and β̄ the
+  averages of the four region intercepts and slopes (per draw).
+- **Regions** (coloured lines): posterior mean, drawn over the region's data range (first to last start year);
+  dashed where the 500-year rolling window has fewer than 10 entries.
+- **Data** (points): share yes per region in 500-year bins of start year (lower edge included), size = number of
+  entries, regions shifted slightly around the bin midpoint. Black-outlined points: all four regions pooled.
+
+```{r curves, fig.width = 9, fig.height = 4.5}
+years <- seq(year_min, year_max, by = 50)
+answers <- rename(grouped, question = group)
+
+# overall curve: average region intercept and slope per draw
+overall_curves <- fits |>
+  mutate(curve = map(fit, function(fit) {
+    draws <- as_draws_df(fit, variable = "^b_region", regex = TRUE) |> as_tibble()
+    a <- rowMeans(select(draws, starts_with("b_region") & !ends_with(":time")))
+    b <- rowMeans(select(draws, starts_with("b_region") & ends_with(":time")))
+    p <- plogis(outer(a, rep(1, length(years))) + outer(b, years / 1000))
+    tibble(year = years, mean = colMeans(p), lo95 = apply(p, 2, quantile, 0.025), hi95 = apply(p, 2, quantile, 0.975))
+  })) |>
+  select(question, curve) |>
+  unnest(curve)
+
+# entries per region in 500-year rolling windows of start year (centred every 50 years)
+rolling <- map_dfr(years, function(centre) {
+  answers |>
+    filter(year_from >= centre - 250, year_from < centre + 250) |>
+    count(question, region) |>
+    mutate(year = centre)
+})
+
+# region curves (posterior mean) within each region's data range, solid where the rolling window has at least 10 entries
+grid <- crossing(region = factor(regions, levels = regions), year = years) |> mutate(time = year / 1000)
+data_range <- answers |>
+  group_by(question, region) |>
+  summarise(from = floor(min(year_from) / 50) * 50, to = ceiling(max(year_from) / 50) * 50, .groups = "drop")
+region_lines <- fits |>
+  mutate(curve = map(fit, ~ mutate(grid, mean = colMeans(posterior_epred(.x, newdata = grid))))) |>
+  select(question, curve) |>
+  unnest(curve) |>
+  inner_join(data_range, by = c("question", "region")) |>
+  filter(year >= from, year <= to) |>
+  left_join(rolling, by = c("question", "region", "year")) |>
+  mutate(solid = if_else(replace_na(n, 0) >= 10, mean, NA_real_))
+
+# observed share per region (shifted around the bin midpoint) and pooled, in 500-year bins of start year
+bin_edges <- seq(year_min, year_max, by = 500)
+offsets <- setNames(c(-75, -25, 25, 75), regions)
+binned <- answers |>
+  mutate(bin = findInterval(year_from, bin_edges)) |>
+  group_by(question, region, bin) |>
+  summarise(share = mean(answer_value), n = n(), .groups = "drop") |>
+  mutate(year = bin_edges[bin] + 250 + offsets[as.character(region)])
+binned_pooled <- answers |>
+  mutate(bin = findInterval(year_from, bin_edges)) |>
+  group_by(question, bin) |>
+  summarise(share = mean(answer_value), n = n(), .groups = "drop") |>
+  mutate(year = bin_edges[bin] + 250)
+
+together_colors <- c(region_colors[regions], overall = "black")
+p_curves <- ggplot(mapping = aes(year)) +
+  geom_hline(yintercept = c(0, 1), colour = "grey85", linewidth = 0.3) +
+  geom_ribbon(data = overall_curves, aes(ymin = lo95, ymax = hi95), fill = "grey60", alpha = 0.3) +
+  geom_point(data = binned, aes(y = share, colour = region, size = n), alpha = 0.65) +
+  geom_line(data = region_lines, aes(y = mean, colour = region, group = region), linewidth = 0.5, linetype = "22") +
+  geom_line(data = region_lines, aes(y = solid, colour = region, group = region), linewidth = 0.8, na.rm = TRUE) +
+  geom_line(data = overall_curves, aes(y = mean, colour = "overall"), linewidth = 1.2) +
+  geom_point(data = binned_pooled, aes(y = share, size = n), shape = 21, fill = "white", colour = "black", stroke = 0.9) +
+  facet_wrap(~ factor(question, levels = names(groups))) +
+  scale_colour_manual(values = together_colors, breaks = names(together_colors), labels = c(regions, "overall (typical region)")) +
+  scale_size_area(max_size = 4.5, breaks = c(1, 5, 10, 20, 40)) +
+  scale_x_continuous(breaks = seq(year_min, year_max, by = 1000)) +
+  scale_y_continuous(breaks = c(0, 0.5, 1)) +
+  coord_cartesian(ylim = c(0, 1), xlim = c(year_min, year_max)) +
+  labs(x = "Year (start year)", y = "P(yes)", colour = NULL, size = "entries") +
+  theme(legend.position = "top", panel.grid.minor = element_blank(), axis.text.x = element_text(size = 7))
+save_plot(p_curves, "curves", 9, 4.5)
+```

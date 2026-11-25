@@ -19,6 +19,8 @@ venv/
 
 # R
 .Rhistory
+.Rapp.history
+Rplots*.pdf
 .RData
 .Ruserdata
 .Renviron
@@ -45,6 +47,8 @@ Thumbs.db
 *.swo
 *~
 ~$*
+.~lock.*#
+*.log
 
 # quick look-ups
 scratch/

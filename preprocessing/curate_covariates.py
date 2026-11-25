@@ -13,7 +13,10 @@ Writes:
 - answers_covariates.csv: one row per yes/no answer, weighted 1/n (constants.covariate_coding)
   - religion and politics: official political support (2300); head of polity is head of religion (2339)
     and political officials are religious officials (2319), with "No" inferred when 2300 is "No"
-  - supernatural punishment and reward present, own written language
+  - supernatural punishment (3420) and reward (3437) present; for each, when (this life, afterlife) and
+    who / why (e.g. only by the high god, impersonal, to enforce group norms), with "No" inferred when
+    3420 (3437) is "No"
+  - own written language
 
 Run from inside preprocessing/.
 """
@@ -158,9 +161,16 @@ entry_covariates.to_csv("../data/preprocessed/entry_covariates.csv", index=False
 """
 Yes/no covariate questions (constants.covariate_coding).
 question_name is kept per poll, since group and text wording differ for several questions.
-- Inferred (constants.covariate_infer_no; inferred = True): 2339 and 2319 are only asked when 2300 is "Yes";
-  "No" when 2300 is "No" (not when 2300 is answered both "Yes" and "No", or not at all).
+- Inferred (constants.covariate_infer_no; inferred = True): "No" when the parent is "No" (not when the parent
+  is answered both "Yes" and "No", or not at all).
+  - 2339 and 2319 are only asked when 2300 is "Yes".
+  - Punishment: this life / afterlife are only asked when 3420 is "Yes"; who / why only when, in addition,
+    the cause or agent (3480) / the reason (3485) is known. "No" is inferred from 3420 only: a "No" to the
+    gateway ("reason not known") leaves who / why missing. Reward (3437) is the same, with one gateway (3469).
+  - Open: the top questions ask whether supernatural beings punish (reward), so groups with only impersonal
+    (karma-type) punishment may answer "No" there; inferring "No" for "punishment impersonal" is then wrong.
 All other answers as answered (inferred = False).
+Conflicting answers (an entry answers a question both "Yes" and "No") have weight < 1.
 """
 
 covariate_names = pd.DataFrame(list(covariate_coding.items()), columns=["related_question_id", "question_short"])

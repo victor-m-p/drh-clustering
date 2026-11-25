@@ -2,6 +2,13 @@
 Latent class (EM) clustering of group entries, with multiple random starts per c.
 For each c we run n_starts fits (seed = c * 1000 + start) and keep the best by logL.
 
+Subset (first argument, default "group"):
+- group: the 36 child questions, entries with at least 50% answered (../data/preprocessed/groups_expanded.csv)
+- group_parents: the 36 child questions plus the two parent questions, entries that answered both parents
+  (../data/preprocessed/groups_expanded_parents.csv; see prepare_data.py)
+- group_parents_collapsed: as group_parents, with murder out-group and elite ties collapsed (34 questions;
+  ../data/preprocessed/groups_expanded_parents_collapsed.csv; see prepare_data.py)
+
 Writes to data/ (inside clustering/):
 - EM_starts_{subset}.csv: logL for every start (diagnostics).
 - EM_model_selection_{subset}.csv: best logL, AIC, BIC per c, and how many starts reached the best.
@@ -9,6 +16,7 @@ Writes to data/ (inside clustering/):
   First row of the theta file holds pi (cluster shares).
 """
 
+import sys
 import numpy as np
 import pandas as pd
 from helper_functions import fit
@@ -18,13 +26,22 @@ c_grid = [c + 1 for c in range(10)]  # tried up to 20
 n_starts = 1000  # random starts per c
 candidates = [2, 3, 4, 5, 6, 7]  # save full solutions for these
 logL_tol = 0.01  # a start "reached the best" if within this of the best logL
-subset = "group" # only set up for groups
+subset = sys.argv[1] if len(sys.argv) > 1 else "group"
+inputs = {
+    "group": "groups_expanded.csv",
+    "group_parents": "groups_expanded_parents.csv",
+    "group_parents_collapsed": "groups_expanded_parents_collapsed.csv",
+}
 
 # load data
 entry_metadata = pd.read_csv("../data/sccsrv3/entry_data.csv")
-questions = pd.read_csv("../data/preprocessed/answers_subset_groups.csv")
+questions = pd.concat([
+    pd.read_csv("../data/preprocessed/answers_subset_groups.csv"),
+    pd.read_csv("../data/preprocessed/answers_parents_groups.csv"),  # parent questions (group_parents only)
+    pd.DataFrame({"question_id": [9001, 9002], "question_short": ["murder out-group", "elite ties"]}),  # collapsed
+])
 questions = questions[["question_id", "question_short"]].drop_duplicates()
-answers = pd.read_csv(f"../data/preprocessed/groups_expanded.csv")
+answers = pd.read_csv(f"../data/preprocessed/{inputs[subset]}")
 
 # preprocess data for EM
 answers = answers.fillna(100)  # everything not 1/0 treated as nan
@@ -52,7 +69,7 @@ selection = []
 for c in c_grid:
     starts_c = starts[starts["c"] == c]
     logL = best[c]["logL"]
-    k = c * X.shape[1] + (c - 1)  # c x 36 thetas + (c - 1) mixing proportions
+    k = c * X.shape[1] + (c - 1)  # c x questions thetas + (c - 1) mixing proportions
     AIC = (2 * k) - (2 * logL)
     BIC = (np.log(n) * k) - (2 * logL)
     n_reached_best = int((starts_c["logL"] > logL - logL_tol).sum())

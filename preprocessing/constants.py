@@ -64,14 +64,44 @@ covariate_coding = {
     # children of 2300 (only asked when 2300 is "Yes"; "No" inferred when 2300 is "No", see covariate_infer_no)
     "2339": "head of polity is head of religion",  # text: leaders of the polity and the religion the same figure
     "2319": "political officials are religious officials",  # text: involved in the support of textual production
-    # supernatural punishment and reward (no child questions)
+    # supernatural punishment and reward
     "3420": "supernatural punishment",
     "3437": "supernatural reward",
+    # children of 3420: when (only asked when 3420 is "Yes")
+    "3440": "punishment this life",
+    "3444": "punishment afterlife",
+    # grandchildren of 3420: who (under 3480, is the cause or agent known) and why (under 3485, is the reason known)
+    "3477": "punishment by high god only",
+    "3478": "punishment by many beings",
+    "3479": "punishment impersonal",
+    "3482": "punishment for group norms",
+    "3483": "punishment for ritual",
+    "3484": "punishment random",
+    "3486": "punishment for selfishness",
+    # children of 3437: when (only asked when 3437 is "Yes")
+    "3434": "reward this life",
+    "3450": "reward afterlife",
+    # grandchildren of 3437: who and why (both under 3469, is the cause/purpose known)
+    "3472": "reward by high god only",
+    "3466": "reward by many beings",
+    "3470": "reward impersonal",
+    "3473": "reward for group norms",
+    "3471": "reward for ritual",
+    "3467": "reward random",
+    "3468": "reward for selfishness",
     # written language
     "3166": "own written language",  # text: written in distinctly religious/sacred language
 }
-# covariate questions with "No" inferred when their parent (2300) is "No" (child: parent)
-covariate_infer_no = {"2339": "2300", "2319": "2300"}
+# covariate questions with "No" inferred when their parent is "No" (child: parent)
+# punishment and reward: inferred from the top question only, never from a "No" gateway ("reason not known");
+# the "Other [specify]" questions and the gateways themselves are not used
+punishment_questions = ["3440", "3444", "3477", "3478", "3479", "3482", "3483", "3484", "3486"]
+reward_questions = ["3434", "3450", "3472", "3466", "3470", "3473", "3471", "3467", "3468"]
+covariate_infer_no = (
+    {"2339": "2300", "2319": "2300"}
+    | {q: "3420" for q in punishment_questions}
+    | {q: "3437" for q in reward_questions}
+)
 
 # Society type (related id 3492): answer -> level; answer_value has the same codes (1-5) for groups,
 # but is -1 for nearly all text answers, so we code from the answer text

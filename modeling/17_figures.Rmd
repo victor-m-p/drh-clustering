@@ -1,0 +1,142 @@
+---
+title: "Figures for the paper"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+Figure-ready versions of results from the fitting documents. Nothing is fitted here: the fits are read from `fits/`,
+so run `13_main.Rmd` (main model), `14_abrahamic.Rmd` (+ Abrahamic) and `15_texts.Rmd` (+ texts) first.
+
+Run from inside `modeling/`. Figures are saved in `fig/paper/`.
+
+```{r setup, message = FALSE}
+library(tidyverse)
+library(posterior)
+
+theme_set(theme_bw(base_size = 10))
+fig_dir <- "fig/paper"
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+
+model_files <- c(main = "main_region_time", texts = "texts", abrahamic = "abrahamic")  # order in the figures
+model_labels <- c(main = "main model (groups)", texts = "+ texts", abrahamic = "+ Abrahamic")
+model_colors <- c(main = "#2b2a28", texts = "#2a78d6", abrahamic = "#8a63d2")
+```
+
+# Questions
+
+Display labels; order = order in the figures (topic order as in `13_main.Rmd`).
+
+```{r questions}
+questions <- tribble(
+  ~question, ~label, ~domain,
+  "supernatural monitoring present", "supernatural monitoring present", "parent",
+  "supreme high god present", "supreme high god present", "parent",
+  # monitoring
+  "murder coreligionists", "murder of coreligionists", "monitoring",
+  "murder out-group", "murder of out-group (any)", "monitoring",
+  "non-lethal fighting", "non-lethal fighting", "monitoring",
+  "prosocial norm adherence", "prosocial norm adherence", "monitoring",
+  "lying", "lying", "monitoring",
+  "honouring oaths", "honouring oaths", "monitoring",
+  "property crimes", "property crimes", "monitoring",
+  "economic fairness", "economic fairness", "monitoring",
+  "gossiping", "gossiping", "monitoring",
+  "laziness", "laziness", "monitoring",
+  "shirking risk", "shirking risk", "monitoring",
+  "disrespecting elders", "disrespecting elders", "monitoring",
+  "sex", "sex", "monitoring",
+  "ritual observance", "ritual observance", "monitoring",
+  "performance of rituals", "performance of rituals", "monitoring",
+  "taboos", "taboos", "monitoring",
+  "personal hygiene", "personal hygiene", "monitoring",
+  "sorcery", "sorcery", "monitoring",
+  "conversion non-religionists", "conversion of non-religionists", "monitoring",
+  # supreme high god
+  "knowledge this world", "knowledge of this world", "shg",
+  "causal efficacy the world", "causal efficacy in the world", "shg",
+  "indirect causal efficacy the world", "indirect causal efficacy", "shg",
+  "communicates with living", "communicates with the living", "shg",
+  "is unquestionably good", "unquestionably good", "shg",
+  "positive emotion", "positive emotion", "shg",
+  "negative emotion", "negative emotion", "shg",
+  "is anthropomorphic", "anthropomorphic", "shg",
+  "possesses hunger", "hunger", "shg",
+  "is sky deity", "sky deity", "shg",
+  "is chthonic", "chthonic", "shg",
+  "permissible to worship other god?", "permissible to worship other gods", "shg",
+  "elite ties", "elite ties (any)", "shg"
+) |>
+  mutate(panel = factor(c(parent = "parent", monitoring = "monitoring", shg = "supreme\nhigh god")[domain],
+                        levels = c("parent", "monitoring", "supreme\nhigh god")))
+stopifnot(nrow(questions) == 34)
+```
+
+# Average slopes
+
+Average of the four region slopes per draw (log-odds per 1,000 years), for each model and question.
+
+```{r slopes, message = FALSE}
+fit_path <- function(model, question) {
+  set <- if_else(question %in% questions$question[questions$domain == "parent"], "parent", "conditional")
+  sprintf("fits/%s_%s_%s.rds", model_files[[model]], set, question)
+}
+
+average_slope <- function(path) {
+  draws <- as_draws_df(readRDS(path), variable = "^b_region.*:time$", regex = TRUE) |>
+    as_tibble() |>
+    select(starts_with("b_"))
+  value <- rowMeans(draws)
+  tibble(mean = mean(value), lower = quantile(value, 0.025), upper = quantile(value, 0.975),
+         p_positive = mean(value > 0))
+}
+
+slopes <- crossing(model = names(model_files), question = questions$question) |>
+  mutate(est = map2(model, question, ~ average_slope(fit_path(.x, .y)))) |>
+  unnest(est) |>
+  left_join(questions, by = "question")
+
+slopes |>
+  select(model, question, mean, lower, upper, p_positive) |>
+  mutate(across(where(is.numeric), ~ round(.x, 2))) |>
+  pivot_wider(names_from = model, values_from = c(mean, p_positive)) |>
+  select(-lower, -upper) |>
+  print(n = Inf)
+```
+
+# Figure 2: average slopes, three models
+
+```{r fig2, fig.width = 7, fig.height = 10}
+# filled points: 95% sure of the direction (P(slope > 0) >= 0.95 or <= 0.05); open otherwise
+fig2_data <- slopes |>
+  mutate(
+    model = factor(model, levels = rev(names(model_files))),  # main on top within each question, then texts
+    label = factor(label, levels = rev(questions$label)),
+    sure = p_positive >= 0.95 | p_positive <= 0.05
+  )
+dodge <- position_dodge(width = 0.72)
+
+fig2 <- ggplot(fig2_data, aes(mean, label, colour = model, group = model)) +
+  geom_vline(xintercept = 0, colour = "grey60", linewidth = 0.4) +
+  geom_linerange(aes(xmin = lower, xmax = upper), position = dodge, linewidth = 0.55) +
+  geom_point(aes(fill = if_else(sure, model, NA)), shape = 21, size = 1.7, stroke = 0.7, position = dodge) +
+  facet_grid(panel ~ ., scales = "free_y", space = "free_y") +
+  scale_colour_manual(values = model_colors, labels = model_labels, breaks = names(model_files), name = NULL) +
+  scale_fill_manual(values = model_colors, na.value = "white", guide = "none") +
+  scale_x_continuous(breaks = seq(-2, 2, 1)) +
+  guides(colour = guide_legend(override.aes = list(fill = model_colors, size = 2.6, linewidth = 1))) +
+  labs(x = "Average time slope (log-odds per 1,000 years)", y = NULL) +
+  theme(
+    legend.position = "top",
+    legend.text = element_text(size = 11),
+    legend.key.width = unit(26, "pt"),
+    legend.spacing.x = unit(6, "pt"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_blank(),
+    strip.text.y = element_text(angle = 0, size = 9),
+    panel.spacing.y = unit(4, "pt")
+  )
+fig2
+ggsave(file.path(fig_dir, "fig2_slopes.jpg"), fig2, width = 7, height = 10, dpi = 300)
+```

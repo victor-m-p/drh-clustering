@@ -3,17 +3,24 @@ Exploratory plots of answers by society type (social_complexity from preprocessi
 share "Yes" for band, tribe, chiefdom, state, empire; groups (v5 + v6) and texts separately.
 Entries without a society type are left out.
 
-Parent questions: supernatural monitoring present (2890), supreme high god present (2919).
+Top-level questions: supernatural beings present (2893), supreme high god present (2919), supernatural monitoring
+present (2890), supernatural punishment (3420) and reward (3437; from answers_covariates.csv).
 Supreme high god present includes the inferred "No" when supernatural beings are absent (2893 "No").
-Child questions: conditional answers (only answered when the parent is "Yes").
-Entries with conflicting answers count with weight 1/n per answer, so each entry counts once.
+Child questions: conditional answers (only answered when the parent is "Yes"); punishment and reward who / why
+only when, in addition, the cause or agent / reason is known (see preprocessing/curate_covariates.py).
+Unconditional versions (inferred "No" included): child questions are "No" when the parent is "No" (as in
+preprocessing/curate_answers.py and curate_covariates.py; permissible to worship other gods is inferred "Yes";
+punishment and reward when / who / why from the top question only).
+Conflicting answers (an entry answers a question both "Yes" and "No"; about 0.2% of answers) are left out.
 Error bars: 95% Wilson intervals (n = number of entries).
 Levels with fewer than min_n entries are not plotted (overlays) or drawn in light grey (all questions).
 
 Figures (fig/covariates/):
-- parents_social_complexity.jpg: both parent questions
-- shg_social_complexity.jpg, monitoring_social_complexity.jpg: selected questions (as in temporal/plot_question_time.py)
-- shg_social_complexity_all.jpg, monitoring_social_complexity_all.jpg: all questions, one panel each
+- parents_social_complexity.jpg: the five top-level questions
+- {family}_social_complexity.jpg (shg, monitoring, punishment, reward): selected questions (shg, monitoring as in
+  temporal/plot_question_time.py; punishment, reward as in the summary figures of within_type_time.py)
+- {family}_social_complexity_unconditional.jpg: the same with the inferred "No" included
+- {family}_social_complexity_all.jpg: all questions, one panel each (as answered)
   (order as in temporal/plot_all_questions_time.py)
 
 Run from inside eda/ after preprocessing/curate_answers.py and preprocessing/curate_covariates.py.
@@ -43,6 +50,9 @@ selected = {
         "conversion non-religionists", "economic fairness", "murder other polities",
         "performance of rituals", "shirking risk", "prosocial norm adherence",
     ],
+    # as in the summary figures of within_type_time.py
+    "punishment": ["punishment afterlife", "punishment by high god only", "punishment impersonal", "punishment for selfishness"],
+    "reward": ["reward afterlife", "reward by high god only", "reward impersonal", "reward for selfishness"],
 }
 # all questions in topic order (as in temporal/plot_all_questions_time.py)
 all_questions = {
@@ -60,32 +70,72 @@ all_questions = {
         "permissible to worship other god?",
         "is monarch fused", "is monarch manifestation", "is kin to elites", "other elite loyalty",
     ],
+    "punishment": [
+        "punishment this life", "punishment afterlife",
+        "punishment by high god only", "punishment by many beings", "punishment impersonal",
+        "punishment for group norms", "punishment for ritual", "punishment for selfishness", "punishment random",
+    ],
+    "reward": [
+        "reward this life", "reward afterlife",
+        "reward by high god only", "reward by many beings", "reward impersonal",
+        "reward for group norms", "reward for ritual", "reward for selfishness", "reward random",
+    ],
 }
-titles = {"monitoring": "Supernatural Monitoring", "shg": "Supreme High God"}
+titles = {"monitoring": "Supernatural Monitoring", "shg": "Supreme High God",
+          "punishment": "Supernatural Punishment", "reward": "Supernatural Reward"}
+top_questions = [
+    "supernatural beings present", "supreme high god present", "supernatural monitoring present",
+    "supernatural punishment", "supernatural reward",
+]
 
 # answers with society type (one row per answer)
 covariates = pd.read_csv("../data/preprocessed/entry_covariates.csv")[["entry_id", "social_complexity"]].dropna()
 parents = pd.read_csv("../data/preprocessed/answers_parents_all.csv")
-parents = parents[parents["question_short"].isin(["supernatural monitoring present", "supreme high god present"])]
-children = pd.read_csv("../data/preprocessed/answers_subset_all.csv").dropna(subset=["answer_value"])
-answers = pd.concat([parents, children], ignore_index=True)
-answers["poll"] = np.where(answers["poll_name"].str.contains("Group"), "group", "text")
-answers = answers.merge(covariates, on="entry_id", how="inner")
-assert set(q for qs in all_questions.values() for q in qs) <= set(answers["question_short"])
+parents = parents[parents["question_short"].isin(top_questions)]
+covariate_answers = pd.read_csv("../data/preprocessed/answers_covariates.csv")
+covariate_answers = covariate_answers[
+    covariate_answers["question_short"].isin(top_questions + all_questions["punishment"] + all_questions["reward"])
+]
 
-# weighted share "Yes" per poll, question and society type, with 95% Wilson interval
-s = (
-    answers.assign(yes=answers["answer_value"] * answers["weight"])
-    .groupby(["poll", "question_short", "social_complexity"])
-    .agg(n=("weight", "sum"), yes=("yes", "sum"))
-    .reset_index()
+
+def load_answers(unconditional):
+    """Child questions as answered, or with the inferred "No" (unconditional; see the top of this file)."""
+    if unconditional:
+        children = pd.read_csv("../data/preprocessed/answers_subset_all_unconditional.csv")
+        punishment_reward = covariate_answers
+    else:
+        children = pd.read_csv("../data/preprocessed/answers_subset_all.csv")
+        punishment_reward = covariate_answers[~covariate_answers["inferred"]]
+    children = children.dropna(subset=["answer_value"])
+    answers = pd.concat([parents, punishment_reward, children], ignore_index=True)
+    answers = answers[answers["weight"] == 1]  # conflicting answers left out
+    answers["poll"] = np.where(answers["poll_name"].str.contains("Group"), "group", "text")
+    answers = answers.merge(covariates, on="entry_id", how="inner")
+    assert set(q for qs in all_questions.values() for q in qs) <= set(answers["question_short"])
+    return answers
+
+
+def share_yes(answers):
+    """Weighted share "Yes" per poll, question and society type, with 95% Wilson interval."""
+    s = (
+        answers.assign(yes=answers["answer_value"] * answers["weight"])
+        .groupby(["poll", "question_short", "social_complexity"])
+        .agg(n=("weight", "sum"), yes=("yes", "sum"))
+        .reset_index()
+    )
+    s["p"] = s["yes"] / s["n"]
+    z = norm.ppf(0.975)
+    centre = (s["p"] + z**2 / (2 * s["n"])) / (1 + z**2 / s["n"])
+    half = z * np.sqrt(s["p"] * (1 - s["p"]) / s["n"] + z**2 / (4 * s["n"] ** 2)) / (1 + z**2 / s["n"])
+    s["lower"], s["upper"] = np.minimum(centre - half, s["p"]), np.maximum(centre + half, s["p"])  # rounding at p = 0, 1
+    return s
+
+
+s = share_yes(load_answers(unconditional=False))
+s_unconditional = share_yes(load_answers(unconditional=True))
+pd.concat([s.assign(answers="as answered"), s_unconditional.assign(answers="inferred No included")]).to_csv(
+    "data/share_yes_social_complexity.csv", index=False
 )
-s["p"] = s["yes"] / s["n"]
-z = norm.ppf(0.975)
-centre = (s["p"] + z**2 / (2 * s["n"])) / (1 + z**2 / s["n"])
-half = z * np.sqrt(s["p"] * (1 - s["p"]) / s["n"] + z**2 / (4 * s["n"] ** 2)) / (1 + z**2 / s["n"])
-s["lower"], s["upper"] = np.minimum(centre - half, s["p"]), np.maximum(centre + half, s["p"])  # rounding at p = 0, 1
-s.to_csv("data/share_yes_social_complexity.csv", index=False)
 
 
 def style(ax):
@@ -96,11 +146,11 @@ def style(ax):
     ax.tick_params(length=0, labelsize=8, colors=color_text)
 
 
-def get(poll, question):
+def get(s, poll, question):
     return s[(s["poll"] == poll) & (s["question_short"] == question)].set_index("social_complexity").reindex(levels)
 
 
-def plot_overlay(questions, path, legend_title):
+def plot_overlay(s, questions, path, legend_title, title=None):
     """Share "Yes" for several questions in one panel per poll (dodged, with error bars)."""
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.2), dpi=300, sharey=True)
     x = np.arange(len(levels))
@@ -108,7 +158,7 @@ def plot_overlay(questions, path, legend_title):
     for ax, poll in zip(axes, poll_labels):
         n = []
         for q, color, offset in zip(questions, series_colors, offsets):
-            sq = get(poll, q)
+            sq = get(s, poll, q)
             n.append(sq["n"].fillna(0))
             sq.loc[sq["n"] < min_n, ["p", "lower", "upper"]] = np.nan  # line breaks there
             ax.plot(x + offset, 100 * sq["p"], color=color, lw=2, zorder=2)
@@ -125,6 +175,8 @@ def plot_overlay(questions, path, legend_title):
         style(ax)
     axes[0].set_ylabel('% "Yes"', fontsize=9, color=color_text)
     axes[1].legend(frameon=False, fontsize=8, title=legend_title, title_fontsize=8, loc="upper left", bbox_to_anchor=(1.02, 1))
+    if title:
+        fig.suptitle(title, fontsize=12, x=0.01, ha="left")
     plt.tight_layout()
     plt.savefig(path, bbox_inches="tight")
     plt.close()
@@ -138,7 +190,7 @@ def plot_all(questions, title, path):
     x = np.arange(len(levels))
     for ax, q in zip(axes.flat, questions):
         for poll, color in zip(poll_labels, series_colors):
-            sq = get(poll, q)
+            sq = get(s, poll, q)
             ax.plot(x, sq["p"], color=color_sparse, lw=1.4, zorder=1)
             ok = sq["n"] >= min_n
             ax.plot(x, sq["p"].where(ok), color=color, lw=2, marker="o", ms=4, mec="white", mew=0.6, zorder=2,
@@ -159,11 +211,12 @@ def plot_all(questions, title, path):
     plt.close()
 
 
-plot_overlay(["supernatural monitoring present", "supreme high god present"],
-             f"{fig_dir}/parents_social_complexity.jpg", "present")
-for family in ["shg", "monitoring"]:
-    plot_overlay(selected[family], f"{fig_dir}/{family}_social_complexity.jpg", titles[family])
+plot_overlay(s, top_questions, f"{fig_dir}/parents_social_complexity.jpg", "top-level questions")
+for family in ["shg", "monitoring", "punishment", "reward"]:
+    plot_overlay(s, selected[family], f"{fig_dir}/{family}_social_complexity.jpg", titles[family])
+    plot_overlay(s_unconditional, selected[family], f"{fig_dir}/{family}_social_complexity_unconditional.jpg",
+                 titles[family], title='Inferred "No" included (child questions are "No" when the parent is "No")')
     plot_all(all_questions[family], titles[family], f"{fig_dir}/{family}_social_complexity_all.jpg")
 
-print(s[s["question_short"].str.contains("present")].pivot(
+print(s[s["question_short"].isin(top_questions)].pivot(
     index=["poll", "social_complexity"], columns="question_short", values=["p", "n"]).reindex(levels, level=1).round(2))

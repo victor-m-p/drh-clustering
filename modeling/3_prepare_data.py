@@ -35,7 +35,8 @@ answers = answers[["entry_id", "poll", "poll_name", "question_id", "question_sho
 ### entry-level variables ###
 entry_tags = pd.read_csv("data/entry_tags.csv")
 traditions = ["islamic", "buddhist", "christian", "jewish", "hindu", "chinese"]
-entries = entry_tags[["entry_id", "entry_name", "year_from", "year_to", "region_id"] + traditions].copy()
+entries = entry_tags[["entry_id", "entry_name", "year_from", "year_to", "region_id", "abrahamic"] + traditions].copy()
+entries["abrahamic"] = entries["abrahamic"].astype(int)  # christian, islamic or jewish, or tagged "Abrahamic"
 entries["duration"] = entries["year_to"] - entries["year_from"]
 
 # one tradition per entry, in this priority (as in temporal/plot_traditions_time.py)
